@@ -100,9 +100,10 @@ def all_gather(data):
         list[data]: list of data gathered from each rank
     """
     world_size = get_world_size()
+    #print("之后,已分配存储：", torch.cuda.memory_allocated() / (1024.0 * 1024.0), "MB")
     if world_size == 1:
         return [data]
-
+   
     # serialized to a Tensor
     buffer = pickle.dumps(data)
     storage = torch.ByteStorage.from_buffer(buffer)
@@ -114,7 +115,7 @@ def all_gather(data):
     dist.all_gather(size_list, local_size)
     size_list = [int(size.item()) for size in size_list]
     max_size = max(size_list)
-
+    
     # receiving Tensor from all ranks
     # we pad the tensor because torch all_gather does not support
     # gathering tensors of different shapes
@@ -227,6 +228,7 @@ class MetricLogger(object):
         MB = 1024.0 * 1024.0
         for obj in iterable:
             data_time.update(time.time() - end)
+            #print("log内-已分配存储：", torch.cuda.memory_allocated() / (1024.0 * 1024.0), "MB")
             yield obj
             iter_time.update(time.time() - end)
             if i % print_freq == 0 or i == len(iterable) - 1:

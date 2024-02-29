@@ -26,4 +26,6 @@ MODEL_PATH="/root/autodl-tmp/DiffHOI/params/diffhoi_s.pth"
         --ft_clip_with_small_lr \
         --with_clip_label \
         --with_obj_clip_label \
-        --eval 
+        --eval \
+        --batch_size 4 \
+        --device "cuda"
