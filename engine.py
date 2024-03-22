@@ -100,10 +100,10 @@ def evaluate_hoi(dataset_file, model, postprocessors, data_loader,
         #print("***\neval的样本和target情况..\n,",type(samples),type(targets),samples.tensors.shape,len(targets))
         #<class 'util.misc.NestedTensor'> <class 'tuple'> torch.Size([4, 3, 1201, 1204]) 4 (bs=4)
         #print(targets[0])  #是一个字典，‘origin_size，size，filename，boxes(2维),labels,id，sd_puts(3d),clip_inputs(3d),hois(2d?)'
-        targets = [{k: v.to(device) for k, v in t.items() if (k != 'filename' and k != 'id') } for t in targets]
+        _targets = [{k: v.to(device) for k, v in t.items() if (k != 'filename' and k != 'id') } for t in targets]
   
         with torch.no_grad():
-            outputs = model(samples,targets, is_training=False)
+            outputs = model(samples,_targets, is_training=False)
             #print(outputs.keys()) ['pred_hoi_logits', 'pred_obj_logits', 'pred_sub_boxes', 'pred_obj_boxes', 'aux_outputs']
         
         orig_target_sizes = torch.stack([t["orig_size"] for t in targets], dim=0)
@@ -111,17 +111,24 @@ def evaluate_hoi(dataset_file, model, postprocessors, data_loader,
         #print(type(results),len(results),results[0]) bs=4,<class 'list'> 4 'labels,boxes,hoi_scores,obj_scores,sub_ids,obj_ids'，记作键①
         #print(list(itertools.chain.from_iterable([results]))) 也是一个字典的列表；和上面键①一样↑
     
-        results_wout_tensor = [{k:v.to('cpu') for k,v in t.items()} for t in results]
-        preds.extend(list(itertools.chain.from_iterable([results_wout_tensor])))  #由于目前只有一张显卡，所以采用这种写法 且原先是[result]
+        # ===== preds ===== #
+        #results_wout_tensor = [{k:v.to(device) for k,v in t.items()} for t in results]
+        #preds.extend(list(itertools.chain.from_iterable([results_wout_tensor])))  #由于目前只有一张显卡，所以采用这种写法 且原先是[result]
+        preds.extend(list(itertools.chain.from_iterable([results])))
         #print(len(preds),preds) #len不断上升；preds是字典列表，和上面键①一样
   
+        # ==== targets ==== #
         # For avoiding a runtime error, the copy is used
-        print("之中,已分配存储：", torch.cuda.memory_allocated() / (1024.0 * 1024.0), "MB")
-        targets_wout_tensor = [{k:v.to('cpu') for k,v in t.items()} for t in copy.deepcopy(targets)]
-        gts.extend(list(itertools.chain.from_iterable([targets_wout_tensor])))  #原先是utils.all_gather(copy.deepcopy(targets))))
+        #print("之中,已分配存储：", torch.cuda.memory_allocated() / (1024.0 * 1024.0), "MB")
+        #targets_wout_tensor = [{k:v.to(device) for k,v in t.items()} for t in copy.deepcopy(targets)]
+        #gts.extend(list(itertools.chain.from_iterable([targets_wout_tensor])))  #原先是utils.all_gather(copy.deepcopy(targets))))
+        gts.extend(list(itertools.chain.from_iterable(utils.all_gather(copy.deepcopy(targets)))))
         #print("之后,已分配存储：", torch.cuda.memory_allocated() / (1024.0 * 1024.0), "MB")
-        print("===")
-        #print("results:",results,"\ntargets:",targets,"\npreds:",preds,"\ngts:",gts)
+        
+        
+        print("===",len(preds),"===")
+        if len(preds)>200:
+            break
         # counter += 1
 
 
