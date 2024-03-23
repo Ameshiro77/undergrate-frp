@@ -37,8 +37,7 @@ def get_args_parser():
     # Model parameters
     parser.add_argument('--frozen_weights', type=str, default=None,
                         help="Path to the pretrained model. If set, only the mask head will be trained")
-    parser.add_argument('--model_name', type=str, default=None)
-
+    parser.add_argument('--model_name', type=str, default="diffhoi_s")  #原先是none
 
     # * Backbone
     parser.add_argument('--backbone', default='resnet50', type=str,
@@ -115,7 +114,7 @@ def get_args_parser():
                         help="Relative classification weight of the no-object class")
 
     # dataset parameters
-    parser.add_argument('--dataset_file', default='coco')
+    parser.add_argument('--dataset_file', default='hico')  #这里改成hico了，原来是coco
     parser.add_argument('--coco_path', type=str)
     parser.add_argument('--coco_panoptic_path', type=str)
     parser.add_argument('--remove_difficult', action='store_true')
@@ -195,6 +194,27 @@ def main(args):
     print(args) #这一句打印args
 
     device = torch.device(args.device)
+     #=== 试验区域 别的地方真别动
+    print("start")
+    model, criterion, postprocessors = build_model(args)  #构建模型、损失函数和后处理器
+    model.to("cuda")
+    dataset_train = build_dataset(image_set='train', args=args)   #继承dataset类。args指明HICO/VCOCO
+    sampler_train = torch.utils.data.RandomSampler(dataset_train) 
+    batch_sampler_train = torch.utils.data.BatchSampler(
+        sampler_train, args.batch_size, drop_last=True)
+    data_loader_train = DataLoader(dataset_train, batch_sampler=batch_sampler_train,
+                                   collate_fn=utils.collate_fn, num_workers=args.num_workers)
+    for x in data_loader_train:
+        src = x[0].to('cuda')
+        targets = x[1]
+        targets = [{k: v.to(device) for k, v in t.items() if k != 'filename'} for t in targets]
+        out = model(src,targets)
+        # match = matcher.HungarianMatcherHOI()
+        # res = match(out,targets)
+        #loss = criterion(out,targets)
+        break
+    exit()
+    #===
 
     # fix the seed for reproducibility 即：通过设定相同seed，确保可重现性
     seed = args.seed + utils.get_rank()  #确保每个进程随机数列不同

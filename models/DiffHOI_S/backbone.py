@@ -68,7 +68,7 @@ class BackboneBase(nn.Module):
         if return_interm_layers:
             return_layers = {"layer1": "0", "layer2": "1", "layer3": "2", "layer4": "3"}
         else:
-            return_layers = {'layer4': "0"}
+            return_layers = {'layer4': "0"}  #因为我们是没有分割的，所以就返回一层的
         self.body = IntermediateLayerGetter(backbone, return_layers=return_layers)
         self.num_channels = num_channels
 
@@ -109,13 +109,20 @@ class Joiner(nn.Sequential):
             # position encoding
             pos.append(self[1](x).to(x.tensors.dtype))
 
-        return out, pos
+        return out, pos #返回俩列表，没有分割长度其实就是1
 
 
 def build_backbone(args):
     position_embedding = build_position_encoding(args)
     train_backbone = args.lr_backbone > 0
-    return_interm_layers = True
+    # return_interm_layers = True
+    return_interm_layers = False  #原先是true，不知道要干啥
+    #=== 如果设置成true，以3 3 304 284为例，输出：
+    #0 torch.Size([3, 256, 76, 71])
+    #1 torch.Size([3, 512, 38, 36])
+    #2 torch.Size([3, 1024, 19, 18])
+    #3 torch.Size([3, 2048, 10, 9])
+    #=== 此即resnet50的输出。
     backbone = Backbone(args.backbone, train_backbone, return_interm_layers, args.dilation)
     model = Joiner(backbone, position_embedding)
     model.num_channels = backbone.num_channels

@@ -34,6 +34,11 @@ class DiffHOI_S(nn.Module):
         super().__init__()
         config_path = os.environ.get("SD_Config")
         ckpt_path = os.environ.get("SD_ckpt")
+        # =============
+        # 测试用的 ， 后面注释掉
+        config_path = r"G:\Code_Project\毕设\stable-diffusion-main\configs\stable-diffusion\v1-inference.yaml"
+        ckpt_path = r"G:\数据集&权重\v1-5-pruned-emaonly.ckpt"
+        # =============
         config = OmegaConf.load(config_path)
         config.model.params.ckpt_path = ckpt_path
         config.model.params.cond_stage_config.target = 'ldm.modules.encoders.modules.AbstractEncoder'
@@ -122,15 +127,15 @@ class DiffHOI_S(nn.Module):
 
     def extract_feat(self, img,targets):
         """Extract features from images."""
-        target_clip_inputs = torch.cat([t['clip_inputs'].unsqueeze(0) for t in targets])
-        target_sd_inputs = torch.cat([t['sd_inputs'].unsqueeze(0) for t in targets])
+        target_clip_inputs = torch.cat([t['clip_inputs'].unsqueeze(0) for t in targets])  #[3，224,224] > [bs,3,224,224]  就是变成batch的样子
+        target_sd_inputs = torch.cat([t['sd_inputs'].unsqueeze(0) for t in targets])  #[bs 3 512 512]
         with torch.no_grad():
-            clip_feats = self.clip_model.encode_image(target_clip_inputs)
-        clip_feats=self.text_adapter(clip_feats.unsqueeze(1).float())
-        t = torch.zeros((img.shape[0],), device=img.device).long()
+            clip_feats = self.clip_model.encode_image(target_clip_inputs)     #[bs 512]
+        clip_feats=self.text_adapter(clip_feats.unsqueeze(1).float()) #text_adapter是一个512->768的linear 现在变成了[bs 1 768] ？
+        t = torch.zeros((img.shape[0],), device=img.device).long()  #batch_size个0？[0,0]
         with torch.no_grad():
-            latents = self.encoder_vq.encode(target_sd_inputs)
-            latents = latents.mode().detach()
+            latents = self.encoder_vq.encode(target_sd_inputs)  #这个encoder_vq是AutoEncoderKL类 在ldm里  得到的好像是个分布？
+            latents = latents.mode().detach()  #[2(bs？) 4 64 64]不知道干啥的
             outs = self.unet(latents, t, c_crossattn=[clip_feats])
         return outs
 
@@ -168,16 +173,20 @@ class DiffHOI_S(nn.Module):
                hoi_text_label_del, obj_text_inputs, text_embedding_del.float()
 
     def forward(self, samples: NestedTensor,targets, is_training=True):
+        print("model开始运算")
         if not isinstance(samples, NestedTensor):
             samples = nested_tensor_from_tensor_list(samples)
 
         # with torch.no_grad():
-        features, pos = self.backbone(samples)
-        src, mask = features[-1].decompose()
+        features, pos = self.backbone(samples)  #提取CNN特征和pos，都是个列表，返回各层结果，一般都是最终的
+        src, mask = features[-1].decompose()  #src是2048维度的特征图 bs*2048*h'*w'
 
-        sd_feat = self.extract_feat(samples.decompose()[0],targets)
-        sd_decoder = self.image_adapter(sd_feat[-2])
-        sd_decoder = torch.nn.functional.interpolate(sd_decoder,size=[src.shape[-2],src.shape[-1]])
+        sd_feat = self.extract_feat(samples.decompose()[0],targets)   #依据batch的图像和标签 提取sd特征
+                                                                      #得到的疑似是unet各层输出？是个四层列表，
+                                                                      #最后一层是[bs 1280 8 8]（不懂）
+                                                                      #[-2]是 [bs 1280 16 16]
+        sd_decoder = self.image_adapter(sd_feat[-2])  #image_adapter是降维卷积核，1280降维到hidden_dim(256)  然后变成了[bs 256 H' W' ??]
+        sd_decoder = torch.nn.functional.interpolate(sd_decoder,size=[src.shape[-2],src.shape[-1]]) #插值，大小不变
 
         assert mask is not None
         h_hs, o_hs, inter_hs = self.transformer(self.input_proj(src), mask,
@@ -185,21 +194,22 @@ class DiffHOI_S(nn.Module):
                                                 self.query_embed_o.weight,
                                                 self.pos_guided_embedd.weight,
                                                 pos[-1],sd_decoder)[:3]
+        # 这一步得到的应该也是6个decoder层的输出。三个维度都是[6,bs,64(query个数),256(hidden dim)] 
 
-        outputs_sub_coord = self.hum_bbox_embed(h_hs).sigmoid()
+        outputs_sub_coord = self.hum_bbox_embed(h_hs).sigmoid()  #经过MLP。 变成[6，bs，64(query num),4]
         outputs_obj_coord = self.obj_bbox_embed(o_hs).sigmoid()
 
         # clip_feat
-        target_clip_inputs = torch.cat([t['clip_inputs'].unsqueeze(0) for t in targets])
+        target_clip_inputs = torch.cat([t['clip_inputs'].unsqueeze(0) for t in targets]) #[3，224,224] > [bs,3,224,224].刚才不是提取过了吗..
         with torch.no_grad():
             target_clip_feats = self.clip_model.encode_image(target_clip_inputs)
-        target_clip_feats = self.clip_adapter(target_clip_feats.float())
+        target_clip_feats = self.clip_adapter(target_clip_feats.float())  #[bs 512]
 
         if self.args.with_obj_clip_label:
             obj_logit_scale = self.obj_logit_scale.exp()
             o_hs = self.obj_class_fc(o_hs)
             o_hs = o_hs / o_hs.norm(dim=-1, keepdim=True)
-            outputs_obj_class = obj_logit_scale * self.obj_visual_projection(o_hs)
+            outputs_obj_class = obj_logit_scale * self.obj_visual_projection(o_hs)  #projection是个512->81的Linear。得到[6 bs 64(q_num) 81]
         else:
             outputs_obj_class = self.obj_class_embed(o_hs)
 
@@ -213,19 +223,21 @@ class DiffHOI_S(nn.Module):
                     and (self.args.eval or not is_training):
                 outputs_hoi_class = logit_scale * self.eval_visual_projection(inter_hs)
             else:
-                outputs_hoi_class = logit_scale * self.visual_projection(inter_hs)
+                outputs_hoi_class = logit_scale * self.visual_projection(inter_hs)  #[6 2 64 600] 600就是hoi类别的个数。
         else:
             inter_hs = self.hoi_class_fc(inter_hs)
             outputs_inter_hs = inter_hs.clone()
             outputs_hoi_class = self.hoi_class_embedding(inter_hs)
 
         out = {'pred_hoi_logits': outputs_hoi_class[-1], 'pred_obj_logits': outputs_obj_class[-1],
-               'pred_sub_boxes': outputs_sub_coord[-1], 'pred_obj_boxes': outputs_obj_coord[-1],}
-
+               'pred_sub_boxes': outputs_sub_coord[-1], 'pred_obj_boxes': outputs_obj_coord[-1],}  #[-1]就是取解码器最后一层输出
+        #[bs 64 600]  [bs 64 81] [bs 64 4] [bs 64 4]  64就是query的数量。
         if self.training:
             if self.args.with_mimic:
-                out['inter_memory'] = outputs_inter_hs[-1]
+                out['inter_memory'] = outputs_inter_hs[-1]  #[6 2 64 512] 与clip特征同维度不知道干啥的
 
+        #这个是保留decoder层中间输出的，
+        #比如六层，最后就一个总的，即上面的out那四项(解码器最后一层输出)，然后loss0~4都存着放一个列表里。
         if self.aux_loss:
             if self.args.with_mimic and self.training:
                 aux_mimic = outputs_inter_hs
@@ -235,7 +247,7 @@ class DiffHOI_S(nn.Module):
                                                             outputs_sub_coord, outputs_obj_coord,
                                                             aux_mimic)
 
-        return out
+        return out  #输出那四个加上一个解码器各层的列表aux。
 
     @torch.jit.unused
     def _set_aux_loss_triplet(self, outputs_hoi_class, outputs_obj_class,

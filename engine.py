@@ -99,7 +99,7 @@ def evaluate_hoi(dataset_file, model, postprocessors, data_loader,
     
         #print("***\neval的样本和target情况..\n,",type(samples),type(targets),samples.tensors.shape,len(targets))
         #<class 'util.misc.NestedTensor'> <class 'tuple'> torch.Size([4, 3, 1201, 1204]) 4 (bs=4)
-        #print(targets[0])  #是一个字典，‘origin_size，size，filename，boxes(2维),labels,id，sd_puts(3d),clip_inputs(3d),hois(2d?)'
+        #print(targets[0])  #是一个字典，‘origin_size，size，filename，boxes(2维),labels,id,sd_puts(3d),clip_inputs(3d),hois(2d?)'
         _targets = [{k: v.to(device) for k, v in t.items() if (k != 'filename' and k != 'id') } for t in targets]
   
         with torch.no_grad():

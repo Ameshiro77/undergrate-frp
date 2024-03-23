@@ -85,7 +85,7 @@ class HICODetection(torch.utils.data.Dataset):
         img = Image.open(self.img_folder / img_anno['file_name']).convert('RGB')
         w, h = img.size
 
-        if self.img_set == 'train' and len(img_anno['annotations']) > self.num_queries:
+        if self.img_set == 'train' and len(img_anno['annotations']) > self.num_queries:  #如果太长就截断
             img_anno['annotations'] = img_anno['annotations'][:self.num_queries]
 
         boxes = [obj['bbox'] for obj in img_anno['annotations']]
@@ -95,7 +95,7 @@ class HICODetection(torch.utils.data.Dataset):
         if self.img_set == 'train':
             # Add index for confirming which boxes are kept after image transformation
             classes = [(i, self._valid_obj_ids.index(obj['category_id'])) for i, obj in
-                       enumerate(img_anno['annotations'])]
+                       enumerate(img_anno['annotations'])]  #变成解析数据集时候的序号
         else:
             classes = [self._valid_obj_ids.index(obj['category_id']) for obj in img_anno['annotations']]
         classes = torch.tensor(classes, dtype=torch.int64)
@@ -105,10 +105,10 @@ class HICODetection(torch.utils.data.Dataset):
         target['size'] = torch.as_tensor([int(h), int(w)])
         if self.img_set == 'train':
             boxes[:, 0::2].clamp_(min=0, max=w)
-            boxes[:, 1::2].clamp_(min=0, max=h)
+            boxes[:, 1::2].clamp_(min=0, max=h)  #标注bbox超出范围就截断
             keep = (boxes[:, 3] > boxes[:, 1]) & (boxes[:, 2] > boxes[:, 0])
             boxes = boxes[keep]
-            classes = classes[keep]
+            classes = classes[keep]  #留下合法的标签
 
             target['boxes'] = boxes
             target['labels'] = classes
@@ -118,13 +118,15 @@ class HICODetection(torch.utils.data.Dataset):
             if self._transforms is not None:
                 img_0, target_0 = self._transforms[0](img, target)
                 img, target = self._transforms[1](img_0, target_0)
+            #===新加的
             from torchvision import transforms
             transform = transforms.ToTensor()
             sd_inputs = torch.nn.functional.interpolate(transform(img_0).unsqueeze(0), size=(512, 512)).squeeze(0)
             clip_inputs = self.clip_preprocess(img_0)
             target['clip_inputs'] = clip_inputs
             target['sd_inputs'] = sd_inputs
-            kept_box_indices = [label[0] for label in target['labels']]
+            #=====
+            kept_box_indices = [label[0] for label in target['labels']] #物体类别在图像里的索引
 
             target['labels'] = target['labels'][:, 1]
 
@@ -183,17 +185,21 @@ class HICODetection(torch.utils.data.Dataset):
                 img, _ = self._transforms[1](img_0, None)
             from torchvision import transforms
             transform = transforms.ToTensor()
-            sd_inputs = torch.nn.functional.interpolate(transform(img_0).unsqueeze(0), size=(512, 512)).squeeze(0)
+            sd_inputs = torch.nn.functional.interpolate(transform(img_0).unsqueeze(0), size=(512, 512)).squeeze(0)   #(3 512 512)
             target['sd_inputs'] = sd_inputs
-            clip_inputs = self.clip_preprocess(img_0)
+            clip_inputs = self.clip_preprocess(img_0)  #(3,224,224)
             target['clip_inputs'] = clip_inputs
             hois = []
             for hoi in img_anno['hoi_annotation']:
                 hois.append((hoi['subject_id'], hoi['object_id'], self._valid_verb_ids.index(hoi['category_id'])))
             target['hois'] = torch.as_tensor(hois, dtype=torch.int64)
 
-
+        # target内容：orig_size , size , boxes(物体边框) , labels(物体分类，0(人)开始预测时序号) , iscrowd不用管 area(面积)
+        #                  *  clip_inputs([3,224,224])         *  sd_inputs:([3,512,512]) filename(string)
+        #            obj_labels(每一个交互的物体序号,如[62,62]) verb_labels(每一个交互的动作，117独热)
+        #            hoi_labels(每一个交互的hoi序号，600维独热) sub_boxes(每一个交互的人框) obj_boxes(不用说了，可以是同一个)
         return img, target
+    
 
     def set_rare_hois(self, anno_file):
         with open(anno_file, 'r') as f:

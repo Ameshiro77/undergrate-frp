@@ -272,7 +272,7 @@ def get_sha():
     message = f"sha: {sha}, status: {diff}, branch: {branch}"
     return message
 
-
+# 返回一个元组，它之前是列表，[(nested_tensor1)，[label1，label2……]]
 def collate_fn(batch):
     batch = list(zip(*batch))
     batch[0] = nested_tensor_from_tensor_list(batch[0])
