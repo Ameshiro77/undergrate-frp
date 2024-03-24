@@ -211,7 +211,7 @@ def main(args):
         out = model(src,targets)
         # match = matcher.HungarianMatcherHOI()
         # res = match(out,targets)
-        #loss = criterion(out,targets)
+        loss = criterion(out,targets)
         break
     exit()
     #===

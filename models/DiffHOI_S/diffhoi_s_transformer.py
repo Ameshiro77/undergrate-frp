@@ -67,7 +67,7 @@ class DIFFHOI_S_Transformer(nn.Module):
 
         # memory = memory + self.laynorm(self.project(sd_decoder))
 
-        ins_hs = self.instance_decoder(ins_tgt, memory, memory_key_padding_mask=mask,
+        ins_hs = self.instance_decoder(ins_tgt, memory, memory_key_padding_mask=mask,   #hs 应该是 hidden state
                                        pos=pos_embed, query_pos=ins_query_embed)
 
         ins_hs = ins_hs.transpose(1, 2)

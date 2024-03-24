@@ -130,7 +130,7 @@ class DiffHOI_S(nn.Module):
         target_clip_inputs = torch.cat([t['clip_inputs'].unsqueeze(0) for t in targets])  #[3，224,224] > [bs,3,224,224]  就是变成batch的样子
         target_sd_inputs = torch.cat([t['sd_inputs'].unsqueeze(0) for t in targets])  #[bs 3 512 512]
         with torch.no_grad():
-            clip_feats = self.clip_model.encode_image(target_clip_inputs)     #[bs 512]
+            clip_feats = self.clip_model.encode_image(target_clip_inputs)     #[bs 512]  全NAN?
         clip_feats=self.text_adapter(clip_feats.unsqueeze(1).float()) #text_adapter是一个512->768的linear 现在变成了[bs 1 768] ？
         t = torch.zeros((img.shape[0],), device=img.device).long()  #batch_size个0？[0,0]
         with torch.no_grad():
@@ -189,12 +189,12 @@ class DiffHOI_S(nn.Module):
         sd_decoder = torch.nn.functional.interpolate(sd_decoder,size=[src.shape[-2],src.shape[-1]]) #插值，大小不变
 
         assert mask is not None
-        h_hs, o_hs, inter_hs = self.transformer(self.input_proj(src), mask,
-                                                self.query_embed_h.weight,
+        h_hs, o_hs, inter_hs = self.transformer(self.input_proj(src), mask,   #特征图变成256通道
+                                                self.query_embed_h.weight,   #这两个都是nn.embedding  64(query数)*256(hidden_dim)
                                                 self.query_embed_o.weight,
-                                                self.pos_guided_embedd.weight,
-                                                pos[-1],sd_decoder)[:3]
-        # 这一步得到的应该也是6个decoder层的输出。三个维度都是[6,bs,64(query个数),256(hidden dim)] 
+                                                self.pos_guided_embedd.weight,  #64*256  位置引导 CDN还是GEN-VIKT 提出的
+                                                pos[-1],sd_decoder)[:3]  #不取memory
+        # 这一步得到的应该也是6个decoder层的输出。三个维度都是[dec_layers,bs,64(query个数),256(hidden dim)] 
 
         outputs_sub_coord = self.hum_bbox_embed(h_hs).sigmoid()  #经过MLP。 变成[6，bs，64(query num),4]
         outputs_obj_coord = self.obj_bbox_embed(o_hs).sigmoid()
@@ -223,7 +223,7 @@ class DiffHOI_S(nn.Module):
                     and (self.args.eval or not is_training):
                 outputs_hoi_class = logit_scale * self.eval_visual_projection(inter_hs)
             else:
-                outputs_hoi_class = logit_scale * self.visual_projection(inter_hs)  #[6 2 64 600] 600就是hoi类别的个数。
+                outputs_hoi_class = logit_scale * self.visual_projection(inter_hs)  #[dec_layers 2 64 600] 600就是hoi类别的个数。
         else:
             inter_hs = self.hoi_class_fc(inter_hs)
             outputs_inter_hs = inter_hs.clone()
@@ -234,7 +234,7 @@ class DiffHOI_S(nn.Module):
         #[bs 64 600]  [bs 64 81] [bs 64 4] [bs 64 4]  64就是query的数量。
         if self.training:
             if self.args.with_mimic:
-                out['inter_memory'] = outputs_inter_hs[-1]  #[6 2 64 512] 与clip特征同维度不知道干啥的
+                out['inter_memory'] = outputs_inter_hs[-1]  #[dec_layers 2 64 512] 与clip特征同维度不知道干啥的
 
         #这个是保留decoder层中间输出的，
         #比如六层，最后就一个总的，即上面的out那四项(解码器最后一层输出)，然后loss0~4都存着放一个列表里。
