@@ -36,8 +36,10 @@ class DiffHOI_S(nn.Module):
         ckpt_path = os.environ.get("SD_ckpt")
         # =============
         # 测试用的 ， 后面注释掉
-        config_path = r"G:\Code_Project\毕设\stable-diffusion-main\configs\stable-diffusion\v1-inference.yaml"
-        ckpt_path = r"G:\数据集&权重\v1-5-pruned-emaonly.ckpt"
+        # config_path = r"G:\Code_Project\毕设\stable-diffusion-main\configs\stable-diffusion\v1-inference.yaml"
+        # ckpt_path = r"G:\数据集&权重\v1-5-pruned-emaonly.ckpt"
+        config_path="/root/autodl-tmp/DiffHOI/stable-diffusion/configs/stable-diffusion/v1-inference.yaml"  #linux
+        ckpt_path="/root/autodl-tmp/DiffHOI/params/v1-5-pruned-emaonly.ckpt"
         # =============
         config = OmegaConf.load(config_path)
         config.model.params.ckpt_path = ckpt_path
@@ -303,14 +305,15 @@ class SetCriterionHOI(nn.Module):
         self.alpha = args.alpha
 
     def loss_obj_labels(self, outputs, targets, indices, num_interactions, log=True):
-        assert 'pred_obj_logits' in outputs
+        #只有这玩意有log。也就是只记录最后一层输出的obj分类error
+        assert 'pred_obj_logits' in outputs   #跟hoi一样
         src_logits = outputs['pred_obj_logits']
 
-        idx = self._get_src_permutation_idx(indices)
-        target_classes_o = torch.cat([t['obj_labels'][J] for t, (_, J) in zip(targets, indices)])
+        idx = self._get_src_permutation_idx(indices) 
+        target_classes_o = torch.cat([t['obj_labels'][J] for t, (_, J) in zip(targets, indices)])  #[交互对个数 ]
         target_classes = torch.full(src_logits.shape[:2], self.num_obj_classes,
                                     dtype=torch.int64, device=src_logits.device)
-        target_classes[idx] = target_classes_o
+        target_classes[idx] = target_classes_o  #[bs query_num]
 
         loss_obj_ce = F.cross_entropy(src_logits.transpose(1, 2), target_classes, self.empty_weight)
         losses = {'loss_obj_ce': loss_obj_ce}
@@ -345,15 +348,15 @@ class SetCriterionHOI(nn.Module):
 
     def loss_hoi_labels(self, outputs, targets, indices, num_interactions, topk=5):
         assert 'pred_hoi_logits' in outputs
-        src_logits = outputs['pred_hoi_logits']
+        src_logits = outputs['pred_hoi_logits']   #[bs ,querynum,600]
 
-        idx = self._get_src_permutation_idx(indices)
-        target_classes_o = torch.cat([t['hoi_labels'][J] for t, (_, J) in zip(targets, indices)])
+        idx = self._get_src_permutation_idx(indices) #一个元组 前者是batch_id列表 后者是query_id序号列表
+        target_classes_o = torch.cat([t['hoi_labels'][J] for t, (_, J) in zip(targets, indices)])  #[交互对个数,600]
         target_classes = torch.zeros_like(src_logits)
-        target_classes[idx] = target_classes_o
+        target_classes[idx] = target_classes_o  #联系src_logits的大小就知道了
         src_logits = _sigmoid(src_logits)
         loss_hoi_ce = self._neg_loss(src_logits, target_classes, weights=None, alpha=self.alpha)
-        losses = {'loss_hoi_labels': loss_hoi_ce}
+        losses = {'loss_hoi_labels': loss_hoi_ce}  #hoi损失
 
         _, pred = src_logits[idx].topk(topk, 1, True, True)
         acc = 0.0
@@ -367,7 +370,7 @@ class SetCriterionHOI(nn.Module):
             acc += acc_pred / len(tgt_idx)
         rel_labels_error = 100 - 100 * acc / max(len(target_classes_o), 1)
         losses['hoi_class_error'] = torch.from_numpy(np.array(
-            rel_labels_error)).to(src_logits.device).float()
+            rel_labels_error)).to(src_logits.device).float()   #算error的
         return losses
 
     def loss_sub_obj_boxes(self, outputs, targets, indices, num_interactions):
@@ -378,10 +381,10 @@ class SetCriterionHOI(nn.Module):
         target_sub_boxes = torch.cat([t['sub_boxes'][i] for t, (_, i) in zip(targets, indices)], dim=0)
         target_obj_boxes = torch.cat([t['obj_boxes'][i] for t, (_, i) in zip(targets, indices)], dim=0)
 
-        exist_obj_boxes = (target_obj_boxes != 0).any(dim=1)
+        exist_obj_boxes = (target_obj_boxes != 0).any(dim=1)   #[交互个数]大小的bool数组
 
         losses = {}
-        if src_sub_boxes.shape[0] == 0:
+        if src_sub_boxes.shape[0] == 0: #无交互
             losses['loss_sub_bbox'] = src_sub_boxes.sum()
             losses['loss_obj_bbox'] = src_obj_boxes.sum()
             losses['loss_sub_giou'] = src_sub_boxes.sum()
@@ -440,12 +443,12 @@ class SetCriterionHOI(nn.Module):
 
     def _get_src_permutation_idx(self, indices):
         # permute predictions following indices
-        batch_idx = torch.cat([torch.full_like(src, i) for i, (src, _) in enumerate(indices)])
-        src_idx = torch.cat([src for (src, _) in indices])
+        batch_idx = torch.cat([torch.full_like(src, i) for i, (src, _) in enumerate(indices)])  #显然是batch里发生hoi的顺序地属于第几个图
+        src_idx = torch.cat([src for (src, _) in indices])   #应该是第几个query
         return batch_idx, src_idx
 
     def get_loss(self, loss, outputs, targets, indices, num, **kwargs):
-        if 'pred_hoi_logits' in outputs.keys():
+        if 'pred_hoi_logits' in outputs.keys():  #函数表
             loss_map = {
                 'hoi_labels': self.loss_hoi_labels,
                 'obj_labels': self.loss_obj_labels,
@@ -468,12 +471,12 @@ class SetCriterionHOI(nn.Module):
         # Retrieve the matching between the outputs of the last layer and the targets
         indices = self.matcher(outputs_without_aux, targets)
 
-        num_interactions = sum(len(t['hoi_labels']) for t in targets)
-        num_interactions = torch.as_tensor([num_interactions], dtype=torch.float,
+        num_interactions = sum(len(t['hoi_labels']) for t in targets)   #总交互数量
+        num_interactions = torch.as_tensor([num_interactions], dtype=torch.float,      #变成tensor，为什么要弄成float呢..
                                            device=next(iter(outputs.values())).device)
         if is_dist_avail_and_initialized():
             torch.distributed.all_reduce(num_interactions)
-        num_interactions = torch.clamp(num_interactions / get_world_size(), min=1).item()
+        num_interactions = torch.clamp(num_interactions / get_world_size(), min=1).item()  #哦，是为了截断？
 
         # Compute all the requested losses
         losses = {}
@@ -493,7 +496,9 @@ class SetCriterionHOI(nn.Module):
                     l_dict = {k + f'_{i}': v for k, v in l_dict.items()}
                     losses.update(l_dict)
 
-        return losses
+        return losses  #如果有aux，还包含了解码器除了最后层的其余层的输出。 记作[loss_hoi_labels_1]等，但是只有obj_class_error没有。
+    #一般包含：
+    #['loss_hoi_labels'、'loss_hoi_error'; 'loss_obj_ce'、'obj_class_error'; 'loss_sub/obj_bbox'、'loss_sub/obj_giou'; |'feats_mimic'（可选）]
 
 
 class PostProcessHOITriplet(nn.Module):
