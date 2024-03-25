@@ -1,4 +1,4 @@
-from diffusers import DiffusionPipeline,StableDiffusionPipeline
+#from diffusers import DiffusionPipeline,StableDiffusionPipeline
 import os, sys
 import torch, json
 import numpy as np
@@ -19,8 +19,9 @@ from DINO.util import box_ops
 # pipe("A photo of a man washing his car").images[0].save('output.jpg')
 
 # 2. 检测人-物框
-model_config_path = r"./DINO/config/DINO/DINO_5scale.py" # change the path of the model config file
-model_checkpoint_path = r"G:\数据集&权重\checkpoint0031_5scale.pth"  # change the path of the model checkpoint
+model_config_path = r"/root/autodl-tmp/DiffHOI/SynPipeline/DINO/config/DINO/DINO_4scale_swin.py" # change the path of the model config file
+#model_checkpoint_path = r"G:\数据集&权重\checkpoint0031_5scale.pth"  # change the path of the model checkpoint
+model_checkpoint_path = r"/root/autodl-tmp/DiffHOI/params/checkpoint0011_4scale_swin.pth"
 
 args = SLConfig.fromfile(model_config_path) 
 args.device = 'cuda' 
@@ -58,5 +59,8 @@ pred_dict = {
     'size': torch.Tensor([image.shape[1], image.shape[2]]),
     'box_label': box_label
 }
-vslzr.visualize(image, pred_dict, savedir=None, dpi=100)
+print(pred_dict)
+vslzr.visualize(image, pred_dict, savedir=None, dpi=100)  #保存图片
+
+
 
