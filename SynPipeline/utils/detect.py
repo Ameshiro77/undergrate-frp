@@ -49,9 +49,8 @@ def detect(img_path,config_path,checkpoint_path) -> dict:
     boxes = box_ops.box_xyxy_to_cxcywh(output['boxes'])
     select_mask = scores > thershold
 
-    from SynPipeline.utils.labels_dict import original_labels_dict
-    box_original_coco_label = [int(item) for item in labels[select_mask] ]
-    box_label_parse_id = original_labels_dict[box_original_coco_label]
+    from utils.labels_dict import original_labels_dict
+    box_label_parse_id = [int(item) for item in labels[select_mask] ]
     box_label = [id2name[int(item)] for item in labels[select_mask]]
     pred_dict = {
         'boxes': boxes[select_mask],
@@ -59,8 +58,9 @@ def detect(img_path,config_path,checkpoint_path) -> dict:
         'box_label': box_label,
         'box_label_parse_id':box_label_parse_id
     }
-    print(pred_dict)
+    #print(pred_dict)
     vslzr.visualize(image, pred_dict, savedir=None, dpi=100)  #保存图片
+    return pred_dict
 
 if __name__ == "__main__":
     img_path = "./output.jpg"

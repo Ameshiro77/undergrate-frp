@@ -25,6 +25,7 @@ class SynPipeline:
         # 检测
         tgt = detect(img_name, self.config_path, self.model_checkpoint_path)
         # 过滤
+        #print("tgt:",tgt)
         for v_o in verbs_objs_tuple_list:
             obj_id = v_o[1]
             if obj_id not in tgt["box_label_parse_id"]:
@@ -38,15 +39,12 @@ class SynPipeline:
 
 
 if __name__ == "__main__":
-    out_name = "./output10"
-    model_config_path = (
-        r"/root/autodl-tmp/DiffHOI/SynPipeline/DINO/config/DINO/DINO_4scale_swin.py"
-    )
-    model_checkpoint_path = (
-        r"/root/autodl-tmp/DiffHOI/params/checkpoint0011_4scale_swin.pth"
-    )
+    out_name = "SynDatasets/train_images/HICO_train2015_00000001"
+    model_config_path = "/root/autodl-tmp/DiffHOI/SynPipeline/DINO/config/DINO/DINO_4scale_swin.py"
+    model_checkpoint_path = "/root/autodl-tmp/DiffHOI/params/checkpoint0011_4scale_swin.pth"
 
-    pipeline = SynPipeline()
-    v_o = [(5, 1), (10, 1)]
-    tgt = pipeline.detect_and_filter("output.jpg",v_o)
+    pipeline = SynPipeline(out_name,model_config_path,model_checkpoint_path)
+    v_o = [(73, 4), (77, 4),(88, 4),(99, 4)]
+    tgt = pipeline.detect_and_filter("SynDatasets/train_images/HICO_train2015_00000001.jpg",v_o)
+    print(tgt)
     pipeline.append_anno(v_o,tgt)

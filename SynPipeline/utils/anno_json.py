@@ -1,8 +1,9 @@
 # 给定提示词(hoi标签)和人物框数组 追加json
-import torch
+import torch,sys
 import numpy as np
 from matplotlib.patches import Polygon
 import json,math
+sys.path.append("./")
 #file_name,img_id,annotations["bbox","category_id"],hoi_annotation["subject_id","object_id","category_id","hoi_category_id"]
 """
 3.对过滤后的图进行标注。
@@ -51,20 +52,20 @@ def append_json(verbs_objs_tuple_list:list, tgt: dict):
     # annotations [] 目标的bbox和类别
     H, W = tgt['size']
     new_anno["annotations"] = []
-    for i ,bbox in enumerate(tgt["boxes"]):
+    for i ,bbox in enumerate(tgt["boxes"].to("cpu")):  #to,否则会不在一个设备
         annotation = {}
         unnormbbox = bbox * torch.Tensor([W, H, W, H])
         unnormbbox[:2] -= unnormbbox[2:] / 2
         [x, y, w, h] = [int(x) for x in unnormbbox.tolist()]
         xyxy = [x , y , x + w , y + h]
-        print(xyxy)
+        # print(xyxy)
         annotation["bbox"] = xyxy
         annotation["category_id"] = tgt['box_label_parse_id'][i]
         new_anno["annotations"].append(annotation)
 
     # hoi_annotation [] , 包含subject id  | object id | category id | hoi category id  
     new_anno["hoi_annotation"] = []
-    from labels_dict import get_hoi_id
+    from utils.labels_dict import get_hoi_id
     # 1. 遍历检测到的boxes 取出物框
     is_labeled = [False for i in range(len(tgt["boxes"]))]  #bool数组 记录是否被组合了
     for box_id,box_original_label in enumerate(tgt['box_label_parse_id']):
@@ -74,12 +75,14 @@ def append_json(verbs_objs_tuple_list:list, tgt: dict):
         subject_id = find_closest_box_id(object_id,tgt,True) #找到离框最近的人
         is_labeled[subject_id] = True
         for v_o in verbs_objs_tuple_list: #找到对应obj_id的动作
-            if v_o[1] == object_id:
+            if v_o[1] == box_original_label:
                 hoi_annotation = {}  #清空
                 hoi_annotation["subject_id"] = subject_id
                 hoi_annotation["object_id"] = object_id
                 hoi_annotation["category_id"] = v_o[0]
                 hoi_annotation["hoi_category_id"] = get_hoi_id(v_o)
+                if hoi_annotation["hoi_category_id"] == None:
+                    raise ValueError("不存在对应的hoi的id! "+str(v_o[0])+" "+str(v_o[1]))
                 new_anno["hoi_annotation"].append(hoi_annotation)
     # 2. 如果有人框没检测到
     for box_id,box_original_label in enumerate(tgt['box_label_parse_id']):
@@ -87,14 +90,16 @@ def append_json(verbs_objs_tuple_list:list, tgt: dict):
             object_id = find_closest_box_id(subject_id,tgt,False)
             is_labeled[subject_id] = True
             for v_o in verbs_objs_tuple_list: #找到对应obj_id的动作
-                if v_o[1] == object_id:
+                if v_o[1] == box_original_label:
                     hoi_annotation = {}  #清空
                     hoi_annotation["subject_id"] = subject_id
                     hoi_annotation["object_id"] = object_id
                     hoi_annotation["category_id"] = v_o[0]
                     hoi_annotation["hoi_category_id"] = get_hoi_id(v_o)
+                    if hoi_annotation["hoi_category_id"] == None:
+                        raise ValueError("不存在对应的hoi的id! "+str(v_o[0])+" "+str(v_o[1]))
                     new_anno["hoi_annotation"].append(hoi_annotation)
-
+    print("生成结束")
     # === 生成结束
     
     # == 追加并写回
