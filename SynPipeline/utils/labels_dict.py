@@ -91,7 +91,6 @@ def get_parse_to_original_labels_dict():
 
 if __name__ == "__main__":
     #print(get_obj_to_id_dict())
-    print(get_hoi_to_id_dict())
-    pass
+    print(inverse_dict(get_hoi_to_id_dict()))
 
 

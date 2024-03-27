@@ -13,7 +13,7 @@ from DINO.util import box_ops
 
 #1. 生成图片
 def generate_img(prompt,out_name):
-    pipe = DiffusionPipeline.from_pretrained(r"G:\数据集&权重\stable-diffusion-v1.5", torch_dtype=torch.float32)
+    pipe = DiffusionPipeline.from_pretrained(r"/root/autodl-tmp/DiffHOI/params/stable-diffusion-v1.5/", torch_dtype=torch.float32)
     pipe.to("cuda")
-    pipe(prompt).images[0].save(out_name+".jpg")
+    pipe(prompt).images[0].save(out_name)
 

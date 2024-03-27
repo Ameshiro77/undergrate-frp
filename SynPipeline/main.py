@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 
 sys.path.append("./DINO")
-#from generate import generate_img
+from utils.generate import generate_img
 from utils.detect import detect
 from utils.anno_json import append_json
 
@@ -17,7 +17,7 @@ class SynPipeline:
 
     # 1.生成图片
     def generate(self, prompt, out_name):
-    #    generate_img(prompt, out_name + "jpg")
+        generate_img(prompt, out_name)
         pass
 
     # 2.检测并过滤
@@ -29,7 +29,8 @@ class SynPipeline:
         for v_o in verbs_objs_tuple_list:
             obj_id = v_o[1]
             if obj_id not in tgt["box_label_parse_id"]:
-                print("错误！没检测出生成图片时指定的物体！")
+                print(tgt)
+                raise ValueError("错误！没检测出生成图片时指定的物体！")
                 return None
         return tgt
 
@@ -39,12 +40,22 @@ class SynPipeline:
 
 
 if __name__ == "__main__":
-    out_name = "SynDatasets/train_images/HICO_train2015_00000001"
+    out_name = "/root/autodl-tmp/DiffHOI/SynPipeline/SynDatasets/train_images/Syn_001.jpg"
     model_config_path = "/root/autodl-tmp/DiffHOI/SynPipeline/DINO/config/DINO/DINO_4scale_swin.py"
     model_checkpoint_path = "/root/autodl-tmp/DiffHOI/params/checkpoint0011_4scale_swin.pth"
 
+    from labels_txt.labels import *
+    import random
+    index = random.randint(1,600)
+    v_o = (24,53)
+    verb = id_to_verb_dict[v_o[0]]
+    obj = id_to_obj_dict[v_o[1]]
+    prompt = "a person "+verb+" a "+obj+",high quality,reality,partical view"
+
     pipeline = SynPipeline(out_name,model_config_path,model_checkpoint_path)
-    v_o = [(73, 4), (77, 4),(88, 4),(99, 4)]
-    tgt = pipeline.detect_and_filter("SynDatasets/train_images/HICO_train2015_00000001.jpg",v_o)
+    v_o_list = [v_o]
+    print(prompt)
+    pipeline.generate(prompt,out_name)
+    tgt = pipeline.detect_and_filter("/root/autodl-tmp/DiffHOI/SynPipeline/SynDatasets/train_images/Syn_001.jpg",v_o_list)
     print(tgt)
-    pipeline.append_anno(v_o,tgt)
+    pipeline.append_anno(v_o_list,tgt)
