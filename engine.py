@@ -94,6 +94,7 @@ def evaluate_hoi(dataset_file, model, postprocessors, data_loader,
     indices = []
     counter = 0
     # samples targets outputs | preds 
+    stats_list = []
     for samples, targets in metric_logger.log_every(data_loader, 10, header):
         samples = samples.to(device)
     
@@ -125,27 +126,39 @@ def evaluate_hoi(dataset_file, model, postprocessors, data_loader,
         gts.extend(list(itertools.chain.from_iterable(utils.all_gather(copy.deepcopy(targets)))))
         #print("之后,已分配存储：", torch.cuda.memory_allocated() / (1024.0 * 1024.0), "MB")
         
+        # == 得到了 preds 和 targets  分不同批次测
         
         print("===",len(preds),"===")
-        if len(preds)>200:
-            break
-        # counter += 1
+        if len(preds) >= 500:
+            # counter += 1
+            # gather the stats from all processes
+            metric_logger.synchronize_between_processes()
+            img_ids = [img_gts['id'] for img_gts in gts]
+            _, indices = np.unique(img_ids, return_index=True)
+            preds = [img_preds for i, img_preds in enumerate(preds) if i in indices]
+            gts = [img_gts for i, img_gts in enumerate(gts) if i in indices]
 
-
-    # gather the stats from all processes
-    metric_logger.synchronize_between_processes()
-
-    img_ids = [img_gts['id'] for img_gts in gts]
-    _, indices = np.unique(img_ids, return_index=True)
-    preds = [img_preds for i, img_preds in enumerate(preds) if i in indices]
-    gts = [img_gts for i, img_gts in enumerate(gts) if i in indices]
-
-    if dataset_file == 'hico':
-        evaluator = HICOEvaluator(preds, gts, data_loader.dataset.rare_triplets,
-                                  data_loader.dataset.non_rare_triplets, data_loader.dataset.correct_mat, args=args)
-    elif dataset_file == 'vcoco':
-        evaluator = VCOCOEvaluator(preds, gts, data_loader.dataset.correct_mat, use_nms_filter=args.use_nms_filter)
-
-    stats = evaluator.evaluate()
-
+            if dataset_file == 'hico':
+                evaluator = HICOEvaluator(preds, gts, data_loader.dataset.rare_triplets,
+                                        data_loader.dataset.non_rare_triplets, data_loader.dataset.correct_mat, args=args)
+            elif dataset_file == 'vcoco':
+                evaluator = VCOCOEvaluator(preds, gts, data_loader.dataset.correct_mat, use_nms_filter=args.use_nms_filter)
+            print("第"+str(len(stats_list)+1)+"批:")
+            stats = evaluator.evaluate()
+            stats_list.append(stats)
+            del preds,targets
+            torch.cuda.empty_cache()
+            
+    # === 对于stats列表算总map === #
+    #  return_dict = {'mAP': m_ap, 'mAP rare': m_ap_rare, 'mAP non-rare': m_ap_non_rare, 'mean max recall': m_max_recall}
+    sum_m_max_recall = sum_m_ap = sum_m_ap_non_rare = sum_m_ap_rare = 0
+    sum_m_ap = sum(stat["mAP"] for stat in stats_list)
+    sum_m_ap_rare = sum(stat["mAP rare"] for stat in stats_list)
+    sum_m_ap_non_rare = sum(stat["mAP non-rare"] for stat in stats_list)
+    sum_m_max_recall = sum(stat["mean max recall"] for stat in stats_list)
+    bs = len(stats_list)
+    print('mAP full: {} mAP rare: {}  mAP non-rare: {}  mean max recall: {}'.format(sum_m_ap/bs, sum_m_ap_rare/bs, sum_m_ap_non_rare/bs,
+                                                                                    sum_m_max_recall/bs))
+    avg_stats = {}
+    avg_stats["mAP"] = sum_m_ap/bs
     return stats

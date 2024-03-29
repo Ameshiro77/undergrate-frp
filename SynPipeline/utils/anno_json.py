@@ -109,15 +109,12 @@ def generate_annotation(verbs_objs_tuple_list:list, tgt: dict ,img_name:str,img_
 
 
 
-tgt = {
-    'boxes': torch.tensor([[0.5144, 0.3778, 0.6895, 0.6894],
-        [0.3623, 0.7997, 0.7244, 0.2670]], device='cuda:0'), 
-    'size': torch.tensor([800., 800.]), 
-    'box_label': ['person', 'skateboard'], 
-    'box_label_parse_id': [1, 41]
-}
+tgt = {'boxes': torch.tensor([[0.1952, 0.5542, 0.3899, 0.8914],
+        [0.8905, 0.2497, 0.2197, 0.3728],
+        [0.4508, 0.5724, 0.4224, 0.4191],
+        [0.5001, 0.4998, 0.9999, 0.9993]], device='cuda:0'), 'size': torch.tensor([800., 800.]), 'box_label': ['person', 'cup', 'cup', 'dining table'], 'box_label_parse_id': [1, 47, 47, 67]}
 
 
 if __name__ == "__main__": 
-    new_anno = generate_annotation([(28,36)],tgt,"1",1)
+    new_anno = generate_annotation([(86,47)],tgt,"1",1)
     print(new_anno)
