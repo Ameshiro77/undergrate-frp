@@ -34,21 +34,13 @@ def find_closest_box_id(source_box_id:int,tgt:dict,find_sub:True): #find_sub决�
     return dist.index(min(dist))
 
 
-def append_json(verbs_objs_tuple_list:list, tgt: dict): 
-    # == 读取json
-    with open("./SynDatasets/annotations/train_val.json","r") as f:
-        anno = json.load(f)
-    
-    # == 此段生成标签
+def generate_annotation(verbs_objs_tuple_list:list, tgt: dict ,img_name:str,img_id:int): 
+    # =生成标签
     new_anno = {}
-    # file_name
-    files_num = len(anno)
-    formatted_number = '{:06d}'.format(files_num + 1)
-    new_anno["file_name"] = "Syn_train_" + formatted_number + ".jpg"
-
+    # 名字
+    new_anno["file_name"] = img_name
     # img_id
-    new_anno["img_id"] = files_num + 1
-
+    new_anno["img_id"] = img_id
     # annotations [] 目标的bbox和类别
     H, W = tgt['size']
     new_anno["annotations"] = []
@@ -82,7 +74,8 @@ def append_json(verbs_objs_tuple_list:list, tgt: dict):
                 hoi_annotation["category_id"] = v_o[0]
                 hoi_annotation["hoi_category_id"] = get_hoi_id(v_o)
                 if hoi_annotation["hoi_category_id"] == None:
-                    raise ValueError("不存在对应的hoi的id! "+str(v_o[0])+" "+str(v_o[1]))
+                    #raise ValueError("不存在对应的hoi的id! "+str(v_o[0])+" "+str(v_o[1]))
+                    return None
                 new_anno["hoi_annotation"].append(hoi_annotation)
     # 2. 如果有人框没检测到
     for box_id,box_original_label in enumerate(tgt['box_label_parse_id']):
@@ -97,16 +90,14 @@ def append_json(verbs_objs_tuple_list:list, tgt: dict):
                     hoi_annotation["category_id"] = v_o[0]
                     hoi_annotation["hoi_category_id"] = get_hoi_id(v_o)
                     if hoi_annotation["hoi_category_id"] == None:
-                        raise ValueError("不存在对应的hoi的id! "+str(v_o[0])+" "+str(v_o[1]))
+                        #raise ValueError("不存在对应的hoi的id! "+str(v_o[0])+" "+str(v_o[1]))
+                        return None
                     new_anno["hoi_annotation"].append(hoi_annotation)
     print("生成结束")
     # === 生成结束
+    return new_anno  #返回生成的字典
     
-    # == 追加并写回
-    anno.append(new_anno)
-    with open('./SynDatasets/annotations/train_val.json', 'w') as f:
-        json.dump(anno, f, indent=4)
-    f.close()
+    
 
 
 
@@ -121,4 +112,4 @@ tgt = {
 
 if __name__ == "__main__": 
      print(1)
-     append_json([(5,1)],tgt)
+     #append_json([(5,1)],tgt)
