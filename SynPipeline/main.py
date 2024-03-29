@@ -51,7 +51,7 @@ class SynPipeline:
             tgt = detect(img, self.config_path, self.model_checkpoint_path)
             # 过滤
             # print("tgt:",tgt)
-            # == 2.1.检查是否检测出了指定的物体
+            # == 检查是否检测出了指定的物体
             for v_o in verbs_objs_tuple_list:
                 obj_id = v_o[1]
                 if obj_id not in tgt["box_label_parse_id"]:
@@ -59,10 +59,11 @@ class SynPipeline:
                     #raise ValueError("错误！没检测出生成图片时指定的物体！")
                     break
             # == 如果检测出来就做标注,并保存
-            img.save(formatted_name)
             new_anno = generate_annotation(verbs_objs_tuple_list,tgt,formatted_name,files_num + 1) #先获得标注框
-            anno.append(new_anno)
-            json.dump(anno, f, indent=4)
+            if new_anno != None:
+                img.save(formatted_name)
+                anno.append(new_anno)
+                json.dump(anno, f, indent=4)
         f.close()
 
 if __name__ == "__main__":
