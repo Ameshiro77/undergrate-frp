@@ -9,14 +9,15 @@ from PIL import Image
 def generate_img(prompt):
     # pipe = DiffusionPipeline.from_pretrained(r"/root/autodl-tmp/DiffHOI/params/stable-diffusion-v1.5/", torch_dtype=torch.float32)
     pipe = StableDiffusionPipeline.from_pretrained(
-        r"G:\数据集&权重\stable-diffusion-v1.5", torch_dtype=torch.float32
+        #r"G:\数据集&权重\stable-diffusion-v1.5", torch_dtype=torch.float32
+        "/root/autodl-tmp/DiffHOI/params/stable-diffusion-v1.5"
     )
     pipe.to("cuda")
     imgs = pipe(
         prompt,
         height=512,
         width=512,
-        num_inference_steps=50,
+        num_inference_steps=75,
         negative_prompt="mutated hands and fingers,poorly drawn hands,deformed,poorly drawn face,floating limbs,extra limb,floating limbs",
     ).images
     return imgs

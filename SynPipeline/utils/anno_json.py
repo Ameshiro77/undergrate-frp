@@ -4,6 +4,7 @@ import numpy as np
 from matplotlib.patches import Polygon
 import json,math
 sys.path.append("./")
+sys.path.append("../")
 #file_name,img_id,annotations["bbox","category_id"],hoi_annotation["subject_id","object_id","category_id","hoi_category_id"]
 """
 3.对过滤后的图进行标注。
@@ -31,6 +32,8 @@ def find_closest_box_id(source_box_id:int,tgt:dict,find_sub:True): #find_sub决�
             if idx!=source_box_id and box_label_parse_id[idx] != 1:
                 bb_dist = get_box_distance(target_box,source_box)
                 dist[idx] = bb_dist
+    if len(set(dist)) <= 1: #如果压根没有人/物 或者就一个框 直接舍弃
+        return -1
     return dist.index(min(dist))
 
 
@@ -65,6 +68,8 @@ def generate_annotation(verbs_objs_tuple_list:list, tgt: dict ,img_name:str,img_
             continue 
         object_id = box_id #说明是物框，换个变量名
         subject_id = find_closest_box_id(object_id,tgt,True) #找到离框最近的人
+        if subject_id == -1: #如果异常检测 即就一个框
+            return None
         is_labeled[subject_id] = True
         for v_o in verbs_objs_tuple_list: #找到对应obj_id的动作
             if v_o[1] == box_original_label:
@@ -80,7 +85,10 @@ def generate_annotation(verbs_objs_tuple_list:list, tgt: dict ,img_name:str,img_
     # 2. 如果有人框没检测到
     for box_id,box_original_label in enumerate(tgt['box_label_parse_id']):
         if box_original_label == 1 and is_labeled[box_id] == False: 
+            subject_id = box_id #说明是人框，换个变量名
             object_id = find_closest_box_id(subject_id,tgt,False)
+            if object_id == -1: #如果异常检测 即就一个框
+                return None
             is_labeled[subject_id] = True
             for v_o in verbs_objs_tuple_list: #找到对应obj_id的动作
                 if v_o[1] == box_original_label:
@@ -102,14 +110,14 @@ def generate_annotation(verbs_objs_tuple_list:list, tgt: dict ,img_name:str,img_
 
 
 tgt = {
-    "boxes": torch.tensor(
-        [[0.6207, 0.5451, 0.4399, 0.7578], [0.3205, 0.6232, 0.6407, 0.5138]]),
-    "size": torch.tensor([800.0, 800.0]),
-    "box_label": ["person", "car"],
-    "box_label_parse_id": [1, 3]
+    'boxes': torch.tensor([[0.5144, 0.3778, 0.6895, 0.6894],
+        [0.3623, 0.7997, 0.7244, 0.2670]], device='cuda:0'), 
+    'size': torch.tensor([800., 800.]), 
+    'box_label': ['person', 'skateboard'], 
+    'box_label_parse_id': [1, 41]
 }
 
 
 if __name__ == "__main__": 
-     print(1)
-     #append_json([(5,1)],tgt)
+    new_anno = generate_annotation([(28,36)],tgt,"1",1)
+    print(new_anno)

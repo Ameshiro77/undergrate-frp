@@ -3,6 +3,7 @@ import os, sys
 import torch, json
 import numpy as np
 from PIL import Image
+sys.path.append("./")
 sys.path.append("./DINO")
 import DINO.datasets.transforms as T
 from DINO.main import build_model_main
@@ -14,7 +15,7 @@ from DINO.util import box_ops
 """
 2.检测人-物框
 """
-def detect(img_path,config_path,checkpoint_path) -> dict:
+def detect(img,config_path,checkpoint_path) -> dict:
     model_config_path = config_path # change the path of the model config file
     #model_checkpoint_path = r"G:\数据集&权重\checkpoint0031_5scale.pth"  # change the path of the model checkpoint
     model_checkpoint_path = checkpoint_path
@@ -30,8 +31,8 @@ def detect(img_path,config_path,checkpoint_path) -> dict:
     with open('./DINO/util/coco_id2name.json') as f:
         id2name = json.load(f)
         id2name = {int(k):v for k,v in id2name.items()}
-
-    image = Image.open(img_path).convert("RGB") # load image
+    # img = Image.open(img)
+    image = img.convert("RGB") # load image
     transform = T.Compose([
         T.RandomResize([800], max_size=1333),
         T.ToTensor(),
@@ -58,12 +59,12 @@ def detect(img_path,config_path,checkpoint_path) -> dict:
         'box_label': box_label,
         'box_label_parse_id':box_label_parse_id
     }
-    #print(pred_dict)
+    print(pred_dict)
     vslzr.visualize(image, pred_dict, savedir=None, dpi=100)  #保存图片
     return pred_dict
 
 if __name__ == "__main__":
-    img_path = "./output.jpg"
+    img_path = "/root/autodl-tmp/DiffHOI/SynPipeline/SynDatasets/train_images/Syn_train_000001.jpg"
     config_path = r"/root/autodl-tmp/DiffHOI/SynPipeline/DINO/config/DINO/DINO_4scale_swin.py"
     model_checkpoint_path =  r"/root/autodl-tmp/DiffHOI/params/checkpoint0011_4scale_swin.pth"
     detect(img_path,config_path,model_checkpoint_path)
