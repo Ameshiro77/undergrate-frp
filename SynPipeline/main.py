@@ -79,6 +79,9 @@ if __name__ == "__main__":
         "/root/autodl-tmp/DiffHOI/params/checkpoint0011_4scale_swin.pth"
     )
 
+    crr = { (k[0]+1,valid_obj_ids[k[1]]):v for k,v in hico_text_label.items()}
+    print(crr)
+    exit()
     # ==== pipeline
     pipeline = SynPipeline(model_config_path, model_checkpoint_path)
     
