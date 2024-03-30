@@ -46,10 +46,11 @@ def generate_annotation(verbs_objs_tuple_list:list, tgt: dict ,img_name:str,img_
     new_anno["img_id"] = img_id
     # annotations [] 目标的bbox和类别
     H, W = tgt['size']
+    o_h,o_w = tgt['original_size']
     new_anno["annotations"] = []
     for i ,bbox in enumerate(tgt["boxes"].to("cpu")):  #to,否则会不在一个设备
         annotation = {}
-        unnormbbox = bbox * torch.Tensor([W, H, W, H])
+        unnormbbox = bbox * torch.Tensor([o_w, o_h, o_w, o_h])
         unnormbbox[:2] -= unnormbbox[2:] / 2
         [x, y, w, h] = [int(x) for x in unnormbbox.tolist()]
         xyxy = [x , y , x + w , y + h]
@@ -111,12 +112,16 @@ def generate_annotation(verbs_objs_tuple_list:list, tgt: dict ,img_name:str,img_
 
 
 
-tgt = {'boxes': torch.tensor([[0.5552, 0.5062, 0.1915, 0.5057],
-        [0.5571, 0.4052, 0.1149, 0.1864]], device='cuda:0'), 'size': torch.tensor([800., 800.]), 'box_label': ['person', 'backpack'], 'box_label_parse_id': [1, 27]}
+tgt = {'boxes': torch.tensor([[0.6698, 0.4336, 0.6593, 0.7727],
+        [0.6512, 0.7430, 0.3043, 0.2084],
+        [0.0801, 0.6507, 0.1595, 0.2835],
+        [0.0577, 0.6970, 0.1147, 0.2327],
+        [0.3828, 0.8482, 0.5547, 0.1070]], device='cuda:0'), 'size': torch.tensor([512., 512.]), 
+       'original_size':torch.tensor([512.,512.]),
+       'box_label': ['person', 'laptop', 'cup', 'cup', 'book'], 
+       'box_label_parse_id': [1, 73, 47, 47, 84]}
 
 
 if __name__ == "__main__": 
-    new_anno = generate_annotation([(9,33)],tgt,"1",1)
-    dict = {1:2}
-    print(dict.get(2))
+    new_anno = generate_annotation([(74,73)],tgt,"1",1)
     print(new_anno)

@@ -15,7 +15,7 @@ from DINO.util import box_ops
 """
 2.检测人-物框
 """
-def detect(img,config_path,checkpoint_path) -> dict:
+def detect(img,config_path,checkpoint_path,is_path=False) -> dict:
     model_config_path = config_path # change the path of the model config file
     #model_checkpoint_path = r"G:\数据集&权重\checkpoint0031_5scale.pth"  # change the path of the model checkpoint
     model_checkpoint_path = checkpoint_path
@@ -31,10 +31,12 @@ def detect(img,config_path,checkpoint_path) -> dict:
     with open('./DINO/util/coco_id2name.json') as f:
         id2name = json.load(f)
         id2name = {int(k):v for k,v in id2name.items()}
-    # img = Image.open(img)
+    if is_path==True:
+        img = Image.open(img)
     image = img.convert("RGB") # load image
+    original_h,original_w = image.height,image.width
     transform = T.Compose([
-        T.RandomResize([800], max_size=1333),
+        # T.RandomResize([800], max_size=1333),
         T.ToTensor(),
         T.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ])
@@ -56,6 +58,7 @@ def detect(img,config_path,checkpoint_path) -> dict:
     pred_dict = {
         'boxes': boxes[select_mask],
         'size': torch.Tensor([image.shape[1], image.shape[2]]),
+        'original_size': torch.Tensor([original_h,original_w]),
         'box_label': box_label,
         'box_label_parse_id':box_label_parse_id
     }
