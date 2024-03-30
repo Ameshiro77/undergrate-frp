@@ -175,7 +175,7 @@ class DiffHOI_S(nn.Module):
                hoi_text_label_del, obj_text_inputs, text_embedding_del.float()
 
     def forward(self, samples: NestedTensor,targets, is_training=True):
-        print("model开始运算")
+        #print("model开始运算")
         if not isinstance(samples, NestedTensor):
             samples = nested_tensor_from_tensor_list(samples)
 

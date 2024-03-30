@@ -103,18 +103,20 @@ def generate_annotation(verbs_objs_tuple_list:list, tgt: dict ,img_name:str,img_
                     new_anno["hoi_annotation"].append(hoi_annotation)
     print("生成结束")
     # === 生成结束
+    if len(new_anno["hoi_annotation"]) == 0: #最后一层判断措施
+        return None
     return new_anno  #返回生成的字典
     
     
 
 
 
-tgt = {'boxes': torch.tensor([[0.1952, 0.5542, 0.3899, 0.8914],
-        [0.8905, 0.2497, 0.2197, 0.3728],
-        [0.4508, 0.5724, 0.4224, 0.4191],
-        [0.5001, 0.4998, 0.9999, 0.9993]], device='cuda:0'), 'size': torch.tensor([800., 800.]), 'box_label': ['person', 'cup', 'cup', 'dining table'], 'box_label_parse_id': [1, 47, 47, 67]}
+tgt = {'boxes': torch.tensor([[0.5552, 0.5062, 0.1915, 0.5057],
+        [0.5571, 0.4052, 0.1149, 0.1864]], device='cuda:0'), 'size': torch.tensor([800., 800.]), 'box_label': ['person', 'backpack'], 'box_label_parse_id': [1, 27]}
 
 
 if __name__ == "__main__": 
-    new_anno = generate_annotation([(86,47)],tgt,"1",1)
+    new_anno = generate_annotation([(9,33)],tgt,"1",1)
+    dict = {1:2}
+    print(dict.get(2))
     print(new_anno)

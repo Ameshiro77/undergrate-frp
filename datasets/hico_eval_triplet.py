@@ -104,7 +104,7 @@ class HICOEvaluator():
 
                 self.sum_gts[triplet] += 1
 
-        with open(args.json_file, 'w') as f:
+        with open(args.json_file, 'a') as f:
             f.write(json.dumps(str({'preds': self.preds, 'gts': self.gts})))
 
         print(len(self.preds))

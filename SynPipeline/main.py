@@ -17,7 +17,7 @@ def get_prompt(v_o:tuple):
     scene = random.choice(["spacious", "urban", "rustic"])
     shooting = random.choice(["DSLR","grainy","4K"])
     shooting2 = random.choice(["warm lighting","blue hour","backlit"])
-    shooting3 = random.choice(["partial view","back view"])
+    shooting3 = random.choice(["partial view","back view","front view"])
     shooting4 = random.choice(["Canon Eos5D","iphone 12"])
     # prompt_prefix = "Photo of a " + race + " " + human + " " + verb + " a " + obj + ","
     prompt_prefix = hico_text_label[v_o].replace("person",race+" "+human)+","
@@ -37,7 +37,7 @@ class SynPipeline:
             prompt,
             height=512,
             width=512,
-            num_inference_steps=75,
+            num_inference_steps=50,
             num_images_per_prompt=1,
             negative_prompt="mutated hands and fingers,poorly drawn hands,deformed,poorly drawn face,floating limbs,extra limb,floating limbs",
         ).images
@@ -63,7 +63,7 @@ class SynPipeline:
                 if obj_id not in tgt["box_label_parse_id"]:
                     #print(tgt)
                     #raise ValueError("错误！没检测出生成图片时指定的物体！")
-                    break
+                    return
             # == 如果检测出来就做标注,并保存
             new_anno = generate_annotation(verbs_objs_tuple_list,tgt,formatted_name,files_num + 1) #先获得标注框
             if new_anno != None:
