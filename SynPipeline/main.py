@@ -4,7 +4,7 @@ import torch, json, random
 import numpy as np
 from PIL import Image
 from labels_txt.labels import id_to_verb_dict,id_to_obj_dict,valid_obj_ids
-from labels_txt.hico_text_label import hico_text_label
+from labels_txt.hico_text_label import hico_text_label,hico_unseen_index
 sys.path.append("./DINO")
 from utils.detect import detect
 from utils.anno_json import generate_annotation
@@ -37,7 +37,7 @@ class SynPipeline:
             prompt,
             height=512,
             width=512,
-            num_inference_steps=50,
+            num_inference_steps=75,
             num_images_per_prompt=1,
             negative_prompt="mutated hands and fingers,poorly drawn hands,deformed,poorly drawn face,floating limbs,extra limb,floating limbs",
         ).images
@@ -76,12 +76,16 @@ class SynPipeline:
     
     # 自动化流程
     def run(self,SDpipe,imgs_num):
+        rare_first = hico_unseen_index["rare_first"]
+        non_rare_first = hico_unseen_index["non_rare_first"]
         for i in range(imgs_num):
-            v_o = random.choice(list(hico_text_label.keys())) #这个v_o是我改成原本了的 原先是(0开始的verb和预测的obj)
+            #v_o = random.choice(list(hico_text_label.keys())) #这个v_o是我改成原本了的 原先是(0开始的verb和预测的obj)
+            v_o = list(hico_text_label.keys())[random.choice(rare_first)]
             prompt = get_prompt(v_o)  #找到对应提示词
             v_o_list = [v_o]
             imgs = pipeline.generate(SDpipe,prompt) 
             pipeline.detect_and_filter_and_anno(imgs,v_o_list,out_dir,prompt)
+            print("目前进度:"+str(i+1)+"/"+str(imgs_num))
 
 if __name__ == "__main__":
     out_dir = (
@@ -100,4 +104,4 @@ if __name__ == "__main__":
         "/root/autodl-tmp/DiffHOI/params/stable-diffusion-v1.5"
     )
     pipeline = SynPipeline(model_config_path, model_checkpoint_path)
-    pipeline.run(SDpipe,10)
+    pipeline.run(SDpipe,100)

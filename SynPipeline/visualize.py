@@ -140,6 +140,7 @@ def reorder_name(img_dir, json_path):
 if __name__ == "__main__":
     img_dir = "./SynDatasets/train_images"
     json_path = "./SynDatasets/annotations/train_val.json"
+    from_index = 2 #从第几个图片开始读★
     # img_dir = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\images\train2015"
     # json_path = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\annotations\trainval_hico.json"
 
@@ -151,7 +152,9 @@ if __name__ == "__main__":
     annotation_dict = {item["file_name"]: item for item in annotation}
 
     # == 遍历文件夹 依次读取图片
-    for img_filename in os.listdir(img_dir):
+    for index , img_filename in enumerate(os.listdir(img_dir)):
+        if index < from_index - 1:
+            continue
         # 显示图片
         target_dict = annotation_dict.get(img_filename)  # 得到了对应图片的标注字典
         prompt = target_dict.get("prompt").split(",")[0]  # 名字打印到标题上
