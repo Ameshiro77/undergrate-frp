@@ -28,7 +28,7 @@ def draw(img, tgt_dict):
         xy1 = (box[0], box[1])
         xy2 = (box[2], box[3])
         color = (np.random.random(3) * 0.6 + 0.4) * 255
-        print(color)
+        # print(color)
         cv2.rectangle(img, xy1, xy2, color, 2)  # 画人物的框
         text = id_to_obj_dict[category_id]
         cv2.rectangle(  # 用于text的背景框
@@ -140,7 +140,7 @@ def reorder_name(img_dir, json_path):
 if __name__ == "__main__":
     img_dir = "./SynDatasets/train_images"
     json_path = "./SynDatasets/annotations/train_val.json"
-    from_index = 2 #从第几个图片开始读★
+    from_index = 2  # 从第几个图片开始读★
     # img_dir = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\images\train2015"
     # json_path = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\annotations\trainval_hico.json"
 
@@ -152,7 +152,9 @@ if __name__ == "__main__":
     annotation_dict = {item["file_name"]: item for item in annotation}
 
     # == 遍历文件夹 依次读取图片
-    for index , img_filename in enumerate(os.listdir(img_dir)):
+    imgs = os.listdir(img_dir)
+    imgs_num = len(imgs)
+    for index, img_filename in enumerate(imgs):
         if index < from_index - 1:
             continue
         # 显示图片
@@ -161,20 +163,29 @@ if __name__ == "__main__":
         if prompt == None:
             prompt = "example"
         img_path = os.path.join(img_dir, img_filename)
-        img = cv2.imread(img_path)
-        img = draw(img, target_dict)
+        original_img = cv2.imread(img_path)
+        drwon_img = draw(original_img , target_dict)
         print(target_dict)
-        cv2.namedWindow(prompt)
-        cv2.setMouseCallback(prompt, click_corner)
-        cv2.imshow(prompt, img)
+        print("当前图片:第" + str(index + 1) + "/" + str(imgs_num) + "张")
+        # cv2.namedWindow(prompt)
+        # cv2.setMouseCallback(prompt, click_corner)
+        cv2.imshow(prompt, drwon_img)
 
-        # 对图片进行操作：删除和保留
-        key = cv2.waitKey(0)
-        if key == ord("q"):  # 退出
+        # 对图片进行操作：删除 保留 切换原图
+        while(1):
+            key = cv2.waitKey(0)
+            if key == ord("q"):  # 退出
+                exit()
+            if key == ord("d"):  # 删除文件
+                os.remove(img_path)
+                del annotation_dict[img_filename]
+            if key == ord("o"):  #切换原图
+                cv2.imshow(prompt, original_img)
+                continue
+            if key == ord("i"):  #切换bbox图
+                cv2.imshow(prompt, drwon_img)
+                continue
             break
-        if key == ord("d"):  # 删除文件
-            os.remove(img_path)
-            del annotation_dict[img_filename]
 
         cv2.destroyAllWindows()
 

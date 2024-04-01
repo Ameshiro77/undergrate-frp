@@ -105,23 +105,36 @@ def generate_annotation(
                     new_anno["hoi_annotation"].append(hoi_annotation)
     # 2. 如果有人框没检测到
     for box_id, box_original_label in enumerate(tgt["box_label_parse_id"]):
-        if box_original_label == 1 and is_labeled[box_id] == False:
+        if box_original_label == 1 and is_labeled[box_id] == False:  # 如果没检测到
             subject_id = box_id  # 说明是人框，换个变量名
             object_id = find_closest_box_id(subject_id, tgt, False)
             if object_id == -1:  # 如果异常检测 即就一个框
                 return None
             is_labeled[subject_id] = True
-            for v_o in verbs_objs_tuple_list:  # 找到对应obj_id的动作
-                if v_o[1] == box_original_label:
-                    hoi_annotation = {}  # 清空
-                    hoi_annotation["subject_id"] = subject_id
-                    hoi_annotation["object_id"] = object_id
-                    hoi_annotation["category_id"] = v_o[0]
-                    hoi_annotation["hoi_category_id"] = get_hoi_id(v_o)
-                    if hoi_annotation["hoi_category_id"] == None:
-                        # raise ValueError("不存在对应的hoi的id! "+str(v_o[0])+" "+str(v_o[1]))
-                        return None
-                    new_anno["hoi_annotation"].append(hoi_annotation)
+            # 先看这个物体在不在vo列表里，不在的话就分配no_interact
+            if box_original_label not in [vo[1] for vo in verbs_objs_tuple_list]:
+                hoi_annotation = {}  # 清空
+                hoi_annotation["subject_id"] = subject_id
+                hoi_annotation["object_id"] = object_id
+                hoi_annotation["category_id"] = 58  # 58就是无交互
+                hoi_annotation["hoi_category_id"] = get_hoi_id(
+                    (58, box_original_label)
+                )  # 这个是必有得
+                if hoi_annotation["hoi_category_id"] == None:
+                    return None
+                new_anno["hoi_annotation"].append(hoi_annotation)
+            else:
+                for v_o in verbs_objs_tuple_list:  # 找到对应obj_id的动作
+                    if v_o[1] == box_original_label:
+                        hoi_annotation = {}  # 清空
+                        hoi_annotation["subject_id"] = subject_id
+                        hoi_annotation["object_id"] = object_id
+                        hoi_annotation["category_id"] = v_o[0]
+                        hoi_annotation["hoi_category_id"] = get_hoi_id(v_o)
+                        if hoi_annotation["hoi_category_id"] == None:
+                            # raise ValueError("不存在对应的hoi的id! "+str(v_o[0])+" "+str(v_o[1]))
+                            return None
+                        new_anno["hoi_annotation"].append(hoi_annotation)
     print("生成结束")
     # === 生成结束
     if len(new_anno["hoi_annotation"]) == 0:  # 最后一层判断措施
@@ -148,5 +161,5 @@ tgt = {
 
 
 if __name__ == "__main__":
-    new_anno = generate_annotation([(74, 73)], tgt, "1", 1)
+    new_anno = generate_annotation([(74, 73), (37, 73)], tgt, "1", 1)
     print(new_anno)
