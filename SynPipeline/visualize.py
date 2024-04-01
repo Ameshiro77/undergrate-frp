@@ -10,9 +10,15 @@ from labels_txt.labels import id_to_obj_dict, id_to_hoi_dict, id_to_verb_dict
 def click_corner(event, x, y, flags, param):
     if event == cv2.EVENT_LBUTTONDOWN:
         xy = "%d,%d" % (x, y)
-        cv2.circle(img, (x, y), 1, (255, 0, 0), thickness=-1)
+        cv2.circle(original_img, (x, y), 1, (255, 0, 0), thickness=-1)
         cv2.putText(
-            img, xy, (x, y), cv2.FONT_HERSHEY_PLAIN, 1.0, (0, 0, 0), thickness=1
+            original_img,
+            xy,
+            (x, y),
+            cv2.FONT_HERSHEY_PLAIN,
+            1.0,
+            (0, 0, 0),
+            thickness=1,
         )
         print(x, y)
 
@@ -120,9 +126,9 @@ def draw(img, tgt_dict):
 def reorder_name(img_dir, json_path):
     with open(json_path, "r") as f:
         annotation = json.load(f)
-    # 重命名图片和重排标签 , 二者数量必须相等 否则直接assert
+
     imgs = os.listdir(img_dir)
-    assert len(annotation) == len(imgs)
+
     for i, img_filename in enumerate(imgs):
         # 重命名
         src = os.path.join(img_dir, img_filename)
@@ -140,10 +146,10 @@ def reorder_name(img_dir, json_path):
 if __name__ == "__main__":
     img_dir = "./SynDatasets/train_images"
     json_path = "./SynDatasets/annotations/train_val.json"
-    from_index = 2  # 从第几个图片开始读★
+    from_index = 1  # 从第几个图片开始读★
     # img_dir = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\images\train2015"
     # json_path = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\annotations\trainval_hico.json"
-
+    
     # == 先读取标注文件
     with open(json_path, "r") as f:
         annotation = json.load(f)
@@ -154,6 +160,9 @@ if __name__ == "__main__":
     # == 遍历文件夹 依次读取图片
     imgs = os.listdir(img_dir)
     imgs_num = len(imgs)
+    is_exit = False
+    print("一共" + str(imgs_num) + "张图，标签共" + str(len(annotation)) + "个")
+    assert len(annotation) == imgs_num
     for index, img_filename in enumerate(imgs):
         if index < from_index - 1:
             continue
@@ -164,35 +173,42 @@ if __name__ == "__main__":
             prompt = "example"
         img_path = os.path.join(img_dir, img_filename)
         original_img = cv2.imread(img_path)
-        drwon_img = draw(original_img , target_dict)
+        drwon_img = draw(original_img, target_dict)
         print(target_dict)
         print("当前图片:第" + str(index + 1) + "/" + str(imgs_num) + "张")
         # cv2.namedWindow(prompt)
         # cv2.setMouseCallback(prompt, click_corner)
         cv2.imshow(prompt, drwon_img)
-
         # 对图片进行操作：删除 保留 切换原图
-        while(1):
+        while 1:
             key = cv2.waitKey(0)
             if key == ord("q"):  # 退出
-                exit()
+                is_exit = True
+                break
             if key == ord("d"):  # 删除文件
                 os.remove(img_path)
+                print(img_filename)
                 del annotation_dict[img_filename]
-            if key == ord("o"):  #切换原图
+                print(annotation_dict)
+                break
+            if key == ord("o"):  # 切换原图
                 cv2.imshow(prompt, original_img)
                 continue
-            if key == ord("i"):  #切换bbox图
+            if key == ord("i"):  # 切换bbox图
                 cv2.imshow(prompt, drwon_img)
                 continue
+            if key == 13 or key == 32 or key == 10:
+                break
+        if is_exit == True:
             break
-
         cv2.destroyAllWindows()
 
     # 删除完了后要重新进行写
+    print("重写...")
     with open(json_path, "w") as f:
         new_annotation = list(annotation_dict.values())
         json.dump(new_annotation, f, indent=2)
 
     # 重排名序
+    print("重排...")
     reorder_name(img_dir, json_path)
