@@ -22,7 +22,7 @@
 *.cfg
 !setup.cfg
 !cfg/yolov3*.cfg
-!SynPipeline/
+!/SynPipeline/*
 
 storage.googleapis.com
 
