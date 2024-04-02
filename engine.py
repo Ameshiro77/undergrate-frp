@@ -85,47 +85,47 @@ def train_one_epoch(model: torch.nn.Module, criterion: torch.nn.Module,
 @torch.no_grad()
 def evaluate_hoi(dataset_file, model, postprocessors, data_loader,
                  subject_category_id, device, args):
-    # metric_logger = utils.MetricLogger(delimiter="  ")
-    # header = 'Test:'
+    metric_logger = utils.MetricLogger(delimiter="  ")
+    header = 'Test:'
 
-    # preds = []
-    # gts = []
-    # indices = []
-    # counter = 0
-    # for samples, targets in metric_logger.log_every(data_loader, 10, header):
-    #     samples = samples.to(device)
-    #     _targets = [{k: v.to(device) for k, v in t.items() if (k != 'filename' and k != 'id') } for t in targets]
-    #     outputs = model(samples,_targets, is_training=False)
-    #     orig_target_sizes = torch.stack([t["orig_size"] for t in targets], dim=0)
-    #     results = postprocessors['hoi'](outputs, orig_target_sizes)
+    preds = []
+    gts = []
+    indices = []
+    counter = 0
+    for samples, targets in metric_logger.log_every(data_loader, 10, header):
+        samples = samples.to(device)
+        _targets = [{k: v.to(device) for k, v in t.items() if (k != 'filename' and k != 'id') } for t in targets]
+        outputs = model(samples,_targets, is_training=False)
+        orig_target_sizes = torch.stack([t["orig_size"] for t in targets], dim=0)
+        results = postprocessors['hoi'](outputs, orig_target_sizes)
 
-    #     preds.extend(list(itertools.chain.from_iterable(utils.all_gather(results))))
-    #     # For avoiding a runtime error, the copy is used
-    #     gts.extend(list(itertools.chain.from_iterable(utils.all_gather(copy.deepcopy(targets)))))
-    #     if len(preds) % 100 == 0:
-    #         import gc
-    #         gc.collect()
+        preds.extend(list(itertools.chain.from_iterable(utils.all_gather(results))))
+        # For avoiding a runtime error, the copy is used
+        gts.extend(list(itertools.chain.from_iterable(utils.all_gather(copy.deepcopy(targets)))))
+        if len(preds) % 100 == 0:
+            import gc
+            gc.collect()
 
-    #     # counter += 1
+        # counter += 1
 
 
-    # # gather the stats from all processes
-    # metric_logger.synchronize_between_processes()
+    # gather the stats from all processes
+    metric_logger.synchronize_between_processes()
 
-    # img_ids = [img_gts['id'] for img_gts in gts]
-    # _, indices = np.unique(img_ids, return_index=True)
-    # preds = [img_preds for i, img_preds in enumerate(preds) if i in indices]
-    # gts = [img_gts for i, img_gts in enumerate(gts) if i in indices]
+    img_ids = [img_gts['id'] for img_gts in gts]
+    _, indices = np.unique(img_ids, return_index=True)
+    preds = [img_preds for i, img_preds in enumerate(preds) if i in indices]
+    gts = [img_gts for i, img_gts in enumerate(gts) if i in indices]
 
-    # if dataset_file == 'hico':
-    #     evaluator = HICOEvaluator(preds, gts, data_loader.dataset.rare_triplets,
-    #                               data_loader.dataset.non_rare_triplets, data_loader.dataset.correct_mat, args=args)
-    # elif dataset_file == 'vcoco':
-    #     evaluator = VCOCOEvaluator(preds, gts, data_loader.dataset.correct_mat, use_nms_filter=args.use_nms_filter)
+    if dataset_file == 'hico':
+        evaluator = HICOEvaluator(preds, gts, data_loader.dataset.rare_triplets,
+                                  data_loader.dataset.non_rare_triplets, data_loader.dataset.correct_mat, args=args)
+    elif dataset_file == 'vcoco':
+        evaluator = VCOCOEvaluator(preds, gts, data_loader.dataset.correct_mat, use_nms_filter=args.use_nms_filter)
 
-    # stats = evaluator.evaluate()
+    stats = evaluator.evaluate()
 
-    # return stats
+    return stats
 
     # === new ===
     
