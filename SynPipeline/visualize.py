@@ -70,14 +70,14 @@ def draw(img, tgt_dict):
             s_o = (
                 hoi["subject_id"],
                 hoi["object_id"],
-            )  # 记录主体客体对出现此处 调整text用的
+            )  # 记录主体客体对出现次数 调整text用的
             if so_count.get(s_o) == None:
                 so_count[s_o] = 0
             else:
                 so_count[s_o] = so_count[s_o] + 1
             text_pos = (
                 int((xy1[0] + xy2[0]) / 2),
-                int((xy1[1] + xy2[1]) / 2) + 18 * so_count[s_o],
+                int((xy1[1] + xy2[1]) / 2) + 28 * so_count[s_o],
             )  # 放文字的基准点
             text = id_to_verb_dict[hoi["category_id"]]
             cv2.rectangle(  # 用于text的背景框
@@ -97,6 +97,7 @@ def draw(img, tgt_dict):
                 2,
             )
             cv2.line(blk, xy1, xy2, (0, 255, 0), 3)
+        # 画交互点
         cv2.circle(
             blk,
             (int((xy1[0] + xy2[0]) / 2), int((xy1[1] + xy2[1]) / 2)),
@@ -144,11 +145,11 @@ def reorder_name(img_dir, json_path):
 
 
 if __name__ == "__main__":
-    img_dir = "./SynDatasets/train_images"
-    json_path = "./SynDatasets/annotations/train_val.json"
+    #img_dir = "./SynDatasets/train_images"
+    #json_path = "./SynDatasets/annotations/train_val.json"
     from_index = 1  # 从第几个图片开始读★
-    # img_dir = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\images\train2015"
-    # json_path = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\annotations\trainval_hico.json"
+    img_dir = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\images\train2015"
+    json_path = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\annotations\trainval_hico.json"
     
     # == 先读取标注文件
     with open(json_path, "r") as f:
@@ -162,15 +163,26 @@ if __name__ == "__main__":
     imgs_num = len(imgs)
     is_exit = False
     print("一共" + str(imgs_num) + "张图，标签共" + str(len(annotation)) + "个")
-    assert len(annotation) == imgs_num
+    #assert len(annotation) == imgs_num
+    # 可视化，注意HICO DET数据集的标签比图片少 
     for index, img_filename in enumerate(imgs):
         if index < from_index - 1:
             continue
         # 显示图片
         target_dict = annotation_dict.get(img_filename)  # 得到了对应图片的标注字典
-        prompt = target_dict.get("prompt").split(",")[0]  # 名字打印到标题上
+        if target_dict == None:  #如果找不到图片就跳过,只针对hicodet数据集
+            continue
+        ctg = target_dict["annotations"]
+        if ctg != None:
+            objs_id = [ctg["category_id"] for ctg in target_dict["annotations"]]
+        if 5 not in objs_id:
+            continue
+        
+        prompt = target_dict.get("prompt")  # 名字打印到标题上
         if prompt == None:
             prompt = "example"
+        else:
+            prompt = prompt.split(",")[0]
         img_path = os.path.join(img_dir, img_filename)
         original_img = cv2.imread(img_path)
         drwon_img = draw(original_img, target_dict)
@@ -187,9 +199,7 @@ if __name__ == "__main__":
                 break
             if key == ord("d"):  # 删除文件
                 os.remove(img_path)
-                print(img_filename)
                 del annotation_dict[img_filename]
-                print(annotation_dict)
                 break
             if key == ord("o"):  # 切换原图
                 cv2.imshow(prompt, original_img)
@@ -203,12 +213,12 @@ if __name__ == "__main__":
             break
         cv2.destroyAllWindows()
 
-    # 删除完了后要重新进行写
-    print("重写...")
-    with open(json_path, "w") as f:
-        new_annotation = list(annotation_dict.values())
-        json.dump(new_annotation, f, indent=2)
+    # # 删除完了后要重新进行写
+    # print("重写...")
+    # with open(json_path, "w") as f:
+    #     new_annotation = list(annotation_dict.values())
+    #     json.dump(new_annotation, f, indent=2)
 
-    # 重排名序
-    print("重排...")
-    reorder_name(img_dir, json_path)
+    # # 重排名序
+    # print("重排...")
+    # reorder_name(img_dir, json_path)
