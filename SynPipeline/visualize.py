@@ -213,11 +213,11 @@ if __name__ == "__main__":
             break
         cv2.destroyAllWindows()
 
-    # # 删除完了后要重新进行写
-    # print("重写...")
-    # with open(json_path, "w") as f:
-    #     new_annotation = list(annotation_dict.values())
-    #     json.dump(new_annotation, f, indent=2)
+    # 删除完了后要重新进行写
+    print("重写...")
+    with open(json_path, "w") as f:
+        new_annotation = list(annotation_dict.values())
+        json.dump(new_annotation, f, indent=2)
 
     # # 重排名序
     # print("重排...")

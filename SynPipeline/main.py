@@ -152,11 +152,11 @@ if __name__ == "__main__":
         "/root/autodl-tmp/DiffHOI/params/checkpoint0011_4scale_swin.pth"
     )
 
-    # ==== pipeline
-    # SDpipe = StableDiffusionPipeline.from_pretrained(  #放在这是为了避免多次调用
-    #     #"G:\数据集&权重\stable-diffusion-v1.5", torch_dtype=torch.float32
-    #     "/root/autodl-tmp/DiffHOI/params/stable-diffusion-v1.5"
-    # )
+    #==== pipeline
+    SDpipe = StableDiffusionPipeline.from_pretrained(  #放在这是为了避免多次调用
+        #"G:\数据集&权重\stable-diffusion-v1.5", torch_dtype=torch.float32
+        "/root/autodl-tmp/DiffHOI/params/stable-diffusion-v1.5"
+    )
     SDpipe = ""
     pipeline = SynPipeline(model_config_path, model_checkpoint_path)
     pipeline.run(SDpipe,100)
