@@ -181,7 +181,7 @@ if __name__ == "__main__":
         if prompt == None:
             prompt = "example"
         else:
-            prompt = prompt.split(",")[:1]
+            prompt = prompt.split(",")[0] + prompt.split(",")[1]
         img_path = os.path.join(img_dir, img_filename)
         original_img = cv2.imread(str(img_path))
         drwon_img = draw(original_img, target_dict)
@@ -189,6 +189,7 @@ if __name__ == "__main__":
         print("当前图片:第" + str(index + 1) + "/" + str(imgs_num) + "张")
         # cv2.namedWindow(prompt)
         # cv2.setMouseCallback(prompt, click_corner)
+        print(prompt)
         cv2.imshow(prompt, drwon_img)
         # 对图片进行操作：删除 保留 切换原图
         while 1:
