@@ -148,7 +148,7 @@ def reorder_name(img_dir, json_path):
 if __name__ == "__main__":
     img_dir = "./SynDatasets/train_images"
     json_path = "./SynDatasets/annotations/train_val.json"
-    from_index = 60  # 从第几个图片开始读★
+    from_index = 200 # 从第几个图片开始读★
     #img_dir = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\images\train2015"
     #json_path = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\annotations\trainval_hico.json"
     
@@ -182,7 +182,7 @@ if __name__ == "__main__":
         if prompt == None:
             prompt = "example"
         else:
-            prompt = prompt.split(",")[0] + prompt.split(",")[1]
+            prompt = prompt.split(",")[0] + "," + prompt.split(",")[1]
         img_path = os.path.join(img_dir, img_filename)
         original_img = cv2.imread(str(img_path))
         drwon_img = draw(original_img, target_dict)
