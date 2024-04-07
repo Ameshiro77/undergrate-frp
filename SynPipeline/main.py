@@ -157,6 +157,5 @@ if __name__ == "__main__":
         #"G:\数据集&权重\stable-diffusion-v1.5", torch_dtype=torch.float32
         "/root/autodl-tmp/DiffHOI/params/stable-diffusion-v1.5"
     )
-    SDpipe = ""
     pipeline = SynPipeline(model_config_path, model_checkpoint_path)
-    pipeline.run(SDpipe,100)
+    pipeline.run(SDpipe,5)

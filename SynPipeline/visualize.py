@@ -145,11 +145,11 @@ def reorder_name(img_dir, json_path):
 
 
 if __name__ == "__main__":
-    #img_dir = "./SynDatasets/train_images"
-    #json_path = "./SynDatasets/annotations/train_val.json"
-    from_index = 1  # 从第几个图片开始读★
-    img_dir = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\images\train2015"
-    json_path = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\annotations\trainval_hico.json"
+    img_dir = "./SynDatasets/train_images"
+    json_path = "./SynDatasets/annotations/train_val.json"
+    from_index = 60  # 从第几个图片开始读★
+    #img_dir = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\images\train2015"
+    #json_path = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\annotations\trainval_hico.json"
     
     # == 先读取标注文件
     with open(json_path, "r") as f:
@@ -163,7 +163,7 @@ if __name__ == "__main__":
     imgs_num = len(imgs)
     is_exit = False
     print("一共" + str(imgs_num) + "张图，标签共" + str(len(annotation)) + "个")
-    #assert len(annotation) == imgs_num
+    assert len(annotation) == imgs_num
     # 可视化，注意HICO DET数据集的标签比图片少 
     for index, img_filename in enumerate(imgs):
         if index < from_index - 1:
@@ -175,16 +175,15 @@ if __name__ == "__main__":
         ctg = target_dict["annotations"]
         if ctg != None:
             objs_id = [ctg["category_id"] for ctg in target_dict["annotations"]]
-        if 5 not in objs_id:
-            continue
-        
+        # if 5 not in objs_id:
+        #     continue
         prompt = target_dict.get("prompt")  # 名字打印到标题上
         if prompt == None:
             prompt = "example"
         else:
-            prompt = prompt.split(",")[0]
+            prompt = prompt.split(",")[:1]
         img_path = os.path.join(img_dir, img_filename)
-        original_img = cv2.imread(img_path)
+        original_img = cv2.imread(str(img_path))
         drwon_img = draw(original_img, target_dict)
         print(target_dict)
         print("当前图片:第" + str(index + 1) + "/" + str(imgs_num) + "张")
@@ -219,6 +218,6 @@ if __name__ == "__main__":
         new_annotation = list(annotation_dict.values())
         json.dump(new_annotation, f, indent=2)
 
-    # # 重排名序
-    # print("重排...")
-    # reorder_name(img_dir, json_path)
+    # 重排名序
+    print("重排...")
+    reorder_name(img_dir, json_path)
