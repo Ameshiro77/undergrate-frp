@@ -158,4 +158,4 @@ if __name__ == "__main__":
         "/root/autodl-tmp/DiffHOI/params/stable-diffusion-v1.5"
     )
     pipeline = SynPipeline(model_config_path, model_checkpoint_path)
-    pipeline.run(SDpipe,5)
+    pipeline.run(SDpipe,200)
