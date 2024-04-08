@@ -17,7 +17,7 @@ def get_box_distance(box_1, box_2):  # 获取两个box的中点距离 xyxy格式
     x1 = (box_1[0] + box_1[2]) / 2
     y1 = (box_1[1] + box_1[3]) / 2
     x2 = (box_2[0] + box_2[2]) / 2
-    y2 = (box_2[0] + box_2[2]) / 2
+    y2 = (box_2[1] + box_2[3]) / 2
     return math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
 
 

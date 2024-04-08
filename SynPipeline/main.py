@@ -1,4 +1,5 @@
 import os, sys
+import argparse
 from diffusers import DiffusionPipeline, StableDiffusionPipeline
 import torch, json, random
 import numpy as np
@@ -10,6 +11,9 @@ sys.path.append("./DINO")
 from utils.detect import detect
 from utils.anno_json import generate_annotation
 
+parser = argparse.ArgumentParser('Set output imgs num', add_help=False)
+parser.add_argument('--nums', default=1, type=int)
+    
 def get_verb(v_o): #接受一个元组
     prompt = hico_text_label.get(v_o).split()[5:]
     str = ""
@@ -49,7 +53,7 @@ def get_prompt(v_o_list:list):
     hoi = hoi[:-4] + get_noun(v_o_list[-1][1])
     prompt_prefix = "a photo of a " + race + " " + human + " " + hoi + ","  
     prompt_suffix = quality + "," + details + "," + scene + "," + \
-    shooting + "," + shooting2 + "," + shooting3 + "," + shooting4
+    shooting + "," + shooting2  + "," + shooting4
     return prompt_prefix + prompt_suffix
     
 class SynPipeline:
@@ -60,7 +64,7 @@ class SynPipeline:
     def random_choice(self):  #随机选择要生成的vo元组列表
         # 首先 50-40-10 的选择从哪里选
         v_o_list = []
-        seed = random.choice([0,0,0,0,0,1,1,1,1,2])  #50:multi 40:rare 10:non-rare
+        seed = random.choice([0,0,0,1,1,1,2,2,2])  #30:multi 40:rare 30:non-rare
         if seed == 0:
             hois = random.choice(vo_pairs)
             for hoi in hois:
@@ -71,7 +75,7 @@ class SynPipeline:
         elif seed == 2:
             v_o_list.append(list(hico_text_label.keys())[random.choice(hico_unseen_index["non_rare_first"])])
         # 如果是只有一个（即不是multi抽的） 就按概率,根据multi变成多个（如果有）
-        seed = random.choice([0,0,0,0,0,1])
+        seed = random.choice([0,0,0,0,1])
         hoi_id = hoi_to_id_dict[v_o_list[0]] 
         if seed == 0 and hoi_id in multi_hoi:
             hois = [hoi for hoi in vo_pairs if hoi_id in hoi]
@@ -105,7 +109,7 @@ class SynPipeline:
             anno = json.load(f)
         f.close()
         # file_name,id
-        files_num = len(anno)
+        files_num = anno[-1]["img_id"]
         formatted_name = "Syn_train_" + '{:06d}'.format(files_num + 1) + ".jpg"
         # == 对每个图像检测
         for img in imgs:
@@ -125,6 +129,7 @@ class SynPipeline:
                 with open("./SynDatasets/annotations/train_val.json","w") as f:
                     new_anno["prompt"] = prompt
                     img.save(out_dir + formatted_name)
+                    print("保存图片:",formatted_name)
                     anno.append(new_anno)
                     json.dump(anno, f, indent=4)
                 f.close()
@@ -146,16 +151,17 @@ if __name__ == "__main__":
         "./SynDatasets/train_images/"
     )
     model_config_path = (
-        "/root/autodl-tmp/DiffHOI/SynPipeline/DINO/config/DINO/DINO_4scale_swin.py"
+        "/root/autodl-tmp/frp/SynPipeline/DINO/config/DINO/DINO_4scale_swin.py"
     )
     model_checkpoint_path = (
-        "/root/autodl-tmp/DiffHOI/params/checkpoint0011_4scale_swin.pth"
+        "/root/autodl-tmp/frp/params/checkpoint0011_4scale_swin.pth"
     )
 
+    args = parser.parse_args()
     #==== pipeline
     SDpipe = StableDiffusionPipeline.from_pretrained(  #放在这是为了避免多次调用
         #"G:\数据集&权重\stable-diffusion-v1.5", torch_dtype=torch.float32
-        "/root/autodl-tmp/DiffHOI/params/stable-diffusion-v1.5"
+        "/root/autodl-tmp/frp/params/stable-diffusion-v1.5"
     )
     pipeline = SynPipeline(model_config_path, model_checkpoint_path)
-    pipeline.run(SDpipe,200)
+    pipeline.run(SDpipe,args.nums)
