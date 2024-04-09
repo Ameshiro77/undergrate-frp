@@ -1,12 +1,15 @@
 # 本程序可视化并手动筛选
 # TODO
 # 记得改filename 逻辑
-import cv2, os,sys
+import cv2, os,sys,argparse
 import json, random
 import numpy as np
 from labels_txt.labels import id_to_obj_dict, id_to_hoi_dict, id_to_verb_dict
 print(sys.path)
 sys.path.append("./")
+
+parser = argparse.ArgumentParser('Set output imgs num', add_help=False)
+parser.add_argument('--start', default=1, type=int)
 
 def click_corner(event, x, y, flags, param):
     if event == cv2.EVENT_LBUTTONDOWN:
@@ -146,9 +149,10 @@ def reorder_name(img_dir, json_path):
 
 
 if __name__ == "__main__":
+    args = parser.parse_args()
     img_dir = "./SynDatasets/train_images"
     json_path = "./SynDatasets/annotations/train_val.json"
-    from_index = 200 # 从第几个图片开始读★
+    from_index = args.start # 从第几个图片开始读★
     #img_dir = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\images\train2015"
     #json_path = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\annotations\trainval_hico.json"
     

@@ -79,7 +79,6 @@ def generate_annotation(
         subject_id = find_closest_box_id(object_id, tgt, True)  # 找到离框最近的人
         if subject_id == -1:  # 如果异常检测 即就一个框
             return None
-        is_labeled[subject_id] = True
         # 先看这个物体在不在vo列表里，不在的话就分配no_interact
         if box_original_label not in [vo[1] for vo in verbs_objs_tuple_list]:
             hoi_annotation = {}  # 清空
@@ -93,6 +92,7 @@ def generate_annotation(
                 return None
             new_anno["hoi_annotation"].append(hoi_annotation)
         else:
+            is_labeled[subject_id] = True
             for v_o in verbs_objs_tuple_list:  # 找到对应obj_id的动作
                 if v_o[1] == box_original_label:
                     hoi_annotation = {}  # 清空

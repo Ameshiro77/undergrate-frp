@@ -64,7 +64,7 @@ class SynPipeline:
     def random_choice(self):  #随机选择要生成的vo元组列表
         # 首先 50-40-10 的选择从哪里选
         v_o_list = []
-        seed = random.choice([0,0,0,1,1,1,2,2,2])  #30:multi 40:rare 30:non-rare
+        seed = random.choice([0,1,1,1,1,1,1,2,2,2,3])  #10:multi 50:rare 30:non-rare #10:random
         if seed == 0:
             hois = random.choice(vo_pairs)
             for hoi in hois:
@@ -74,6 +74,8 @@ class SynPipeline:
             v_o_list.append(list(hico_text_label.keys())[random.choice(hico_unseen_index["rare_first"])])
         elif seed == 2:
             v_o_list.append(list(hico_text_label.keys())[random.choice(hico_unseen_index["non_rare_first"])])
+        elif seed == 3:
+            v_o_list.append(list(hico_text_label.keys())[random.randint(0,600)])  
         # 如果是只有一个（即不是multi抽的） 就按概率,根据multi变成多个（如果有）
         seed = random.choice([0,0,0,0,1])
         hoi_id = hoi_to_id_dict[v_o_list[0]] 
