@@ -51,7 +51,7 @@ class HICODetection(torch.utils.data.Dataset):
                     tmp.append(k)
             self.text_label_ids = tmp
 
-        if img_set == 'train':
+        if img_set == 'train': #训练集根据unseen筛选
             self.ids = []
             for idx, img_anno in enumerate(self.annotations):
                 new_img_anno = []
@@ -59,7 +59,7 @@ class HICODetection(torch.utils.data.Dataset):
                 for hoi in img_anno['hoi_annotation']:
                     if hoi['hoi_category_id'] - 1 in self.unseen_index:
                         skip_pair.append((hoi['subject_id'], hoi['object_id']))
-                for hoi in img_anno['hoi_annotation']:
+                for hoi in img_anno['hoi_annotation']:  #如果sub/obj id超了 直接break
                     if hoi['subject_id'] >= len(img_anno['annotations']) or hoi['object_id'] >= len(
                             img_anno['annotations']):
                         new_img_anno = []
@@ -67,10 +67,10 @@ class HICODetection(torch.utils.data.Dataset):
                     if (hoi['subject_id'], hoi['object_id']) not in skip_pair:
                         new_img_anno.append(hoi)
                 if len(new_img_anno) > 0:
-                    self.ids.append(idx)
+                    self.ids.append(idx) #有效标注的id
                     img_anno['hoi_annotation'] = new_img_anno
         else:
-            self.ids = list(range(len(self.annotations)))
+            self.ids = list(range(len(self.annotations))) #测试集就不筛选
         print("{} contains {} images".format(img_set, len(self.ids)))
 
         device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -85,7 +85,7 @@ class HICODetection(torch.utils.data.Dataset):
         img = Image.open(self.img_folder / img_anno['file_name']).convert('RGB')
         w, h = img.size
 
-        if self.img_set == 'train' and len(img_anno['annotations']) > self.num_queries:
+        if self.img_set == 'train' and len(img_anno['annotations']) > self.num_queries: #物体太多，就截断
             img_anno['annotations'] = img_anno['annotations'][:self.num_queries]
 
         boxes = [obj['bbox'] for obj in img_anno['annotations']]
@@ -95,7 +95,7 @@ class HICODetection(torch.utils.data.Dataset):
         if self.img_set == 'train':
             # Add index for confirming which boxes are kept after image transformation
             classes = [(i, self._valid_obj_ids.index(obj['category_id'])) for i, obj in
-                       enumerate(img_anno['annotations'])]
+                       enumerate(img_anno['annotations'])]  #图片中 物体标签 预测序号(index())
         else:
             classes = [self._valid_obj_ids.index(obj['category_id']) for obj in img_anno['annotations']]
         classes = torch.tensor(classes, dtype=torch.int64)
@@ -104,14 +104,14 @@ class HICODetection(torch.utils.data.Dataset):
         target['orig_size'] = torch.as_tensor([int(h), int(w)])
         target['size'] = torch.as_tensor([int(h), int(w)])
         if self.img_set == 'train':
-            boxes[:, 0::2].clamp_(min=0, max=w)
+            boxes[:, 0::2].clamp_(min=0, max=w) #box超过图像范围就截断
             boxes[:, 1::2].clamp_(min=0, max=h)
             keep = (boxes[:, 3] > boxes[:, 1]) & (boxes[:, 2] > boxes[:, 0])
-            boxes = boxes[keep]
-            classes = classes[keep]
+            boxes = boxes[keep] #留下合法的bbox和标签
+            classes = classes[keep]  #如果xy2小于xy1就不合法
 
             target['boxes'] = boxes
-            target['labels'] = classes
+            target['labels'] = classes #训练集是元组列表 测试集是预测id列表
             target['iscrowd'] = torch.tensor([0 for _ in range(boxes.shape[0])])
             target['area'] = (boxes[:, 2] - boxes[:, 0]) * (boxes[:, 3] - boxes[:, 1])
 
@@ -169,6 +169,8 @@ class HICODetection(torch.utils.data.Dataset):
                 target['sub_boxes'] = torch.stack(sub_boxes)
                 target['obj_boxes'] = torch.stack(obj_boxes)
         else:
+            # 测试集相对简单 
+            # orig_size size filename boxes labels(预测) hois [[s_id o_id verb_id(start from 0)]...]
             target['filename'] = img_anno['file_name']
             target['boxes'] = boxes
             target['labels'] = classes
