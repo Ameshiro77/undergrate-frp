@@ -64,7 +64,7 @@ class SynPipeline:
     def random_choice(self):  #随机选择要生成的vo元组列表
         # 首先 50-40-10 的选择从哪里选
         v_o_list = []
-        seed = random.choice([0,1,1,1,1,1,1,2,2,2,3])  #10:multi 50:rare 30:non-rare #10:random
+        seed = random.choice([0,1,1,1,1,2,2,2,3,3])  #10:multi 40:rare 30:non-rare #20:random
         if seed == 0:
             hois = random.choice(vo_pairs)
             for hoi in hois:
