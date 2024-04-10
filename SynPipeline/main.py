@@ -75,7 +75,7 @@ class SynPipeline:
         elif seed == 2:
             v_o_list.append(list(hico_text_label.keys())[random.choice(hico_unseen_index["non_rare_first"])])
         elif seed == 3:
-            v_o_list.append(list(hico_text_label.keys())[random.randint(0,600)])  
+            v_o_list.append(list(hico_text_label.keys())[random.randint(0,599)])  
         # 如果是只有一个（即不是multi抽的） 就按概率,根据multi变成多个（如果有）
         seed = random.choice([0,0,0,0,1])
         hoi_id = hoi_to_id_dict[v_o_list[0]] 
