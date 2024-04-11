@@ -149,7 +149,7 @@ def reorder_name(img_dir, json_path):
 
 
 if __name__ == "__main__":
-    is_syn = False
+    is_syn = True
     args = parser.parse_args()
     if is_syn == True:
         img_dir = "./SynDatasets/train_images"
@@ -184,16 +184,16 @@ if __name__ == "__main__":
         if ctg != None:
             objs_id = [ctg["category_id"] for ctg in target_dict["annotations"]]
             
-        if is_syn == False:
+        if is_syn == True:
             hois = target_dict["hoi_annotation"]
             verb_ids = [_dict["category_id"] for _dict in hois]
             hoi_ids = [_dict["hoi_category_id"] for _dict in hois]
             # if 58 not in verb_ids:
             #     continue
-            # if 36 not in objs_id:
-            #     continue
-            if 499 not in hoi_ids:
+            if 36 not in objs_id:
                 continue
+            # if 499 not in hoi_ids:
+            #     continue
             
         prompt = target_dict.get("prompt")  # 名字打印到标题上
         if prompt == None:
