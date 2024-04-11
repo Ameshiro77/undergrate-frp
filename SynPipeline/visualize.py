@@ -149,13 +149,15 @@ def reorder_name(img_dir, json_path):
 
 
 if __name__ == "__main__":
+    is_syn = False
     args = parser.parse_args()
-    img_dir = "./SynDatasets/train_images"
-    json_path = "./SynDatasets/annotations/train_val.json"
+    if is_syn == True:
+        img_dir = "./SynDatasets/train_images"
+        json_path = "./SynDatasets/annotations/train_val.json"
+    else:
+        img_dir = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\images\train2015"
+        json_path = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\annotations\trainval_hico.json"
     from_index = args.start # 从第几个图片开始读★
-    #img_dir = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\images\train2015"
-    #json_path = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\annotations\trainval_hico.json"
-    
     # == 先读取标注文件
     with open(json_path, "r") as f:
         annotation = json.load(f)
@@ -168,7 +170,8 @@ if __name__ == "__main__":
     imgs_num = len(imgs)
     is_exit = False
     print("一共" + str(imgs_num) + "张图，标签共" + str(len(annotation)) + "个")
-    assert len(annotation) == imgs_num
+    if is_syn == True:
+        assert len(annotation) == imgs_num
     # 可视化，注意HICO DET数据集的标签比图片少 
     for index, img_filename in enumerate(imgs):
         if index < from_index - 1:
@@ -180,8 +183,18 @@ if __name__ == "__main__":
         ctg = target_dict["annotations"]
         if ctg != None:
             objs_id = [ctg["category_id"] for ctg in target_dict["annotations"]]
-        # if 5 not in objs_id:
-        #     continue
+            
+        if is_syn == False:
+            hois = target_dict["hoi_annotation"]
+            verb_ids = [_dict["category_id"] for _dict in hois]
+            hoi_ids = [_dict["hoi_category_id"] for _dict in hois]
+            # if 58 not in verb_ids:
+            #     continue
+            # if 36 not in objs_id:
+            #     continue
+            if 499 not in hoi_ids:
+                continue
+            
         prompt = target_dict.get("prompt")  # 名字打印到标题上
         if prompt == None:
             prompt = "example"
@@ -202,7 +215,7 @@ if __name__ == "__main__":
             if key == ord("q"):  # 退出
                 is_exit = True
                 break
-            if key == ord("d"):  # 删除文件
+            if key == ord("d") and is_syn==True:  # 删除文件
                 os.remove(img_path)
                 del annotation_dict[img_filename]
                 break
@@ -219,11 +232,13 @@ if __name__ == "__main__":
         cv2.destroyAllWindows()
 
     # 删除完了后要重新进行写
-    print("重写...")
-    with open(json_path, "w") as f:
-        new_annotation = list(annotation_dict.values())
-        json.dump(new_annotation, f, indent=2)
+    if is_syn ==True:
+        print("重写...")
+        with open(json_path, "w") as f:
+            new_annotation = list(annotation_dict.values())
+            json.dump(new_annotation, f, indent=2)
 
     # 重排名序
-    print("重排...")
-    reorder_name(img_dir, json_path)
+    if is_syn ==True:
+        print("重排...")
+        reorder_name(img_dir, json_path)

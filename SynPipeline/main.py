@@ -133,7 +133,7 @@ class SynPipeline:
                     img.save(out_dir + formatted_name)
                     print("保存图片:",formatted_name)
                     anno.append(new_anno)
-                    json.dump(anno, f, indent=4)
+                    json.dump(anno, f, indent=2)
                 f.close()
     
     # 自动化流程
