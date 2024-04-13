@@ -3,6 +3,7 @@ import argparse
 from diffusers import DiffusionPipeline, StableDiffusionPipeline
 import torch, json, random
 import numpy as np
+import clip
 from PIL import Image
 from labels_txt.labels import id_to_verb_dict,id_to_obj_dict,valid_obj_ids,id_to_hoi_dict,original_labels_dict,hoi_to_id_dict
 from labels_txt.hico_text_label import hico_text_label,hico_unseen_index,hico_obj_text_label
@@ -63,6 +64,8 @@ class SynPipeline:
     def __init__(self, config_path, ckpt_path) -> None:
         self.config_path = config_path
         self.model_checkpoint_path = ckpt_path
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.model, self.preprocess = clip.load("ViT-B/16", device=self.device)
 
     def random_choice(self,start,mode,seq_hoi_id):  #随机选择要生成的vo元组列表
         v_o_list = []
@@ -113,6 +116,16 @@ class SynPipeline:
 
     # 2.检测并过滤，然后  3.标注
     def detect_and_filter_and_anno(self, imgs, verbs_objs_tuple_list: list,out_dir,prompt):
+        # 首先，用CLIP过滤
+        # 向量化
+        image_embed = self.preprocess(img).unsqueeze(0).to(self.device)
+        text_embed = clip.tokenize(prompt).to(self.device)
+        image_features = self.model.encode_image(image_embed)  # 将图片进行编码  # [1,512]
+        text_features = self.model.encode_text(text_embed)  # 将文本进行编码
+        similarity = torch.nn.functional.cosine_similarity(image_features, text_features).item()
+        if similarity < 0.275:
+            return
+        
         # == 读取json 为了之后的标注
         with open("./SynDatasets/annotations/train_val.json","r") as f:
             anno = json.load(f)

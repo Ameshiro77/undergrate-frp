@@ -172,9 +172,12 @@ if __name__ == "__main__":
     print("一共" + str(imgs_num) + "张图，标签共" + str(len(annotation)) + "个")
     if is_syn == True:
         assert len(annotation) == imgs_num
+    low = [33, 38, 76, 143, 157, 241, 255, 269, 277, 335, 342, 363, 373, 404, 443, 447, 456, 462, 474, 481, 487, 496]
     # 可视化，注意HICO DET数据集的标签比图片少 
     for index, img_filename in enumerate(imgs):
         if index < from_index - 1:
+            continue
+        if index not in low:
             continue
         # 显示图片
         target_dict = annotation_dict.get(img_filename)  # 得到了对应图片的标注字典
@@ -184,7 +187,7 @@ if __name__ == "__main__":
         if ctg != None:
             objs_id = [ctg["category_id"] for ctg in target_dict["annotations"]]
             
-        if is_syn == True:
+        if is_syn == False:
             hois = target_dict["hoi_annotation"]
             verb_ids = [_dict["category_id"] for _dict in hois]
             hoi_ids = [_dict["hoi_category_id"] for _dict in hois]
