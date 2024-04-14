@@ -15,8 +15,8 @@ from labels_txt.rare_list import rare_list
 
 parser = argparse.ArgumentParser('Set output imgs num', add_help=False)
 parser.add_argument('--nums', default=1, type=int)
-parser.add_argument('--boundary', default=160, type=int) # 对于seq的
-parser.add_argument('mode',default="random",type=str) #random | seq
+parser.add_argument('--rare', default=160, type=int) # 表明前多少个算rare
+parser.add_argument('--mode',default="random",type=str) #random | seq
     
 def get_verb(v_o): #接受一个元组
     prompt = hico_text_label.get(v_o).split()[5:]
@@ -65,9 +65,9 @@ class SynPipeline:
         self.config_path = config_path
         self.model_checkpoint_path = ckpt_path
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        self.model, self.preprocess = clip.load("ViT-B/16", device=self.device)
+        #self.model, self.preprocess = clip.load("ViT-B/16", device=self.device)
 
-    def random_choice(self,start,mode,seq_hoi_id):  #随机选择要生成的vo元组列表
+    def random_choice(self,start,mode,seq_hoi_id=None):  #随机选择要生成的vo元组列表
         v_o_list = []
         if mode == 'random':  #如果是random模式，就随机按权重抽取
             # 首先选择从哪里选
@@ -85,6 +85,7 @@ class SynPipeline:
                 v_o_list.append(list(hico_text_label.keys())[random.randint(0,599)])  
             hoi_id = hoi_to_id_dict[v_o_list[0]] 
         elif mode == 'seq':  #如果是顺序模式，就顺序按rare程度以此生成图片
+            v_o_list.append(id_to_hoi_dict[seq_hoi_id])
             hoi_id = seq_hoi_id
         
         # 按概率,根据multi变成多个（如果有）
@@ -104,11 +105,12 @@ class SynPipeline:
     # 1.生成图片
     def generate(self, pipe ,prompt):
         pipe.to("cuda")
+        torch.cuda.empty_cache()
         imgs = pipe(
             prompt,
             height=512,
             width=512,
-            num_inference_steps=75,
+            num_inference_steps=50,
             num_images_per_prompt=1,
             negative_prompt="mutated hands and fingers,poorly drawn hands,deformed,poorly drawn face,floating limbs,extra limb,floating limbs",
         ).images
@@ -118,13 +120,14 @@ class SynPipeline:
     def detect_and_filter_and_anno(self, imgs, verbs_objs_tuple_list: list,out_dir,prompt):
         # 首先，用CLIP过滤
         # 向量化
-        image_embed = self.preprocess(img).unsqueeze(0).to(self.device)
-        text_embed = clip.tokenize(prompt).to(self.device)
-        image_features = self.model.encode_image(image_embed)  # 将图片进行编码  # [1,512]
-        text_features = self.model.encode_text(text_embed)  # 将文本进行编码
-        similarity = torch.nn.functional.cosine_similarity(image_features, text_features).item()
-        if similarity < 0.275:
-            return
+        # with torch.no_grad():
+        #     image_embed = self.preprocess(img).unsqueeze(0).to(self.device)
+        #     text_embed = clip.tokenize(prompt).to(self.device)
+        #     image_features = self.model.encode_image(image_embed)  # 将图片进行编码  # [1,512]
+        #     text_features = self.model.encode_text(text_embed)  # 将文本进行编码
+        #     similarity = torch.nn.functional.cosine_similarity(image_features, text_features).item()
+        #     if similarity < 0.275:
+        #         return
         
         # == 读取json 为了之后的标注
         with open("./SynDatasets/annotations/train_val.json","r") as f:
@@ -161,7 +164,7 @@ class SynPipeline:
         if mode == 'random':
             for i in range(imgs_num):
                 #v_o = random.choice(list(hico_text_label.keys())) #这个v_o是我改成原本了的 原先是(0开始的verb和预测的obj)
-                v_o_list = self.random_choice(rare_num)
+                v_o_list = self.random_choice(rare_num,mode)
                 #print(v_o_list)
                 prompt = get_prompt(v_o_list)  #找到对应提示词
                 #print(prompt)
@@ -173,7 +176,7 @@ class SynPipeline:
             sum = rare_num * imgs_num
             for i in range(rare_num):
                 for j in range(imgs_num):
-                    v_o_list = self.random_choice(rare_list[i])
+                    v_o_list = self.random_choice(rare_num,mode,rare_list[i])
                     prompt = get_prompt(v_o_list)
                     imgs = pipeline.generate(SDpipe,prompt) 
                     pipeline.detect_and_filter_and_anno(imgs,v_o_list,out_dir,prompt)
@@ -199,4 +202,4 @@ if __name__ == "__main__":
         "/root/autodl-tmp/frp/params/stable-diffusion-v1.5"
     )
     pipeline = SynPipeline(model_config_path, model_checkpoint_path)
-    pipeline.run(SDpipe,args.nums,args.rare)
+    pipeline.run(SDpipe,args.nums,args.rare,args.mode)
