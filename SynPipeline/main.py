@@ -42,7 +42,7 @@ def get_prompt(v_o_list:list):
     quality = random.choice(["best quality","masterpiece"])
     details = random.choice(["Professional","Vivid Colors"])
     #scene = random.choice(["spacious", "urban", "rustic"])
-    scene = random.choice(["realistic"])
+    scene = random.choice(["ultra realistic"])
     shooting = random.choice(["DSLR","4K","HD"])
     shooting2 = random.choice(["warm lighting","blue hour"])
     #shooting3 = random.choice(["partial view","back view","front view"])

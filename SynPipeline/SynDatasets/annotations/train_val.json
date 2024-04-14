@@ -46276,5 +46276,305 @@
       }
     ],
     "prompt": "(a photo of a asian boy painting a vase):1.1,masterpiece,realistic,Vivid Colors,4K,blue hour,Highly detailed,Canon Eos5D"
+  },
+  {
+    "file_name": "Syn_train_001119.jpg",
+    "img_id": 1119,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          0,
+          412,
+          490
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          36,
+          120,
+          390
+        ],
+        "category_id": 70
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 88,
+        "hoi_category_id": 555
+      }
+    ],
+    "prompt": "(a photo of a black young woman sitting on a toilet):1.05,masterpiece,realistic,Professional,4K,blue hour,Highly detailed,iphone 12"
+  },
+  {
+    "file_name": "Syn_train_001120.jpg",
+    "img_id": 1120,
+    "annotations": [
+      {
+        "bbox": [
+          109,
+          53,
+          509,
+          477
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          91,
+          291,
+          263,
+          421
+        ],
+        "category_id": 70
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 88,
+        "hoi_category_id": 555
+      }
+    ],
+    "prompt": "(a photo of a black young man sitting on a toilet):1.05,best quality,realistic,Vivid Colors,HD,warm lighting,Highly detailed,Canon Eos5D"
+  },
+  {
+    "file_name": "Syn_train_001121.jpg",
+    "img_id": 1121,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          1,
+          433,
+          507
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          261,
+          240,
+          408,
+          375
+        ],
+        "category_id": 56
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 24,
+        "hoi_category_id": 259
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 260
+      }
+    ],
+    "prompt": "(a photo of a black young man eating and holding a broccoli):1.05,masterpiece,realistic,Vivid Colors,4K,warm lighting,Highly detailed,iphone 12"
+  },
+  {
+    "file_name": "Syn_train_001122.jpg",
+    "img_id": 1122,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          32,
+          465,
+          509
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          235,
+          348,
+          463,
+          474
+        ],
+        "category_id": 56
+      },
+      {
+        "bbox": [
+          15,
+          396,
+          176,
+          511
+        ],
+        "category_id": 56
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 24,
+        "hoi_category_id": 259
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 260
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 24,
+        "hoi_category_id": 259
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 37,
+        "hoi_category_id": 260
+      }
+    ],
+    "prompt": "(a photo of a asian boy eating and holding a broccoli):1.05,masterpiece,realistic,Vivid Colors,HD,warm lighting,Highly detailed,Canon Eos5D"
+  },
+  {
+    "file_name": "Syn_train_001123.jpg",
+    "img_id": 1123,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          102,
+          191,
+          487
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          198,
+          388,
+          452
+        ],
+        "category_id": 2
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 112,
+        "hoi_category_id": 23
+      }
+    ],
+    "prompt": "(a photo of a asian boy washing a bicycle):1.05,masterpiece,realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,Canon Eos5D"
+  },
+  {
+    "file_name": "Syn_train_001124.jpg",
+    "img_id": 1124,
+    "annotations": [
+      {
+        "bbox": [
+          12,
+          172,
+          511,
+          452
+        ],
+        "category_id": 2
+      },
+      {
+        "bbox": [
+          190,
+          25,
+          359,
+          440
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 112,
+        "hoi_category_id": 23
+      }
+    ],
+    "prompt": "(a photo of a black young woman washing a bicycle):1.05,masterpiece,realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,Canon Eos5D"
+  },
+  {
+    "file_name": "Syn_train_001125.jpg",
+    "img_id": 1125,
+    "annotations": [
+      {
+        "bbox": [
+          59,
+          21,
+          321,
+          460
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          90,
+          422,
+          441,
+          511
+        ],
+        "category_id": 59
+      },
+      {
+        "bbox": [
+          0,
+          31,
+          92,
+          143
+        ],
+        "category_id": 78
+      },
+      {
+        "bbox": [
+          154,
+          381,
+          196,
+          445
+        ],
+        "category_id": 49
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 55,
+        "hoi_category_id": 425
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 15,
+        "hoi_category_id": 421
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 393
+      },
+      {
+        "subject_id": 0,
+        "object_id": 3,
+        "category_id": 58,
+        "hoi_category_id": 383
+      }
+    ],
+    "prompt": "(a photo of a hispanic woman making and cooking a pizza):1.05,best quality,realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
   }
 ]
