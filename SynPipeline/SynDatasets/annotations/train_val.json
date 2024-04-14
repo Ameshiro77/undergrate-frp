@@ -46576,5 +46576,425 @@
       }
     ],
     "prompt": "(a photo of a hispanic woman making and cooking a pizza):1.05,best quality,realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
+  },
+  {
+    "file_name": "Syn_train_001126.jpg",
+    "img_id": 1126,
+    "annotations": [
+      {
+        "bbox": [
+          318,
+          73,
+          473,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          269,
+          282,
+          383,
+          433
+        ],
+        "category_id": 31
+      },
+      {
+        "bbox": [
+          19,
+          284,
+          122,
+          320
+        ],
+        "category_id": 15
+      },
+      {
+        "bbox": [
+          229,
+          248,
+          245,
+          300
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 9,
+        "hoi_category_id": 353
+      },
+      {
+        "subject_id": 3,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 247
+      },
+      {
+        "subject_id": 3,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 170
+      }
+    ],
+    "prompt": "(a photo of a asian boy carrying a handbag):1.05,best quality,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
+  },
+  {
+    "file_name": "Syn_train_001127.jpg",
+    "img_id": 1127,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          8,
+          286,
+          508
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          167,
+          253,
+          296,
+          391
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          179,
+          342,
+          213,
+          380
+        ],
+        "category_id": 32
+      },
+      {
+        "bbox": [
+          47,
+          179,
+          327,
+          402
+        ],
+        "category_id": 72
+      },
+      {
+        "bbox": [
+          282,
+          447,
+          393,
+          501
+        ],
+        "category_id": 51
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 546
+      },
+      {
+        "subject_id": 1,
+        "object_id": 3,
+        "category_id": 58,
+        "hoi_category_id": 198
+      },
+      {
+        "subject_id": 1,
+        "object_id": 4,
+        "category_id": 58,
+        "hoi_category_id": 257
+      },
+      {
+        "subject_id": 0,
+        "object_id": 4,
+        "category_id": 58,
+        "hoi_category_id": 170
+      }
+    ],
+    "prompt": "(a photo of a hispanic young man and a tv):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
+  },
+  {
+    "file_name": "Syn_train_001128.jpg",
+    "img_id": 1128,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          108,
+          460,
+          508
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          -1,
+          286,
+          482
+        ],
+        "category_id": 8
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 58,
+        "hoi_category_id": 576
+      }
+    ],
+    "prompt": "(a photo of a asian young man and a truck):1.05,best quality,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,Canon Eos5D"
+  },
+  {
+    "file_name": "Syn_train_001129.jpg",
+    "img_id": 1129,
+    "annotations": [
+      {
+        "bbox": [
+          38,
+          209,
+          307,
+          508
+        ],
+        "category_id": 18
+      },
+      {
+        "bbox": [
+          230,
+          21,
+          511,
+          507
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 66,
+        "hoi_category_id": 121
+      }
+    ],
+    "prompt": "(a photo of a black young woman petting a dog):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
+  },
+  {
+    "file_name": "Syn_train_001130.jpg",
+    "img_id": 1130,
+    "annotations": [
+      {
+        "bbox": [
+          140,
+          172,
+          415,
+          508
+        ],
+        "category_id": 18
+      },
+      {
+        "bbox": [
+          0,
+          1,
+          323,
+          506
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 66,
+        "hoi_category_id": 121
+      }
+    ],
+    "prompt": "(a photo of a black boy petting a dog):1.05,best quality,ultra realistic,Professional,4K,blue hour,Highly detailed,Canon Eos5D"
+  },
+  {
+    "file_name": "Syn_train_001131.jpg",
+    "img_id": 1131,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          136,
+          330,
+          509
+        ],
+        "category_id": 18
+      },
+      {
+        "bbox": [
+          224,
+          0,
+          511,
+          508
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 81,
+        "hoi_category_id": 123
+      }
+    ],
+    "prompt": "(a photo of a asian young woman scratching a dog):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,iphone 12"
+  },
+  {
+    "file_name": "Syn_train_001132.jpg",
+    "img_id": 1132,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          65,
+          413,
+          508
+        ],
+        "category_id": 18
+      },
+      {
+        "bbox": [
+          29,
+          0,
+          511,
+          511
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 81,
+        "hoi_category_id": 123
+      }
+    ],
+    "prompt": "(a photo of a hispanic man scratching a dog):1.05,masterpiece,ultra realistic,Professional,4K,warm lighting,Highly detailed,iphone 12"
+  },
+  {
+    "file_name": "Syn_train_001133.jpg",
+    "img_id": 1133,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          34,
+          136,
+          509
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          22,
+          181,
+          209,
+          475
+        ],
+        "category_id": 27
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 42,
+        "hoi_category_id": 211
+      }
+    ],
+    "prompt": "(a photo of a hispanic young woman inspecting a backpack):1.05,best quality,ultra realistic,Professional,DSLR,blue hour,Highly detailed,iphone 12"
+  },
+  {
+    "file_name": "Syn_train_001134.jpg",
+    "img_id": 1134,
+    "annotations": [
+      {
+        "bbox": [
+          410,
+          351,
+          512,
+          455
+        ],
+        "category_id": 41
+      },
+      {
+        "bbox": [
+          360,
+          98,
+          511,
+          411
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 29,
+        "hoi_category_id": 455
+      }
+    ],
+    "prompt": "(a photo of a black young woman flipping a skateboard):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
+  },
+  {
+    "file_name": "Syn_train_001135.jpg",
+    "img_id": 1135,
+    "annotations": [
+      {
+        "bbox": [
+          314,
+          0,
+          512,
+          421
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          328,
+          378,
+          512,
+          494
+        ],
+        "category_id": 41
+      },
+      {
+        "bbox": [
+          311,
+          206,
+          464,
+          268
+        ],
+        "category_id": 41
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 29,
+        "hoi_category_id": 455
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 29,
+        "hoi_category_id": 455
+      }
+    ],
+    "prompt": "(a photo of a black young man flipping a skateboard):1.05,masterpiece,ultra realistic,Professional,4K,warm lighting,Highly detailed,iphone 12"
   }
 ]
