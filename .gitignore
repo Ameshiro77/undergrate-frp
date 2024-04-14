@@ -21,7 +21,7 @@
 *.json
 *.cfg
 /SynPipeline/DINO
-/DIFFHOI
+# /DIFFHOI
 !setup.cfg
 !cfg/yolov3*.cfg
 !/SynPipeline/*
