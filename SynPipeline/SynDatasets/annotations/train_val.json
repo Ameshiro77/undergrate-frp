@@ -46996,5 +46996,38 @@
       }
     ],
     "prompt": "(a photo of a black young man flipping a skateboard):1.05,masterpiece,ultra realistic,Professional,4K,warm lighting,Highly detailed,iphone 12"
+  },
+  {
+    "file_name": "Syn_train_001136.jpg",
+    "img_id": 1136,
+    "annotations": [
+      {
+        "bbox": [
+          135,
+          149,
+          407,
+          486
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          45,
+          356,
+          373,
+          509
+        ],
+        "category_id": 36
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 115,
+        "hoi_category_id": 482
+      }
+    ],
+    "prompt": "(a photo of a asian young woman wearing a snowboard):1.05,best quality,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,iphone 12"
   }
 ]
