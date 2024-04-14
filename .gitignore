@@ -6,7 +6,7 @@
 *.tif
 *.tiff
 *.heic
-*.JPG
+#*.JPG
 *.JPEG
 *.PNG
 *.BMP
@@ -22,8 +22,8 @@
 *.cfg
 !setup.cfg
 !cfg/yolov3*.cfg
-#!/SynPipeline/*
-#!/SynPipeline/SynDatasets/annotations/train_val.json
+!/SynPipeline/*
+!/SynPipeline/SynDatasets/annotations/train_val.json
 
 storage.googleapis.com
 
