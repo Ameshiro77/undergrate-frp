@@ -71,7 +71,7 @@ def analyse():
 
 
 def clip_similarity():
-    import clip, PIL
+    import clip
 
     img_dir = r"./SynDatasets/train_images"
     json_path = "./SynDatasets/annotations/train_val.json"
