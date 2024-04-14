@@ -15,7 +15,7 @@ from labels_txt.rare_list import rare_list
 
 parser = argparse.ArgumentParser('Set output imgs num', add_help=False)
 parser.add_argument('--nums', default=1, type=int)
-parser.add_argument('--start', default=160, type=int)
+parser.add_argument('--boundary', default=160, type=int) # 对于seq的
 parser.add_argument('mode',default="random",type=str) #random | seq
     
 def get_verb(v_o): #接受一个元组
@@ -69,7 +69,7 @@ class SynPipeline:
 
     def random_choice(self,start,mode,seq_hoi_id):  #随机选择要生成的vo元组列表
         v_o_list = []
-        if mode == 'random':
+        if mode == 'random':  #如果是random模式，就随机按权重抽取
             # 首先选择从哪里选
             seed = random.choice([1,1,1,1,1,1,1,2,2,2])  # 70:rare 30:non-rare 
             if seed == 0:
@@ -83,13 +83,13 @@ class SynPipeline:
                 v_o_list.append(list(hico_text_label.keys())[random.choice(rare_list[start:])])
             elif seed == 3:
                 v_o_list.append(list(hico_text_label.keys())[random.randint(0,599)])  
-            # 如果是只有一个（即不是multi抽的） 就按概率,根据multi变成多个（如果有）
-            seed = random.choice([0,0,0,0,0,0,0,0,0,1])
             hoi_id = hoi_to_id_dict[v_o_list[0]] 
-        elif mode == 'seq':
+        elif mode == 'seq':  #如果是顺序模式，就顺序按rare程度以此生成图片
             hoi_id = seq_hoi_id
-            
-        if seed == 0 and hoi_id in multi_hoi:
+        
+        # 按概率,根据multi变成多个（如果有）
+        seed = random.choice([0,0,0,0,0,0,0,0,0,1])
+        if seed == 0 and hoi_id in multi_hoi:  #补全可能的多标签
             hois = [hoi for hoi in vo_pairs if hoi_id in hoi]
             #print(hois,hoi_id)
             while 1:
@@ -157,11 +157,11 @@ class SynPipeline:
                 f.close()
     
     # 自动化流程
-    def run(self,SDpipe,imgs_num,start_from,mode):
+    def run(self,SDpipe,imgs_num,rare_num,mode):
         if mode == 'random':
             for i in range(imgs_num):
                 #v_o = random.choice(list(hico_text_label.keys())) #这个v_o是我改成原本了的 原先是(0开始的verb和预测的obj)
-                v_o_list = self.random_choice(start_from)
+                v_o_list = self.random_choice(rare_num)
                 #print(v_o_list)
                 prompt = get_prompt(v_o_list)  #找到对应提示词
                 #print(prompt)
@@ -170,8 +170,8 @@ class SynPipeline:
                 print("目前进度:"+str(i+1)+"/"+str(imgs_num))
         if mode == 'seq':
             count = 0
-            sum = start_from * imgs_num
-            for i in range(start_from):
+            sum = rare_num * imgs_num
+            for i in range(rare_num):
                 for j in range(imgs_num):
                     v_o_list = self.random_choice(rare_list[i])
                     prompt = get_prompt(v_o_list)
@@ -199,4 +199,4 @@ if __name__ == "__main__":
         "/root/autodl-tmp/frp/params/stable-diffusion-v1.5"
     )
     pipeline = SynPipeline(model_config_path, model_checkpoint_path)
-    pipeline.run(SDpipe,args.nums,args.start)
+    pipeline.run(SDpipe,args.nums,args.rare)
