@@ -93,18 +93,18 @@ def evaluate_hoi(dataset_file, model, postprocessors, data_loader,
         outputs = model(samples, is_training=False)
         orig_target_sizes = torch.stack([t["orig_size"] for t in targets], dim=0)
         results = postprocessors['hoi'](outputs, orig_target_sizes)
-        print("outputs:",outputs)
-        print("\nresults:",results)
+        #print("outputs:",outputs)
+        #print("\nresults:",results)
         preds.extend(list(itertools.chain.from_iterable(utils.all_gather(results))))
         # For avoiding a runtime error, the copy is used
         gts.extend(list(itertools.chain.from_iterable(utils.all_gather(copy.deepcopy(targets)))))
         #print(results[0]["obj_scores"].shape,results[0]["hoi_scores"].shape,"\n\n\n",targets) #(64 81) (64 600)
-        break
+        #break
         # counter += 1
     # 关于output和result: result是output的后处理
     #outputs 包括 
-
     # gather the stats from all processes
+    
     metric_logger.synchronize_between_processes()
 
     img_ids = [img_gts['id'] for img_gts in gts]

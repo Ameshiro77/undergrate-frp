@@ -20,15 +20,19 @@
 *.data
 *.json
 *.cfg
+*.pth
 /SynPipeline/DINO
+/gen-vlkt/exps/*
+/gen-vlkt/exps
 # /DIFFHOI
 !setup.cfg
 !cfg/yolov3*.cfg
 !/SynPipeline/*
+/gen-vlkt/exps/hico_gen_vlkt_s_r50_dec_3layers/checkpoint_last.pth
 !/SynPipeline/SynDatasets/annotations/train_val.json
 
 storage.googleapis.com
-
+exps/
 results*.csv
 
 # Datasets -------------------------------------------------------------------------------------------------------------

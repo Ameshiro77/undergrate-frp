@@ -311,7 +311,7 @@ def main(args):
             sampler_train.set_epoch(epoch)
 
         train_stats = train_one_epoch(
-            model, criterion, data_loader_train, optimizer, device, epoch, args.clip_max_norm)
+            model_without_ddp, criterion, data_loader_train, optimizer, device, epoch, args.clip_max_norm)
         lr_scheduler.step()
         if epoch == args.epochs - 1:
             checkpoint_path = os.path.join(output_dir, 'checkpoint_last.pth')

@@ -28,7 +28,8 @@ def delete_syn(hico_dir):
 
 
 if __name__ == "__main__":
-    HICO_PATH = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det"
+    #HICO_PATH = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det"
+    HICO_PATH = "/root/autodl-tmp/data/hico_20160224_det"
     source_dir = r"./SynDatasets/train_images"
     target_dir = os.path.join(HICO_PATH, "images", "train2015")
     hico_json_path = os.path.join(HICO_PATH, "annotations", "trainval_hico.json")

@@ -267,7 +267,7 @@ def build(image_set, args):
     root = Path(args.hoi_path)
     assert root.exists(), f'provided HOI path {root} does not exist'
     PATHS = {
-        'train': (root / 'images' / 'train2015', root / 'annotations' / 'trainval_hico.json',
+        'train': (root / 'images' / 'train2015', root / 'annotations' / 'new_trainval_hico.json',
                   root / 'clip_feats_pool' / 'train2015'),
         'val': (
             root / 'images' / 'test2015', root / 'annotations' / 'test_hico.json',

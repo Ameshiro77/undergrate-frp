@@ -177,11 +177,13 @@ class SynPipeline:
         if mode == 'seq':
             count = 0
             from analyse import get_rare_list
-            _rare_list = get_rare_list()
+            HICO_PATH = "/root/autodl-tmp/data/hico_20160224_det"
+            _rare_list = get_rare_list(HICO_PATH)
             random.shuffle(_rare_list)
             sum = rare_num * imgs_num
             for i in range(rare_num):
                 for j in range(imgs_num):
+                    count = count + 1
                     vo = id_to_hoi_dict[_rare_list[i]]
                     if vo[0] == 58 or vo[1] == 1:
                         print("无交互或对象是人")
@@ -190,7 +192,7 @@ class SynPipeline:
                     prompt = get_prompt(v_o_list)
                     imgs = pipeline.generate(SDpipe,prompt) 
                     pipeline.detect_and_filter_and_anno(imgs,v_o_list,out_dir,prompt)
-                    count = count + 1
+                    #count = count + 1
                     print("目前进度:"+str(count)+"/"+str(sum))
             
 

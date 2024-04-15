@@ -3,6 +3,7 @@
 set -x
 EXP_DIR=exps/hico_gen_vlkt_s_r50_dec_3layers_eval
 MODEL_PATH=/root/autodl-tmp/frp/params/HICO_GEN_VLKT_S.pth
+#MODEL_PATH=/root/autodl-tmp/frp/gen-vlkt/exps/hico_gen_vlkt_s_r50_dec_3layers/checkpoint_last.pth
 # python -m torch.distributed.launch \
 #         --nproc_per_node=1 \
 #         --use_env \
