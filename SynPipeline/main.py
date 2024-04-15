@@ -116,7 +116,7 @@ class SynPipeline:
             num_images_per_prompt=1,
             #negative_prompt="mutated hands and fingers,poorly drawn hands,deformed,poorly drawn face,floating limbs,low quality,",
             negative_prompt = "low quality,monochrome,skin blemishes,6 more fingers on one hand,deformity,bad legs,malformed limbs,extra limbs,ugly,poorly drawn hands,poorly drawn face,\
-                               extra fingers,mutated hands,mutation,bad anatomy,disfigured,fused fingers"
+                               extra fingers,mutated hands,mutation,bad anatomy,disfigured,fused fingers,2 more person[]"
         ).images
         return imgs
 
@@ -176,11 +176,16 @@ class SynPipeline:
                 print("目前进度:"+str(i+1)+"/"+str(imgs_num))
         if mode == 'seq':
             count = 0
-            _rare_list = rare_list
+            from analyse import get_rare_list
+            _rare_list = get_rare_list()
             random.shuffle(_rare_list)
             sum = rare_num * imgs_num
             for i in range(rare_num):
                 for j in range(imgs_num):
+                    vo = id_to_hoi_dict[_rare_list[i]]
+                    if vo[0] == 58 or vo[1] == 1:
+                        print("无交互或对象是人")
+                        continue
                     v_o_list = self.random_choice(rare_num,mode,_rare_list[i])
                     prompt = get_prompt(v_o_list)
                     imgs = pipeline.generate(SDpipe,prompt) 

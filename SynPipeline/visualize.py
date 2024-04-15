@@ -5,7 +5,7 @@ import cv2, os,sys,argparse
 import json, random
 import numpy as np
 from labels_txt.labels import id_to_obj_dict, id_to_hoi_dict, id_to_verb_dict
-print(sys.path)
+#print(sys.path)
 sys.path.append("./")
 
 parser = argparse.ArgumentParser('Set output imgs num', add_help=False)
@@ -177,8 +177,8 @@ if __name__ == "__main__":
     for index, img_filename in enumerate(imgs):
         if index < from_index - 1:
             continue
-        if index not in low:
-            continue
+        # if index not in low:
+        #     continue
         # 显示图片
         target_dict = annotation_dict.get(img_filename)  # 得到了对应图片的标注字典
         if target_dict == None:  #如果找不到图片就跳过,只针对hicodet数据集
