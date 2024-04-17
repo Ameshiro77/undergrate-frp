@@ -20,8 +20,8 @@ def get_prompt(tgt):  # 获取[text]
     return prompt
 
 #综合合成和HICO 获取按值排序的hoi类别字典
-def get_rare_list(HICO_PATH): 
-    #img_dir = os.path.join(HICO_PATH,"images","train2015")
+def get_rare_list(HICO_PATH,limit): 
+    img_dir = os.path.join(HICO_PATH,"images","train2015")
     json_path = os.path.join(HICO_PATH,"annotations","new_trainval_hico.json")
     with open(json_path, "r") as f:
         annotation = json.load(f)
@@ -35,16 +35,22 @@ def get_rare_list(HICO_PATH):
     # 按值排序
     hoi_count = dict(sorted(hoi_count.items(), key=lambda item: item[1]))
     print(list(hoi_count.keys()))
-    # plt.bar(range(600), list(hoi_count.values()))
-    # plt.show()
+    plt.bar(range(limit), list(hoi_count.values())[:limit])
+    plt.show()
     return list(hoi_count.keys())
     
-def analyse():
+def analyse(mode):
     # 用于分析HICO-DET数据集。
-    img_dir = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\images\train2015"
-    json_path = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\annotations\trainval_hico.json"
-    #img_dir = "./SynDatasets/train_images"
-    #json_path = "./SynDatasets/annotations/train_val.json"
+    if mode == "HICO":
+        img_dir = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\images\train2015"
+        json_path = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\annotations\trainval_hico.json"
+        if not os.path.exists(img_dir):
+            img_dir = "/root/autodl-tmp/data/hico_20160224_det/images/train2015"
+            json_path = "/root/autodl-tmp/data/hico_20160224_det/annotations/trainval_hico.json"
+    elif mode == "Syn":
+        img_dir = "./SynDatasets/train_images"
+        json_path = "./SynDatasets/annotations/train_val.json"
+        
     with open(json_path, "r") as f:
         annotation = json.load(f)
         # 将字典列表转换为字典，以便快速查找
@@ -74,8 +80,6 @@ def analyse():
     # 按值排序
     hoi_count = dict(sorted(hoi_count.items(), key=lambda item: item[1]))
     #verb_count = dict(sorted(verb_count.items(), key=lambda item: item[1]))
-    # print(hoi_count)
-    # print(verb_count)
     rare_hois = list(hoi_count.keys())[:600]
     ids = list(hoi_count.keys())
     print(id_to_hoi_dict[ids[-1]])
@@ -149,5 +153,7 @@ def clip_similarity():
 if __name__ == "__main__":
     #clip_similarity()
     HICO_PATH = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det"
-    get_rare_list(HICO_PATH)
+    if not os.path.exists(HICO_PATH):
+        HICO_PATH = "/root/autodl-tmp/data/hico_20160224_det"
+    get_rare_list(HICO_PATH,300)
     #analyse()

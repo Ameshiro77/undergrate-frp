@@ -21,4 +21,6 @@ def adjust():
 
     with open(json_path,"w") as f:
         json.dump(new_anno, f, indent=2)
-            
+
+if __name__ == "__main__":
+    print("这是adjust，暂时不给用！")

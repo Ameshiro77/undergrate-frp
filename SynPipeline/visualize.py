@@ -1,15 +1,17 @@
 # 本程序可视化并手动筛选
 # TODO
 # 记得改filename 逻辑
-import cv2, os,sys,argparse
+import cv2, os, sys, argparse
 import json, random
 import numpy as np
 from labels_txt.labels import id_to_obj_dict, id_to_hoi_dict, id_to_verb_dict
-#print(sys.path)
+
+# print(sys.path)
 sys.path.append("./")
 
-parser = argparse.ArgumentParser('Set output imgs num', add_help=False)
-parser.add_argument('--start', default=1, type=int)
+parser = argparse.ArgumentParser("Set output imgs num", add_help=False)
+parser.add_argument("--start", default=1, type=int)
+
 
 def click_corner(event, x, y, flags, param):
     if event == cv2.EVENT_LBUTTONDOWN:
@@ -157,7 +159,7 @@ if __name__ == "__main__":
     else:
         img_dir = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\images\train2015"
         json_path = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\annotations\trainval_hico.json"
-    from_index = args.start # 从第几个图片开始读★
+    from_index = args.start  # 从第几个图片开始读★
     # == 先读取标注文件
     with open(json_path, "r") as f:
         annotation = json.load(f)
@@ -172,8 +174,32 @@ if __name__ == "__main__":
     print("一共" + str(imgs_num) + "张图，标签共" + str(len(annotation)) + "个")
     if is_syn == True:
         assert len(annotation) == imgs_num
-    low = [33, 38, 76, 143, 157, 241, 255, 269, 277, 335, 342, 363, 373, 404, 443, 447, 456, 462, 474, 481, 487, 496]
-    # 可视化，注意HICO DET数据集的标签比图片少 
+    low = [
+        33,
+        38,
+        76,
+        143,
+        157,
+        241,
+        255,
+        269,
+        277,
+        335,
+        342,
+        363,
+        373,
+        404,
+        443,
+        447,
+        456,
+        462,
+        474,
+        481,
+        487,
+        496,
+    ]
+    at_index = 0
+    # 可视化，注意HICO DET数据集的标签比图片少
     for index, img_filename in enumerate(imgs):
         if index < from_index - 1:
             continue
@@ -181,12 +207,12 @@ if __name__ == "__main__":
         #     continue
         # 显示图片
         target_dict = annotation_dict.get(img_filename)  # 得到了对应图片的标注字典
-        if target_dict == None:  #如果找不到图片就跳过,只针对hicodet数据集
+        if target_dict == None:  # 如果找不到图片就跳过,只针对hicodet数据集
             continue
         ctg = target_dict["annotations"]
         if ctg != None:
             objs_id = [ctg["category_id"] for ctg in target_dict["annotations"]]
-            
+
         if is_syn == False:
             hois = target_dict["hoi_annotation"]
             verb_ids = [_dict["category_id"] for _dict in hois]
@@ -197,7 +223,7 @@ if __name__ == "__main__":
                 continue
             # if 499 not in hoi_ids:
             #     continue
-            
+
         prompt = target_dict.get("prompt")  # 名字打印到标题上
         if prompt == None:
             prompt = "example"
@@ -217,8 +243,9 @@ if __name__ == "__main__":
             key = cv2.waitKey(0)
             if key == ord("q"):  # 退出
                 is_exit = True
+                at_index = index + 1
                 break
-            if key == ord("d") and is_syn==True:  # 删除文件
+            if key == ord("d") and is_syn == True:  # 删除文件
                 os.remove(img_path)
                 del annotation_dict[img_filename]
                 break
@@ -235,13 +262,18 @@ if __name__ == "__main__":
         cv2.destroyAllWindows()
 
     # 删除完了后要重新进行写
-    if is_syn ==True:
+    if is_syn == True:
         print("重写...")
         with open(json_path, "w") as f:
             new_annotation = list(annotation_dict.values())
             json.dump(new_annotation, f, indent=2)
 
     # 重排名序
-    if is_syn ==True:
+    if is_syn == True:
         print("重排...")
         reorder_name(img_dir, json_path)
+
+    # 在哪里退出
+    imgs = os.listdir(img_dir)
+    new_imgs_num = len(imgs)
+    print("退出时的图片在当前位于:", new_imgs_num - (imgs_num - at_index))
