@@ -137,6 +137,8 @@ class SynPipeline:
         seed = random.choice([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1])
         if seed == 0 and hoi_id in multi_hoi:  # 补全可能的多标签
             hois = [hoi for hoi in vo_pairs if hoi_id in hoi]
+            if len(hois) == 0:
+                return v_o_list
             # print(hois,hoi_id)
             while 1:
                 hois_tuple = random.choice(hois)
