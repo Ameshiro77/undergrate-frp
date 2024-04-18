@@ -235,7 +235,7 @@ class SynPipeline:
             from analyse import get_rare_list
 
             HICO_PATH = "/root/autodl-tmp/data/hico_20160224_det"
-            _rare_list = get_rare_list(HICO_PATH)
+            _rare_list = get_rare_list(HICO_PATH,args.rare)
             random.shuffle(_rare_list)
             sum = rare_num * imgs_num
             for i in range(rare_num):

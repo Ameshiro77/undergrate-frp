@@ -35,8 +35,8 @@ def get_rare_list(HICO_PATH,limit):
     # 按值排序
     hoi_count = dict(sorted(hoi_count.items(), key=lambda item: item[1]))
     print(list(hoi_count.keys()))
-    plt.bar(range(limit), list(hoi_count.values())[:limit])
-    plt.show()
+#     plt.bar(range(limit), list(hoi_count.values())[:limit])
+#     plt.show()
     return list(hoi_count.keys())
     
 def analyse(mode):
