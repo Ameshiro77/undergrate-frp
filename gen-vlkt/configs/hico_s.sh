@@ -7,8 +7,9 @@ EXP_DIR=exps/hico_gen_vlkt_s_r50_dec_3layers
 #         --use_env \
 # python  main.py \
 #         --pretrained params/detr-r50-pre-2branch-hico.pth \
+ #--pretrained /root/autodl-tmp/frp/params/HICO_GEN_VLKT_S.pth \
 python  main.py \
-        --pretrained /root/autodl-tmp/frp/params/HICO_GEN_VLKT_S.pth \
+        --resume /root/autodl-tmp/frp/params/HICO_GEN_VLKT_S.pth \
         --output_dir ${EXP_DIR} \
         --dataset_file hico \
         --hoi_path /root/autodl-tmp/data/hico_20160224_det \
@@ -19,7 +20,7 @@ python  main.py \
         --dec_layers 3 \
         --epochs 1 \
         --lr_drop 60 \
-        --batch_size 1 \
+        --batch_size 4 \
         --use_nms_filter \
         --ft_clip_with_small_lr \
         --with_clip_label \

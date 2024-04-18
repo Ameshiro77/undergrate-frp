@@ -27,6 +27,7 @@ from labels_txt.rare_list import rare_list
 
 parser = argparse.ArgumentParser("Set output imgs num", add_help=False)
 parser.add_argument("--nums", default=1, type=int)
+parser.add_argument("--steps", default=75, type=int)
 parser.add_argument("--rare", default=160, type=int)  # 表明前多少个算rare
 parser.add_argument("--mode", default="random", type=str)  # random | seq
 
@@ -147,14 +148,14 @@ class SynPipeline:
         return v_o_list
 
     # 1.生成图片
-    def generate(self, pipe, prompt):
+    def generate(self, pipe, prompt,steps):
         pipe.to("cuda")
         torch.cuda.empty_cache()
         imgs = pipe(
             prompt,
             height=512,
             width=512,
-            num_inference_steps=75,
+            num_inference_steps=steps,
             num_images_per_prompt=1,
             # negative_prompt="mutated hands and fingers,poorly drawn hands,deformed,poorly drawn face,floating limbs,low quality,",
             negative_prompt="low quality,monochrome,skin blemishes,6 more fingers on one hand,deformity,bad legs,malformed limbs,extra limbs,ugly,poorly drawn hands,poorly drawn face,\
@@ -215,10 +216,10 @@ class SynPipeline:
                 f.close()
 
     # 自动化流程
-    def run(self, SDpipe, imgs_num, rare_num, mode):
-        v_o_list = self.random_choice(rare_num, mode)
-        print(get_prompt(v_o_list))  # 找到对应提示词
-        exit()
+    def run(self, SDpipe, imgs_num, rare_num, mode, steps):
+        #v_o_list = self.random_choice(rare_num, mode)
+        #print(get_prompt(v_o_list))  # 找到对应提示词
+        #exit()
         if mode == "random":
             for i in range(imgs_num):
                 # v_o = random.choice(list(hico_text_label.keys())) #这个v_o是我改成原本了的 原先是(0开始的verb和预测的obj)
@@ -226,7 +227,7 @@ class SynPipeline:
                 # print(v_o_list)
                 prompt = get_prompt(v_o_list)  # 找到对应提示词
                 # print(prompt)
-                imgs = pipeline.generate(SDpipe, prompt)
+                imgs = pipeline.generate(SDpipe, prompt, steps)
                 pipeline.detect_and_filter_and_anno(imgs, v_o_list, out_dir, prompt)
                 print("目前进度:" + str(i + 1) + "/" + str(imgs_num))
         if mode == "seq":
@@ -246,7 +247,7 @@ class SynPipeline:
                         continue
                     v_o_list = self.random_choice(rare_num, mode, _rare_list[i])
                     prompt = get_prompt(v_o_list)
-                    imgs = pipeline.generate(SDpipe, prompt)
+                    imgs = pipeline.generate(SDpipe, prompt, steps)
                     pipeline.detect_and_filter_and_anno(imgs, v_o_list, out_dir, prompt)
                     # count = count + 1
                     print("目前进度:" + str(count) + "/" + str(sum))
@@ -262,8 +263,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
     # ==== pipeline
     SDpipe = StableDiffusionPipeline.from_pretrained(  # 放在这是为了避免多次调用
-        "G:\数据集&权重\stable-diffusion-v1.5", torch_dtype=torch.float32
-        #"/root/autodl-tmp/frp/params/stable-diffusion-v1.5"
+        #"G:\数据集&权重\stable-diffusion-v1.5", torch_dtype=torch.float32
+        "/root/autodl-tmp/frp/params/stable-diffusion-v1.5"
     )
     pipeline = SynPipeline(model_config_path, model_checkpoint_path)
-    pipeline.run(SDpipe, args.nums, args.rare, args.mode)
+    pipeline.run(SDpipe, args.nums, args.rare, args.mode, args.steps)
