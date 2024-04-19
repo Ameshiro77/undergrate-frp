@@ -1,26 +1,16 @@
 import os, sys
 import argparse
-from diffusers import DiffusionPipeline, StableDiffusionPipeline
+from diffusers import StableDiffusionPipeline, StableDiffusionImg2ImgPipeline
 import torch, json, random
 import numpy as np
 import clip
 from PIL import Image
-from labels_txt.labels import (
-    id_to_verb_dict,
-    id_to_obj_dict,
-    valid_obj_ids,
-    id_to_hoi_dict,
-    original_labels_dict,
-    hoi_to_id_dict,
-)
-from labels_txt.hico_text_label import (
-    hico_text_label,
-    hico_unseen_index,
-    hico_obj_text_label,
-)
-from labels_txt.vo_pairs import vo_pairs, multi_hoi, aux_verb_noun
+from labels_txt.labels import id_to_hoi_dict, hoi_to_id_dict
+from labels_txt.hico_text_label import hico_text_label
+from labels_txt.vo_pairs import vo_pairs, multi_hoi
 
 sys.path.append("./DINO")
+from utils.get_prompt import get_prompt
 from utils.detect import detect
 from utils.anno_json import generate_annotation
 from labels_txt.rare_list import rare_list
@@ -30,75 +20,7 @@ parser.add_argument("--nums", default=1, type=int)
 parser.add_argument("--steps", default=75, type=int)
 parser.add_argument("--rare", default=160, type=int)  # 表明前多少个算rare
 parser.add_argument("--mode", default="random", type=str)  # random | seq
-
-
-def get_verb(v_o):  # 接受一个元组
-    prompt = hico_text_label.get(v_o).split()[5:]
-    str = ""
-    for word in prompt:
-        if word == "a" or word == "an":
-            break
-        str = str + word + " "
-    return str[:-1]
-
-
-def get_noun(v_o):  # 接受一个vo
-    obj_id = v_o[1]
-    prompt = hico_obj_text_label[original_labels_dict[obj_id]][1].split()[4:]
-    str = ""
-    for word in prompt:
-        if word == "a" or word == "an":
-            break
-        str = str + word + " "
-    return "a " + str[:-1]
-
-
-def get_hoi(v_o_list):
-    hoi = ""
-    last_vo = v_o_list[0]
-    for v_o in v_o_list:
-        if last_vo != v_o:
-            hoi = hoi[:-4] + get_noun(last_vo) + aux_verb_noun[last_vo[0]] + ","
-        hoi = hoi + (get_verb(v_o)) + " and "
-        last_vo = v_o
-    hoi = hoi[:-4] + get_noun(v_o_list[-1]) + aux_verb_noun[v_o_list[-1][0]]
-    return hoi
-
-
-def get_prompt(v_o_list: list):
-    race = random.choice(["asian", "black", "hispanic"])
-    human = random.choice(
-        ["boy", "teenager", "man", "young man", "woman", "young woman"]
-    )
-    quality = random.choice(["best quality", "masterpiece"])
-    details = random.choice(["Professional", "Vivid Colors"])
-    # scene = random.choice(["spacious", "urban", "rustic"])
-    scene = random.choice(["ultra realistic"])
-    shooting = random.choice(["DSLR", "4K", "HD"])
-    shooting2 = random.choice(["warm lighting", "blue hour"])
-    # shooting3 = random.choice(["partial view","back view","front view"])
-    shooting3 = random.choice(["Highly detailed"])
-    shooting4 = random.choice(["Canon Eos5D", "iphone 12"])
-    # prompt_prefix = hico_text_label[v_o].replace("person",race+" "+human)+","
-    hoi = get_hoi(v_o_list)
-    # (a photo of a asian young man cutting with a knife,cutting a carrot,holding a knife):1.05,
-    prompt_prefix = "(a photo of a " + race + " " + human + " " + hoi + "):1.05,"
-    prompt_suffix = (
-        quality
-        + ","
-        + scene
-        + ","
-        + details
-        + ","
-        + shooting
-        + ","
-        + shooting2
-        + ","
-        + shooting3
-        + ","
-        + shooting4
-    )
-    return prompt_prefix + prompt_suffix
+parser.add_argument("--gen", default="t2i", type=str)  # t2i | i2i
 
 
 class SynPipeline:
@@ -108,6 +30,9 @@ class SynPipeline:
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.model, self.preprocess = clip.load("ViT-B/16", device=self.device)
 
+    """
+    # 随机选择要生成的vo元组列表
+    """
     def random_choice(self, start, mode, seq_hoi_id=None):  # 随机选择要生成的vo元组列表
         v_o_list = []
         if mode == "random":  # 如果是random模式，就随机按权重抽取
@@ -149,23 +74,43 @@ class SynPipeline:
                     v_o_list.append(id_to_hoi_dict[hoi])
         return v_o_list
 
-    # 1.生成图片
-    def generate(self, pipe, prompt,steps):
-        pipe.to("cuda")
-        torch.cuda.empty_cache()
-        imgs = pipe(
-            prompt,
-            height=512,
-            width=512,
-            num_inference_steps=steps,
-            num_images_per_prompt=1,
-            # negative_prompt="mutated hands and fingers,poorly drawn hands,deformed,poorly drawn face,floating limbs,low quality,",
-            negative_prompt="low quality,monochrome,skin blemishes,6 more fingers on one hand,deformity,bad legs,malformed limbs,extra limbs,ugly,poorly drawn hands,poorly drawn face,\
-                               extra fingers,mutated hands,mutation,bad anatomy,disfigured,fused fingers,2 more person[]",
-        ).images
-        return imgs
+    """
+    1.生成图片
+    """
+    def generate(self, pipe, prompt, steps, mode):
+        ngt_prmt = "low quality,monochrome,skin blemishes,6 more fingers on one hand,deformity,bad legs,malformed limbs,extra limbs,ugly,poorly drawn hands,poorly drawn face,\
+                                extra fingers,mutated hands,mutation,bad anatomy,disfigured,fused fingers,2 more person"
+        if mode == "t2i":
+            pipe.to("cuda")
+            torch.cuda.empty_cache()
+            imgs = pipe(
+                prompt,
+                height=512,
+                width=512,
+                num_inference_steps=steps,
+                num_images_per_prompt=1,
+                # negative_prompt="mutated hands and fingers,poorly drawn hands,deformed,poorly drawn face,floating limbs,low quality,",
+                negative_prompt=ngt_prmt,
+            ).images
+            return imgs
 
-    # 2.检测并过滤，然后  3.标注
+        elif mode == "i2i":
+            pipe.to("cuda")
+            torch.cuda.empty_cache()
+            imgs = pipe(
+                prompt,
+                height=512,
+                width=512,
+                num_inference_steps=steps,
+                num_images_per_prompt=1,
+                # negative_prompt="mutated hands and fingers,poorly drawn hands,deformed,poorly drawn face,floating limbs,low quality,",
+                negative_prompt=ngt_prmt,
+            ).images
+            return imgs
+
+    """
+    2.检测并过滤，然后  3.标注
+    """
     def detect_and_filter_and_anno(
         self, imgs, verbs_objs_tuple_list: list, out_dir, prompt
     ):
@@ -217,39 +162,44 @@ class SynPipeline:
                     json.dump(anno, f, indent=2)
                 f.close()
 
-    # 自动化流程
-    def run(self, SDpipe, imgs_num, rare_num, mode, steps):
-        #v_o_list = self.random_choice(rare_num, mode)
-        #print(get_prompt(v_o_list))  # 找到对应提示词
-        #exit()
-        if mode == "random":
-            for i in range(imgs_num):
+    """
+    自动化流程
+    """
+    # def run(self, SDpipe, imgs_num, rare_num, mode, steps):
+    def run(self, *args):
+        # v_o_list = self.random_choice(rare_num, mode)
+        # print(get_prompt(v_o_list))  # 找到对应提示词
+        # exit()
+        # ==== 随机按权重从600个hoi里挑选生成
+        if args.mode == "random":
+            for i in range(args.imgs_num):
                 # v_o = random.choice(list(hico_text_label.keys())) #这个v_o是我改成原本了的 原先是(0开始的verb和预测的obj)
-                v_o_list = self.random_choice(rare_num, mode)
-                # print(v_o_list)
+                v_o_list = self.random_choice(args.rare_num, args.mode)
                 prompt = get_prompt(v_o_list)  # 找到对应提示词
-                # print(prompt)
-                imgs = pipeline.generate(SDpipe, prompt, steps)
+                imgs = pipeline.generate(SDpipe, prompt, args.steps, args.gen)
                 pipeline.detect_and_filter_and_anno(imgs, v_o_list, out_dir, prompt)
-                print("目前进度:" + str(i + 1) + "/" + str(imgs_num))
-        if mode == "seq":
+                print("目前进度:" + str(i + 1) + "/" + str(args.imgs_num))
+        # ==== 随机从尾部N个类别里依次生成M个
+        if args.mode == "seq":
             count = 0
             from analyse import get_rare_list
 
             HICO_PATH = "/root/autodl-tmp/data/hico_20160224_det"
-            _rare_list = get_rare_list(HICO_PATH,args.rare)
+            _rare_list = get_rare_list(HICO_PATH, args.rare)
             random.shuffle(_rare_list)
-            sum = rare_num * imgs_num
-            for i in range(rare_num):
-                for j in range(imgs_num):
+            sum = args.rare_num * args.imgs_num
+            for i in range(args.rare_num):
+                for j in range(args.imgs_num):
                     count = count + 1
                     vo = id_to_hoi_dict[_rare_list[i]]
                     if vo[0] == 58 or vo[1] == 1:
                         print("无交互或对象是人")
                         continue
-                    v_o_list = self.random_choice(rare_num, mode, _rare_list[i])
+                    v_o_list = self.random_choice(
+                        args.rare_num, args.mode, _rare_list[i]
+                    )
                     prompt = get_prompt(v_o_list)
-                    imgs = pipeline.generate(SDpipe, prompt, steps)
+                    imgs = pipeline.generate(SDpipe, prompt, args.steps, args.gen)
                     pipeline.detect_and_filter_and_anno(imgs, v_o_list, out_dir, prompt)
                     # count = count + 1
                     print("目前进度:" + str(count) + "/" + str(sum))
@@ -264,9 +214,21 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     # ==== pipeline
-    SDpipe = StableDiffusionPipeline.from_pretrained(  # 放在这是为了避免多次调用
-        #"G:\数据集&权重\stable-diffusion-v1.5", torch_dtype=torch.float32
-        "/root/autodl-tmp/frp/params/stable-diffusion-v1.5"
-    )
+    SDpipe = None
+    if args.gen == "t2i":
+        SDpipe = StableDiffusionPipeline.from_pretrained(  # 放在这是为了避免多次调用
+            # "G:\数据集&权重\stable-diffusion-v1.5", torch_dtype=torch.float32
+            "/root/autodl-tmp/frp/params/stable-diffusion-v1.5"
+        )
+    elif args.gen == "i2i":
+        SDpipe = StableDiffusionImg2ImgPipeline.from_pretrained(  # 放在这是为了避免多次调用
+            # "G:\数据集&权重\stable-diffusion-v1.5", torch_dtype=torch.float32
+            "/root/autodl-tmp/frp/params/stable-diffusion-v1.5"
+        )
+    else:
+        raise ValueError("生成方式不对,选择文生图t2i或图生图i2i")
+
+    from diffusers import StableDiffusionImg2ImgPipeline
+
     pipeline = SynPipeline(model_config_path, model_checkpoint_path)
-    pipeline.run(SDpipe, args.nums, args.rare, args.mode, args.steps)
+    pipeline.run(SDpipe, args)
