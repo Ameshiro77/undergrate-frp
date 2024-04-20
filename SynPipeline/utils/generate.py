@@ -30,10 +30,12 @@ def get_hico_img(v_o_list):
     if len(found_dict.keys()) ==0:
         id = random.choice(hoi_ids)
         found_dict = {k: v for k, v in name2ids_dict.items() if id in v}  #如果找不到完全包含的，就随机选一个id找
-    print(found_dict)
+    #print(found_dict)
     img_name = random.choice(list(found_dict.keys()))  #随机挑一个满足条件的HICO数据
+    print(img_name,name2ids_dict[img_name])
     img_path = os.path.join(HICO_PATH, "images","train2015", img_name)
     img = Image.open(img_path)
+    img.save("./original.jpg")
     # original_img = cv2.imread(str(img_path))
     # cv2.imshow("1", original_img)
     # cv2.waitKey(1)
@@ -64,8 +66,8 @@ def generate(pipe, v_o_list, steps, mode):
         imgs = pipe(
             prompt,
             image=get_hico_img(v_o_list),
-            height=512,
-            width=512,
+            height=800,
+            width=800,
             num_inference_steps=steps,
             num_images_per_prompt=1,
             # negative_prompt="mutated hands and fingers,poorly drawn hands,deformed,poorly drawn face,floating limbs,low quality,",
@@ -78,7 +80,8 @@ if __name__ == "__main__":
     # vos = [id_to_hoi_dict[i] for i in [224,225,226,227]]
     # print(get_hico_img(vos))
     # exit()
-    SD_PATH = r"G:\数据集&权重\stable-diffusion-v1.5"
+    #SD_PATH = r"G:\数据集&权重\stable-diffusion-v1.5"
+    SD_PATH = "/root/autodl-tmp/frp/params/stable-diffusion-v1.5/"
     # ==== SD pipeline
     gen = "i2i"
     if gen == "t2i":
@@ -94,8 +97,8 @@ if __name__ == "__main__":
     else:
         raise ValueError("生成方式不对,选择文生图t2i或图生图i2i")
     v_o_list = []
-    hoi_id = [7, 8]
+    hoi_id = [219, 223]
     for seq_hoi_id in hoi_id:
         v_o_list.append(id_to_hoi_dict[seq_hoi_id])
-    imgs = generate(SDpipe, v_o_list, 50, gen)
-    imgs.save("../example.jpg")
+    imgs = generate(SDpipe, v_o_list, 120, gen)
+    imgs[0].save("./example.jpg")
