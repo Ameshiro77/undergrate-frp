@@ -198,6 +198,7 @@ if __name__ == "__main__":
         496,
     ]
     at_index = 0
+    del_count = 0
     # 可视化，注意HICO DET数据集的标签比图片少
     for index, img_filename in enumerate(imgs):
         if index < from_index - 1:
@@ -248,6 +249,7 @@ if __name__ == "__main__":
                 break
             if key == ord("d") and is_syn == True:  # 删除文件
                 os.remove(img_path)
+                del_count = del_count + 1
                 del annotation_dict[img_filename]
                 break
             if key == ord("o"):  # 切换原图

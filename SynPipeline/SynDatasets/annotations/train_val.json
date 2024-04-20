@@ -49334,39 +49334,6 @@
     "annotations": [
       {
         "bbox": [
-          53,
-          0,
-          453,
-          340
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          151,
-          222,
-          346,
-          463
-        ],
-        "category_id": 61
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 24,
-        "hoi_category_id": 268
-      }
-    ],
-    "prompt": "(a photo of a black boy eating a cake):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001206.jpg",
-    "img_id": 1206,
-    "annotations": [
-      {
-        "bbox": [
           0,
           13,
           313,
@@ -49401,8 +49368,8 @@
     "prompt": "(a photo of a hispanic teenager riding and standing on a skateboard):1.05,best quality,ultra realistic,Professional,4K,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001207.jpg",
-    "img_id": 1207,
+    "file_name": "Syn_train_001206.jpg",
+    "img_id": 1206,
     "annotations": [
       {
         "bbox": [
@@ -49509,8 +49476,8 @@
     "prompt": "(a photo of a asian boy buying a donut):1.05,masterpiece,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001208.jpg",
-    "img_id": 1208,
+    "file_name": "Syn_train_001207.jpg",
+    "img_id": 1207,
     "annotations": [
       {
         "bbox": [
@@ -49557,8 +49524,8 @@
     "prompt": "(a photo of a hispanic teenager buying a donut):1.05,best quality,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001209.jpg",
-    "img_id": 1209,
+    "file_name": "Syn_train_001208.jpg",
+    "img_id": 1208,
     "annotations": [
       {
         "bbox": [
@@ -49590,8 +49557,8 @@
     "prompt": "(a photo of a asian young man walking a elephant):1.05,best quality,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001210.jpg",
-    "img_id": 1210,
+    "file_name": "Syn_train_001209.jpg",
+    "img_id": 1209,
     "annotations": [
       {
         "bbox": [
@@ -49623,8 +49590,8 @@
     "prompt": "(a photo of a asian boy cleaning a microwave):1.05,masterpiece,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001211.jpg",
-    "img_id": 1211,
+    "file_name": "Syn_train_001210.jpg",
+    "img_id": 1210,
     "annotations": [
       {
         "bbox": [
@@ -49656,8 +49623,8 @@
     "prompt": "(a photo of a hispanic man picking a orange):1.05,masterpiece,ultra realistic,Professional,4K,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001212.jpg",
-    "img_id": 1212,
+    "file_name": "Syn_train_001211.jpg",
+    "img_id": 1211,
     "annotations": [
       {
         "bbox": [
@@ -49764,8 +49731,8 @@
     "prompt": "(a photo of a asian man picking a orange):1.05,masterpiece,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001213.jpg",
-    "img_id": 1213,
+    "file_name": "Syn_train_001212.jpg",
+    "img_id": 1212,
     "annotations": [
       {
         "bbox": [
@@ -49827,8 +49794,8 @@
     "prompt": "(a photo of a asian woman picking a orange):1.05,best quality,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001214.jpg",
-    "img_id": 1214,
+    "file_name": "Syn_train_001213.jpg",
+    "img_id": 1213,
     "annotations": [
       {
         "bbox": [
@@ -49860,8 +49827,8 @@
     "prompt": "(a photo of a black young woman pouring a cup):1.05,masterpiece,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001215.jpg",
-    "img_id": 1215,
+    "file_name": "Syn_train_001214.jpg",
+    "img_id": 1214,
     "annotations": [
       {
         "bbox": [
@@ -49893,8 +49860,8 @@
     "prompt": "(a photo of a black teenager drying a cat):1.05,best quality,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001216.jpg",
-    "img_id": 1216,
+    "file_name": "Syn_train_001215.jpg",
+    "img_id": 1215,
     "annotations": [
       {
         "bbox": [
@@ -49926,8 +49893,8 @@
     "prompt": "(a photo of a hispanic woman washing a airplane):1.05,best quality,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001217.jpg",
-    "img_id": 1217,
+    "file_name": "Syn_train_001216.jpg",
+    "img_id": 1216,
     "annotations": [
       {
         "bbox": [
@@ -49959,8 +49926,8 @@
     "prompt": "(a photo of a asian boy repairing a tv):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001218.jpg",
-    "img_id": 1218,
+    "file_name": "Syn_train_001217.jpg",
+    "img_id": 1217,
     "annotations": [
       {
         "bbox": [
@@ -50052,8 +50019,8 @@
     "prompt": "(a photo of a hispanic woman paying a parking meter):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001219.jpg",
-    "img_id": 1219,
+    "file_name": "Syn_train_001218.jpg",
+    "img_id": 1218,
     "annotations": [
       {
         "bbox": [
@@ -50085,8 +50052,8 @@
     "prompt": "(a photo of a hispanic boy holding a horse):1.05,masterpiece,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001220.jpg",
-    "img_id": 1220,
+    "file_name": "Syn_train_001219.jpg",
+    "img_id": 1219,
     "annotations": [
       {
         "bbox": [
@@ -50124,8 +50091,8 @@
     "prompt": "(a photo of a hispanic woman reading and holding a book):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001221.jpg",
-    "img_id": 1221,
+    "file_name": "Syn_train_001220.jpg",
+    "img_id": 1220,
     "annotations": [
       {
         "bbox": [
@@ -50172,8 +50139,8 @@
     "prompt": "(a photo of a hispanic woman reading a book):1.05,masterpiece,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001222.jpg",
-    "img_id": 1222,
+    "file_name": "Syn_train_001221.jpg",
+    "img_id": 1221,
     "annotations": [
       {
         "bbox": [
@@ -50205,8 +50172,8 @@
     "prompt": "(a photo of a asian man carrying a tennis racket):1.05,best quality,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001223.jpg",
-    "img_id": 1223,
+    "file_name": "Syn_train_001222.jpg",
+    "img_id": 1222,
     "annotations": [
       {
         "bbox": [
@@ -50238,8 +50205,8 @@
     "prompt": "(a photo of a black woman boarding a boat):1.05,masterpiece,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001224.jpg",
-    "img_id": 1224,
+    "file_name": "Syn_train_001223.jpg",
+    "img_id": 1223,
     "annotations": [
       {
         "bbox": [
@@ -50271,8 +50238,8 @@
     "prompt": "(a photo of a hispanic teenager buying a banana):1.05,masterpiece,ultra realistic,Professional,4K,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001225.jpg",
-    "img_id": 1225,
+    "file_name": "Syn_train_001224.jpg",
+    "img_id": 1224,
     "annotations": [
       {
         "bbox": [
@@ -50349,8 +50316,8 @@
     "prompt": "(a photo of a asian man buying a banana):1.05,best quality,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001226.jpg",
-    "img_id": 1226,
+    "file_name": "Syn_train_001225.jpg",
+    "img_id": 1225,
     "annotations": [
       {
         "bbox": [
@@ -50412,8 +50379,8 @@
     "prompt": "(a photo of a hispanic woman cutting a pizza):1.05,masterpiece,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001227.jpg",
-    "img_id": 1227,
+    "file_name": "Syn_train_001226.jpg",
+    "img_id": 1226,
     "annotations": [
       {
         "bbox": [
@@ -50451,8 +50418,8 @@
     "prompt": "(a photo of a black woman holding and cutting with a scissors):1.05,masterpiece,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001228.jpg",
-    "img_id": 1228,
+    "file_name": "Syn_train_001227.jpg",
+    "img_id": 1227,
     "annotations": [
       {
         "bbox": [
@@ -50484,8 +50451,8 @@
     "prompt": "(a photo of a asian teenager signing a baseball bat):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001229.jpg",
-    "img_id": 1229,
+    "file_name": "Syn_train_001228.jpg",
+    "img_id": 1228,
     "annotations": [
       {
         "bbox": [
@@ -50535,8 +50502,8 @@
     "prompt": "(a photo of a asian teenager sitting on and holding and straddling and riding a motorcycle):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001230.jpg",
-    "img_id": 1230,
+    "file_name": "Syn_train_001229.jpg",
+    "img_id": 1229,
     "annotations": [
       {
         "bbox": [
@@ -50574,8 +50541,8 @@
     "prompt": "(a photo of a asian young man eating and holding a apple):1.05,masterpiece,ultra realistic,Professional,DSLR,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001231.jpg",
-    "img_id": 1231,
+    "file_name": "Syn_train_001230.jpg",
+    "img_id": 1230,
     "annotations": [
       {
         "bbox": [
@@ -50607,8 +50574,8 @@
     "prompt": "(a photo of a hispanic woman sipping a cup):1.05,masterpiece,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001232.jpg",
-    "img_id": 1232,
+    "file_name": "Syn_train_001231.jpg",
+    "img_id": 1231,
     "annotations": [
       {
         "bbox": [
@@ -50640,8 +50607,8 @@
     "prompt": "(a photo of a black boy carrying a baseball bat):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001233.jpg",
-    "img_id": 1233,
+    "file_name": "Syn_train_001232.jpg",
+    "img_id": 1232,
     "annotations": [
       {
         "bbox": [
@@ -50673,8 +50640,8 @@
     "prompt": "(a photo of a asian young woman inspecting a sports ball):1.05,masterpiece,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001234.jpg",
-    "img_id": 1234,
+    "file_name": "Syn_train_001233.jpg",
+    "img_id": 1233,
     "annotations": [
       {
         "bbox": [
@@ -50706,8 +50673,8 @@
     "prompt": "(a photo of a asian boy washing a horse):1.05,best quality,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001235.jpg",
-    "img_id": 1235,
+    "file_name": "Syn_train_001234.jpg",
+    "img_id": 1234,
     "annotations": [
       {
         "bbox": [
@@ -50769,8 +50736,8 @@
     "prompt": "(a photo of a asian boy filling a wine glass):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001236.jpg",
-    "img_id": 1236,
+    "file_name": "Syn_train_001235.jpg",
+    "img_id": 1235,
     "annotations": [
       {
         "bbox": [
@@ -50814,8 +50781,8 @@
     "prompt": "(a photo of a hispanic man rowing and riding and sitting on a boat):1.05,best quality,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001237.jpg",
-    "img_id": 1237,
+    "file_name": "Syn_train_001236.jpg",
+    "img_id": 1236,
     "annotations": [
       {
         "bbox": [
@@ -50847,8 +50814,8 @@
     "prompt": "(a photo of a hispanic man repairing a truck):1.05,best quality,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001238.jpg",
-    "img_id": 1238,
+    "file_name": "Syn_train_001237.jpg",
+    "img_id": 1237,
     "annotations": [
       {
         "bbox": [
@@ -50895,8 +50862,8 @@
     "prompt": "(a photo of a asian young woman texting on a cell phone):1.05,best quality,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001239.jpg",
-    "img_id": 1239,
+    "file_name": "Syn_train_001238.jpg",
+    "img_id": 1238,
     "annotations": [
       {
         "bbox": [
@@ -50928,8 +50895,8 @@
     "prompt": "(a photo of a asian man texting on a cell phone):1.05,best quality,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001240.jpg",
-    "img_id": 1240,
+    "file_name": "Syn_train_001239.jpg",
+    "img_id": 1239,
     "annotations": [
       {
         "bbox": [
@@ -50961,8 +50928,8 @@
     "prompt": "(a photo of a asian woman pushing a bicycle):1.05,best quality,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001241.jpg",
-    "img_id": 1241,
+    "file_name": "Syn_train_001240.jpg",
+    "img_id": 1240,
     "annotations": [
       {
         "bbox": [
@@ -51012,8 +50979,8 @@
     "prompt": "(a photo of a black young man riding and racing and sitting on and straddling a motorcycle):1.05,best quality,ultra realistic,Professional,4K,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001242.jpg",
-    "img_id": 1242,
+    "file_name": "Syn_train_001241.jpg",
+    "img_id": 1241,
     "annotations": [
       {
         "bbox": [
@@ -51045,8 +51012,8 @@
     "prompt": "(a photo of a asian young man holding a vase):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001243.jpg",
-    "img_id": 1243,
+    "file_name": "Syn_train_001242.jpg",
+    "img_id": 1242,
     "annotations": [
       {
         "bbox": [
@@ -51078,8 +51045,8 @@
     "prompt": "(a photo of a asian woman holding a vase):1.05,masterpiece,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001244.jpg",
-    "img_id": 1244,
+    "file_name": "Syn_train_001243.jpg",
+    "img_id": 1243,
     "annotations": [
       {
         "bbox": [
@@ -51126,8 +51093,8 @@
     "prompt": "(a photo of a asian man carrying a teddy bear):1.05,best quality,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001245.jpg",
-    "img_id": 1245,
+    "file_name": "Syn_train_001244.jpg",
+    "img_id": 1244,
     "annotations": [
       {
         "bbox": [
@@ -51174,8 +51141,8 @@
     "prompt": "(a photo of a asian man spinning a frisbee):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001246.jpg",
-    "img_id": 1246,
+    "file_name": "Syn_train_001245.jpg",
+    "img_id": 1245,
     "annotations": [
       {
         "bbox": [
@@ -51207,8 +51174,8 @@
     "prompt": "(a photo of a black teenager smelling a pizza):1.05,best quality,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001247.jpg",
-    "img_id": 1247,
+    "file_name": "Syn_train_001246.jpg",
+    "img_id": 1246,
     "annotations": [
       {
         "bbox": [
@@ -51240,8 +51207,8 @@
     "prompt": "(a photo of a black man smelling a pizza):1.05,best quality,ultra realistic,Professional,DSLR,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001248.jpg",
-    "img_id": 1248,
+    "file_name": "Syn_train_001247.jpg",
+    "img_id": 1247,
     "annotations": [
       {
         "bbox": [
@@ -51279,8 +51246,8 @@
     "prompt": "(a photo of a asian teenager dragging and holding a surfboard):1.05,best quality,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001249.jpg",
-    "img_id": 1249,
+    "file_name": "Syn_train_001248.jpg",
+    "img_id": 1248,
     "annotations": [
       {
         "bbox": [
@@ -51318,8 +51285,8 @@
     "prompt": "(a photo of a black man carrying and holding a suitcase):1.05,masterpiece,ultra realistic,Professional,DSLR,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001250.jpg",
-    "img_id": 1250,
+    "file_name": "Syn_train_001249.jpg",
+    "img_id": 1249,
     "annotations": [
       {
         "bbox": [
@@ -51351,8 +51318,8 @@
     "prompt": "(a photo of a hispanic teenager swinging a baseball bat):1.05,masterpiece,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001251.jpg",
-    "img_id": 1251,
+    "file_name": "Syn_train_001250.jpg",
+    "img_id": 1250,
     "annotations": [
       {
         "bbox": [
@@ -51384,8 +51351,8 @@
     "prompt": "(a photo of a black young woman swinging a baseball bat):1.05,best quality,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001252.jpg",
-    "img_id": 1252,
+    "file_name": "Syn_train_001251.jpg",
+    "img_id": 1251,
     "annotations": [
       {
         "bbox": [
@@ -51417,8 +51384,8 @@
     "prompt": "(a photo of a asian young woman kissing a dog):1.05,masterpiece,ultra realistic,Professional,4K,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001253.jpg",
-    "img_id": 1253,
+    "file_name": "Syn_train_001252.jpg",
+    "img_id": 1252,
     "annotations": [
       {
         "bbox": [
@@ -51450,8 +51417,8 @@
     "prompt": "(a photo of a asian boy wearing a skis):1.05,best quality,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001254.jpg",
-    "img_id": 1254,
+    "file_name": "Syn_train_001253.jpg",
+    "img_id": 1253,
     "annotations": [
       {
         "bbox": [
@@ -51483,8 +51450,8 @@
     "prompt": "(a photo of a hispanic young woman wearing a skis):1.05,masterpiece,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001255.jpg",
-    "img_id": 1255,
+    "file_name": "Syn_train_001254.jpg",
+    "img_id": 1254,
     "annotations": [
       {
         "bbox": [
@@ -51531,8 +51498,8 @@
     "prompt": "(a photo of a asian boy wearing a skis):1.05,masterpiece,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001256.jpg",
-    "img_id": 1256,
+    "file_name": "Syn_train_001255.jpg",
+    "img_id": 1255,
     "annotations": [
       {
         "bbox": [
@@ -51564,8 +51531,8 @@
     "prompt": "(a photo of a asian man holding a bowl):1.05,best quality,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001257.jpg",
-    "img_id": 1257,
+    "file_name": "Syn_train_001256.jpg",
+    "img_id": 1256,
     "annotations": [
       {
         "bbox": [
@@ -51597,8 +51564,8 @@
     "prompt": "(a photo of a hispanic teenager flipping a skateboard):1.05,masterpiece,ultra realistic,Professional,4K,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001258.jpg",
-    "img_id": 1258,
+    "file_name": "Syn_train_001257.jpg",
+    "img_id": 1257,
     "annotations": [
       {
         "bbox": [
@@ -51630,8 +51597,8 @@
     "prompt": "(a photo of a asian young man washing a cat):1.05,masterpiece,ultra realistic,Professional,DSLR,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001259.jpg",
-    "img_id": 1259,
+    "file_name": "Syn_train_001258.jpg",
+    "img_id": 1258,
     "annotations": [
       {
         "bbox": [
@@ -51663,8 +51630,8 @@
     "prompt": "(a photo of a hispanic boy washing a sheep):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001260.jpg",
-    "img_id": 1260,
+    "file_name": "Syn_train_001259.jpg",
+    "img_id": 1259,
     "annotations": [
       {
         "bbox": [
@@ -51696,8 +51663,8 @@
     "prompt": "(a photo of a hispanic teenager toasting a wine glass):1.05,masterpiece,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001261.jpg",
-    "img_id": 1261,
+    "file_name": "Syn_train_001260.jpg",
+    "img_id": 1260,
     "annotations": [
       {
         "bbox": [
@@ -51729,8 +51696,8 @@
     "prompt": "(a photo of a hispanic woman opening a backpack):1.05,masterpiece,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001262.jpg",
-    "img_id": 1262,
+    "file_name": "Syn_train_001261.jpg",
+    "img_id": 1261,
     "annotations": [
       {
         "bbox": [
@@ -51762,8 +51729,8 @@
     "prompt": "(a photo of a asian man inspecting a tennis racket):1.05,masterpiece,ultra realistic,Professional,4K,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001263.jpg",
-    "img_id": 1263,
+    "file_name": "Syn_train_001262.jpg",
+    "img_id": 1262,
     "annotations": [
       {
         "bbox": [
@@ -51825,8 +51792,8 @@
     "prompt": "(a photo of a black young woman buying a pizza):1.05,masterpiece,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001264.jpg",
-    "img_id": 1264,
+    "file_name": "Syn_train_001263.jpg",
+    "img_id": 1263,
     "annotations": [
       {
         "bbox": [
@@ -51858,8 +51825,8 @@
     "prompt": "(a photo of a black young man parking a motorcycle):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001265.jpg",
-    "img_id": 1265,
+    "file_name": "Syn_train_001264.jpg",
+    "img_id": 1264,
     "annotations": [
       {
         "bbox": [
@@ -51906,8 +51873,8 @@
     "prompt": "(a photo of a asian young man washing a broccoli):1.05,masterpiece,ultra realistic,Professional,HD,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001266.jpg",
-    "img_id": 1266,
+    "file_name": "Syn_train_001265.jpg",
+    "img_id": 1265,
     "annotations": [
       {
         "bbox": [
@@ -51954,8 +51921,8 @@
     "prompt": "(a photo of a hispanic young woman hunting a bear):1.05,best quality,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001267.jpg",
-    "img_id": 1267,
+    "file_name": "Syn_train_001266.jpg",
+    "img_id": 1266,
     "annotations": [
       {
         "bbox": [
@@ -51987,8 +51954,8 @@
     "prompt": "(a photo of a hispanic man kissing a giraffe):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001268.jpg",
-    "img_id": 1268,
+    "file_name": "Syn_train_001267.jpg",
+    "img_id": 1267,
     "annotations": [
       {
         "bbox": [
@@ -52020,8 +51987,8 @@
     "prompt": "(a photo of a asian young man kissing a giraffe):1.05,best quality,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001269.jpg",
-    "img_id": 1269,
+    "file_name": "Syn_train_001268.jpg",
+    "img_id": 1268,
     "annotations": [
       {
         "bbox": [
@@ -52053,8 +52020,8 @@
     "prompt": "(a photo of a hispanic boy watching a giraffe):1.05,masterpiece,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001270.jpg",
-    "img_id": 1270,
+    "file_name": "Syn_train_001269.jpg",
+    "img_id": 1269,
     "annotations": [
       {
         "bbox": [
@@ -52092,8 +52059,8 @@
     "prompt": "(a photo of a asian man holding and dragging a suitcase):1.05,best quality,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001271.jpg",
-    "img_id": 1271,
+    "file_name": "Syn_train_001270.jpg",
+    "img_id": 1270,
     "annotations": [
       {
         "bbox": [
@@ -52146,8 +52113,8 @@
     "prompt": "(a photo of a hispanic man cutting with a knife,cutting a pizza,holding a knife):1.05,best quality,ultra realistic,Professional,DSLR,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001272.jpg",
-    "img_id": 1272,
+    "file_name": "Syn_train_001271.jpg",
+    "img_id": 1271,
     "annotations": [
       {
         "bbox": [
@@ -52179,8 +52146,8 @@
     "prompt": "(a photo of a asian young woman cleaning a oven):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001273.jpg",
-    "img_id": 1273,
+    "file_name": "Syn_train_001272.jpg",
+    "img_id": 1272,
     "annotations": [
       {
         "bbox": [
@@ -52230,8 +52197,8 @@
     "prompt": "(a photo of a asian boy sitting on and holding and riding and straddling a bicycle):1.05,masterpiece,ultra realistic,Professional,DSLR,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001274.jpg",
-    "img_id": 1274,
+    "file_name": "Syn_train_001273.jpg",
+    "img_id": 1273,
     "annotations": [
       {
         "bbox": [
@@ -52263,8 +52230,8 @@
     "prompt": "(a photo of a asian teenager repairing a toilet):1.05,best quality,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001275.jpg",
-    "img_id": 1275,
+    "file_name": "Syn_train_001274.jpg",
+    "img_id": 1274,
     "annotations": [
       {
         "bbox": [
@@ -52296,8 +52263,8 @@
     "prompt": "(a photo of a black man opening a microwave):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001276.jpg",
-    "img_id": 1276,
+    "file_name": "Syn_train_001275.jpg",
+    "img_id": 1275,
     "annotations": [
       {
         "bbox": [
@@ -52335,8 +52302,8 @@
     "prompt": "(a photo of a black young man holding and swinging a tennis racket):1.05,best quality,ultra realistic,Professional,HD,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001277.jpg",
-    "img_id": 1277,
+    "file_name": "Syn_train_001276.jpg",
+    "img_id": 1276,
     "annotations": [
       {
         "bbox": [
@@ -52368,8 +52335,8 @@
     "prompt": "(a photo of a asian young woman kissing a sheep):1.05,masterpiece,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001278.jpg",
-    "img_id": 1278,
+    "file_name": "Syn_train_001277.jpg",
+    "img_id": 1277,
     "annotations": [
       {
         "bbox": [
@@ -52401,8 +52368,8 @@
     "prompt": "(a photo of a asian man washing a apple):1.05,best quality,ultra realistic,Professional,DSLR,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001279.jpg",
-    "img_id": 1279,
+    "file_name": "Syn_train_001278.jpg",
+    "img_id": 1278,
     "annotations": [
       {
         "bbox": [
@@ -52479,8 +52446,8 @@
     "prompt": "(a photo of a asian young woman buying a donut):1.05,best quality,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001280.jpg",
-    "img_id": 1280,
+    "file_name": "Syn_train_001279.jpg",
+    "img_id": 1279,
     "annotations": [
       {
         "bbox": [
@@ -52512,8 +52479,8 @@
     "prompt": "(a photo of a hispanic boy carrying a book):1.05,best quality,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001281.jpg",
-    "img_id": 1281,
+    "file_name": "Syn_train_001280.jpg",
+    "img_id": 1280,
     "annotations": [
       {
         "bbox": [
@@ -52545,8 +52512,8 @@
     "prompt": "(a photo of a hispanic teenager hugging a elephant):1.05,best quality,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001282.jpg",
-    "img_id": 1282,
+    "file_name": "Syn_train_001281.jpg",
+    "img_id": 1281,
     "annotations": [
       {
         "bbox": [
@@ -52593,8 +52560,8 @@
     "prompt": "(a photo of a black young woman picking a banana):1.05,best quality,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001283.jpg",
-    "img_id": 1283,
+    "file_name": "Syn_train_001282.jpg",
+    "img_id": 1282,
     "annotations": [
       {
         "bbox": [
@@ -52626,8 +52593,8 @@
     "prompt": "(a photo of a asian man inspecting a kite):1.05,masterpiece,ultra realistic,Professional,4K,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001284.jpg",
-    "img_id": 1284,
+    "file_name": "Syn_train_001283.jpg",
+    "img_id": 1283,
     "annotations": [
       {
         "bbox": [
@@ -52665,8 +52632,8 @@
     "prompt": "(a photo of a hispanic boy sitting on and riding a train):1.05,masterpiece,ultra realistic,Professional,4K,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001285.jpg",
-    "img_id": 1285,
+    "file_name": "Syn_train_001284.jpg",
+    "img_id": 1284,
     "annotations": [
       {
         "bbox": [
@@ -52698,8 +52665,8 @@
     "prompt": "(a photo of a black woman walking a cow):1.05,best quality,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001286.jpg",
-    "img_id": 1286,
+    "file_name": "Syn_train_001285.jpg",
+    "img_id": 1285,
     "annotations": [
       {
         "bbox": [
@@ -52731,8 +52698,8 @@
     "prompt": "(a photo of a asian man cooking a hot dog):1.05,best quality,ultra realistic,Professional,4K,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001287.jpg",
-    "img_id": 1287,
+    "file_name": "Syn_train_001286.jpg",
+    "img_id": 1286,
     "annotations": [
       {
         "bbox": [
@@ -52764,8 +52731,8 @@
     "prompt": "(a photo of a asian woman making a vase):1.05,masterpiece,ultra realistic,Professional,HD,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001288.jpg",
-    "img_id": 1288,
+    "file_name": "Syn_train_001287.jpg",
+    "img_id": 1287,
     "annotations": [
       {
         "bbox": [
@@ -52797,8 +52764,8 @@
     "prompt": "(a photo of a hispanic man riding a elephant):1.05,masterpiece,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001289.jpg",
-    "img_id": 1289,
+    "file_name": "Syn_train_001288.jpg",
+    "img_id": 1288,
     "annotations": [
       {
         "bbox": [
@@ -52830,8 +52797,8 @@
     "prompt": "(a photo of a black young man picking up a skateboard):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001290.jpg",
-    "img_id": 1290,
+    "file_name": "Syn_train_001289.jpg",
+    "img_id": 1289,
     "annotations": [
       {
         "bbox": [
@@ -52863,8 +52830,8 @@
     "prompt": "(a photo of a asian young man carrying a backpack):1.05,best quality,ultra realistic,Professional,HD,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001291.jpg",
-    "img_id": 1291,
+    "file_name": "Syn_train_001290.jpg",
+    "img_id": 1290,
     "annotations": [
       {
         "bbox": [
@@ -52896,8 +52863,8 @@
     "prompt": "(a photo of a hispanic boy repairing a bicycle):1.05,masterpiece,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001292.jpg",
-    "img_id": 1292,
+    "file_name": "Syn_train_001291.jpg",
+    "img_id": 1291,
     "annotations": [
       {
         "bbox": [
@@ -52935,8 +52902,8 @@
     "prompt": "(a photo of a asian young man straddling and riding a horse):1.05,best quality,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001293.jpg",
-    "img_id": 1293,
+    "file_name": "Syn_train_001292.jpg",
+    "img_id": 1292,
     "annotations": [
       {
         "bbox": [
@@ -52974,8 +52941,8 @@
     "prompt": "(a photo of a asian young man drinking with and holding a cup):1.05,masterpiece,ultra realistic,Professional,HD,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001294.jpg",
-    "img_id": 1294,
+    "file_name": "Syn_train_001293.jpg",
+    "img_id": 1293,
     "annotations": [
       {
         "bbox": [
@@ -53013,8 +52980,8 @@
     "prompt": "(a photo of a hispanic boy riding and standing on a skateboard):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001295.jpg",
-    "img_id": 1295,
+    "file_name": "Syn_train_001294.jpg",
+    "img_id": 1294,
     "annotations": [
       {
         "bbox": [
@@ -53076,8 +53043,8 @@
     "prompt": "(a photo of a black woman cleaning a dining table):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001296.jpg",
-    "img_id": 1296,
+    "file_name": "Syn_train_001295.jpg",
+    "img_id": 1295,
     "annotations": [
       {
         "bbox": [
@@ -53115,8 +53082,8 @@
     "prompt": "(a photo of a hispanic young man riding and straddling a horse):1.05,best quality,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001297.jpg",
-    "img_id": 1297,
+    "file_name": "Syn_train_001296.jpg",
+    "img_id": 1296,
     "annotations": [
       {
         "bbox": [
@@ -53148,8 +53115,8 @@
     "prompt": "(a photo of a black man petting a zebra):1.05,masterpiece,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001298.jpg",
-    "img_id": 1298,
+    "file_name": "Syn_train_001297.jpg",
+    "img_id": 1297,
     "annotations": [
       {
         "bbox": [
@@ -53181,8 +53148,8 @@
     "prompt": "(a photo of a asian boy wearing a snowboard):1.05,masterpiece,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001299.jpg",
-    "img_id": 1299,
+    "file_name": "Syn_train_001298.jpg",
+    "img_id": 1298,
     "annotations": [
       {
         "bbox": [
@@ -53214,8 +53181,8 @@
     "prompt": "(a photo of a asian young man feeding a horse):1.05,masterpiece,ultra realistic,Professional,HD,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001300.jpg",
-    "img_id": 1300,
+    "file_name": "Syn_train_001299.jpg",
+    "img_id": 1299,
     "annotations": [
       {
         "bbox": [
@@ -53262,8 +53229,8 @@
     "prompt": "(a photo of a asian boy inspecting a apple):1.05,best quality,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001301.jpg",
-    "img_id": 1301,
+    "file_name": "Syn_train_001300.jpg",
+    "img_id": 1300,
     "annotations": [
       {
         "bbox": [
@@ -53301,8 +53268,8 @@
     "prompt": "(a photo of a black teenager standing on and riding a skateboard):1.05,masterpiece,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001302.jpg",
-    "img_id": 1302,
+    "file_name": "Syn_train_001301.jpg",
+    "img_id": 1301,
     "annotations": [
       {
         "bbox": [
@@ -53334,8 +53301,8 @@
     "prompt": "(a photo of a asian young man setting a clock):1.05,best quality,ultra realistic,Professional,DSLR,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001303.jpg",
-    "img_id": 1303,
+    "file_name": "Syn_train_001302.jpg",
+    "img_id": 1302,
     "annotations": [
       {
         "bbox": [
@@ -53403,89 +53370,8 @@
     "prompt": "(a photo of a asian young woman cutting a cake,cutting with and holding a knife):1.05,best quality,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001304.jpg",
-    "img_id": 1304,
-    "annotations": [
-      {
-        "bbox": [
-          272,
-          2,
-          511,
-          506
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          0,
-          379,
-          507
-        ],
-        "category_id": 22
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 27,
-        "hoi_category_id": 314
-      }
-    ],
-    "prompt": "(a photo of a black young woman feeding a elephant):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001305.jpg",
-    "img_id": 1305,
-    "annotations": [
-      {
-        "bbox": [
-          85,
-          30,
-          370,
-          445
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          66,
-          314,
-          238,
-          502
-        ],
-        "category_id": 33
-      },
-      {
-        "bbox": [
-          280,
-          305,
-          391,
-          478
-        ],
-        "category_id": 33
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 61,
-        "hoi_category_id": 513
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 61,
-        "hoi_category_id": 513
-      }
-    ],
-    "prompt": "(a photo of a hispanic boy packing a suitcase):1.05,masterpiece,ultra realistic,Professional,4K,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001306.jpg",
-    "img_id": 1306,
+    "file_name": "Syn_train_001303.jpg",
+    "img_id": 1303,
     "annotations": [
       {
         "bbox": [
@@ -53532,8 +53418,8 @@
     "prompt": "(a photo of a hispanic boy watching a giraffe):1.05,masterpiece,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001307.jpg",
-    "img_id": 1307,
+    "file_name": "Syn_train_001304.jpg",
+    "img_id": 1304,
     "annotations": [
       {
         "bbox": [
@@ -53565,8 +53451,8 @@
     "prompt": "(a photo of a black woman hugging a dog):1.05,best quality,ultra realistic,Professional,HD,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001308.jpg",
-    "img_id": 1308,
+    "file_name": "Syn_train_001305.jpg",
+    "img_id": 1305,
     "annotations": [
       {
         "bbox": [
@@ -53604,8 +53490,8 @@
     "prompt": "(a photo of a black boy riding and sitting on a boat):1.05,masterpiece,ultra realistic,Professional,DSLR,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001309.jpg",
-    "img_id": 1309,
+    "file_name": "Syn_train_001306.jpg",
+    "img_id": 1306,
     "annotations": [
       {
         "bbox": [
@@ -53637,8 +53523,8 @@
     "prompt": "(a photo of a asian young woman washing a sink):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001310.jpg",
-    "img_id": 1310,
+    "file_name": "Syn_train_001307.jpg",
+    "img_id": 1307,
     "annotations": [
       {
         "bbox": [
@@ -53670,8 +53556,8 @@
     "prompt": "(a photo of a hispanic man repairing a mouse):1.05,best quality,ultra realistic,Professional,DSLR,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001311.jpg",
-    "img_id": 1311,
+    "file_name": "Syn_train_001308.jpg",
+    "img_id": 1308,
     "annotations": [
       {
         "bbox": [
@@ -53703,41 +53589,8 @@
     "prompt": "(a photo of a asian boy sitting on a surfboard):1.05,best quality,ultra realistic,Professional,4K,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001312.jpg",
-    "img_id": 1312,
-    "annotations": [
-      {
-        "bbox": [
-          86,
-          14,
-          309,
-          509
-        ],
-        "category_id": 19
-      },
-      {
-        "bbox": [
-          0,
-          34,
-          140,
-          506
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 38,
-        "hoi_category_id": 137
-      }
-    ],
-    "prompt": "(a photo of a hispanic young woman hopping on a horse):1.05,best quality,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001313.jpg",
-    "img_id": 1313,
+    "file_name": "Syn_train_001309.jpg",
+    "img_id": 1309,
     "annotations": [
       {
         "bbox": [
@@ -53769,56 +53622,8 @@
     "prompt": "(a photo of a hispanic man holding a horse):1.05,masterpiece,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001314.jpg",
-    "img_id": 1314,
-    "annotations": [
-      {
-        "bbox": [
-          186,
-          0,
-          511,
-          420
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          273,
-          351,
-          379,
-          437
-        ],
-        "category_id": 61
-      },
-      {
-        "bbox": [
-          248,
-          320,
-          278,
-          351
-        ],
-        "category_id": 49
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 55,
-        "hoi_category_id": 271
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 58,
-        "hoi_category_id": 383
-      }
-    ],
-    "prompt": "(a photo of a hispanic woman making a cake):1.05,masterpiece,ultra realistic,Professional,4K,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001315.jpg",
-    "img_id": 1315,
+    "file_name": "Syn_train_001310.jpg",
+    "img_id": 1310,
     "annotations": [
       {
         "bbox": [
@@ -53850,8 +53655,8 @@
     "prompt": "(a photo of a asian young woman jumping a snowboard):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001316.jpg",
-    "img_id": 1316,
+    "file_name": "Syn_train_001311.jpg",
+    "img_id": 1311,
     "annotations": [
       {
         "bbox": [
@@ -53883,8 +53688,8 @@
     "prompt": "(a photo of a black young woman running a horse):1.05,best quality,ultra realistic,Professional,4K,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001317.jpg",
-    "img_id": 1317,
+    "file_name": "Syn_train_001312.jpg",
+    "img_id": 1312,
     "annotations": [
       {
         "bbox": [
@@ -53916,8 +53721,8 @@
     "prompt": "(a photo of a asian man lying on a surfboard):1.05,best quality,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001318.jpg",
-    "img_id": 1318,
+    "file_name": "Syn_train_001313.jpg",
+    "img_id": 1313,
     "annotations": [
       {
         "bbox": [
@@ -53949,8 +53754,8 @@
     "prompt": "(a photo of a hispanic man carrying a cake):1.05,best quality,ultra realistic,Professional,HD,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001319.jpg",
-    "img_id": 1319,
+    "file_name": "Syn_train_001314.jpg",
+    "img_id": 1314,
     "annotations": [
       {
         "bbox": [
@@ -53982,8 +53787,8 @@
     "prompt": "(a photo of a black young woman standing on a boat):1.05,masterpiece,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001320.jpg",
-    "img_id": 1320,
+    "file_name": "Syn_train_001315.jpg",
+    "img_id": 1315,
     "annotations": [
       {
         "bbox": [
@@ -54015,8 +53820,8 @@
     "prompt": "(a photo of a hispanic woman carrying a pizza):1.05,best quality,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001321.jpg",
-    "img_id": 1321,
+    "file_name": "Syn_train_001316.jpg",
+    "img_id": 1316,
     "annotations": [
       {
         "bbox": [
@@ -54048,41 +53853,8 @@
     "prompt": "(a photo of a hispanic woman hugging a horse):1.05,masterpiece,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001322.jpg",
-    "img_id": 1322,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          281,
-          511,
-          431
-        ],
-        "category_id": 42
-      },
-      {
-        "bbox": [
-          18,
-          56,
-          369,
-          483
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 42,
-        "hoi_category_id": 520
-      }
-    ],
-    "prompt": "(a photo of a asian teenager inspecting a surfboard):1.05,best quality,ultra realistic,Professional,4K,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001323.jpg",
-    "img_id": 1323,
+    "file_name": "Syn_train_001317.jpg",
+    "img_id": 1317,
     "annotations": [
       {
         "bbox": [
@@ -54120,8 +53892,8 @@
     "prompt": "(a photo of a hispanic man holding and licking a bottle):1.05,best quality,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001324.jpg",
-    "img_id": 1324,
+    "file_name": "Syn_train_001318.jpg",
+    "img_id": 1318,
     "annotations": [
       {
         "bbox": [
@@ -54153,41 +53925,8 @@
     "prompt": "(a photo of a black teenager wearing a baseball glove):1.05,masterpiece,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001325.jpg",
-    "img_id": 1325,
-    "annotations": [
-      {
-        "bbox": [
-          325,
-          124,
-          503,
-          412
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          71,
-          102,
-          399,
-          407
-        ],
-        "category_id": 21
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 46,
-        "hoi_category_id": 101
-      }
-    ],
-    "prompt": "(a photo of a black man kissing a cow):1.05,best quality,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001326.jpg",
-    "img_id": 1326,
+    "file_name": "Syn_train_001319.jpg",
+    "img_id": 1319,
     "annotations": [
       {
         "bbox": [
@@ -54237,8 +53976,8 @@
     "prompt": "(a photo of a asian woman holding and riding and sitting on and straddling a bicycle):1.05,best quality,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001327.jpg",
-    "img_id": 1327,
+    "file_name": "Syn_train_001320.jpg",
+    "img_id": 1320,
     "annotations": [
       {
         "bbox": [
@@ -54270,8 +54009,8 @@
     "prompt": "(a photo of a asian woman cleaning a sink):1.05,best quality,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001328.jpg",
-    "img_id": 1328,
+    "file_name": "Syn_train_001321.jpg",
+    "img_id": 1321,
     "annotations": [
       {
         "bbox": [
@@ -54318,8 +54057,8 @@
     "prompt": "(a photo of a black boy buying a orange):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001329.jpg",
-    "img_id": 1329,
+    "file_name": "Syn_train_001322.jpg",
+    "img_id": 1322,
     "annotations": [
       {
         "bbox": [
@@ -54366,8 +54105,8 @@
     "prompt": "(a photo of a black boy holding a stop sign):1.05,masterpiece,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001330.jpg",
-    "img_id": 1330,
+    "file_name": "Syn_train_001323.jpg",
+    "img_id": 1323,
     "annotations": [
       {
         "bbox": [
@@ -54399,8 +54138,8 @@
     "prompt": "(a photo of a asian teenager holding a wine glass):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001331.jpg",
-    "img_id": 1331,
+    "file_name": "Syn_train_001324.jpg",
+    "img_id": 1324,
     "annotations": [
       {
         "bbox": [
@@ -54432,8 +54171,8 @@
     "prompt": "(a photo of a hispanic young man carrying a cell phone):1.05,masterpiece,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001332.jpg",
-    "img_id": 1332,
+    "file_name": "Syn_train_001325.jpg",
+    "img_id": 1325,
     "annotations": [
       {
         "bbox": [
@@ -54471,8 +54210,8 @@
     "prompt": "(a photo of a asian man carrying and holding a surfboard):1.05,best quality,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001333.jpg",
-    "img_id": 1333,
+    "file_name": "Syn_train_001326.jpg",
+    "img_id": 1326,
     "annotations": [
       {
         "bbox": [
@@ -54504,8 +54243,8 @@
     "prompt": "(a photo of a asian boy lassoing a cow):1.05,best quality,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001334.jpg",
-    "img_id": 1334,
+    "file_name": "Syn_train_001327.jpg",
+    "img_id": 1327,
     "annotations": [
       {
         "bbox": [
@@ -54543,8 +54282,8 @@
     "prompt": "(a photo of a hispanic young man sitting on and driving a boat):1.05,masterpiece,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001335.jpg",
-    "img_id": 1335,
+    "file_name": "Syn_train_001328.jpg",
+    "img_id": 1328,
     "annotations": [
       {
         "bbox": [
@@ -54576,8 +54315,8 @@
     "prompt": "(a photo of a black young man hugging a dog):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001336.jpg",
-    "img_id": 1336,
+    "file_name": "Syn_train_001329.jpg",
+    "img_id": 1329,
     "annotations": [
       {
         "bbox": [
@@ -54609,8 +54348,8 @@
     "prompt": "(a photo of a black woman holding a potted plant):1.05,best quality,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001337.jpg",
-    "img_id": 1337,
+    "file_name": "Syn_train_001330.jpg",
+    "img_id": 1330,
     "annotations": [
       {
         "bbox": [
@@ -54648,8 +54387,8 @@
     "prompt": "(a photo of a black young man holding and dragging a suitcase):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001338.jpg",
-    "img_id": 1338,
+    "file_name": "Syn_train_001331.jpg",
+    "img_id": 1331,
     "annotations": [
       {
         "bbox": [
@@ -54687,8 +54426,8 @@
     "prompt": "(a photo of a black young man standing on and riding a skateboard):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001339.jpg",
-    "img_id": 1339,
+    "file_name": "Syn_train_001332.jpg",
+    "img_id": 1332,
     "annotations": [
       {
         "bbox": [
@@ -54720,8 +54459,8 @@
     "prompt": "(a photo of a asian young man holding a bowl):1.05,best quality,ultra realistic,Professional,4K,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001340.jpg",
-    "img_id": 1340,
+    "file_name": "Syn_train_001333.jpg",
+    "img_id": 1333,
     "annotations": [
       {
         "bbox": [
@@ -54759,8 +54498,8 @@
     "prompt": "(a photo of a hispanic man dragging and holding a surfboard):1.05,best quality,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001341.jpg",
-    "img_id": 1341,
+    "file_name": "Syn_train_001334.jpg",
+    "img_id": 1334,
     "annotations": [
       {
         "bbox": [
@@ -54792,8 +54531,8 @@
     "prompt": "(a photo of a black young woman repairing a boat):1.05,masterpiece,ultra realistic,Professional,HD,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001342.jpg",
-    "img_id": 1342,
+    "file_name": "Syn_train_001335.jpg",
+    "img_id": 1335,
     "annotations": [
       {
         "bbox": [
@@ -54840,8 +54579,8 @@
     "prompt": "(a photo of a asian young man sitting on a toilet):1.05,masterpiece,ultra realistic,Professional,DSLR,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001343.jpg",
-    "img_id": 1343,
+    "file_name": "Syn_train_001336.jpg",
+    "img_id": 1336,
     "annotations": [
       {
         "bbox": [
@@ -54873,8 +54612,8 @@
     "prompt": "(a photo of a hispanic teenager watching a tv):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001344.jpg",
-    "img_id": 1344,
+    "file_name": "Syn_train_001337.jpg",
+    "img_id": 1337,
     "annotations": [
       {
         "bbox": [
@@ -54906,59 +54645,8 @@
     "prompt": "(a photo of a asian teenager painting a vase):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001345.jpg",
-    "img_id": 1345,
-    "annotations": [
-      {
-        "bbox": [
-          244,
-          17,
-          439,
-          478
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          66,
-          124,
-          511,
-          445
-        ],
-        "category_id": 4
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 77,
-        "hoi_category_id": 154
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 37,
-        "hoi_category_id": 147
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 99,
-        "hoi_category_id": 156
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 88,
-        "hoi_category_id": 155
-      }
-    ],
-    "prompt": "(a photo of a black young man riding and holding and straddling and sitting on a motorcycle):1.05,masterpiece,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001346.jpg",
-    "img_id": 1346,
+    "file_name": "Syn_train_001338.jpg",
+    "img_id": 1338,
     "annotations": [
       {
         "bbox": [
@@ -54990,8 +54678,8 @@
     "prompt": "(a photo of a asian young man kissing a dog):1.05,masterpiece,ultra realistic,Professional,HD,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001347.jpg",
-    "img_id": 1347,
+    "file_name": "Syn_train_001339.jpg",
+    "img_id": 1339,
     "annotations": [
       {
         "bbox": [
@@ -55023,8 +54711,8 @@
     "prompt": "(a photo of a hispanic young man repairing a oven):1.05,best quality,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001348.jpg",
-    "img_id": 1348,
+    "file_name": "Syn_train_001340.jpg",
+    "img_id": 1340,
     "annotations": [
       {
         "bbox": [
@@ -55056,8 +54744,8 @@
     "prompt": "(a photo of a black man washing a boat):1.05,masterpiece,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001349.jpg",
-    "img_id": 1349,
+    "file_name": "Syn_train_001341.jpg",
+    "img_id": 1341,
     "annotations": [
       {
         "bbox": [
@@ -55089,41 +54777,8 @@
     "prompt": "(a photo of a hispanic boy picking up a skateboard):1.05,best quality,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001350.jpg",
-    "img_id": 1350,
-    "annotations": [
-      {
-        "bbox": [
-          267,
-          156,
-          453,
-          438
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          257,
-          511,
-          509
-        ],
-        "category_id": 9
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 77,
-        "hoi_category_id": 39
-      }
-    ],
-    "prompt": "(a photo of a asian young man riding a boat):1.05,best quality,ultra realistic,Professional,4K,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001351.jpg",
-    "img_id": 1351,
+    "file_name": "Syn_train_001342.jpg",
+    "img_id": 1342,
     "annotations": [
       {
         "bbox": [
@@ -55155,8 +54810,8 @@
     "prompt": "(a photo of a black man wearing a snowboard):1.05,masterpiece,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001352.jpg",
-    "img_id": 1352,
+    "file_name": "Syn_train_001343.jpg",
+    "img_id": 1343,
     "annotations": [
       {
         "bbox": [
@@ -55224,8 +54879,8 @@
     "prompt": "(a photo of a asian teenager cutting a cake,cutting with and holding a knife):1.05,masterpiece,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001353.jpg",
-    "img_id": 1353,
+    "file_name": "Syn_train_001344.jpg",
+    "img_id": 1344,
     "annotations": [
       {
         "bbox": [
@@ -55263,8 +54918,8 @@
     "prompt": "(a photo of a hispanic man smelling and holding a banana):1.05,best quality,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001354.jpg",
-    "img_id": 1354,
+    "file_name": "Syn_train_001345.jpg",
+    "img_id": 1345,
     "annotations": [
       {
         "bbox": [
@@ -55296,104 +54951,8 @@
     "prompt": "(a photo of a hispanic woman making a donut):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001355.jpg",
-    "img_id": 1355,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          0,
-          406,
-          509
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          411,
-          365,
-          511,
-          486
-        ],
-        "category_id": 55
-      },
-      {
-        "bbox": [
-          384,
-          299,
-          496,
-          397
-        ],
-        "category_id": 55
-      },
-      {
-        "bbox": [
-          415,
-          145,
-          511,
-          261
-        ],
-        "category_id": 51
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 65,
-        "hoi_category_id": 403
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 65,
-        "hoi_category_id": 403
-      },
-      {
-        "subject_id": 0,
-        "object_id": 3,
-        "category_id": 58,
-        "hoi_category_id": 257
-      }
-    ],
-    "prompt": "(a photo of a hispanic woman peeling a orange):1.05,best quality,ultra realistic,Professional,DSLR,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001356.jpg",
-    "img_id": 1356,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          52,
-          300,
-          370
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          302,
-          511,
-          508
-        ],
-        "category_id": 9
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 42,
-        "hoi_category_id": 35
-      }
-    ],
-    "prompt": "(a photo of a asian young woman inspecting a boat):1.05,best quality,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001357.jpg",
-    "img_id": 1357,
+    "file_name": "Syn_train_001346.jpg",
+    "img_id": 1346,
     "annotations": [
       {
         "bbox": [
@@ -55455,8 +55014,8 @@
     "prompt": "(a photo of a hispanic man herding a sheep):1.05,best quality,ultra realistic,Professional,HD,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001358.jpg",
-    "img_id": 1358,
+    "file_name": "Syn_train_001347.jpg",
+    "img_id": 1347,
     "annotations": [
       {
         "bbox": [
@@ -55488,8 +55047,8 @@
     "prompt": "(a photo of a asian boy eating a pizza):1.05,best quality,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001359.jpg",
-    "img_id": 1359,
+    "file_name": "Syn_train_001348.jpg",
+    "img_id": 1348,
     "annotations": [
       {
         "bbox": [
@@ -55521,80 +55080,8 @@
     "prompt": "(a photo of a black man holding a zebra):1.05,masterpiece,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001360.jpg",
-    "img_id": 1360,
-    "annotations": [
-      {
-        "bbox": [
-          64,
-          46,
-          371,
-          507
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          148,
-          141,
-          243,
-          218
-        ],
-        "category_id": 44
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 49,
-        "hoi_category_id": 51
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 37,
-        "hoi_category_id": 49
-      }
-    ],
-    "prompt": "(a photo of a asian woman licking and holding a bottle):1.05,best quality,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001361.jpg",
-    "img_id": 1361,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          40,
-          511,
-          508
-        ],
-        "category_id": 3
-      },
-      {
-        "bbox": [
-          1,
-          123,
-          362,
-          347
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 77,
-        "hoi_category_id": 74
-      }
-    ],
-    "prompt": "(a photo of a hispanic woman riding a car):1.05,masterpiece,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001362.jpg",
-    "img_id": 1362,
+    "file_name": "Syn_train_001349.jpg",
+    "img_id": 1349,
     "annotations": [
       {
         "bbox": [
@@ -55632,8 +55119,8 @@
     "prompt": "(a photo of a asian teenager holding and drinking with a cup):1.05,masterpiece,ultra realistic,Professional,DSLR,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001363.jpg",
-    "img_id": 1363,
+    "file_name": "Syn_train_001350.jpg",
+    "img_id": 1350,
     "annotations": [
       {
         "bbox": [
@@ -55665,8 +55152,8 @@
     "prompt": "(a photo of a hispanic woman hugging a sheep):1.05,masterpiece,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001364.jpg",
-    "img_id": 1364,
+    "file_name": "Syn_train_001351.jpg",
+    "img_id": 1351,
     "annotations": [
       {
         "bbox": [
@@ -55698,8 +55185,8 @@
     "prompt": "(a photo of a black young woman chasing a dog):1.05,best quality,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001365.jpg",
-    "img_id": 1365,
+    "file_name": "Syn_train_001352.jpg",
+    "img_id": 1352,
     "annotations": [
       {
         "bbox": [
@@ -55737,8 +55224,8 @@
     "prompt": "(a photo of a black woman carrying and holding a handbag):1.05,best quality,ultra realistic,Professional,4K,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001366.jpg",
-    "img_id": 1366,
+    "file_name": "Syn_train_001353.jpg",
+    "img_id": 1353,
     "annotations": [
       {
         "bbox": [
@@ -55806,8 +55293,8 @@
     "prompt": "(a photo of a asian young woman cutting a carrot,cutting with and holding a knife):1.05,best quality,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001367.jpg",
-    "img_id": 1367,
+    "file_name": "Syn_train_001354.jpg",
+    "img_id": 1354,
     "annotations": [
       {
         "bbox": [
@@ -55857,113 +55344,8 @@
     "prompt": "(a photo of a hispanic young man straddling and racing and sitting on and riding a motorcycle):1.05,masterpiece,ultra realistic,Professional,DSLR,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001368.jpg",
-    "img_id": 1368,
-    "annotations": [
-      {
-        "bbox": [
-          73,
-          19,
-          400,
-          333
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          158,
-          431,
-          388
-        ],
-        "category_id": 42
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 88,
-        "hoi_category_id": 526
-      }
-    ],
-    "prompt": "(a photo of a black woman sitting on a surfboard):1.05,masterpiece,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001369.jpg",
-    "img_id": 1369,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          0,
-          358,
-          510
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          170,
-          257,
-          334,
-          388
-        ],
-        "category_id": 47
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 90,
-        "hoi_category_id": 302
-      }
-    ],
-    "prompt": "(a photo of a asian boy smelling a cup):1.05,best quality,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001370.jpg",
-    "img_id": 1370,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          229,
-          427,
-          415
-        ],
-        "category_id": 42
-      },
-      {
-        "bbox": [
-          116,
-          194,
-          323,
-          509
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 9,
-        "hoi_category_id": 517
-      },
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 37,
-        "hoi_category_id": 519
-      }
-    ],
-    "prompt": "(a photo of a asian boy carrying and holding a surfboard):1.05,best quality,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001371.jpg",
-    "img_id": 1371,
+    "file_name": "Syn_train_001355.jpg",
+    "img_id": 1355,
     "annotations": [
       {
         "bbox": [
@@ -55995,8 +55377,8 @@
     "prompt": "(a photo of a hispanic teenager wearing a backpack):1.05,best quality,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001372.jpg",
-    "img_id": 1372,
+    "file_name": "Syn_train_001356.jpg",
+    "img_id": 1356,
     "annotations": [
       {
         "bbox": [
@@ -56028,8 +55410,8 @@
     "prompt": "(a photo of a black man hosing a potted plant):1.05,best quality,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001373.jpg",
-    "img_id": 1373,
+    "file_name": "Syn_train_001357.jpg",
+    "img_id": 1357,
     "annotations": [
       {
         "bbox": [
@@ -56061,8 +55443,8 @@
     "prompt": "(a photo of a black man carrying a banana):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001374.jpg",
-    "img_id": 1374,
+    "file_name": "Syn_train_001358.jpg",
+    "img_id": 1358,
     "annotations": [
       {
         "bbox": [
@@ -56094,8 +55476,8 @@
     "prompt": "(a photo of a black young woman riding a sheep):1.05,masterpiece,ultra realistic,Professional,DSLR,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001375.jpg",
-    "img_id": 1375,
+    "file_name": "Syn_train_001359.jpg",
+    "img_id": 1359,
     "annotations": [
       {
         "bbox": [
@@ -56127,8 +55509,8 @@
     "prompt": "(a photo of a asian man holding a carrot):1.05,best quality,ultra realistic,Professional,4K,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001376.jpg",
-    "img_id": 1376,
+    "file_name": "Syn_train_001360.jpg",
+    "img_id": 1360,
     "annotations": [
       {
         "bbox": [
@@ -56160,8 +55542,8 @@
     "prompt": "(a photo of a black teenager walking a sheep):1.05,best quality,ultra realistic,Professional,4K,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001377.jpg",
-    "img_id": 1377,
+    "file_name": "Syn_train_001361.jpg",
+    "img_id": 1361,
     "annotations": [
       {
         "bbox": [
@@ -56193,56 +55575,8 @@
     "prompt": "(a photo of a hispanic teenager holding a bowl):1.05,masterpiece,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001378.jpg",
-    "img_id": 1378,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          22,
-          473,
-          507
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          382,
-          0,
-          482,
-          511
-        ],
-        "category_id": 35
-      },
-      {
-        "bbox": [
-          232,
-          0,
-          331,
-          511
-        ],
-        "category_id": 35
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 42,
-        "hoi_category_id": 467
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 42,
-        "hoi_category_id": 467
-      }
-    ],
-    "prompt": "(a photo of a asian woman inspecting a skis by looking close):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001379.jpg",
-    "img_id": 1379,
+    "file_name": "Syn_train_001362.jpg",
+    "img_id": 1362,
     "annotations": [
       {
         "bbox": [
@@ -56274,41 +55608,8 @@
     "prompt": "(a photo of a black teenager inspecting a sports ball by looking close):1.05,masterpiece,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001380.jpg",
-    "img_id": 1380,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          15,
-          460,
-          424
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          211,
-          316,
-          325,
-          436
-        ],
-        "category_id": 37
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 42,
-        "hoi_category_id": 495
-      }
-    ],
-    "prompt": "(a photo of a black man inspecting a sports ball by looking close):1.05,masterpiece,ultra realistic,Professional,4K,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001381.jpg",
-    "img_id": 1381,
+    "file_name": "Syn_train_001363.jpg",
+    "img_id": 1363,
     "annotations": [
       {
         "bbox": [
@@ -56355,47 +55656,8 @@
     "prompt": "(a photo of a asian man inspecting a sports ball by looking close):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001382.jpg",
-    "img_id": 1382,
-    "annotations": [
-      {
-        "bbox": [
-          87,
-          41,
-          511,
-          510
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          417,
-          359,
-          511,
-          510
-        ],
-        "category_id": 59
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 55,
-        "hoi_category_id": 425
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 15,
-        "hoi_category_id": 421
-      }
-    ],
-    "prompt": "(a photo of a black teenager making a pizza,cooking a pizza):1.05,best quality,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001383.jpg",
-    "img_id": 1383,
+    "file_name": "Syn_train_001364.jpg",
+    "img_id": 1364,
     "annotations": [
       {
         "bbox": [
@@ -56433,8 +55695,8 @@
     "prompt": "(a photo of a asian woman making a pizza,cooking a pizza):1.05,best quality,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001384.jpg",
-    "img_id": 1384,
+    "file_name": "Syn_train_001365.jpg",
+    "img_id": 1365,
     "annotations": [
       {
         "bbox": [
@@ -56487,8 +55749,8 @@
     "prompt": "(a photo of a hispanic man making a pizza,cooking a pizza):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001385.jpg",
-    "img_id": 1385,
+    "file_name": "Syn_train_001366.jpg",
+    "img_id": 1366,
     "annotations": [
       {
         "bbox": [
@@ -56520,41 +55782,8 @@
     "prompt": "(a photo of a asian man feeding a zebra):1.05,best quality,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001386.jpg",
-    "img_id": 1386,
-    "annotations": [
-      {
-        "bbox": [
-          135,
-          135,
-          511,
-          465
-        ],
-        "category_id": 24
-      },
-      {
-        "bbox": [
-          64,
-          139,
-          177,
-          461
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 27,
-        "hoi_category_id": 596
-      }
-    ],
-    "prompt": "(a photo of a black young woman feeding a zebra):1.05,best quality,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001387.jpg",
-    "img_id": 1387,
+    "file_name": "Syn_train_001367.jpg",
+    "img_id": 1367,
     "annotations": [
       {
         "bbox": [
@@ -56622,356 +55851,8 @@
     "prompt": "(a photo of a hispanic woman sitting on a train,riding a train):1.05,best quality,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001388.jpg",
-    "img_id": 1388,
-    "annotations": [
-      {
-        "bbox": [
-          146,
-          38,
-          510,
-          506
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          1,
-          198,
-          507
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          199,
-          318,
-          283,
-          415
-        ],
-        "category_id": 53
-      },
-      {
-        "bbox": [
-          316,
-          395,
-          429,
-          499
-        ],
-        "category_id": 53
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 2,
-        "category_id": 8,
-        "hoi_category_id": 199
-      },
-      {
-        "subject_id": 0,
-        "object_id": 3,
-        "category_id": 8,
-        "hoi_category_id": 199
-      }
-    ],
-    "prompt": "(a photo of a black man buying a apple):1.05,best quality,ultra realistic,Professional,HD,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001389.jpg",
-    "img_id": 1389,
-    "annotations": [
-      {
-        "bbox": [
-          80,
-          81,
-          408,
-          509
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          428,
-          243,
-          480,
-          417
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          322,
-          233,
-          383,
-          385
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          331,
-          372,
-          402,
-          425
-        ],
-        "category_id": 53
-      },
-      {
-        "bbox": [
-          0,
-          357,
-          86,
-          399
-        ],
-        "category_id": 53
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 2,
-        "object_id": 3,
-        "category_id": 8,
-        "hoi_category_id": 199
-      },
-      {
-        "subject_id": 2,
-        "object_id": 4,
-        "category_id": 8,
-        "hoi_category_id": 199
-      },
-      {
-        "subject_id": 0,
-        "object_id": 3,
-        "category_id": 58,
-        "hoi_category_id": 170
-      },
-      {
-        "subject_id": 1,
-        "object_id": 3,
-        "category_id": 58,
-        "hoi_category_id": 170
-      }
-    ],
-    "prompt": "(a photo of a black woman buying a apple):1.05,best quality,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001390.jpg",
-    "img_id": 1390,
-    "annotations": [
-      {
-        "bbox": [
-          26,
-          299,
-          229,
-          494
-        ],
-        "category_id": 37
-      },
-      {
-        "bbox": [
-          0,
-          24,
-          203,
-          438
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 20,
-        "hoi_category_id": 492
-      }
-    ],
-    "prompt": "(a photo of a hispanic woman dribbling a sports ball):1.05,best quality,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001391.jpg",
-    "img_id": 1391,
-    "annotations": [
-      {
-        "bbox": [
-          119,
-          19,
-          445,
-          473
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          66,
-          416,
-          139,
-          490
-        ],
-        "category_id": 37
-      },
-      {
-        "bbox": [
-          0,
-          97,
-          145,
-          469
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 2,
-        "object_id": 1,
-        "category_id": 20,
-        "hoi_category_id": 492
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 58,
-        "hoi_category_id": 170
-      }
-    ],
-    "prompt": "(a photo of a black young woman dribbling a sports ball):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001392.jpg",
-    "img_id": 1392,
-    "annotations": [
-      {
-        "bbox": [
-          59,
-          0,
-          350,
-          474
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          355,
-          449,
-          491,
-          511
-        ],
-        "category_id": 37
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 20,
-        "hoi_category_id": 492
-      }
-    ],
-    "prompt": "(a photo of a black young woman dribbling a sports ball):1.05,best quality,ultra realistic,Professional,HD,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001393.jpg",
-    "img_id": 1393,
-    "annotations": [
-      {
-        "bbox": [
-          41,
-          0,
-          494,
-          509
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          238,
-          357,
-          337,
-          481
-        ],
-        "category_id": 55
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 92,
-        "hoi_category_id": 405
-      }
-    ],
-    "prompt": "(a photo of a black young man squeezing a orange):1.05,best quality,ultra realistic,Professional,4K,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001394.jpg",
-    "img_id": 1394,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          0,
-          408,
-          510
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          66,
-          346,
-          194,
-          477
-        ],
-        "category_id": 55
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 92,
-        "hoi_category_id": 405
-      }
-    ],
-    "prompt": "(a photo of a asian boy squeezing a orange):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001395.jpg",
-    "img_id": 1395,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          0,
-          393,
-          511
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          191,
-          347,
-          335,
-          489
-        ],
-        "category_id": 55
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 92,
-        "hoi_category_id": 405
-      }
-    ],
-    "prompt": "(a photo of a asian boy squeezing a orange):1.05,best quality,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001396.jpg",
-    "img_id": 1396,
+    "file_name": "Syn_train_001368.jpg",
+    "img_id": 1368,
     "annotations": [
       {
         "bbox": [
@@ -57003,230 +55884,8 @@
     "prompt": "(a photo of a asian young woman training a horse):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001397.jpg",
-    "img_id": 1397,
-    "annotations": [
-      {
-        "bbox": [
-          226,
-          57,
-          510,
-          506
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          87,
-          291,
-          508
-        ],
-        "category_id": 19
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 108,
-        "hoi_category_id": 143
-      }
-    ],
-    "prompt": "(a photo of a asian young woman training a horse):1.05,best quality,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001398.jpg",
-    "img_id": 1398,
-    "annotations": [
-      {
-        "bbox": [
-          306,
-          122,
-          473,
-          499
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          32,
-          296,
-          505
-        ],
-        "category_id": 19
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 108,
-        "hoi_category_id": 143
-      }
-    ],
-    "prompt": "(a photo of a asian young man training a horse):1.05,best quality,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001399.jpg",
-    "img_id": 1399,
-    "annotations": [
-      {
-        "bbox": [
-          247,
-          183,
-          409,
-          304
-        ],
-        "category_id": 22
-      },
-      {
-        "bbox": [
-          170,
-          219,
-          197,
-          303
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          42,
-          130,
-          508
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          101,
-          333,
-          509,
-          509
-        ],
-        "category_id": 22
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 113,
-        "hoi_category_id": 324
-      },
-      {
-        "subject_id": 2,
-        "object_id": 3,
-        "category_id": 113,
-        "hoi_category_id": 324
-      }
-    ],
-    "prompt": "(a photo of a asian teenager watching a elephant):1.05,best quality,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001400.jpg",
-    "img_id": 1400,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          0,
-          398,
-          390
-        ],
-        "category_id": 22
-      },
-      {
-        "bbox": [
-          311,
-          200,
-          464,
-          435
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 113,
-        "hoi_category_id": 324
-      }
-    ],
-    "prompt": "(a photo of a asian young man watching a elephant):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001401.jpg",
-    "img_id": 1401,
-    "annotations": [
-      {
-        "bbox": [
-          236,
-          29,
-          511,
-          469
-        ],
-        "category_id": 73
-      },
-      {
-        "bbox": [
-          0,
-          0,
-          323,
-          507
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 37,
-        "hoi_category_id": 384
-      }
-    ],
-    "prompt": "(a photo of a hispanic young woman holding a laptop with hand):1.05,best quality,ultra realistic,Professional,HD,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001402.jpg",
-    "img_id": 1402,
-    "annotations": [
-      {
-        "bbox": [
-          106,
-          0,
-          511,
-          509
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          108,
-          356,
-          454
-        ],
-        "category_id": 73
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 37,
-        "hoi_category_id": 384
-      }
-    ],
-    "prompt": "(a photo of a asian young man holding a laptop with hand):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001403.jpg",
-    "img_id": 1403,
+    "file_name": "Syn_train_001369.jpg",
+    "img_id": 1369,
     "annotations": [
       {
         "bbox": [
@@ -57258,8 +55917,8 @@
     "prompt": "(a photo of a hispanic woman adjusting a snowboard):1.05,masterpiece,ultra realistic,Professional,HD,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001404.jpg",
-    "img_id": 1404,
+    "file_name": "Syn_train_001370.jpg",
+    "img_id": 1370,
     "annotations": [
       {
         "bbox": [
@@ -57291,8 +55950,8 @@
     "prompt": "(a photo of a hispanic young man adjusting a snowboard):1.05,best quality,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001405.jpg",
-    "img_id": 1405,
+    "file_name": "Syn_train_001371.jpg",
+    "img_id": 1371,
     "annotations": [
       {
         "bbox": [
@@ -57324,8 +55983,8 @@
     "prompt": "(a photo of a black woman kissing a cat):1.05,best quality,ultra realistic,Professional,HD,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001406.jpg",
-    "img_id": 1406,
+    "file_name": "Syn_train_001372.jpg",
+    "img_id": 1372,
     "annotations": [
       {
         "bbox": [
@@ -57357,107 +56016,8 @@
     "prompt": "(a photo of a hispanic teenager kissing a cat):1.05,masterpiece,ultra realistic,Professional,4K,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001407.jpg",
-    "img_id": 1407,
-    "annotations": [
-      {
-        "bbox": [
-          246,
-          0,
-          511,
-          494
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          56,
-          201,
-          312,
-          467
-        ],
-        "category_id": 17
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 46,
-        "hoi_category_id": 81
-      }
-    ],
-    "prompt": "(a photo of a black boy kissing a cat):1.05,masterpiece,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001408.jpg",
-    "img_id": 1408,
-    "annotations": [
-      {
-        "bbox": [
-          270,
-          159,
-          378,
-          302
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          201,
-          278,
-          478,
-          321
-        ],
-        "category_id": 36
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 115,
-        "hoi_category_id": 482
-      }
-    ],
-    "prompt": "(a photo of a black man wearing a snowboard):1.05,masterpiece,ultra realistic,Professional,4K,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001409.jpg",
-    "img_id": 1409,
-    "annotations": [
-      {
-        "bbox": [
-          65,
-          201,
-          235,
-          425
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          45,
-          411,
-          266,
-          439
-        ],
-        "category_id": 36
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 115,
-        "hoi_category_id": 482
-      }
-    ],
-    "prompt": "(a photo of a asian man wearing a snowboard):1.05,masterpiece,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001410.jpg",
-    "img_id": 1410,
+    "file_name": "Syn_train_001373.jpg",
+    "img_id": 1373,
     "annotations": [
       {
         "bbox": [
@@ -57489,8 +56049,8 @@
     "prompt": "(a photo of a asian young man wearing a snowboard):1.05,best quality,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001411.jpg",
-    "img_id": 1411,
+    "file_name": "Syn_train_001374.jpg",
+    "img_id": 1374,
     "annotations": [
       {
         "bbox": [
@@ -57522,56 +56082,8 @@
     "prompt": "(a photo of a asian woman petting a horse):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001412.jpg",
-    "img_id": 1412,
-    "annotations": [
-      {
-        "bbox": [
-          304,
-          100,
-          511,
-          445
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          94,
-          319,
-          474
-        ],
-        "category_id": 19
-      },
-      {
-        "bbox": [
-          293,
-          297,
-          377,
-          434
-        ],
-        "category_id": 31
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 66,
-        "hoi_category_id": 138
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 58,
-        "hoi_category_id": 356
-      }
-    ],
-    "prompt": "(a photo of a asian woman petting a horse):1.05,best quality,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001413.jpg",
-    "img_id": 1413,
+    "file_name": "Syn_train_001375.jpg",
+    "img_id": 1375,
     "annotations": [
       {
         "bbox": [
@@ -57603,41 +56115,8 @@
     "prompt": "(a photo of a hispanic teenager petting a horse):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001414.jpg",
-    "img_id": 1414,
-    "annotations": [
-      {
-        "bbox": [
-          128,
-          109,
-          342,
-          463
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          280,
-          81,
-          506,
-          481
-        ],
-        "category_id": 25
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 27,
-        "hoi_category_id": 343
-      }
-    ],
-    "prompt": "(a photo of a hispanic woman feeding a giraffe):1.05,masterpiece,ultra realistic,Professional,4K,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001415.jpg",
-    "img_id": 1415,
+    "file_name": "Syn_train_001376.jpg",
+    "img_id": 1376,
     "annotations": [
       {
         "bbox": [
@@ -57669,236 +56148,8 @@
     "prompt": "(a photo of a black man feeding a giraffe):1.05,best quality,ultra realistic,Professional,4K,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001416.jpg",
-    "img_id": 1416,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          76,
-          261,
-          509
-        ],
-        "category_id": 25
-      },
-      {
-        "bbox": [
-          169,
-          1,
-          318,
-          510
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 27,
-        "hoi_category_id": 343
-      }
-    ],
-    "prompt": "(a photo of a hispanic woman feeding a giraffe):1.05,masterpiece,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001417.jpg",
-    "img_id": 1417,
-    "annotations": [
-      {
-        "bbox": [
-          177,
-          99,
-          510,
-          506
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          8,
-          255,
-          187,
-          366
-        ],
-        "category_id": 61
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 4,
-        "hoi_category_id": 265
-      }
-    ],
-    "prompt": "(a photo of a asian young man blowing a cake):1.05,best quality,ultra realistic,Professional,4K,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001418.jpg",
-    "img_id": 1418,
-    "annotations": [
-      {
-        "bbox": [
-          288,
-          204,
-          345,
-          459
-        ],
-        "category_id": 32
-      },
-      {
-        "bbox": [
-          155,
-          0,
-          511,
-          509
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          68,
-          300,
-          281,
-          511
-        ],
-        "category_id": 61
-      },
-      {
-        "bbox": [
-          0,
-          0,
-          157,
-          472
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 3,
-        "object_id": 0,
-        "category_id": 58,
-        "hoi_category_id": 546
-      },
-      {
-        "subject_id": 3,
-        "object_id": 2,
-        "category_id": 4,
-        "hoi_category_id": 265
-      },
-      {
-        "subject_id": 1,
-        "object_id": 2,
-        "category_id": 58,
-        "hoi_category_id": 170
-      }
-    ],
-    "prompt": "(a photo of a asian young man blowing a cake):1.05,best quality,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001419.jpg",
-    "img_id": 1419,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          0,
-          355,
-          500
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          306,
-          210,
-          511,
-          483
-        ],
-        "category_id": 61
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 4,
-        "hoi_category_id": 265
-      }
-    ],
-    "prompt": "(a photo of a hispanic teenager blowing a cake):1.05,masterpiece,ultra realistic,Professional,DSLR,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001420.jpg",
-    "img_id": 1420,
-    "annotations": [
-      {
-        "bbox": [
-          99,
-          55,
-          325,
-          464
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          285,
-          210,
-          512,
-          469
-        ],
-        "category_id": 23
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 41,
-        "hoi_category_id": 237
-      }
-    ],
-    "prompt": "(a photo of a hispanic teenager hunting a bear):1.05,best quality,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001421.jpg",
-    "img_id": 1421,
-    "annotations": [
-      {
-        "bbox": [
-          184,
-          56,
-          449,
-          508
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          384,
-          179,
-          512,
-          510
-        ],
-        "category_id": 88
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 9,
-        "hoi_category_id": 529
-      }
-    ],
-    "prompt": "(a photo of a hispanic boy carrying a teddy bear with hand):1.05,best quality,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001422.jpg",
-    "img_id": 1422,
+    "file_name": "Syn_train_001377.jpg",
+    "img_id": 1377,
     "annotations": [
       {
         "bbox": [
@@ -57945,8 +56196,8 @@
     "prompt": "(a photo of a asian man carrying a teddy bear with hand):1.05,best quality,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001423.jpg",
-    "img_id": 1423,
+    "file_name": "Syn_train_001378.jpg",
+    "img_id": 1378,
     "annotations": [
       {
         "bbox": [
@@ -57978,305 +56229,8 @@
     "prompt": "(a photo of a asian teenager carrying a teddy bear with hand):1.05,best quality,ultra realistic,Professional,DSLR,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001424.jpg",
-    "img_id": 1424,
-    "annotations": [
-      {
-        "bbox": [
-          209,
-          145,
-          323,
-          455
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          343,
-          403,
-          452
-        ],
-        "category_id": 42
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 94,
-        "hoi_category_id": 525
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 77,
-        "hoi_category_id": 524
-      }
-    ],
-    "prompt": "(a photo of a black young man standing on a surfboard,riding a surfboard):1.05,masterpiece,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001425.jpg",
-    "img_id": 1425,
-    "annotations": [
-      {
-        "bbox": [
-          18,
-          0,
-          511,
-          509
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          413,
-          511,
-          509
-        ],
-        "category_id": 42
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 94,
-        "hoi_category_id": 525
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 77,
-        "hoi_category_id": 524
-      }
-    ],
-    "prompt": "(a photo of a hispanic young woman standing on a surfboard,riding a surfboard):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001426.jpg",
-    "img_id": 1426,
-    "annotations": [
-      {
-        "bbox": [
-          142,
-          0,
-          321,
-          404
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          227,
-          0,
-          431,
-          133
-        ],
-        "category_id": 42
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 94,
-        "hoi_category_id": 525
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 77,
-        "hoi_category_id": 524
-      }
-    ],
-    "prompt": "(a photo of a hispanic boy standing on a surfboard,riding a surfboard):1.05,masterpiece,ultra realistic,Professional,4K,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001427.jpg",
-    "img_id": 1427,
-    "annotations": [
-      {
-        "bbox": [
-          64,
-          22,
-          511,
-          422
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          32,
-          511,
-          506
-        ],
-        "category_id": 65
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 13,
-        "hoi_category_id": 240
-      }
-    ],
-    "prompt": "(a photo of a hispanic young woman cleaning a bed):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001428.jpg",
-    "img_id": 1428,
-    "annotations": [
-      {
-        "bbox": [
-          74,
-          28,
-          276,
-          468
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          22,
-          157,
-          511,
-          410
-        ],
-        "category_id": 63
-      },
-      {
-        "bbox": [
-          0,
-          0,
-          146,
-          250
-        ],
-        "category_id": 64
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 9,
-        "hoi_category_id": 93
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 58,
-        "hoi_category_id": 174
-      }
-    ],
-    "prompt": "(a photo of a asian man carrying a couch with hand):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001429.jpg",
-    "img_id": 1429,
-    "annotations": [
-      {
-        "bbox": [
-          224,
-          236,
-          376,
-          450
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          176,
-          300,
-          483,
-          444
-        ],
-        "category_id": 63
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 9,
-        "hoi_category_id": 93
-      }
-    ],
-    "prompt": "(a photo of a hispanic young man carrying a couch with hand):1.05,masterpiece,ultra realistic,Professional,DSLR,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001430.jpg",
-    "img_id": 1430,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          74,
-          496,
-          509
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          162,
-          162,
-          349
-        ],
-        "category_id": 37
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 91,
-        "hoi_category_id": 500
-      }
-    ],
-    "prompt": "(a photo of a black boy spinning a sports ball):1.05,best quality,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001431.jpg",
-    "img_id": 1431,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          78,
-          404,
-          510
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          220,
-          435,
-          373,
-          511
-        ],
-        "category_id": 37
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 91,
-        "hoi_category_id": 500
-      }
-    ],
-    "prompt": "(a photo of a asian teenager spinning a sports ball):1.05,best quality,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001432.jpg",
-    "img_id": 1432,
+    "file_name": "Syn_train_001379.jpg",
+    "img_id": 1379,
     "annotations": [
       {
         "bbox": [
@@ -58308,260 +56262,8 @@
     "prompt": "(a photo of a black teenager hugging a fire hydrant):1.05,best quality,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001433.jpg",
-    "img_id": 1433,
-    "annotations": [
-      {
-        "bbox": [
-          214,
-          38,
-          501,
-          509
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          407,
-          0,
-          509,
-          417
-        ],
-        "category_id": 11
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 40,
-        "hoi_category_id": 326
-      }
-    ],
-    "prompt": "(a photo of a asian young man hugging a fire hydrant):1.05,best quality,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001434.jpg",
-    "img_id": 1434,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          0,
-          511,
-          510
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          342,
-          118,
-          462,
-          231
-        ],
-        "category_id": 60
-      },
-      {
-        "bbox": [
-          279,
-          214,
-          463,
-          384
-        ],
-        "category_id": 60
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 68,
-        "hoi_category_id": 311
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 68,
-        "hoi_category_id": 311
-      }
-    ],
-    "prompt": "(a photo of a hispanic boy picking up a donut):1.05,best quality,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001435.jpg",
-    "img_id": 1435,
-    "annotations": [
-      {
-        "bbox": [
-          65,
-          0,
-          510,
-          509
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          89,
-          258,
-          210,
-          323
-        ],
-        "category_id": 60
-      },
-      {
-        "bbox": [
-          199,
-          369,
-          327,
-          439
-        ],
-        "category_id": 60
-      },
-      {
-        "bbox": [
-          206,
-          309,
-          321,
-          377
-        ],
-        "category_id": 60
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 68,
-        "hoi_category_id": 311
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 68,
-        "hoi_category_id": 311
-      },
-      {
-        "subject_id": 0,
-        "object_id": 3,
-        "category_id": 68,
-        "hoi_category_id": 311
-      }
-    ],
-    "prompt": "(a photo of a asian boy picking up a donut):1.05,masterpiece,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001436.jpg",
-    "img_id": 1436,
-    "annotations": [
-      {
-        "bbox": [
-          104,
-          365,
-          271,
-          470
-        ],
-        "category_id": 60
-      },
-      {
-        "bbox": [
-          15,
-          335,
-          165,
-          426
-        ],
-        "category_id": 60
-      },
-      {
-        "bbox": [
-          195,
-          8,
-          485,
-          389
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          89,
-          35,
-          159,
-          99
-        ],
-        "category_id": 60
-      },
-      {
-        "bbox": [
-          202,
-          450,
-          435,
-          511
-        ],
-        "category_id": 60
-      },
-      {
-        "bbox": [
-          0,
-          26,
-          89,
-          92
-        ],
-        "category_id": 60
-      },
-      {
-        "bbox": [
-          146,
-          42,
-          197,
-          97
-        ],
-        "category_id": 60
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 2,
-        "object_id": 0,
-        "category_id": 68,
-        "hoi_category_id": 311
-      },
-      {
-        "subject_id": 2,
-        "object_id": 1,
-        "category_id": 68,
-        "hoi_category_id": 311
-      },
-      {
-        "subject_id": 2,
-        "object_id": 3,
-        "category_id": 68,
-        "hoi_category_id": 311
-      },
-      {
-        "subject_id": 2,
-        "object_id": 4,
-        "category_id": 68,
-        "hoi_category_id": 311
-      },
-      {
-        "subject_id": 2,
-        "object_id": 5,
-        "category_id": 68,
-        "hoi_category_id": 311
-      },
-      {
-        "subject_id": 2,
-        "object_id": 6,
-        "category_id": 68,
-        "hoi_category_id": 311
-      }
-    ],
-    "prompt": "(a photo of a black boy picking up a donut):1.05,best quality,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001437.jpg",
-    "img_id": 1437,
+    "file_name": "Syn_train_001380.jpg",
+    "img_id": 1380,
     "annotations": [
       {
         "bbox": [
@@ -58593,8 +56295,8 @@
     "prompt": "(a photo of a hispanic boy flushing a toilet):1.05,best quality,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001438.jpg",
-    "img_id": 1438,
+    "file_name": "Syn_train_001381.jpg",
+    "img_id": 1381,
     "annotations": [
       {
         "bbox": [
@@ -58626,260 +56328,8 @@
     "prompt": "(a photo of a asian young man flushing a toilet):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001439.jpg",
-    "img_id": 1439,
-    "annotations": [
-      {
-        "bbox": [
-          195,
-          9,
-          488,
-          508
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          397,
-          116,
-          510
-        ],
-        "category_id": 70
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 30,
-        "hoi_category_id": 552
-      }
-    ],
-    "prompt": "(a photo of a hispanic woman flushing a toilet):1.05,best quality,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001440.jpg",
-    "img_id": 1440,
-    "annotations": [
-      {
-        "bbox": [
-          159,
-          34,
-          511,
-          508
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          1,
-          295,
-          259,
-          493
-        ],
-        "category_id": 70
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 88,
-        "hoi_category_id": 555
-      }
-    ],
-    "prompt": "(a photo of a black young man sitting on a toilet):1.05,masterpiece,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001441.jpg",
-    "img_id": 1441,
-    "annotations": [
-      {
-        "bbox": [
-          182,
-          71,
-          511,
-          495
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          311,
-          0,
-          422,
-          110
-        ],
-        "category_id": 39
-      },
-      {
-        "bbox": [
-          0,
-          159,
-          54,
-          261
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          58,
-          132,
-          198,
-          383
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          183,
-          148,
-          305,
-          336
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 4,
-        "object_id": 1,
-        "category_id": 100,
-        "hoi_category_id": 229
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 58,
-        "hoi_category_id": 170
-      },
-      {
-        "subject_id": 2,
-        "object_id": 1,
-        "category_id": 58,
-        "hoi_category_id": 170
-      },
-      {
-        "subject_id": 3,
-        "object_id": 1,
-        "category_id": 58,
-        "hoi_category_id": 170
-      }
-    ],
-    "prompt": "(a photo of a hispanic man swinging a baseball bat):1.05,best quality,ultra realistic,Professional,4K,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001442.jpg",
-    "img_id": 1442,
-    "annotations": [
-      {
-        "bbox": [
-          291,
-          26,
-          511,
-          497
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          125,
-          0,
-          246,
-          103
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          7,
-          68,
-          261,
-          114
-        ],
-        "category_id": 39
-      },
-      {
-        "bbox": [
-          376,
-          0,
-          469,
-          101
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          451,
-          0,
-          511,
-          117
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          207,
-          0,
-          297,
-          108
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          256,
-          0,
-          320,
-          112
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 6,
-        "object_id": 2,
-        "category_id": 100,
-        "hoi_category_id": 229
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 58,
-        "hoi_category_id": 170
-      },
-      {
-        "subject_id": 1,
-        "object_id": 2,
-        "category_id": 58,
-        "hoi_category_id": 170
-      },
-      {
-        "subject_id": 3,
-        "object_id": 2,
-        "category_id": 58,
-        "hoi_category_id": 170
-      },
-      {
-        "subject_id": 4,
-        "object_id": 2,
-        "category_id": 58,
-        "hoi_category_id": 170
-      },
-      {
-        "subject_id": 5,
-        "object_id": 2,
-        "category_id": 58,
-        "hoi_category_id": 170
-      }
-    ],
-    "prompt": "(a photo of a black boy swinging a baseball bat):1.05,masterpiece,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001443.jpg",
-    "img_id": 1443,
+    "file_name": "Syn_train_001382.jpg",
+    "img_id": 1382,
     "annotations": [
       {
         "bbox": [
@@ -58911,74 +56361,8 @@
     "prompt": "(a photo of a asian teenager carrying a book with hand):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001444.jpg",
-    "img_id": 1444,
-    "annotations": [
-      {
-        "bbox": [
-          226,
-          66,
-          315,
-          339
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          90,
-          196,
-          398,
-          470
-        ],
-        "category_id": 19
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 38,
-        "hoi_category_id": 137
-      }
-    ],
-    "prompt": "(a photo of a black young woman hopping on a horse):1.05,best quality,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001445.jpg",
-    "img_id": 1445,
-    "annotations": [
-      {
-        "bbox": [
-          42,
-          191,
-          357,
-          457
-        ],
-        "category_id": 19
-      },
-      {
-        "bbox": [
-          125,
-          136,
-          230,
-          346
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 38,
-        "hoi_category_id": 137
-      }
-    ],
-    "prompt": "(a photo of a hispanic teenager hopping on a horse):1.05,masterpiece,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001446.jpg",
-    "img_id": 1446,
+    "file_name": "Syn_train_001383.jpg",
+    "img_id": 1383,
     "annotations": [
       {
         "bbox": [
@@ -59010,8 +56394,8 @@
     "prompt": "(a photo of a black young man jumping a bicycle):1.05,masterpiece,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001447.jpg",
-    "img_id": 1447,
+    "file_name": "Syn_train_001384.jpg",
+    "img_id": 1384,
     "annotations": [
       {
         "bbox": [
@@ -59043,89 +56427,8 @@
     "prompt": "(a photo of a asian woman jumping a bicycle):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001448.jpg",
-    "img_id": 1448,
-    "annotations": [
-      {
-        "bbox": [
-          117,
-          221,
-          460,
-          507
-        ],
-        "category_id": 2
-      },
-      {
-        "bbox": [
-          193,
-          25,
-          375,
-          391
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 44,
-        "hoi_category_id": 14
-      }
-    ],
-    "prompt": "(a photo of a asian man jumping a bicycle):1.05,best quality,ultra realistic,Professional,DSLR,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001449.jpg",
-    "img_id": 1449,
-    "annotations": [
-      {
-        "bbox": [
-          224,
-          59,
-          321,
-          510
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          82,
-          85,
-          490
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          68,
-          122,
-          137,
-          182
-        ],
-        "category_id": 55
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 2,
-        "category_id": 8,
-        "hoi_category_id": 398
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 58,
-        "hoi_category_id": 170
-      }
-    ],
-    "prompt": "(a photo of a black teenager buying a orange):1.05,masterpiece,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001450.jpg",
-    "img_id": 1450,
+    "file_name": "Syn_train_001385.jpg",
+    "img_id": 1385,
     "annotations": [
       {
         "bbox": [
@@ -59202,8 +56505,8 @@
     "prompt": "(a photo of a black young man buying a orange):1.05,masterpiece,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001451.jpg",
-    "img_id": 1451,
+    "file_name": "Syn_train_001386.jpg",
+    "img_id": 1386,
     "annotations": [
       {
         "bbox": [
@@ -59250,185 +56553,8 @@
     "prompt": "(a photo of a hispanic young woman buying a orange):1.05,best quality,ultra realistic,Professional,4K,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001452.jpg",
-    "img_id": 1452,
-    "annotations": [
-      {
-        "bbox": [
-          193,
-          92,
-          303,
-          434
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          329,
-          132,
-          496,
-          163
-        ],
-        "category_id": 5
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 26,
-        "hoi_category_id": 3
-      }
-    ],
-    "prompt": "(a photo of a black young woman exiting a airplane):1.05,masterpiece,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001453.jpg",
-    "img_id": 1453,
-    "annotations": [
-      {
-        "bbox": [
-          145,
-          67,
-          257,
-          479
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          8,
-          165,
-          512,
-          447
-        ],
-        "category_id": 8
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 76,
-        "hoi_category_id": 572
-      }
-    ],
-    "prompt": "(a photo of a black man repairing a truck with tools):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001454.jpg",
-    "img_id": 1454,
-    "annotations": [
-      {
-        "bbox": [
-          300,
-          72,
-          508,
-          448
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          41,
-          246,
-          509
-        ],
-        "category_id": 8
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 76,
-        "hoi_category_id": 572
-      }
-    ],
-    "prompt": "(a photo of a asian young man repairing a truck with tools):1.05,masterpiece,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001455.jpg",
-    "img_id": 1455,
-    "annotations": [
-      {
-        "bbox": [
-          47,
-          0,
-          349,
-          429
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          358,
-          368,
-          449
-        ],
-        "category_id": 41
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 37,
-        "hoi_category_id": 457
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 9,
-        "hoi_category_id": 454
-      }
-    ],
-    "prompt": "(a photo of a hispanic young woman holding a skateboard with hand,carrying a skateboard with hand):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001456.jpg",
-    "img_id": 1456,
-    "annotations": [
-      {
-        "bbox": [
-          101,
-          351,
-          240,
-          403
-        ],
-        "category_id": 41
-      },
-      {
-        "bbox": [
-          112,
-          107,
-          374,
-          375
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 37,
-        "hoi_category_id": 457
-      },
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 9,
-        "hoi_category_id": 454
-      }
-    ],
-    "prompt": "(a photo of a hispanic young man holding a skateboard with hand,carrying a skateboard with hand):1.05,best quality,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001457.jpg",
-    "img_id": 1457,
+    "file_name": "Syn_train_001387.jpg",
+    "img_id": 1387,
     "annotations": [
       {
         "bbox": [
@@ -59460,41 +56586,8 @@
     "prompt": "(a photo of a hispanic man toasting a wine glass):1.05,best quality,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001458.jpg",
-    "img_id": 1458,
-    "annotations": [
-      {
-        "bbox": [
-          82,
-          17,
-          511,
-          507
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          211,
-          61,
-          392
-        ],
-        "category_id": 46
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 107,
-        "hoi_category_id": 592
-      }
-    ],
-    "prompt": "(a photo of a hispanic boy toasting a wine glass):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001459.jpg",
-    "img_id": 1459,
+    "file_name": "Syn_train_001388.jpg",
+    "img_id": 1388,
     "annotations": [
       {
         "bbox": [
@@ -59556,8 +56649,8 @@
     "prompt": "(a photo of a black woman toasting a wine glass):1.05,best quality,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001460.jpg",
-    "img_id": 1460,
+    "file_name": "Syn_train_001389.jpg",
+    "img_id": 1389,
     "annotations": [
       {
         "bbox": [
@@ -59589,8 +56682,8 @@
     "prompt": "(a photo of a asian young woman launching a kite):1.05,masterpiece,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001461.jpg",
-    "img_id": 1461,
+    "file_name": "Syn_train_001390.jpg",
+    "img_id": 1390,
     "annotations": [
       {
         "bbox": [
@@ -59628,143 +56721,8 @@
     "prompt": "(a photo of a hispanic woman holding a pizza with hand,eating a pizza with mouse):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001462.jpg",
-    "img_id": 1462,
-    "annotations": [
-      {
-        "bbox": [
-          74,
-          139,
-          400,
-          509
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          210,
-          289,
-          362,
-          359
-        ],
-        "category_id": 59
-      },
-      {
-        "bbox": [
-          126,
-          370,
-          218,
-          453
-        ],
-        "category_id": 59
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 37,
-        "hoi_category_id": 424
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 90,
-        "hoi_category_id": 428
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 37,
-        "hoi_category_id": 424
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 90,
-        "hoi_category_id": 428
-      }
-    ],
-    "prompt": "(a photo of a hispanic boy holding a pizza with hand,smelling a pizza with nose):1.05,masterpiece,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001463.jpg",
-    "img_id": 1463,
-    "annotations": [
-      {
-        "bbox": [
-          1,
-          3,
-          512,
-          507
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          413,
-          0,
-          511,
-          315
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          325,
-          290,
-          461
-        ],
-        "category_id": 59
-      },
-      {
-        "bbox": [
-          255,
-          325,
-          511,
-          458
-        ],
-        "category_id": 59
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 2,
-        "category_id": 37,
-        "hoi_category_id": 424
-      },
-      {
-        "subject_id": 1,
-        "object_id": 2,
-        "category_id": 90,
-        "hoi_category_id": 428
-      },
-      {
-        "subject_id": 1,
-        "object_id": 3,
-        "category_id": 37,
-        "hoi_category_id": 424
-      },
-      {
-        "subject_id": 1,
-        "object_id": 3,
-        "category_id": 90,
-        "hoi_category_id": 428
-      },
-      {
-        "subject_id": 0,
-        "object_id": 3,
-        "category_id": 58,
-        "hoi_category_id": 170
-      }
-    ],
-    "prompt": "(a photo of a hispanic boy holding a pizza with hand,smelling a pizza with nose):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001464.jpg",
-    "img_id": 1464,
+    "file_name": "Syn_train_001391.jpg",
+    "img_id": 1391,
     "annotations": [
       {
         "bbox": [
@@ -59796,8 +56754,8 @@
     "prompt": "(a photo of a black boy repairing a clock with tools):1.05,best quality,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001465.jpg",
-    "img_id": 1465,
+    "file_name": "Syn_train_001392.jpg",
+    "img_id": 1392,
     "annotations": [
       {
         "bbox": [
@@ -59829,8 +56787,8 @@
     "prompt": "(a photo of a asian man cleaning a keyboard):1.05,best quality,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001466.jpg",
-    "img_id": 1466,
+    "file_name": "Syn_train_001393.jpg",
+    "img_id": 1393,
     "annotations": [
       {
         "bbox": [
@@ -59862,251 +56820,8 @@
     "prompt": "(a photo of a black woman cleaning a keyboard):1.05,masterpiece,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001467.jpg",
-    "img_id": 1467,
-    "annotations": [
-      {
-        "bbox": [
-          416,
-          68,
-          511,
-          449
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          71,
-          0,
-          459,
-          510
-        ],
-        "category_id": 11
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 59,
-        "hoi_category_id": 328
-      }
-    ],
-    "prompt": "(a photo of a black teenager opening a fire hydrant with hand):1.05,masterpiece,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001468.jpg",
-    "img_id": 1468,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          0,
-          206,
-          462
-        ],
-        "category_id": 11
-      },
-      {
-        "bbox": [
-          188,
-          147,
-          421,
-          481
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 59,
-        "hoi_category_id": 328
-      }
-    ],
-    "prompt": "(a photo of a black boy opening a fire hydrant with hand):1.05,masterpiece,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001469.jpg",
-    "img_id": 1469,
-    "annotations": [
-      {
-        "bbox": [
-          75,
-          1,
-          511,
-          508
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          232,
-          268,
-          477,
-          449
-        ],
-        "category_id": 58
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 24,
-        "hoi_category_id": 360
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 37,
-        "hoi_category_id": 361
-      }
-    ],
-    "prompt": "(a photo of a asian young man eating a hot dog with mouse,holding a hot dog with hand):1.05,best quality,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001470.jpg",
-    "img_id": 1470,
-    "annotations": [
-      {
-        "bbox": [
-          147,
-          0,
-          510,
-          508
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          44,
-          142,
-          341,
-          335
-        ],
-        "category_id": 58
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 24,
-        "hoi_category_id": 360
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 37,
-        "hoi_category_id": 361
-      }
-    ],
-    "prompt": "(a photo of a black boy eating a hot dog with mouse,holding a hot dog with hand):1.05,masterpiece,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001471.jpg",
-    "img_id": 1471,
-    "annotations": [
-      {
-        "bbox": [
-          20,
-          105,
-          502,
-          508
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          92,
-          155,
-          266
-        ],
-        "category_id": 58
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 24,
-        "hoi_category_id": 360
-      }
-    ],
-    "prompt": "(a photo of a black young man eating a hot dog with mouse):1.05,best quality,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001472.jpg",
-    "img_id": 1472,
-    "annotations": [
-      {
-        "bbox": [
-          212,
-          71,
-          511,
-          511
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          0,
-          511,
-          511
-        ],
-        "category_id": 6
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 53,
-        "hoi_category_id": 60
-      }
-    ],
-    "prompt": "(a photo of a black young woman loading a bus):1.05,best quality,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001473.jpg",
-    "img_id": 1473,
-    "annotations": [
-      {
-        "bbox": [
-          198,
-          126,
-          394,
-          386
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          223,
-          360,
-          477,
-          413
-        ],
-        "category_id": 35
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 44,
-        "hoi_category_id": 468
-      }
-    ],
-    "prompt": "(a photo of a asian teenager jumping a skis):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001474.jpg",
-    "img_id": 1474,
+    "file_name": "Syn_train_001394.jpg",
+    "img_id": 1394,
     "annotations": [
       {
         "bbox": [
@@ -60153,290 +56868,8 @@
     "prompt": "(a photo of a hispanic teenager jumping a skateboard):1.05,best quality,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001475.jpg",
-    "img_id": 1475,
-    "annotations": [
-      {
-        "bbox": [
-          78,
-          74,
-          390,
-          443
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          37,
-          363,
-          128,
-          417
-        ],
-        "category_id": 41
-      },
-      {
-        "bbox": [
-          131,
-          211,
-          165,
-          297
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          78,
-          205,
-          123,
-          337
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          53,
-          209,
-          96,
-          329
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 3,
-        "object_id": 1,
-        "category_id": 44,
-        "hoi_category_id": 458
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 58,
-        "hoi_category_id": 170
-      },
-      {
-        "subject_id": 2,
-        "object_id": 1,
-        "category_id": 58,
-        "hoi_category_id": 170
-      },
-      {
-        "subject_id": 4,
-        "object_id": 1,
-        "category_id": 58,
-        "hoi_category_id": 170
-      }
-    ],
-    "prompt": "(a photo of a asian man jumping a skateboard):1.05,best quality,ultra realistic,Professional,HD,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001476.jpg",
-    "img_id": 1476,
-    "annotations": [
-      {
-        "bbox": [
-          69,
-          280,
-          464,
-          395
-        ],
-        "category_id": 41
-      },
-      {
-        "bbox": [
-          109,
-          0,
-          398,
-          327
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 44,
-        "hoi_category_id": 458
-      }
-    ],
-    "prompt": "(a photo of a black teenager jumping a skateboard):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001477.jpg",
-    "img_id": 1477,
-    "annotations": [
-      {
-        "bbox": [
-          243,
-          38,
-          511,
-          507
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          0,
-          400,
-          217
-        ],
-        "category_id": 7
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 22,
-        "hoi_category_id": 188
-      }
-    ],
-    "prompt": "(a photo of a black man driving a train):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001478.jpg",
-    "img_id": 1478,
-    "annotations": [
-      {
-        "bbox": [
-          79,
-          58,
-          320,
-          448
-        ],
-        "category_id": 77
-      },
-      {
-        "bbox": [
-          0,
-          203,
-          351,
-          509
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 37,
-        "hoi_category_id": 285
-      },
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 74,
-        "hoi_category_id": 286
-      }
-    ],
-    "prompt": "(a photo of a black teenager holding a cell phone with hand,reading a cell phone):1.05,best quality,ultra realistic,Professional,HD,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001479.jpg",
-    "img_id": 1479,
-    "annotations": [
-      {
-        "bbox": [
-          199,
-          50,
-          511,
-          508
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          194,
-          267,
-          276,
-          370
-        ],
-        "category_id": 77
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 37,
-        "hoi_category_id": 285
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 102,
-        "hoi_category_id": 288
-      }
-    ],
-    "prompt": "(a photo of a black young woman holding a cell phone with hand,talking on a cell phone):1.05,masterpiece,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001480.jpg",
-    "img_id": 1480,
-    "annotations": [
-      {
-        "bbox": [
-          2,
-          20,
-          511,
-          506
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          393,
-          251,
-          511,
-          335
-        ],
-        "category_id": 77
-      },
-      {
-        "bbox": [
-          0,
-          214,
-          59,
-          308
-        ],
-        "category_id": 77
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 37,
-        "hoi_category_id": 285
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 102,
-        "hoi_category_id": 288
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 37,
-        "hoi_category_id": 285
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 102,
-        "hoi_category_id": 288
-      }
-    ],
-    "prompt": "(a photo of a hispanic woman holding a cell phone with hand,talking on a cell phone):1.05,best quality,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001481.jpg",
-    "img_id": 1481,
+    "file_name": "Syn_train_001395.jpg",
+    "img_id": 1395,
     "annotations": [
       {
         "bbox": [
@@ -60468,8 +56901,8 @@
     "prompt": "(a photo of a black young woman lying on a bed):1.05,masterpiece,ultra realistic,Professional,DSLR,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001482.jpg",
-    "img_id": 1482,
+    "file_name": "Syn_train_001396.jpg",
+    "img_id": 1396,
     "annotations": [
       {
         "bbox": [
@@ -60501,8 +56934,8 @@
     "prompt": "(a photo of a hispanic woman lying on a bed):1.05,masterpiece,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001483.jpg",
-    "img_id": 1483,
+    "file_name": "Syn_train_001397.jpg",
+    "img_id": 1397,
     "annotations": [
       {
         "bbox": [
@@ -60564,86 +56997,8 @@
     "prompt": "(a photo of a black teenager inspecting a oven by looking close):1.05,best quality,ultra realistic,Professional,HD,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001484.jpg",
-    "img_id": 1484,
-    "annotations": [
-      {
-        "bbox": [
-          260,
-          259,
-          317,
-          367
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          78,
-          302,
-          491,
-          463
-        ],
-        "category_id": 8
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 77,
-        "hoi_category_id": 573
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 88,
-        "hoi_category_id": 574
-      }
-    ],
-    "prompt": "(a photo of a asian young man riding a truck,sitting on a truck):1.05,masterpiece,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001485.jpg",
-    "img_id": 1485,
-    "annotations": [
-      {
-        "bbox": [
-          148,
-          26,
-          275,
-          471
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          82,
-          25,
-          511,
-          449
-        ],
-        "category_id": 8
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 77,
-        "hoi_category_id": 573
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 88,
-        "hoi_category_id": 574
-      }
-    ],
-    "prompt": "(a photo of a asian young woman riding a truck,sitting on a truck):1.05,best quality,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001486.jpg",
-    "img_id": 1486,
+    "file_name": "Syn_train_001398.jpg",
+    "img_id": 1398,
     "annotations": [
       {
         "bbox": [
@@ -60681,56 +57036,8 @@
     "prompt": "(a photo of a black teenager washing a spoon with water,holding a spoon with hand):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001487.jpg",
-    "img_id": 1487,
-    "annotations": [
-      {
-        "bbox": [
-          233,
-          45,
-          486,
-          506
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          33,
-          243,
-          230,
-          374
-        ],
-        "category_id": 61
-      },
-      {
-        "bbox": [
-          200,
-          129,
-          283,
-          199
-        ],
-        "category_id": 64
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 37,
-        "hoi_category_id": 269
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 58,
-        "hoi_category_id": 174
-      }
-    ],
-    "prompt": "(a photo of a black boy holding a cake with hand):1.05,best quality,ultra realistic,Professional,4K,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001488.jpg",
-    "img_id": 1488,
+    "file_name": "Syn_train_001399.jpg",
+    "img_id": 1399,
     "annotations": [
       {
         "bbox": [
@@ -60762,8 +57069,8 @@
     "prompt": "(a photo of a asian young woman making a cake):1.05,masterpiece,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001489.jpg",
-    "img_id": 1489,
+    "file_name": "Syn_train_001400.jpg",
+    "img_id": 1400,
     "annotations": [
       {
         "bbox": [
@@ -60810,170 +57117,8 @@
     "prompt": "(a photo of a black teenager making a cake):1.05,best quality,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001490.jpg",
-    "img_id": 1490,
-    "annotations": [
-      {
-        "bbox": [
-          410,
-          389,
-          471,
-          464
-        ],
-        "category_id": 41
-      },
-      {
-        "bbox": [
-          393,
-          73,
-          511,
-          418
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 33,
-        "hoi_category_id": 456
-      }
-    ],
-    "prompt": "(a photo of a hispanic teenager grinding a skateboard):1.05,best quality,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001491.jpg",
-    "img_id": 1491,
-    "annotations": [
-      {
-        "bbox": [
-          16,
-          0,
-          342,
-          356
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          107,
-          343,
-          432,
-          403
-        ],
-        "category_id": 41
-      },
-      {
-        "bbox": [
-          96,
-          234,
-          123,
-          319
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          463,
-          232,
-          486,
-          291
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 33,
-        "hoi_category_id": 456
-      },
-      {
-        "subject_id": 2,
-        "object_id": 1,
-        "category_id": 58,
-        "hoi_category_id": 170
-      },
-      {
-        "subject_id": 3,
-        "object_id": 1,
-        "category_id": 58,
-        "hoi_category_id": 170
-      }
-    ],
-    "prompt": "(a photo of a hispanic young man grinding a skateboard):1.05,best quality,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001492.jpg",
-    "img_id": 1492,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          100,
-          219,
-          356
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          234,
-          73,
-          465
-        ],
-        "category_id": 2
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 44,
-        "hoi_category_id": 14
-      }
-    ],
-    "prompt": "(a photo of a hispanic woman jumping a bicycle):1.05,masterpiece,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001493.jpg",
-    "img_id": 1493,
-    "annotations": [
-      {
-        "bbox": [
-          224,
-          74,
-          342,
-          311
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          224,
-          206,
-          343,
-          382
-        ],
-        "category_id": 2
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 44,
-        "hoi_category_id": 14
-      }
-    ],
-    "prompt": "(a photo of a black teenager jumping a bicycle):1.05,masterpiece,ultra realistic,Professional,DSLR,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001494.jpg",
-    "img_id": 1494,
+    "file_name": "Syn_train_001401.jpg",
+    "img_id": 1401,
     "annotations": [
       {
         "bbox": [
@@ -61005,8 +57150,8 @@
     "prompt": "(a photo of a black boy washing a bowl with water):1.05,best quality,ultra realistic,Professional,HD,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001495.jpg",
-    "img_id": 1495,
+    "file_name": "Syn_train_001402.jpg",
+    "img_id": 1402,
     "annotations": [
       {
         "bbox": [
@@ -61038,104 +57183,8 @@
     "prompt": "(a photo of a hispanic boy washing a bowl with water):1.05,masterpiece,ultra realistic,Professional,4K,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001496.jpg",
-    "img_id": 1496,
-    "annotations": [
-      {
-        "bbox": [
-          168,
-          198,
-          387,
-          503
-        ],
-        "category_id": 18
-      },
-      {
-        "bbox": [
-          307,
-          0,
-          505,
-          456
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          271,
-          121,
-          383,
-          231
-        ],
-        "category_id": 37
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 37,
-        "hoi_category_id": 116
-      },
-      {
-        "subject_id": 1,
-        "object_id": 2,
-        "category_id": 58,
-        "hoi_category_id": 502
-      }
-    ],
-    "prompt": "(a photo of a black boy holding a dog with hand):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001497.jpg",
-    "img_id": 1497,
-    "annotations": [
-      {
-        "bbox": [
-          277,
-          244,
-          393,
-          459
-        ],
-        "category_id": 18
-      },
-      {
-        "bbox": [
-          0,
-          176,
-          247,
-          466
-        ],
-        "category_id": 18
-      },
-      {
-        "bbox": [
-          375,
-          1,
-          511,
-          468
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 2,
-        "object_id": 0,
-        "category_id": 37,
-        "hoi_category_id": 116
-      },
-      {
-        "subject_id": 2,
-        "object_id": 1,
-        "category_id": 37,
-        "hoi_category_id": 116
-      }
-    ],
-    "prompt": "(a photo of a black young man holding a dog with hand):1.05,best quality,ultra realistic,Professional,DSLR,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001498.jpg",
-    "img_id": 1498,
+    "file_name": "Syn_train_001403.jpg",
+    "img_id": 1403,
     "annotations": [
       {
         "bbox": [
@@ -61182,122 +57231,8 @@
     "prompt": "(a photo of a asian woman picking a orange):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001499.jpg",
-    "img_id": 1499,
-    "annotations": [
-      {
-        "bbox": [
-          1,
-          1,
-          471,
-          508
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          282,
-          119,
-          413,
-          256
-        ],
-        "category_id": 55
-      },
-      {
-        "bbox": [
-          27,
-          303,
-          128,
-          383
-        ],
-        "category_id": 55
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 67,
-        "hoi_category_id": 404
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 67,
-        "hoi_category_id": 404
-      }
-    ],
-    "prompt": "(a photo of a black teenager picking a orange):1.05,masterpiece,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001500.jpg",
-    "img_id": 1500,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          0,
-          188,
-          486
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          122,
-          80,
-          510,
-          492
-        ],
-        "category_id": 18
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 99,
-        "hoi_category_id": 124
-      }
-    ],
-    "prompt": "(a photo of a asian woman straddling a dog):1.05,best quality,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001501.jpg",
-    "img_id": 1501,
-    "annotations": [
-      {
-        "bbox": [
-          10,
-          183,
-          221,
-          478
-        ],
-        "category_id": 18
-      },
-      {
-        "bbox": [
-          258,
-          41,
-          453,
-          458
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 99,
-        "hoi_category_id": 124
-      }
-    ],
-    "prompt": "(a photo of a hispanic teenager straddling a dog):1.05,best quality,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001502.jpg",
-    "img_id": 1502,
+    "file_name": "Syn_train_001404.jpg",
+    "img_id": 1404,
     "annotations": [
       {
         "bbox": [
@@ -61335,8 +57270,8 @@
     "prompt": "(a photo of a asian young woman holding a scissors with hand,cutting with a scissors):1.05,masterpiece,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001503.jpg",
-    "img_id": 1503,
+    "file_name": "Syn_train_001405.jpg",
+    "img_id": 1405,
     "annotations": [
       {
         "bbox": [
@@ -61374,233 +57309,8 @@
     "prompt": "(a photo of a black boy holding a scissors with hand,cutting with a scissors):1.05,best quality,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001504.jpg",
-    "img_id": 1504,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          97,
-          174,
-          396
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          386,
-          176,
-          476
-        ],
-        "category_id": 33
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 61,
-        "hoi_category_id": 513
-      }
-    ],
-    "prompt": "(a photo of a asian man packing a suitcase):1.05,best quality,ultra realistic,Professional,4K,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001505.jpg",
-    "img_id": 1505,
-    "annotations": [
-      {
-        "bbox": [
-          117,
-          225,
-          367,
-          509
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          3,
-          71,
-          510,
-          510
-        ],
-        "category_id": 82
-      },
-      {
-        "bbox": [
-          99,
-          461,
-          175,
-          511
-        ],
-        "category_id": 44
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 57,
-        "hoi_category_id": 432
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 58,
-        "hoi_category_id": 54
-      }
-    ],
-    "prompt": "(a photo of a asian young man moving a refrigerator):1.05,best quality,ultra realistic,Professional,DSLR,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001506.jpg",
-    "img_id": 1506,
-    "annotations": [
-      {
-        "bbox": [
-          277,
-          97,
-          425,
-          474
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          180,
-          258,
-          510,
-          472
-        ],
-        "category_id": 2
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 9,
-        "hoi_category_id": 11
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 42,
-        "hoi_category_id": 13
-      }
-    ],
-    "prompt": "(a photo of a black teenager carrying a bicycle with hand,inspecting a bicycle by looking close):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001507.jpg",
-    "img_id": 1507,
-    "annotations": [
-      {
-        "bbox": [
-          129,
-          126,
-          414,
-          454
-        ],
-        "category_id": 2
-      },
-      {
-        "bbox": [
-          180,
-          0,
-          415,
-          314
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 9,
-        "hoi_category_id": 11
-      },
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 42,
-        "hoi_category_id": 13
-      }
-    ],
-    "prompt": "(a photo of a asian teenager carrying a bicycle with hand,inspecting a bicycle by looking close):1.05,masterpiece,ultra realistic,Professional,4K,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001508.jpg",
-    "img_id": 1508,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          33,
-          207,
-          435
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          220,
-          97,
-          376,
-          374
-        ],
-        "category_id": 11
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 62,
-        "hoi_category_id": 329
-      }
-    ],
-    "prompt": "(a photo of a asian boy painting a fire hydrant):1.05,best quality,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001509.jpg",
-    "img_id": 1509,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          158,
-          247,
-          402
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          52,
-          281,
-          186,
-          453
-        ],
-        "category_id": 11
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 62,
-        "hoi_category_id": 329
-      }
-    ],
-    "prompt": "(a photo of a hispanic teenager painting a fire hydrant):1.05,masterpiece,ultra realistic,Professional,4K,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001510.jpg",
-    "img_id": 1510,
+    "file_name": "Syn_train_001406.jpg",
+    "img_id": 1406,
     "annotations": [
       {
         "bbox": [
@@ -61647,8 +57357,8 @@
     "prompt": "(a photo of a black young man racing a horse):1.05,best quality,ultra realistic,Vivid Colors,DSLR,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001511.jpg",
-    "img_id": 1511,
+    "file_name": "Syn_train_001407.jpg",
+    "img_id": 1407,
     "annotations": [
       {
         "bbox": [
@@ -61680,8 +57390,8 @@
     "prompt": "(a photo of a hispanic teenager racing a horse):1.05,masterpiece,ultra realistic,Vivid Colors,DSLR,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001512.jpg",
-    "img_id": 1512,
+    "file_name": "Syn_train_001408.jpg",
+    "img_id": 1408,
     "annotations": [
       {
         "bbox": [
@@ -61731,260 +57441,8 @@
     "prompt": "(a photo of a black boy riding a bicycle,holding a bicycle with hand,sitting on a bicycle,straddling a bicycle):1.05,masterpiece,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001513.jpg",
-    "img_id": 1513,
-    "annotations": [
-      {
-        "bbox": [
-          105,
-          152,
-          511,
-          480
-        ],
-        "category_id": 2
-      },
-      {
-        "bbox": [
-          240,
-          24,
-          435,
-          373
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 77,
-        "hoi_category_id": 19
-      },
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 37,
-        "hoi_category_id": 12
-      },
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 88,
-        "hoi_category_id": 20
-      },
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 99,
-        "hoi_category_id": 21
-      }
-    ],
-    "prompt": "(a photo of a asian woman riding a bicycle,holding a bicycle with hand,sitting on a bicycle,straddling a bicycle):1.05,masterpiece,ultra realistic,Professional,4K,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001514.jpg",
-    "img_id": 1514,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          14,
-          308,
-          506
-        ],
-        "category_id": 4
-      },
-      {
-        "bbox": [
-          0,
-          0,
-          298,
-          338
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 111,
-        "hoi_category_id": 158
-      }
-    ],
-    "prompt": "(a photo of a black man walking a motorcycle):1.05,masterpiece,ultra realistic,Professional,DSLR,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001515.jpg",
-    "img_id": 1515,
-    "annotations": [
-      {
-        "bbox": [
-          67,
-          165,
-          511,
-          462
-        ],
-        "category_id": 4
-      },
-      {
-        "bbox": [
-          309,
-          88,
-          454,
-          486
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 111,
-        "hoi_category_id": 158
-      }
-    ],
-    "prompt": "(a photo of a asian boy walking a motorcycle):1.05,best quality,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001516.jpg",
-    "img_id": 1516,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          230,
-          448,
-          461
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          298,
-          511,
-          500
-        ],
-        "category_id": 15
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 50,
-        "hoi_category_id": 245
-      }
-    ],
-    "prompt": "(a photo of a hispanic woman lying on a bench):1.05,best quality,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001517.jpg",
-    "img_id": 1517,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          114,
-          511,
-          381
-        ],
-        "category_id": 6
-      },
-      {
-        "bbox": [
-          225,
-          213,
-          280,
-          409
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 22,
-        "hoi_category_id": 57
-      },
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 88,
-        "hoi_category_id": 62
-      }
-    ],
-    "prompt": "(a photo of a black teenager driving a bus,sitting on a bus):1.05,best quality,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001518.jpg",
-    "img_id": 1518,
-    "annotations": [
-      {
-        "bbox": [
-          126,
-          0,
-          468,
-          485
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          78,
-          445,
-          332,
-          511
-        ],
-        "category_id": 51
-      },
-      {
-        "bbox": [
-          381,
-          403,
-          511,
-          511
-        ],
-        "category_id": 57
-      },
-      {
-        "bbox": [
-          222,
-          311,
-          320,
-          338
-        ],
-        "category_id": 50
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 58,
-        "hoi_category_id": 257
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 15,
-        "hoi_category_id": 275
-      },
-      {
-        "subject_id": 0,
-        "object_id": 3,
-        "category_id": 58,
-        "hoi_category_id": 488
-      }
-    ],
-    "prompt": "(a photo of a asian boy cooking a carrot):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001519.jpg",
-    "img_id": 1519,
+    "file_name": "Syn_train_001409.jpg",
+    "img_id": 1409,
     "annotations": [
       {
         "bbox": [
@@ -62016,8 +57474,8 @@
     "prompt": "(a photo of a black man lying on a surfboard):1.05,best quality,ultra realistic,Professional,4K,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001520.jpg",
-    "img_id": 1520,
+    "file_name": "Syn_train_001410.jpg",
+    "img_id": 1410,
     "annotations": [
       {
         "bbox": [
@@ -62049,254 +57507,8 @@
     "prompt": "(a photo of a asian young woman lying on a surfboard):1.05,masterpiece,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001521.jpg",
-    "img_id": 1521,
-    "annotations": [
-      {
-        "bbox": [
-          208,
-          51,
-          511,
-          508
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          334,
-          343,
-          450,
-          473
-        ],
-        "category_id": 44
-      },
-      {
-        "bbox": [
-          227,
-          151,
-          263,
-          255
-        ],
-        "category_id": 44
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 59,
-        "hoi_category_id": 52
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 37,
-        "hoi_category_id": 49
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 59,
-        "hoi_category_id": 52
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 37,
-        "hoi_category_id": 49
-      }
-    ],
-    "prompt": "(a photo of a black teenager opening a bottle with hand,holding a bottle with hand):1.05,best quality,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001522.jpg",
-    "img_id": 1522,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          7,
-          511,
-          507
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          406,
-          162,
-          511,
-          391
-        ],
-        "category_id": 44
-      },
-      {
-        "bbox": [
-          68,
-          311,
-          166,
-          346
-        ],
-        "category_id": 77
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 59,
-        "hoi_category_id": 52
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 37,
-        "hoi_category_id": 49
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 58,
-        "hoi_category_id": 290
-      }
-    ],
-    "prompt": "(a photo of a asian man opening a bottle with hand,holding a bottle with hand):1.05,masterpiece,ultra realistic,Professional,4K,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001523.jpg",
-    "img_id": 1523,
-    "annotations": [
-      {
-        "bbox": [
-          312,
-          98,
-          479,
-          510
-        ],
-        "category_id": 19
-      },
-      {
-        "bbox": [
-          130,
-          99,
-          324,
-          394
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          158,
-          166,
-          296,
-          470
-        ],
-        "category_id": 19
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 99,
-        "hoi_category_id": 142
-      },
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 77,
-        "hoi_category_id": 140
-      },
-      {
-        "subject_id": 1,
-        "object_id": 2,
-        "category_id": 99,
-        "hoi_category_id": 142
-      },
-      {
-        "subject_id": 1,
-        "object_id": 2,
-        "category_id": 77,
-        "hoi_category_id": 140
-      }
-    ],
-    "prompt": "(a photo of a black man straddling a horse,riding a horse):1.05,best quality,ultra realistic,Professional,DSLR,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001524.jpg",
-    "img_id": 1524,
-    "annotations": [
-      {
-        "bbox": [
-          93,
-          64,
-          509,
-          510
-        ],
-        "category_id": 19
-      },
-      {
-        "bbox": [
-          244,
-          27,
-          392,
-          466
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 99,
-        "hoi_category_id": 142
-      },
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 77,
-        "hoi_category_id": 140
-      }
-    ],
-    "prompt": "(a photo of a asian boy straddling a horse,riding a horse):1.05,best quality,ultra realistic,Professional,4K,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001525.jpg",
-    "img_id": 1525,
-    "annotations": [
-      {
-        "bbox": [
-          259,
-          44,
-          511,
-          507
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          0,
-          511,
-          375
-        ],
-        "category_id": 5
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 42,
-        "hoi_category_id": 5
-      }
-    ],
-    "prompt": "(a photo of a black boy inspecting a airplane by looking close):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001526.jpg",
-    "img_id": 1526,
+    "file_name": "Syn_train_001411.jpg",
+    "img_id": 1411,
     "annotations": [
       {
         "bbox": [
@@ -62343,173 +57555,8 @@
     "prompt": "(a photo of a black woman inspecting a airplane by looking close):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001527.jpg",
-    "img_id": 1527,
-    "annotations": [
-      {
-        "bbox": [
-          92,
-          28,
-          358,
-          453
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          128,
-          181,
-          495,
-          437
-        ],
-        "category_id": 2
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 112,
-        "hoi_category_id": 23
-      }
-    ],
-    "prompt": "(a photo of a hispanic young man washing a bicycle with water):1.05,best quality,ultra realistic,Professional,4K,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001528.jpg",
-    "img_id": 1528,
-    "annotations": [
-      {
-        "bbox": [
-          209,
-          178,
-          391,
-          394
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          106,
-          266,
-          457,
-          458
-        ],
-        "category_id": 2
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 112,
-        "hoi_category_id": 23
-      }
-    ],
-    "prompt": "(a photo of a hispanic boy washing a bicycle with water):1.05,best quality,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001529.jpg",
-    "img_id": 1529,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          147,
-          456,
-          456
-        ],
-        "category_id": 24
-      },
-      {
-        "bbox": [
-          96,
-          59,
-          255,
-          497
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 37,
-        "hoi_category_id": 597
-      }
-    ],
-    "prompt": "(a photo of a hispanic woman holding a zebra with hand):1.05,best quality,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001530.jpg",
-    "img_id": 1530,
-    "annotations": [
-      {
-        "bbox": [
-          124,
-          34,
-          311,
-          509
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          305,
-          104,
-          511,
-          454
-        ],
-        "category_id": 24
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 37,
-        "hoi_category_id": 597
-      }
-    ],
-    "prompt": "(a photo of a black teenager holding a zebra with hand):1.05,best quality,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001531.jpg",
-    "img_id": 1531,
-    "annotations": [
-      {
-        "bbox": [
-          69,
-          91,
-          510,
-          509
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          1,
-          226,
-          510
-        ],
-        "category_id": 82
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 13,
-        "hoi_category_id": 430
-      }
-    ],
-    "prompt": "(a photo of a asian teenager cleaning a refrigerator):1.05,masterpiece,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001532.jpg",
-    "img_id": 1532,
+    "file_name": "Syn_train_001412.jpg",
+    "img_id": 1412,
     "annotations": [
       {
         "bbox": [
@@ -62541,56 +57588,8 @@
     "prompt": "(a photo of a asian young woman kissing a giraffe):1.05,masterpiece,ultra realistic,Professional,HD,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001533.jpg",
-    "img_id": 1533,
-    "annotations": [
-      {
-        "bbox": [
-          246,
-          182,
-          274,
-          209
-        ],
-        "category_id": 37
-      },
-      {
-        "bbox": [
-          126,
-          191,
-          280,
-          425
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          184,
-          284,
-          201,
-          299
-        ],
-        "category_id": 37
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 105,
-        "hoi_category_id": 501
-      },
-      {
-        "subject_id": 1,
-        "object_id": 2,
-        "category_id": 105,
-        "hoi_category_id": 501
-      }
-    ],
-    "prompt": "(a photo of a asian boy throwing a sports ball):1.05,masterpiece,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001534.jpg",
-    "img_id": 1534,
+    "file_name": "Syn_train_001413.jpg",
+    "img_id": 1413,
     "annotations": [
       {
         "bbox": [
@@ -62622,209 +57621,8 @@
     "prompt": "(a photo of a hispanic boy throwing a sports ball):1.05,best quality,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001535.jpg",
-    "img_id": 1535,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          0,
-          511,
-          489
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          295,
-          66,
-          417,
-          172
-        ],
-        "category_id": 55
-      },
-      {
-        "bbox": [
-          139,
-          51,
-          270,
-          165
-        ],
-        "category_id": 55
-      },
-      {
-        "bbox": [
-          154,
-          154,
-          272,
-          267
-        ],
-        "category_id": 55
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 16,
-        "hoi_category_id": 399
-      },
-      {
-        "subject_id": 0,
-        "object_id": 2,
-        "category_id": 16,
-        "hoi_category_id": 399
-      },
-      {
-        "subject_id": 0,
-        "object_id": 3,
-        "category_id": 16,
-        "hoi_category_id": 399
-      }
-    ],
-    "prompt": "(a photo of a hispanic man cutting a orange):1.05,best quality,ultra realistic,Professional,4K,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001536.jpg",
-    "img_id": 1536,
-    "annotations": [
-      {
-        "bbox": [
-          31,
-          0,
-          511,
-          508
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          53,
-          335,
-          207,
-          486
-        ],
-        "category_id": 55
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 16,
-        "hoi_category_id": 399
-      }
-    ],
-    "prompt": "(a photo of a hispanic young woman cutting a orange):1.05,masterpiece,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001537.jpg",
-    "img_id": 1537,
-    "annotations": [
-      {
-        "bbox": [
-          49,
-          89,
-          278,
-          493
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          0,
-          207,
-          477,
-          508
-        ],
-        "category_id": 9
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 22,
-        "hoi_category_id": 33
-      },
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 88,
-        "hoi_category_id": 42
-      }
-    ],
-    "prompt": "(a photo of a hispanic boy driving a boat,sitting on a boat):1.05,best quality,ultra realistic,Vivid Colors,4K,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001538.jpg",
-    "img_id": 1538,
-    "annotations": [
-      {
-        "bbox": [
-          37,
-          1,
-          474,
-          509
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          229,
-          154,
-          511,
-          507
-        ],
-        "category_id": 20
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 37,
-        "hoi_category_id": 178
-      }
-    ],
-    "prompt": "(a photo of a hispanic woman holding a sheep with hand):1.05,masterpiece,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001539.jpg",
-    "img_id": 1539,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          0,
-          348,
-          510
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          193,
-          385,
-          386,
-          511
-        ],
-        "category_id": 60
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 55,
-        "hoi_category_id": 310
-      }
-    ],
-    "prompt": "(a photo of a black boy making a donut):1.05,best quality,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001540.jpg",
-    "img_id": 1540,
+    "file_name": "Syn_train_001414.jpg",
+    "img_id": 1414,
     "annotations": [
       {
         "bbox": [
@@ -62946,74 +57744,8 @@
     "prompt": "(a photo of a asian young woman making a donut):1.05,masterpiece,ultra realistic,Vivid Colors,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001541.jpg",
-    "img_id": 1541,
-    "annotations": [
-      {
-        "bbox": [
-          122,
-          1,
-          395,
-          509
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          189,
-          195,
-          386,
-          479
-        ],
-        "category_id": 17
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 37,
-        "hoi_category_id": 79
-      }
-    ],
-    "prompt": "(a photo of a asian woman holding a cat with hand):1.05,masterpiece,ultra realistic,Professional,4K,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001542.jpg",
-    "img_id": 1542,
-    "annotations": [
-      {
-        "bbox": [
-          16,
-          197,
-          437,
-          442
-        ],
-        "category_id": 17
-      },
-      {
-        "bbox": [
-          101,
-          0,
-          465,
-          508
-        ],
-        "category_id": 1
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 37,
-        "hoi_category_id": 79
-      }
-    ],
-    "prompt": "(a photo of a hispanic boy holding a cat with hand):1.05,best quality,ultra realistic,Professional,DSLR,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001543.jpg",
-    "img_id": 1543,
+    "file_name": "Syn_train_001415.jpg",
+    "img_id": 1415,
     "annotations": [
       {
         "bbox": [
@@ -63045,8 +57777,8 @@
     "prompt": "(a photo of a asian woman carrying a sports ball with hand):1.05,masterpiece,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001544.jpg",
-    "img_id": 1544,
+    "file_name": "Syn_train_001416.jpg",
+    "img_id": 1416,
     "annotations": [
       {
         "bbox": [
@@ -63084,8 +57816,8 @@
     "prompt": "(a photo of a hispanic woman carrying a sports ball with hand,holding a sports ball with hand):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001545.jpg",
-    "img_id": 1545,
+    "file_name": "Syn_train_001417.jpg",
+    "img_id": 1417,
     "annotations": [
       {
         "bbox": [
@@ -63117,8 +57849,8 @@
     "prompt": "(a photo of a asian boy launching a boat):1.05,best quality,ultra realistic,Professional,DSLR,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001546.jpg",
-    "img_id": 1546,
+    "file_name": "Syn_train_001418.jpg",
+    "img_id": 1418,
     "annotations": [
       {
         "bbox": [
@@ -63150,89 +57882,8 @@
     "prompt": "(a photo of a black young man sitting on a chair):1.05,masterpiece,ultra realistic,Professional,HD,warm lighting,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001547.jpg",
-    "img_id": 1547,
-    "annotations": [
-      {
-        "bbox": [
-          121,
-          29,
-          315,
-          509
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          319,
-          360,
-          495,
-          510
-        ],
-        "category_id": 27
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 115,
-        "hoi_category_id": 213
-      }
-    ],
-    "prompt": "(a photo of a black young man wearing a backpack):1.05,masterpiece,ultra realistic,Professional,4K,warm lighting,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001548.jpg",
-    "img_id": 1548,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          314,
-          511,
-          508
-        ],
-        "category_id": 9
-      },
-      {
-        "bbox": [
-          367,
-          125,
-          381,
-          142
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          302,
-          116,
-          472,
-          172
-        ],
-        "category_id": 9
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 1,
-        "object_id": 0,
-        "category_id": 94,
-        "hoi_category_id": 43
-      },
-      {
-        "subject_id": 1,
-        "object_id": 2,
-        "category_id": 94,
-        "hoi_category_id": 43
-      }
-    ],
-    "prompt": "(a photo of a hispanic young woman standing on a boat):1.05,masterpiece,ultra realistic,Professional,HD,blue hour,Highly detailed,iphone 12"
-  },
-  {
-    "file_name": "Syn_train_001549.jpg",
-    "img_id": 1549,
+    "file_name": "Syn_train_001419.jpg",
+    "img_id": 1419,
     "annotations": [
       {
         "bbox": [
@@ -63264,8 +57915,8 @@
     "prompt": "(a photo of a asian woman blocking a sports ball):1.05,best quality,ultra realistic,Vivid Colors,HD,blue hour,Highly detailed,iphone 12"
   },
   {
-    "file_name": "Syn_train_001550.jpg",
-    "img_id": 1550,
+    "file_name": "Syn_train_001420.jpg",
+    "img_id": 1420,
     "annotations": [
       {
         "bbox": [
@@ -63312,8 +57963,8 @@
     "prompt": "(a photo of a black boy blocking a sports ball):1.05,masterpiece,ultra realistic,Professional,DSLR,blue hour,Highly detailed,Canon Eos5D"
   },
   {
-    "file_name": "Syn_train_001551.jpg",
-    "img_id": 1551,
+    "file_name": "Syn_train_001421.jpg",
+    "img_id": 1421,
     "annotations": [
       {
         "bbox": [
@@ -63343,38 +57994,5 @@
       }
     ],
     "prompt": "(a photo of a black man holding a bird with hand):1.05,best quality,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,Canon Eos5D"
-  },
-  {
-    "file_name": "Syn_train_001552.jpg",
-    "img_id": 1552,
-    "annotations": [
-      {
-        "bbox": [
-          0,
-          0,
-          511,
-          504
-        ],
-        "category_id": 1
-      },
-      {
-        "bbox": [
-          210,
-          187,
-          356,
-          496
-        ],
-        "category_id": 16
-      }
-    ],
-    "hoi_annotation": [
-      {
-        "subject_id": 0,
-        "object_id": 1,
-        "category_id": 37,
-        "hoi_category_id": 27
-      }
-    ],
-    "prompt": "(a photo of a asian teenager holding a bird with hand):1.05,masterpiece,ultra realistic,Professional,4K,blue hour,Highly detailed,Canon Eos5D"
   }
 ]

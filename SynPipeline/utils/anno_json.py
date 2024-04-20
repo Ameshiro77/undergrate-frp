@@ -55,6 +55,8 @@ def generate_annotation(
     # annotations [] 目标的bbox和类别
     o_h, o_w = tgt["original_size"]
     new_anno["annotations"] = []
+    
+    # 变换bbox形式，先构成annotations
     for i, bbox in enumerate(tgt["boxes"].to("cpu")):  # to,否则会不在一个设备
         annotation = {}
         unnormbbox = bbox * torch.Tensor([o_w, o_h, o_w, o_h])
@@ -65,7 +67,8 @@ def generate_annotation(
         annotation["bbox"] = xyxy
         annotation["category_id"] = tgt["box_label_parse_id"][i]
         new_anno["annotations"].append(annotation)
-
+    print(new_anno)
+    
     # hoi_annotation [] , 包含subject id  | object id | category id | hoi category id
     new_anno["hoi_annotation"] = []
     from utils.labels_dict import get_hoi_id

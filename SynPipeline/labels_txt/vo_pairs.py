@@ -109,7 +109,7 @@ aux_verb_noun = {  # 得留空；调整prompt用的
     24: " with mouse",  # eat
     25: "",
     26: "",
-    27: "",
+    27: " with food", #feed
     28: "",
     29: "",
     30: "",
