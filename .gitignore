@@ -21,6 +21,7 @@
 *.json
 *.cfg
 *.pth
+/params
 /SynPipeline/DINO
 /gen-vlkt/exps/*
 /gen-vlkt/exps
