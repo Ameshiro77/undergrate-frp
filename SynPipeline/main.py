@@ -16,23 +16,54 @@ from utils.anno_json import generate_annotation
 from labels_txt.rare_list import rare_list
 
 parser = argparse.ArgumentParser("Set output imgs num", add_help=False)
-parser.add_argument("--nums", default=1, type=int)
+parser.add_argument("--imgs_num", default=1, type=int)
 parser.add_argument("--steps", default=75, type=int)
-parser.add_argument("--rare", default=160, type=int)  # 表明前多少个算rare
+parser.add_argument("--rare_num", default=160, type=int)  # 表明前多少个算rare
 parser.add_argument("--mode", default="random", type=str)  # random | seq
 parser.add_argument("--gen", default="t2i", type=str)  # t2i | i2i
 
 
 class SynPipeline:
-    def __init__(self, config_path, ckpt_path) -> None:
+    def __init__(self, config_path, ckpt_path, HICO_PATH, if_i2i: False) -> None:
         self.config_path = config_path
         self.model_checkpoint_path = ckpt_path
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.model, self.preprocess = clip.load("ViT-B/16", device=self.device)
+        self.HICO_PATH = HICO_PATH
+        # 如果是图生图 指定HICO-DET标签
+        if if_i2i == True:
+            with open(
+                os.path.join(HICO_PATH, "annotations", "trainval_hico.json"), "r"
+            ) as f:
+                self.annotation = json.load(f)
+            self.name2ids_dict = {
+                item["file_name"]: [
+                    hoi_item["hoi_category_id"]
+                    for hoi_item in item.get("hoi_annotation", [])
+                ]
+                for item in self.annotation
+            }
 
-    """
+    # 根据vo列表，找到hico-det对应的图片。
+    def get_hico_img(self, v_o_list):
+        hoi_ids = [hoi_to_id_dict[vo] for vo in v_o_list]  # 给出的[hoi_id]列表
+        found_dict = {
+            k: v for k, v in self.name2ids_dict.items() if set(hoi_ids) <= set(v)
+        }  # 寻找包含hois的HICO数据
+        if len(found_dict.keys()) == 0:
+            id = random.choice(hoi_ids)
+            found_dict = {
+                k: v for k, v in self.name2ids_dict.items() if id in v
+            }  # 如果找不到完全包含的，就随机选一个id找
+        print(found_dict)
+        img_name = random.choice(
+            list(found_dict.keys())
+        )  # 随机挑一个满足条件的HICO数据
+        img_path = os.path.join(self.HICO_PATH, "images", "train2015", img_name)
+        img = Image.open(img_path)
+        return img
+
     # 随机选择要生成的vo元组列表
-    """
     def random_choice(self, start, mode, seq_hoi_id=None):  # 随机选择要生成的vo元组列表
         v_o_list = []
         if mode == "random":  # 如果是random模式，就随机按权重抽取
@@ -74,10 +105,10 @@ class SynPipeline:
                     v_o_list.append(id_to_hoi_dict[hoi])
         return v_o_list
 
-    """
-    1.生成图片
-    """
-    def generate(self, pipe, prompt, steps, mode):
+    # 1.生成图片
+    def generate(self, pipe, v_o_list, steps, mode):
+        prompt = get_prompt(v_o_list)
+        # negative_prompt="mutated hands and fingers,poorly drawn hands,deformed,poorly drawn face,floating limbs,low quality,",
         ngt_prmt = "low quality,monochrome,skin blemishes,6 more fingers on one hand,deformity,bad legs,malformed limbs,extra limbs,ugly,poorly drawn hands,poorly drawn face,\
                                 extra fingers,mutated hands,mutation,bad anatomy,disfigured,fused fingers,2 more person"
         if mode == "t2i":
@@ -89,7 +120,6 @@ class SynPipeline:
                 width=512,
                 num_inference_steps=steps,
                 num_images_per_prompt=1,
-                # negative_prompt="mutated hands and fingers,poorly drawn hands,deformed,poorly drawn face,floating limbs,low quality,",
                 negative_prompt=ngt_prmt,
             ).images
             return imgs
@@ -99,18 +129,16 @@ class SynPipeline:
             torch.cuda.empty_cache()
             imgs = pipe(
                 prompt,
+                image=self.get_hico_img(v_o_list),
                 height=512,
                 width=512,
                 num_inference_steps=steps,
                 num_images_per_prompt=1,
-                # negative_prompt="mutated hands and fingers,poorly drawn hands,deformed,poorly drawn face,floating limbs,low quality,",
                 negative_prompt=ngt_prmt,
             ).images
             return imgs
 
-    """
-    2.检测并过滤，然后  3.标注
-    """
+    # 2.检测并过滤，然后  3.标注
     def detect_and_filter_and_anno(
         self, imgs, verbs_objs_tuple_list: list, out_dir, prompt
     ):
@@ -162,11 +190,8 @@ class SynPipeline:
                     json.dump(anno, f, indent=2)
                 f.close()
 
-    """
-    自动化流程
-    """
-    # def run(self, SDpipe, imgs_num, rare_num, mode, steps):
-    def run(self, *args):
+    # 入口函数 自动化流程
+    def run(self, SDpipe, args):
         # v_o_list = self.random_choice(rare_num, mode)
         # print(get_prompt(v_o_list))  # 找到对应提示词
         # exit()
@@ -176,7 +201,7 @@ class SynPipeline:
                 # v_o = random.choice(list(hico_text_label.keys())) #这个v_o是我改成原本了的 原先是(0开始的verb和预测的obj)
                 v_o_list = self.random_choice(args.rare_num, args.mode)
                 prompt = get_prompt(v_o_list)  # 找到对应提示词
-                imgs = pipeline.generate(SDpipe, prompt, args.steps, args.gen)
+                imgs = pipeline.generate(SDpipe, v_o_list, args.steps, args.gen)
                 pipeline.detect_and_filter_and_anno(imgs, v_o_list, out_dir, prompt)
                 print("目前进度:" + str(i + 1) + "/" + str(args.imgs_num))
         # ==== 随机从尾部N个类别里依次生成M个
@@ -199,36 +224,43 @@ class SynPipeline:
                         args.rare_num, args.mode, _rare_list[i]
                     )
                     prompt = get_prompt(v_o_list)
-                    imgs = pipeline.generate(SDpipe, prompt, args.steps, args.gen)
+                    imgs = pipeline.generate(SDpipe, v_o_list, args.steps, args.gen)
                     pipeline.detect_and_filter_and_anno(imgs, v_o_list, out_dir, prompt)
                     # count = count + 1
                     print("目前进度:" + str(count) + "/" + str(sum))
 
 
 if __name__ == "__main__":
+    # ===== 一些路径设置 ===== #
     out_dir = "./SynDatasets/train_images/"
     model_config_path = (
         "/root/autodl-tmp/frp/SynPipeline/DINO/config/DINO/DINO_4scale_swin.py"
     )
     model_checkpoint_path = "/root/autodl-tmp/frp/params/checkpoint0011_4scale_swin.pth"
+    SD_PATH = "/root/autodl-tmp/frp/params/stable-diffusion-v1.5"
+    if not os.path.exists(SD_PATH):
+        SD_PATH = r"G:\数据集&权重\stable-diffusion-v1.5"
+    HICO_PATH = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det"
+    if not os.path.exists(HICO_PATH):
+        HICO_PATH = "/root/autodl-tmp/data/hico_20160224_det"
+    # =========================#
 
     args = parser.parse_args()
-    # ==== pipeline
+
+    # ==== SD pipeline
     SDpipe = None
     if args.gen == "t2i":
         SDpipe = StableDiffusionPipeline.from_pretrained(  # 放在这是为了避免多次调用
-            # "G:\数据集&权重\stable-diffusion-v1.5", torch_dtype=torch.float32
-            "/root/autodl-tmp/frp/params/stable-diffusion-v1.5"
+            SD_PATH,
+            # torch_dtype=torch.float32
         )
     elif args.gen == "i2i":
         SDpipe = StableDiffusionImg2ImgPipeline.from_pretrained(  # 放在这是为了避免多次调用
-            # "G:\数据集&权重\stable-diffusion-v1.5", torch_dtype=torch.float32
-            "/root/autodl-tmp/frp/params/stable-diffusion-v1.5"
+            SD_PATH,
+            # torch_dtype=torch.float32
         )
     else:
         raise ValueError("生成方式不对,选择文生图t2i或图生图i2i")
 
-    from diffusers import StableDiffusionImg2ImgPipeline
-
-    pipeline = SynPipeline(model_config_path, model_checkpoint_path)
+    pipeline = SynPipeline(model_config_path, model_checkpoint_path, HICO_PATH)
     pipeline.run(SDpipe, args)

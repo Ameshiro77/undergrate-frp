@@ -141,6 +141,7 @@ def generate_annotation(
         return None
     return new_anno  # 返回生成的字典
 
+# =====end===== #
 
 tgt = {
     "boxes": torch.tensor(

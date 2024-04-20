@@ -1,6 +1,5 @@
 # 本程序可视化并手动筛选
-# TODO
-# 记得改filename 逻辑
+
 import cv2, os, sys, argparse
 import json, random
 import numpy as np
@@ -229,6 +228,7 @@ if __name__ == "__main__":
             prompt = "example"
         else:
             prompt = prompt.split(",")[0] + "," + prompt.split(",")[1]
+            
         img_path = os.path.join(img_dir, img_filename)
         original_img = cv2.imread(str(img_path))
         drwon_img = draw(original_img, target_dict)
@@ -238,6 +238,7 @@ if __name__ == "__main__":
         # cv2.setMouseCallback(prompt, click_corner)
         print(prompt)
         cv2.imshow(prompt, drwon_img)
+        
         # 对图片进行操作：删除 保留 切换原图
         while 1:
             key = cv2.waitKey(0)
