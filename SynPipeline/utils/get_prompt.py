@@ -60,15 +60,15 @@ def get_prompt(v_o_list: list):
     details = random.choice(["Professional", "Vivid Colors"])
     # scene = random.choice(["spacious", "urban", "rustic"])
     scene = random.choice(["ultra realistic"])
-    shooting = random.choice(["DSLR", "4K", "HD"])
+    shooting = random.choice(["4K", "HD"])
     shooting2 = random.choice(["warm lighting", "blue hour"])
     # shooting3 = random.choice(["partial view","back view","front view"])
     shooting3 = random.choice(["Highly detailed"])
-    shooting4 = random.choice(["Canon Eos5D", "iphone 12"])
+    #shooting4 = random.choice(["full shot"])
     # prompt_prefix = hico_text_label[v_o].replace("person",race+" "+human)+","
     hoi = get_hoi(v_o_list)
     # (a photo of a asian young man cutting with a knife,cutting a carrot,holding a knife):1.05,
-    prompt_prefix = "(a photo of only one " + race + " " + human + " " + hoi + "):1.95,"
+    prompt_prefix = "(a photo of only one " + race + " " + human + " " + hoi + "):1.75,"
     prompt_suffix = (
         quality
         + ","
@@ -78,11 +78,7 @@ def get_prompt(v_o_list: list):
         + ","
         + shooting
         + ","
-        + shooting2
-        + ","
         + shooting3
-        + ","
-        + shooting4
     )
-    return prompt_prefix
-#     return prompt_prefix + prompt_suffix
+    #return prompt_prefix
+    return prompt_prefix + prompt_suffix

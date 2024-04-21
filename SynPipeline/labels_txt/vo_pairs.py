@@ -1,6 +1,7 @@
 vo_pairs = [  # 放的是hoi,改完一定要记得更新multi_hoi
     (7, 8),
-    (11, 13),
+    (11, 12,13),
+    (11,12,13,18),
     (12, 19, 20, 21),
     # (26, 28),
     (33, 42),
@@ -106,7 +107,7 @@ aux_verb_noun = {  # 得留空；调整prompt用的
     21: "",
     22: "",
     23: "",
-    24: " with mouse",  # eat
+    24: " with mouth",  # eat
     25: "",
     26: "",
     27: " with food", #feed
@@ -127,11 +128,11 @@ aux_verb_noun = {  # 得留空；调整prompt用的
     42: " by looking close",  # inspect
     43: "",
     44: "",
-    45: " with feet",
+    45: " with feet", #kick
     46: "",
     47: "",
     48: "",
-    49: "",
+    49: " with Tongue", #eat
     50: "",
     51: "",
     52: "",
@@ -172,7 +173,7 @@ aux_verb_noun = {  # 得留空；调整prompt用的
     87: "",
     88: "",
     89: "",
-    90: " with nose",  # smell
+    90: " with nose and closing eyes",  # smell
     91: "",
     92: "",
     93: "",

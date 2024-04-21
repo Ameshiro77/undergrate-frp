@@ -11,20 +11,21 @@ from labels_txt.hico_text_label import hico_text_label
 from labels_txt.vo_pairs import vo_pairs, multi_hoi
 from utils.get_prompt import get_prompt
 
-
-def get_hico_img(v_o_list):
-    HICO_PATH = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det"
-    if not os.path.exists(HICO_PATH):
-        HICO_PATH = "/root/autodl-tmp/data/hico_20160224_det"
+def get_name2ids_dict(HICO_PATH):
+    print(HICO_PATH)
     json_path = os.path.join(HICO_PATH, "annotations", "trainval_hico.json")
     with open(json_path, "r") as f:
         annotation = json.load(f)
-    name2ids_dict = {
+    imgname2hoiids_dict = {
         item["file_name"]: [
             hoi_item["hoi_category_id"] for hoi_item in item.get("hoi_annotation", [])
         ]
         for item in annotation
     }
+    return imgname2hoiids_dict
+
+def get_hico_img(v_o_list,HICO_PATH):
+    name2ids_dict = get_name2ids_dict(HICO_PATH)
     hoi_ids = [hoi_to_id_dict[vo] for vo in v_o_list] #给出的[hoi_id]列表
     found_dict = {k: v for k, v in name2ids_dict.items() if set(hoi_ids) <= set(v)} #寻找包含hois的HICO数据
     if len(found_dict.keys()) ==0:
@@ -36,16 +37,12 @@ def get_hico_img(v_o_list):
     img_path = os.path.join(HICO_PATH, "images","train2015", img_name)
     img = Image.open(img_path)
     img.save("./original.jpg")
-    # original_img = cv2.imread(str(img_path))
-    # cv2.imshow("1", original_img)
-    # cv2.waitKey(1)
     return img
 
-
-def generate(pipe, v_o_list, steps, mode):
+def generate(pipe, v_o_list, steps, mode ,HICO_PATH):
     prompt = get_prompt(v_o_list)
     print(prompt)
-    ngt_prmt = "low quality,monochrome,skin blemishes,6 more fingers on one hand,deformity,bad legs,malformed limbs,extra limbs,ugly,poorly drawn hands,poorly drawn face,\
+    ngt_prmt = "monochrome,skin blemishes,6 more fingers on one hand,deformity,bad legs,malformed limbs,extra limbs,ugly,poorly drawn hands,poorly drawn face,\
                                 extra fingers,mutated hands,mutation,bad anatomy,disfigured,fused fingers,2 more person"
     if mode == "t2i":
         pipe.to("cuda")
@@ -56,8 +53,7 @@ def generate(pipe, v_o_list, steps, mode):
             width=512,
             num_inference_steps=steps,
             num_images_per_prompt=1,
-            # negative_prompt="mutated hands and fingers,poorly drawn hands,deformed,poorly drawn face,floating limbs,low quality,",
-            # negative_prompt=ngt_prmt,
+            negative_prompt=ngt_prmt,
         ).images
         return imgs
 
@@ -66,11 +62,11 @@ def generate(pipe, v_o_list, steps, mode):
         torch.cuda.empty_cache()
         imgs = pipe(
             prompt,
-            image=get_hico_img(v_o_list),
+            image=get_hico_img(v_o_list,HICO_PATH),
             height=512,
             width=512,
-            strength=0.81,
-            guidance_scale=8.7,
+            strength=0.75,
+            guidance_scale=7.3,
             num_inference_steps=steps,
             num_images_per_prompt=1,
             negative_prompt=ngt_prmt
@@ -82,9 +78,14 @@ if __name__ == "__main__":
     # vos = [id_to_hoi_dict[i] for i in [224,225,226,227]]
     # print(get_hico_img(vos))
     # exit()
+    HICO_PATH = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det"
+    if not os.path.exists(HICO_PATH):
+        HICO_PATH = "/root/autodl-tmp/data/hico_20160224_det"
+        
     SD_PATH = r"G:\数据集&权重\stable-diffusion-v1.5"
     if not os.path.exists(SD_PATH):
         SD_PATH = "/root/autodl-tmp/frp/params/stable-diffusion-v1.5/"
+        
     # ==== SD pipeline
     gen = "i2i"
     
@@ -105,8 +106,8 @@ if __name__ == "__main__":
 #     print(SDpipe.config)
 #     exit()
     v_o_list = []
-    hoi_id = [494, 499]
+    hoi_id =  (386, 388)
     for seq_hoi_id in hoi_id:
         v_o_list.append(id_to_hoi_dict[seq_hoi_id])
-    imgs = generate(SDpipe, v_o_list, 150, gen)
+    imgs = generate(SDpipe, v_o_list, 89, gen, HICO_PATH)
     imgs[0].save("./example.jpg")
