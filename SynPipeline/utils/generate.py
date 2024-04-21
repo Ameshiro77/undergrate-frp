@@ -44,6 +44,7 @@ def get_hico_img(v_o_list):
 
 def generate(pipe, v_o_list, steps, mode):
     prompt = get_prompt(v_o_list)
+    print(prompt)
     ngt_prmt = "low quality,monochrome,skin blemishes,6 more fingers on one hand,deformity,bad legs,malformed limbs,extra limbs,ugly,poorly drawn hands,poorly drawn face,\
                                 extra fingers,mutated hands,mutation,bad anatomy,disfigured,fused fingers,2 more person"
     if mode == "t2i":
@@ -56,7 +57,7 @@ def generate(pipe, v_o_list, steps, mode):
             num_inference_steps=steps,
             num_images_per_prompt=1,
             # negative_prompt="mutated hands and fingers,poorly drawn hands,deformed,poorly drawn face,floating limbs,low quality,",
-            negative_prompt=ngt_prmt,
+            # negative_prompt=ngt_prmt,
         ).images
         return imgs
 
@@ -66,12 +67,13 @@ def generate(pipe, v_o_list, steps, mode):
         imgs = pipe(
             prompt,
             image=get_hico_img(v_o_list),
-            height=800,
-            width=800,
+            height=512,
+            width=512,
+            strength=0.81,
+            guidance_scale=8.7,
             num_inference_steps=steps,
             num_images_per_prompt=1,
-            # negative_prompt="mutated hands and fingers,poorly drawn hands,deformed,poorly drawn face,floating limbs,low quality,",
-            negative_prompt=ngt_prmt,
+            negative_prompt=ngt_prmt
         ).images
         return imgs
 
@@ -85,6 +87,7 @@ if __name__ == "__main__":
         SD_PATH = "/root/autodl-tmp/frp/params/stable-diffusion-v1.5/"
     # ==== SD pipeline
     gen = "i2i"
+    
     if gen == "t2i":
         SDpipe = StableDiffusionPipeline.from_pretrained(  # 放在这是为了避免多次调用
             SD_PATH,
@@ -97,13 +100,13 @@ if __name__ == "__main__":
         )
     else:
         raise ValueError("生成方式不对,选择文生图t2i或图生图i2i")
-    from diffusers import DDIMScheduler
-    SDpipe.scheduler = DDIMScheduler.from_config(SDpipe.scheduler.config)
-    print(SDpipe.config)
-    exit()
+    from diffusers import DDPMScheduler
+    SDpipe.scheduler = DDPMScheduler.from_config(SDpipe.scheduler.config)
+#     print(SDpipe.config)
+#     exit()
     v_o_list = []
-    hoi_id = [219, 223]
+    hoi_id = [494, 499]
     for seq_hoi_id in hoi_id:
         v_o_list.append(id_to_hoi_dict[seq_hoi_id])
-    imgs = generate(SDpipe, v_o_list, 120, gen)
+    imgs = generate(SDpipe, v_o_list, 150, gen)
     imgs[0].save("./example.jpg")

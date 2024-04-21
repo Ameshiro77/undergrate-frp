@@ -167,7 +167,7 @@ aux_verb_noun = {  # 得留空；调整prompt用的
     82: "",
     83: "",
     84: "",
-    85: "",
+    85: " with a pen signing on the ball", #sign
     86: "",
     87: "",
     88: "",

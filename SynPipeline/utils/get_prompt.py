@@ -52,7 +52,7 @@ def get_hoi(v_o_list):
 
 # 获取提示词
 def get_prompt(v_o_list: list):
-    race = random.choice(["asian", "black", "hispanic"])
+    race = random.choice(["asian", "black", "hispanic" ,"white"])
     human = random.choice(
         ["boy", "teenager", "man", "young man", "woman", "young woman"]
     )
@@ -68,7 +68,7 @@ def get_prompt(v_o_list: list):
     # prompt_prefix = hico_text_label[v_o].replace("person",race+" "+human)+","
     hoi = get_hoi(v_o_list)
     # (a photo of a asian young man cutting with a knife,cutting a carrot,holding a knife):1.05,
-    prompt_prefix = "(a photo of a " + race + " " + human + " " + hoi + "):1.05,"
+    prompt_prefix = "(a photo of only one " + race + " " + human + " " + hoi + "):1.95,"
     prompt_suffix = (
         quality
         + ","
@@ -84,4 +84,5 @@ def get_prompt(v_o_list: list):
         + ","
         + shooting4
     )
-    return prompt_prefix + prompt_suffix
+    return prompt_prefix
+#     return prompt_prefix + prompt_suffix
