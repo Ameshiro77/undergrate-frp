@@ -80,8 +80,9 @@ if __name__ == "__main__":
     # vos = [id_to_hoi_dict[i] for i in [224,225,226,227]]
     # print(get_hico_img(vos))
     # exit()
-    #SD_PATH = r"G:\数据集&权重\stable-diffusion-v1.5"
-    SD_PATH = "/root/autodl-tmp/frp/params/stable-diffusion-v1.5/"
+    SD_PATH = r"G:\数据集&权重\stable-diffusion-v1.5"
+    if not os.path.exists(SD_PATH):
+        SD_PATH = "/root/autodl-tmp/frp/params/stable-diffusion-v1.5/"
     # ==== SD pipeline
     gen = "i2i"
     if gen == "t2i":
@@ -96,6 +97,10 @@ if __name__ == "__main__":
         )
     else:
         raise ValueError("生成方式不对,选择文生图t2i或图生图i2i")
+    from diffusers import DDIMScheduler
+    SDpipe.scheduler = DDIMScheduler.from_config(SDpipe.scheduler.config)
+    print(SDpipe.config)
+    exit()
     v_o_list = []
     hoi_id = [219, 223]
     for seq_hoi_id in hoi_id:
