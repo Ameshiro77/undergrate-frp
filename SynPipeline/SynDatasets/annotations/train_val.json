@@ -57994,5 +57994,584 @@
       }
     ],
     "prompt": "(a photo of a black man holding a bird with hand):1.05,best quality,ultra realistic,Vivid Colors,4K,blue hour,Highly detailed,Canon Eos5D"
+  },
+  {
+    "file_name": "Syn_train_001422.jpg",
+    "img_id": 1422,
+    "annotations": [
+      {
+        "bbox": [
+          228,
+          171,
+          407,
+          509
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          310,
+          265,
+          338,
+          329
+        ],
+        "category_id": 32
+      },
+      {
+        "bbox": [
+          0,
+          21,
+          511,
+          312
+        ],
+        "category_id": 28
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 58,
+        "hoi_category_id": 546
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 37,
+        "hoi_category_id": 578
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 9,
+        "hoi_category_id": 577
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 95,
+        "hoi_category_id": 583
+      }
+    ],
+    "prompt": "(a photo of only one asian teenager holding a umbrella with hand,carrying a umbrella with hand,standing under a umbrella):1.75,best quality,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001423.jpg",
+    "img_id": 1423,
+    "annotations": [
+      {
+        "bbox": [
+          63,
+          86,
+          511,
+          479
+        ],
+        "category_id": 4
+      },
+      {
+        "bbox": [
+          335,
+          48,
+          511,
+          388
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 109,
+        "hoi_category_id": 157
+      }
+    ],
+    "prompt": "(a photo of only one white teenager turning a motorcycle):1.75,best quality,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001424.jpg",
+    "img_id": 1424,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          0,
+          343,
+          509
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          331,
+          370,
+          408,
+          454
+        ],
+        "category_id": 53
+      },
+      {
+        "bbox": [
+          274,
+          238,
+          348,
+          317
+        ],
+        "category_id": 53
+      },
+      {
+        "bbox": [
+          110,
+          410,
+          510,
+          511
+        ],
+        "category_id": 51
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 112,
+        "hoi_category_id": 207
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 112,
+        "hoi_category_id": 207
+      },
+      {
+        "subject_id": 0,
+        "object_id": 3,
+        "category_id": 58,
+        "hoi_category_id": 257
+      }
+    ],
+    "prompt": "(a photo of only one black man washing a apple with water):1.75,best quality,ultra realistic,Vivid Colors,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001425.jpg",
+    "img_id": 1425,
+    "annotations": [
+      {
+        "bbox": [
+          25,
+          1,
+          471,
+          632
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          152,
+          328,
+          329,
+          509
+        ],
+        "category_id": 55
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 401
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 24,
+        "hoi_category_id": 400
+      }
+    ],
+    "prompt": "(a photo of only one hispanic man holding a orange with hand,eating a orange with mouth):1.75,masterpiece,ultra realistic,Vivid Colors,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001426.jpg",
+    "img_id": 1426,
+    "annotations": [
+      {
+        "bbox": [
+          150,
+          1,
+          589,
+          398
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          512,
+          254,
+          616,
+          387
+        ],
+        "category_id": 47
+      },
+      {
+        "bbox": [
+          15,
+          254,
+          144,
+          408
+        ],
+        "category_id": 47
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 112,
+        "hoi_category_id": 304
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 112,
+        "hoi_category_id": 304
+      }
+    ],
+    "prompt": "(a photo of only one black man washing a cup with water):1.75,masterpiece,ultra realistic,Vivid Colors,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001427.jpg",
+    "img_id": 1427,
+    "annotations": [
+      {
+        "bbox": [
+          44,
+          150,
+          215,
+          400
+        ],
+        "category_id": 18
+      },
+      {
+        "bbox": [
+          206,
+          0,
+          449,
+          138
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          264,
+          23,
+          477,
+          344
+        ],
+        "category_id": 18
+      },
+      {
+        "bbox": [
+          499,
+          227,
+          629,
+          331
+        ],
+        "category_id": 18
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 81,
+        "hoi_category_id": 123
+      },
+      {
+        "subject_id": 1,
+        "object_id": 2,
+        "category_id": 81,
+        "hoi_category_id": 123
+      },
+      {
+        "subject_id": 1,
+        "object_id": 3,
+        "category_id": 81,
+        "hoi_category_id": 123
+      }
+    ],
+    "prompt": "(a photo of only one asian woman scratching a dog):1.75,masterpiece,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001428.jpg",
+    "img_id": 1428,
+    "annotations": [
+      {
+        "bbox": [
+          485,
+          50,
+          596,
+          354
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          201,
+          462,
+          356
+        ],
+        "category_id": 3
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 18,
+        "hoi_category_id": 67
+      }
+    ],
+    "prompt": "(a photo of only one black young man directing a car):1.75,masterpiece,ultra realistic,Vivid Colors,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001429.jpg",
+    "img_id": 1429,
+    "annotations": [
+      {
+        "bbox": [
+          508,
+          98,
+          553,
+          192
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          151,
+          106,
+          225,
+          180
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          17,
+          113,
+          580,
+          248
+        ],
+        "category_id": 9
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 48,
+        "hoi_category_id": 37
+      },
+      {
+        "subject_id": 1,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 170
+      }
+    ],
+    "prompt": "(a photo of only one hispanic woman launching a boat):1.75,masterpiece,ultra realistic,Vivid Colors,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001430.jpg",
+    "img_id": 1430,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          50,
+          463,
+          475
+        ],
+        "category_id": 19
+      },
+      {
+        "bbox": [
+          0,
+          116,
+          98,
+          287
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          453,
+          189,
+          571,
+          476
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          456,
+          212,
+          640,
+          476
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          331,
+          316,
+          446,
+          478
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 2,
+        "object_id": 0,
+        "category_id": 46,
+        "hoi_category_id": 135
+      },
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 58,
+        "hoi_category_id": 170
+      },
+      {
+        "subject_id": 3,
+        "object_id": 0,
+        "category_id": 58,
+        "hoi_category_id": 170
+      },
+      {
+        "subject_id": 4,
+        "object_id": 0,
+        "category_id": 58,
+        "hoi_category_id": 170
+      }
+    ],
+    "prompt": "(a photo of only one asian woman kissing a horse):1.75,masterpiece,ultra realistic,Vivid Colors,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001431.jpg",
+    "img_id": 1431,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          66,
+          305,
+          419
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          260,
+          131,
+          422
+        ],
+        "category_id": 33
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 53,
+        "hoi_category_id": 511
+      }
+    ],
+    "prompt": "(a photo of only one white woman loading a suitcase):1.75,best quality,ultra realistic,Vivid Colors,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001432.jpg",
+    "img_id": 1432,
+    "annotations": [
+      {
+        "bbox": [
+          246,
+          244,
+          423,
+          361
+        ],
+        "category_id": 61
+      },
+      {
+        "bbox": [
+          379,
+          0,
+          639,
+          474
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 37,
+        "hoi_category_id": 269
+      }
+    ],
+    "prompt": "(a photo of only one white young man holding a cake with hand):1.75,best quality,ultra realistic,Vivid Colors,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001433.jpg",
+    "img_id": 1433,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          106,
+          565,
+          421
+        ],
+        "category_id": 4
+      },
+      {
+        "bbox": [
+          181,
+          77,
+          300,
+          242
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          93,
+          126,
+          129,
+          162
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 112,
+        "hoi_category_id": 159
+      },
+      {
+        "subject_id": 2,
+        "object_id": 0,
+        "category_id": 58,
+        "hoi_category_id": 170
+      }
+    ],
+    "prompt": "(a photo of only one white man washing a motorcycle with water):1.75,best quality,ultra realistic,Vivid Colors,4K,Highly detailed"
   }
 ]

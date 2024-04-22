@@ -67,7 +67,7 @@ def generate_annotation(
         annotation["bbox"] = xyxy
         annotation["category_id"] = tgt["box_label_parse_id"][i]
         new_anno["annotations"].append(annotation)
-    print(new_anno)
+    #print(new_anno)
     
     # hoi_annotation [] , 包含subject id  | object id | category id | hoi category id
     new_anno["hoi_annotation"] = []
