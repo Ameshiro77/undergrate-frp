@@ -239,13 +239,12 @@ if __name__ == "__main__":
         # cv2.setMouseCallback(prompt, click_corner)
         print(prompt)
         cv2.imshow(prompt, drwon_img)
-        
+        at_index = index + 1
         # 对图片进行操作：删除 保留 切换原图
         while 1:
             key = cv2.waitKey(0)
             if key == ord("q"):  # 退出
                 is_exit = True
-                at_index = index + 1
                 break
             if key == ord("d") and is_syn == True:  # 删除文件
                 os.remove(img_path)
