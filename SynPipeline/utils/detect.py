@@ -17,7 +17,6 @@ from DINO.util import box_ops
 """
 def detect(img,config_path,checkpoint_path,is_path=False) -> dict:
     model_config_path = config_path # change the path of the model config file
-    #model_checkpoint_path = r"G:\数据集&权重\checkpoint0031_5scale.pth"  # change the path of the model checkpoint
     model_checkpoint_path = checkpoint_path
 
     args = SLConfig.fromfile(model_config_path) 
@@ -67,7 +66,7 @@ def detect(img,config_path,checkpoint_path,is_path=False) -> dict:
     return pred_dict
 
 if __name__ == "__main__":
-    img_path = "/root/autodl-tmp/DiffHOI/SynPipeline/SynDatasets/train_images/Syn_train_000001.jpg"
-    config_path = r"/root/autodl-tmp/DiffHOI/SynPipeline/DINO/config/DINO/DINO_4scale_swin.py"
-    model_checkpoint_path =  r"/root/autodl-tmp/DiffHOI/params/checkpoint0011_4scale_swin.pth"
-    print(detect(img_path,config_path,model_checkpoint_path))
+    img_path = "/root/autodl-tmp/frp/SynPipeline/SynDatasets/train_images/Syn_train_001425.jpg"
+    config_path = r"/root/autodl-tmp/frp/SynPipeline/DINO/config/DINO/DINO_4scale_swin.py"
+    model_checkpoint_path =  r"/root/autodl-tmp/frp/params/checkpoint0011_4scale_swin.pth"
+    print(detect(img_path,config_path,model_checkpoint_path,True))
