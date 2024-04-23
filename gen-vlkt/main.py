@@ -325,10 +325,10 @@ def main(args):
                 'args': args,
             }, checkpoint_path)
 
-        if epoch < args.lr_drop and epoch % 5 != 0:  ## eval every 5 epoch before lr_drop
-            continue
-        elif epoch >= args.lr_drop and epoch % 2 == 0:  ## eval every 2 epoch after lr_drop
-            continue
+        # if epoch < args.lr_drop and epoch % 5 != 0:  ## eval every 5 epoch before lr_drop
+        #     continue
+        # elif epoch >= args.lr_drop and epoch % 2 == 0:  ## eval every 2 epoch after lr_drop
+        #     continue
 
         test_stats = evaluate_hoi(args.dataset_file, model, postprocessors, data_loader_val,
                                   args.subject_category_id, device, args)

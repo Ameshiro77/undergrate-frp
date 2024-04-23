@@ -25,7 +25,16 @@ def find_closest_box_id(
     source_box_id: int, tgt: dict, find_sub: True
 ):  # find_sub决定找人还是找物
     # tgt必须有:boxes box_label_parse_id
-    boxes = tgt["boxes"]
+    boxes = []
+    # 此时得到的bbox还是百分比形式的xywh，需要转换一下，否则算距离不准
+    o_h, o_w = tgt["original_size"]
+    for i, bbox in enumerate(tgt["boxes"].to("cpu")):  # to,否则会不在一个设备
+        unnormbbox = bbox * torch.Tensor([o_w, o_h, o_w, o_h])
+        unnormbbox[:2] -= unnormbbox[2:] / 2
+        [x, y, w, h] = [int(x) for x in unnormbbox.tolist()]
+        xyxy = [x, y, x + w, y + h]
+        boxes.append(xyxy)
+    # boxes现在是int的xyxy
     source_box = boxes[source_box_id]
     box_label_parse_id = tgt["box_label_parse_id"]
     dist = [float("inf") for i in range(len(boxes))]
@@ -55,7 +64,7 @@ def generate_annotation(
     # annotations [] 目标的bbox和类别
     o_h, o_w = tgt["original_size"]
     new_anno["annotations"] = []
-    
+
     # 变换bbox形式，先构成annotations
     for i, bbox in enumerate(tgt["boxes"].to("cpu")):  # to,否则会不在一个设备
         annotation = {}
@@ -67,8 +76,8 @@ def generate_annotation(
         annotation["bbox"] = xyxy
         annotation["category_id"] = tgt["box_label_parse_id"][i]
         new_anno["annotations"].append(annotation)
-    #print(new_anno)
-    
+    # print(new_anno)
+
     # hoi_annotation [] , 包含subject id  | object id | category id | hoi category id
     new_anno["hoi_annotation"] = []
     from utils.labels_dict import get_hoi_id
@@ -106,6 +115,7 @@ def generate_annotation(
                     if hoi_annotation["hoi_category_id"] == None:
                         return None
                     new_anno["hoi_annotation"].append(hoi_annotation)
+                    
     # 2. 如果有人框没检测到
     for box_id, box_original_label in enumerate(tgt["box_label_parse_id"]):
         if box_original_label == 1 and is_labeled[box_id] == False:  # 如果没检测到
@@ -115,20 +125,21 @@ def generate_annotation(
                 return None
             is_labeled[subject_id] = True
             # 先看这个物体在不在vo列表里，不在的话就分配no_interact
-            if box_original_label not in [vo[1] for vo in verbs_objs_tuple_list]:
+            object_parse_id = tgt["box_label_parse_id"][object_id]
+            if object_parse_id not in [vo[1] for vo in verbs_objs_tuple_list]:
                 hoi_annotation = {}  # 清空
                 hoi_annotation["subject_id"] = subject_id
                 hoi_annotation["object_id"] = object_id
                 hoi_annotation["category_id"] = 58  # 58就是无交互
                 hoi_annotation["hoi_category_id"] = get_hoi_id(
-                    (58, box_original_label)
+                    (58, object_parse_id)
                 )  # 这个是必有得
                 if hoi_annotation["hoi_category_id"] == None:
                     return None
                 new_anno["hoi_annotation"].append(hoi_annotation)
             else:
                 for v_o in verbs_objs_tuple_list:  # 找到对应obj_id的动作
-                    if v_o[1] == box_original_label:
+                    if v_o[1] == object_parse_id:
                         hoi_annotation = {}  # 清空
                         hoi_annotation["subject_id"] = subject_id
                         hoi_annotation["object_id"] = object_id
@@ -144,26 +155,41 @@ def generate_annotation(
         return None
     return new_anno  # 返回生成的字典
 
+
 # =====end===== #
 
-tgt = {
-    "boxes": torch.tensor(
-        [
-            [0.6698, 0.4336, 0.6593, 0.7727],
-            [0.6512, 0.7430, 0.3043, 0.2084],
-            [0.0801, 0.6507, 0.1595, 0.2835],
-            [0.0577, 0.6970, 0.1147, 0.2327],
-            [0.3828, 0.8482, 0.5547, 0.1070],
-        ],
-        device="cuda:0",
-    ),
-    "size": torch.tensor([512.0, 512.0]),
-    "original_size": torch.tensor([512.0, 512.0]),
-    "box_label": ["person", "laptop", "cup", "cup", "book"],
-    "box_label_parse_id": [1, 73, 47, 47, 84],
-}
+# tgt = {
+#     "boxes": torch.tensor(
+#         [
+#             [0.6698, 0.4336, 0.6593, 0.7727],
+#             [0.6512, 0.7430, 0.3043, 0.2084],
+#             [0.0801, 0.6507, 0.1595, 0.2835],
+#             [0.0577, 0.6970, 0.1147, 0.2327],
+#             [0.3828, 0.8482, 0.5547, 0.1070],
+#         ],
+#         device="cuda:0",
+#     ),
+#     "size": torch.tensor([512.0, 512.0]),
+#     "original_size": torch.tensor([512.0, 512.0]),
+#     "box_label": ["person", "laptop", "cup", "cup", "book"],
+#     "box_label_parse_id": [1, 73, 47, 47, 84],
+# }
 
 
 if __name__ == "__main__":
-    new_anno = generate_annotation([(74, 73), (37, 73)], tgt, "1", 1)
+    tgt = {
+        "boxes": torch.tensor(
+            [
+                [0.8295, 0.3048, 0.0712, 0.1984],
+                [0.4686, 0.3788, 0.8802, 0.2827],
+                [0.2949, 0.2998, 0.1170, 0.1595],
+            ],
+            device="cuda:0",
+        ),
+        "size": torch.tensor([480.0, 640.0]),
+        "original_size": torch.tensor([480.0, 640.0]),
+        "box_label": ["person", "boat", "person"],
+        "box_label_parse_id": [1, 9, 1],
+    }
+    new_anno = generate_annotation([(48,9)], tgt, "1", 1)
     print(new_anno)

@@ -213,6 +213,13 @@ if __name__ == "__main__":
         if ctg != None:
             objs_id = [ctg["category_id"] for ctg in target_dict["annotations"]]
 
+        person_count = 0
+        for id in objs_id:
+            if id == 1:
+                person_count = person_count + 1
+        if person_count <= 1:
+            continue
+            
         if is_syn == False:
             hois = target_dict["hoi_annotation"]
             verb_ids = [_dict["category_id"] for _dict in hois]
