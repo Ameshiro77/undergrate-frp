@@ -68,8 +68,8 @@ V-COCO annotations with the HOIA format, `corre_vcoco.npy`, `test_vcoco.json`, a
 Download the pretrained model of DETR detector for [ResNet50](https://dl.fbaipublicfiles.com/detr/detr-r50-e632da11.pth), and put it to the `params` directory.
 ```
 python ./tools/convert_parameters.py \
-        --load_path params/detr-r50-e632da11.pth \
-        --save_path params/detr-r50-pre-2branch-hico.pth \
+        --load_path /root/autodl-tmp/frp/params/detr-r50-e632da11.pth \
+        --save_path /root/autodl-tmp/frp/params/detr-r50-pre-2branch-hico.pth \
         --num_queries 64
 
 python ./tools/convert_parameters.py \

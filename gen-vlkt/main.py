@@ -152,6 +152,8 @@ def get_args_parser():
                         help='default, rare_first, non_rare_first, unseen_object, unseen_verb')
     parser.add_argument('--del_unseen', action='store_true', help='')
 
+    # DATASET
+    parser.add_argument('--dataset_json', default='hico', type=str ,help='if use syn')
     return parser
 
 

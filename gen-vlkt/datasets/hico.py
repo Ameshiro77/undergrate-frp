@@ -266,8 +266,12 @@ def make_hico_transforms(image_set):
 def build(image_set, args):
     root = Path(args.hoi_path)
     assert root.exists(), f'provided HOI path {root} does not exist'
+    if args.dataset_json == 'hico':
+        json_path = 'trainval_hico.json'
+    elif args.dataset_json == 'syn':
+        json_path = 'new_trainval_hico.json'
     PATHS = {
-        'train': (root / 'images' / 'train2015', root / 'annotations' / 'trainval_hico.json',
+        'train': (root / 'images' / 'train2015', root / 'annotations' / json_path ,
                   root / 'clip_feats_pool' / 'train2015'),
         'val': (
             root / 'images' / 'test2015', root / 'annotations' / 'test_hico.json',
