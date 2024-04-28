@@ -56,8 +56,8 @@ def get_prompt(v_o_list: list):
     human = random.choice(
         ["boy", "teenager", "man", "young man", "woman", "young woman"]
     )
-    quality = random.choice(["best quality", "masterpiece"])
-    details = random.choice(["Professional", "Vivid Colors"])
+    quality = random.choice(["best quality,only one person"])
+    details = random.choice(["Professional"])
     # scene = random.choice(["spacious", "urban", "rustic"])
     scene = random.choice(["ultra realistic"])
     shooting = random.choice(["4K", "HD"])

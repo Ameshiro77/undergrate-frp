@@ -100,8 +100,8 @@ def generate(pipe, v_o_list, steps, mode, HICO_PATH):
             image=get_hico_img(v_o_list, HICO_PATH),
             height=512,
             width=512,
-            strength=0.75,
-            guidance_scale=7.3,
+            strength=0.83,
+            guidance_scale=7.65,
             num_inference_steps=steps,
             num_images_per_prompt=1,
             negative_prompt=ngt_prmt,
@@ -136,15 +136,15 @@ if __name__ == "__main__":
         )
     else:
         raise ValueError("生成方式不对,选择文生图t2i或图生图i2i")
-    from diffusers import DDPMScheduler
+    # from diffusers import DDPMScheduler
 
-    SDpipe.scheduler = DDPMScheduler.from_config(SDpipe.scheduler.config)
-    #     print(SDpipe.config)
+    # SDpipe.scheduler = DDPMScheduler.from_config(SDpipe.scheduler.config)
+    print(SDpipe.config)
     #     exit()
     v_o_list = random_choice(HICO_PATH)
     # hoi_id = (386, 388)
     # for seq_hoi_id in hoi_id:
     #     v_o_list.append(id_to_hoi_dict[seq_hoi_id])
     print(v_o_list)
-    imgs = generate(SDpipe, v_o_list, 89, gen, HICO_PATH)
+    imgs = generate(SDpipe, v_o_list, 80, gen, HICO_PATH)
     imgs[0].save("./example.jpg")

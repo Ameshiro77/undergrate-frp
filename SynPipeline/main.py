@@ -17,9 +17,9 @@ from utils.anno_json import generate_annotation
 from labels_txt.rare_list import rare_list
 
 parser = argparse.ArgumentParser("Set output", add_help=False)
-parser.add_argument("--imgs_num", default=1, type=int)
-parser.add_argument("--steps", default=75, type=int)
-parser.add_argument("--rare_num", default=160, type=int)  # 表明前多少个算rare
+parser.add_argument("--imgs_num", default=3, type=int)
+parser.add_argument("--steps", default=80, type=int)
+parser.add_argument("--rare_num", default=50, type=int)  # 表明前多少个算rare
 parser.add_argument("--mode", default="seq", type=str)  # random | seq
 parser.add_argument("--gen", default="i2i", type=str)  # t2i | i2i
 
@@ -136,8 +136,8 @@ class SynPipeline:
                 image=self.get_hico_img(v_o_list),
                 height=512,
                 width=512,
-                strength=0.75,
-                guidance_scale=7.3,
+                strength=0.83,
+                guidance_scale=7.55,
                 num_inference_steps=steps,
                 num_images_per_prompt=1,
                 negative_prompt=ngt_prmt
@@ -269,8 +269,8 @@ if __name__ == "__main__":
         raise ValueError("生成方式不对,选择文生图t2i或图生图i2i")
 
     # 更换调度器
-    from diffusers import DDPMScheduler
-    SDpipe.scheduler = DDPMScheduler.from_config(SDpipe.scheduler.config)
+    # from diffusers import DDPMScheduler
+    # SDpipe.scheduler = DDPMScheduler.from_config(SDpipe.scheduler.config)
     
     pipeline = SynPipeline(model_config_path, model_checkpoint_path, HICO_PATH)
     pipeline.run(SDpipe, args)
