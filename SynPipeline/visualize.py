@@ -217,8 +217,8 @@ if __name__ == "__main__":
         for id in objs_id:
             if id == 1:
                 person_count = person_count + 1
-        if person_count <= 1:
-            continue
+        # if person_count <= 1:
+        #     continue
             
         if is_syn == False:
             hois = target_dict["hoi_annotation"]

@@ -39,7 +39,7 @@ def get_rare_list(HICO_PATH,limit):
 #     plt.show()
     return list(hoi_count.keys())
     
-def analyse(mode):
+def analyse(mode='Syn_HICO'):
     # 用于分析HICO-DET数据集。
     if mode == "HICO":
         img_dir = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\images\train2015"
@@ -50,7 +50,13 @@ def analyse(mode):
     elif mode == "Syn":
         img_dir = "./SynDatasets/train_images"
         json_path = "./SynDatasets/annotations/train_val.json"
-        
+    elif mode == "Syn_HICO":
+        img_dir = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\images\train2015"
+        json_path = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\annotations\new_trainval_hico.json"
+        if not os.path.exists(img_dir):
+            img_dir = "/root/autodl-tmp/data/hico_20160224_det/images/train2015"
+            json_path = "/root/autodl-tmp/data/hico_20160224_det/annotations/new_trainval_hico.json"
+    
     with open(json_path, "r") as f:
         annotation = json.load(f)
         # 将字典列表转换为字典，以便快速查找
@@ -94,7 +100,7 @@ def analyse(mode):
     #     print(index, i, hoi_count[i + 1])
     #exit()
     #print(sorted(hico_unseen_index["rare_first"]))
-    plt.bar(range(600), list(hoi_count.values()))
+    plt.bar(range(160), list(hoi_count.values())[:160])
     # plt.bar(range(117),list(verb_count.values()))
     plt.show()
 
@@ -156,4 +162,4 @@ if __name__ == "__main__":
     if not os.path.exists(HICO_PATH):
         HICO_PATH = "/root/autodl-tmp/data/hico_20160224_det"
     get_rare_list(HICO_PATH,300)
-    #analyse()
+    analyse()
