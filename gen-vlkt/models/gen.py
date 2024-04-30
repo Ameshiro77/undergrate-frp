@@ -47,19 +47,19 @@ class GEN(nn.Module):
 
     def forward(self, src, mask, query_embed_h, query_embed_o, pos_guided_embed, pos_embed):
         # flatten NxCxHxW to HWxNxC
-        bs, c, h, w = src.shape
-        src = src.flatten(2).permute(2, 0, 1)
-        pos_embed = pos_embed.flatten(2).permute(2, 0, 1)
-        num_queries = query_embed_h.shape[0]
+        bs, c, h, w = src.shape  #这里已经卷积投影成了 bs 256 h' W'
+        src = src.flatten(2).permute(2, 0, 1) # HW bS C(256) 
+        pos_embed = pos_embed.flatten(2).permute(2, 0, 1) #同理也变成HW bs 256
+        num_queries = query_embed_h.shape[0] #Nq
 
-        query_embed_o = query_embed_o + pos_guided_embed
+        query_embed_o = query_embed_o + pos_guided_embed  #论文里的p-GE加到人/物query
         query_embed_h = query_embed_h + pos_guided_embed
         query_embed_o = query_embed_o.unsqueeze(1).repeat(1, bs, 1)
         query_embed_h = query_embed_h.unsqueeze(1).repeat(1, bs, 1)
-        ins_query_embed = torch.cat((query_embed_h, query_embed_o), dim=0)
+        ins_query_embed = torch.cat((query_embed_h, query_embed_o), dim=0) #论文中把人物query拼接起来
 
-        mask = mask.flatten(1)
-        ins_tgt = torch.zeros_like(ins_query_embed)
+        mask = mask.flatten(1)  #bs * HW
+        ins_tgt = torch.zeros_like(ins_query_embed)  # Nq*2 bs C(256)
         memory = self.encoder(src, src_key_padding_mask=mask, pos=pos_embed)
 
         ins_hs = self.instance_decoder(ins_tgt, memory, memory_key_padding_mask=mask,

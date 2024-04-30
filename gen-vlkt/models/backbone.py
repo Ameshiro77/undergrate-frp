@@ -68,7 +68,7 @@ class BackboneBase(nn.Module):
         if return_interm_layers:
             return_layers = {"layer1": "0", "layer2": "1", "layer3": "2", "layer4": "3"}
         else:
-            return_layers = {'layer4': "0"}
+            return_layers = {'layer4': "0"} #因为我们是没有分割的，所以就返回一层的
         self.body = IntermediateLayerGetter(backbone, return_layers=return_layers)
         self.num_channels = num_channels
 
@@ -108,8 +108,10 @@ class Joiner(nn.Sequential):
             out.append(x)
             # position encoding
             pos.append(self[1](x).to(x.tensors.dtype))
-
-        return out, pos
+        
+        return out, pos #返回俩列表，没有分割长度其实就是1
+    # out : nestedtensor  [bs 2048 h/32 w/32]
+    # pos : [bs 256 h/32 w/32]
 
 
 def build_backbone(args):

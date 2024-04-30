@@ -117,7 +117,9 @@ class GEN_VLKT(nn.Module):
     def forward(self, samples: NestedTensor, is_training=True):
         if not isinstance(samples, NestedTensor):
             samples = nested_tensor_from_tensor_list(samples)
-        features, pos = self.backbone(samples)
+        features, pos = self.backbone(samples) 
+        # features : nestedtensor  [bs 2048 h/32 w/32]
+        # pos : [bs 256 h/32 w/32]
 
         src, mask = features[-1].decompose()
         assert mask is not None
@@ -464,7 +466,7 @@ def build(args):
 
     backbone = build_backbone(args)
 
-    gen = build_gen(args)
+    gen = build_gen(args) #transformer
 
     model = GEN_VLKT(
         backbone,

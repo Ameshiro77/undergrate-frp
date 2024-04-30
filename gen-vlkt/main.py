@@ -180,6 +180,28 @@ def main(args):
     print('****************')
     print(model)
     print('****************')
+    
+    #=== 试验区域 别的地方别动
+    if(1):
+        print("start")
+        args.hoi_path = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det"
+        dataset_train = build_dataset(image_set='train', args=args)   #继承dataset类。args指明HICO/VCOCO
+        sampler_train = torch.utils.data.RandomSampler(dataset_train) 
+        batch_sampler_train = torch.utils.data.BatchSampler(
+            sampler_train, args.batch_size, drop_last=True)
+        data_loader_train = DataLoader(dataset_train, batch_sampler=batch_sampler_train,
+                                    collate_fn=utils.collate_fn, num_workers=args.num_workers)
+        for x in data_loader_train:
+            src = x[0].to('cuda')
+            targets = x[1]
+            targets = [{k: v.to(device) for k, v in t.items() if k != 'filename'} for t in targets]
+            out = model(src)
+            # match = matcher.HungarianMatcherHOI()
+            # res = match(out,targets)
+            loss = criterion(out,targets)
+            print(loss)
+            exit()
+  
 
     model_without_ddp = model
     if args.distributed:
@@ -254,7 +276,7 @@ def main(args):
                 "lr": args.lr_backbone,
             },
         ]
-    print(param_dicts)
+    print(param_dicts[0]["params"])
     exit()
     optimizer = torch.optim.AdamW(param_dicts, lr=args.lr,
                                   weight_decay=args.weight_decay)
