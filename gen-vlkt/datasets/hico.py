@@ -283,7 +283,17 @@ def build(image_set, args):
     dataset = HICODetection(image_set, img_folder, anno_file, clip_feats_folder,
                             transforms=make_hico_transforms(image_set),
                             num_queries=args.num_queries, args=args)
+    
     if image_set == 'val':
+        # 维持原有的rare  不能是hico+syn
+        json_path = 'trainval_hico.json'
+        PATHS = {
+        'train': (root / 'images' / 'train2015', root / 'annotations' / json_path ,
+                  root / 'clip_feats_pool' / 'train2015'),
+        'val': (
+            root / 'images' / 'test2015', root / 'annotations' / 'test_hico.json',
+            root / 'clip_feats_pool' / 'test2015')
+        }
         dataset.set_rare_hois(PATHS['train'][1])
         dataset.load_correct_mat(CORRECT_MAT_PATH)
     return dataset
