@@ -182,7 +182,7 @@ def main(args):
     print('****************')
     
     #=== 试验区域 别的地方别动
-    if(1):
+    if(0):
         print("start")
         args.hoi_path = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det"
         dataset_train = build_dataset(image_set='train', args=args)   #继承dataset类。args指明HICO/VCOCO
@@ -276,8 +276,6 @@ def main(args):
                 "lr": args.lr_backbone,
             },
         ]
-    print(param_dicts[0]["params"])
-    exit()
     optimizer = torch.optim.AdamW(param_dicts, lr=args.lr,
                                   weight_decay=args.weight_decay)
     lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, args.lr_drop)
