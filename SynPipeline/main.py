@@ -17,9 +17,9 @@ from utils.anno_json import generate_annotation
 from labels_txt.rare_list import rare_list
 
 parser = argparse.ArgumentParser("Set output", add_help=False)
-parser.add_argument("--imgs_num", default=4, type=int)
+parser.add_argument("--imgs_num", default=2, type=int)
 parser.add_argument("--steps", default=80, type=int)
-parser.add_argument("--rare_num", default=50, type=int)  # 表明前多少个算rare
+parser.add_argument("--rare_num", default=70, type=int)  # 表明前多少个算rare
 parser.add_argument("--mode", default="seq", type=str)  # random | seq
 parser.add_argument("--gen", default="i2i", type=str)  # t2i | i2i
 
@@ -56,13 +56,24 @@ class SynPipeline:
             found_dict = {
                 k: v for k, v in self.name2ids_dict.items() if id in v
             }  # 如果找不到完全包含的，就随机选一个id找
-        #print(found_dict)
-        img_name = random.choice(
-            list(found_dict.keys())
-        )  # 随机挑一个满足条件的HICO数据
-        img_path = os.path.join(self.HICO_PATH, "images", "train2015", img_name)
-        print(img_name,self.name2ids_dict[img_name]) #打印找到的
-        img = Image.open(img_path)
+        # ★要避免返回的图像只有一个通道。否则图生图过不去。
+        cnt = 0
+        while 1:
+            img_name = random.choice(
+                list(found_dict.keys())
+            )  # 随机挑一个满足条件的HICO数据
+            if cnt >= 5:
+                img_name = random.choice(
+                list(self.name2ids_dict.keys())
+            )  # 
+            img_path = os.path.join(self.HICO_PATH, "images", "train2015", img_name)
+            print(img_name,self.name2ids_dict[img_name]) #打印找到的
+            img = Image.open(img_path)
+            channels = len(img.split())
+            if channels != 3:
+                cnt = cnt + 1
+                continue
+            break
         return img
 
     # 随机选择要生成的vo元组列表
