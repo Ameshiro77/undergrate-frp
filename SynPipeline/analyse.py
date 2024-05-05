@@ -34,10 +34,10 @@ def get_rare_list(HICO_PATH,limit):
             hoi_count[hoi_id] = hoi_count[hoi_id] + 1
     # 按值排序
     hoi_count = dict(sorted(hoi_count.items(), key=lambda item: item[1]))
-    print(list(hoi_count.keys()))
+    print(list(hoi_count.keys())[:limit])
 #     plt.bar(range(limit), list(hoi_count.values())[:limit])
 #     plt.show()
-    return list(hoi_count.keys())
+    return list(hoi_count.keys())[:limit]
     
 def analyse(mode='Syn_HICO'):
     # 用于分析HICO-DET数据集。
@@ -162,4 +162,4 @@ if __name__ == "__main__":
     if not os.path.exists(HICO_PATH):
         HICO_PATH = "/root/autodl-tmp/data/hico_20160224_det"
     get_rare_list(HICO_PATH,300)
-    analyse()
+    #analyse()
