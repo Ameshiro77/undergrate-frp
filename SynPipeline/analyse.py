@@ -163,4 +163,4 @@ if __name__ == "__main__":
     if not os.path.exists(HICO_PATH):
         HICO_PATH = "/root/autodl-tmp/data/hico_20160224_det"
     get_rare_list(HICO_PATH,300)
-    analyse('Syn_HICO',76)
+    analyse('HICO',138)
