@@ -17,9 +17,9 @@ from utils.anno_json import generate_annotation
 from labels_txt.rare_list import rare_list
 
 parser = argparse.ArgumentParser("Set output", add_help=False)
-parser.add_argument("--imgs_num", default=2, type=int)
+parser.add_argument("--imgs_num", default=5, type=int)
 parser.add_argument("--steps", default=80, type=int)
-parser.add_argument("--rare_num", default=70, type=int)  # 表明前多少个算rare
+parser.add_argument("--rare_num", default=90, type=int)  # 表明前多少个算rare
 parser.add_argument("--mode", default="seq", type=str)  # random | seq
 parser.add_argument("--gen", default="i2i", type=str)  # t2i | i2i
 
