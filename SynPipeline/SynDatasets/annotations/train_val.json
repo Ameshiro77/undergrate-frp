@@ -69042,5 +69042,6596 @@
       }
     ],
     "prompt": "(a photo of only one black man peeling a orange):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001704.jpg",
+    "img_id": 1704,
+    "annotations": [
+      {
+        "bbox": [
+          47,
+          1,
+          511,
+          506
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          127,
+          191,
+          334,
+          286
+        ],
+        "category_id": 59
+      },
+      {
+        "bbox": [
+          113,
+          406,
+          510,
+          510
+        ],
+        "category_id": 59
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 90,
+        "hoi_category_id": 428
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 424
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 90,
+        "hoi_category_id": 428
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 37,
+        "hoi_category_id": 424
+      }
+    ],
+    "prompt": "(a photo of only one hispanic boy smelling a pizza with nose and closing eyes,holding a pizza with hand):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001705.jpg",
+    "img_id": 1705,
+    "annotations": [
+      {
+        "bbox": [
+          8,
+          4,
+          511,
+          508
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          287,
+          185,
+          408,
+          268
+        ],
+        "category_id": 59
+      },
+      {
+        "bbox": [
+          217,
+          334,
+          321,
+          412
+        ],
+        "category_id": 59
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 90,
+        "hoi_category_id": 428
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 424
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 90,
+        "hoi_category_id": 428
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 37,
+        "hoi_category_id": 424
+      }
+    ],
+    "prompt": "(a photo of only one black young man smelling a pizza with nose and closing eyes,holding a pizza with hand):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001706.jpg",
+    "img_id": 1706,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          0,
+          511,
+          507
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          66,
+          115,
+          237,
+          205
+        ],
+        "category_id": 59
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 90,
+        "hoi_category_id": 428
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 424
+      }
+    ],
+    "prompt": "(a photo of only one white woman smelling a pizza with nose and closing eyes,holding a pizza with hand):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001707.jpg",
+    "img_id": 1707,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          29,
+          511,
+          508
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          240,
+          316,
+          392
+        ],
+        "category_id": 59
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 90,
+        "hoi_category_id": 428
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 424
+      }
+    ],
+    "prompt": "(a photo of only one white man smelling a pizza with nose and closing eyes,holding a pizza with hand):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001708.jpg",
+    "img_id": 1708,
+    "annotations": [
+      {
+        "bbox": [
+          199,
+          1,
+          511,
+          449
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          292,
+          464,
+          491
+        ],
+        "category_id": 42
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 53,
+        "hoi_category_id": 523
+      }
+    ],
+    "prompt": "(a photo of only one hispanic young man loading a surfboard):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001709.jpg",
+    "img_id": 1709,
+    "annotations": [
+      {
+        "bbox": [
+          319,
+          58,
+          473,
+          501
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          116,
+          195,
+          511,
+          439
+        ],
+        "category_id": 42
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 53,
+        "hoi_category_id": 523
+      }
+    ],
+    "prompt": "(a photo of only one hispanic woman loading a surfboard):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001710.jpg",
+    "img_id": 1710,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          126,
+          438,
+          285
+        ],
+        "category_id": 42
+      },
+      {
+        "bbox": [
+          107,
+          71,
+          248,
+          437
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 53,
+        "hoi_category_id": 523
+      }
+    ],
+    "prompt": "(a photo of only one white teenager loading a surfboard):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001711.jpg",
+    "img_id": 1711,
+    "annotations": [
+      {
+        "bbox": [
+          159,
+          303,
+          511,
+          376
+        ],
+        "category_id": 42
+      },
+      {
+        "bbox": [
+          405,
+          206,
+          511,
+          323
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 53,
+        "hoi_category_id": 523
+      }
+    ],
+    "prompt": "(a photo of only one black man loading a surfboard):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001712.jpg",
+    "img_id": 1712,
+    "annotations": [
+      {
+        "bbox": [
+          320,
+          272,
+          511,
+          511
+        ],
+        "category_id": 42
+      },
+      {
+        "bbox": [
+          221,
+          154,
+          493,
+          510
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 53,
+        "hoi_category_id": 523
+      }
+    ],
+    "prompt": "(a photo of only one hispanic woman loading a surfboard):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001713.jpg",
+    "img_id": 1713,
+    "annotations": [
+      {
+        "bbox": [
+          235,
+          65,
+          378,
+          454
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          120,
+          39,
+          236,
+          446
+        ],
+        "category_id": 11
+      },
+      {
+        "bbox": [
+          330,
+          198,
+          401,
+          288
+        ],
+        "category_id": 31
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 40,
+        "hoi_category_id": 326
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 356
+      }
+    ],
+    "prompt": "(a photo of only one asian young woman hugging a fire hydrant):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001714.jpg",
+    "img_id": 1714,
+    "annotations": [
+      {
+        "bbox": [
+          115,
+          0,
+          329,
+          313
+        ],
+        "category_id": 11
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          113,
+          259
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          321,
+          0,
+          508,
+          348
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          288,
+          0,
+          322,
+          92
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 3,
+        "object_id": 0,
+        "category_id": 40,
+        "hoi_category_id": 326
+      },
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 40,
+        "hoi_category_id": 326
+      },
+      {
+        "subject_id": 2,
+        "object_id": 0,
+        "category_id": 40,
+        "hoi_category_id": 326
+      }
+    ],
+    "prompt": "(a photo of only one asian boy hugging a fire hydrant):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001715.jpg",
+    "img_id": 1715,
+    "annotations": [
+      {
+        "bbox": [
+          74,
+          252,
+          320,
+          325
+        ],
+        "category_id": 77
+      },
+      {
+        "bbox": [
+          215,
+          0,
+          511,
+          423
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          343,
+          62,
+          406
+        ],
+        "category_id": 77
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 76,
+        "hoi_category_id": 287
+      },
+      {
+        "subject_id": 1,
+        "object_id": 2,
+        "category_id": 76,
+        "hoi_category_id": 287
+      }
+    ],
+    "prompt": "(a photo of only one hispanic man repairing a cell phone with tools):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001716.jpg",
+    "img_id": 1716,
+    "annotations": [
+      {
+        "bbox": [
+          94,
+          0,
+          511,
+          410
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          228,
+          328,
+          275,
+          444
+        ],
+        "category_id": 77
+      },
+      {
+        "bbox": [
+          243,
+          193,
+          354,
+          296
+        ],
+        "category_id": 77
+      },
+      {
+        "bbox": [
+          0,
+          73,
+          208,
+          286
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 76,
+        "hoi_category_id": 287
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 76,
+        "hoi_category_id": 287
+      },
+      {
+        "subject_id": 3,
+        "object_id": 2,
+        "category_id": 76,
+        "hoi_category_id": 287
+      }
+    ],
+    "prompt": "(a photo of only one black young woman repairing a cell phone with tools):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001717.jpg",
+    "img_id": 1717,
+    "annotations": [
+      {
+        "bbox": [
+          230,
+          274,
+          511,
+          478
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          170,
+          221,
+          511
+        ],
+        "category_id": 46
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 112,
+        "hoi_category_id": 594
+      }
+    ],
+    "prompt": "(a photo of only one white man washing a wine glass with water):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001718.jpg",
+    "img_id": 1718,
+    "annotations": [
+      {
+        "bbox": [
+          133,
+          0,
+          511,
+          509
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          92,
+          270,
+          195,
+          499
+        ],
+        "category_id": 46
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 112,
+        "hoi_category_id": 594
+      }
+    ],
+    "prompt": "(a photo of only one black boy washing a wine glass with water):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001719.jpg",
+    "img_id": 1719,
+    "annotations": [
+      {
+        "bbox": [
+          5,
+          85,
+          320,
+          458
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          255,
+          260,
+          338,
+          417
+        ],
+        "category_id": 46
+      },
+      {
+        "bbox": [
+          0,
+          405,
+          511,
+          508
+        ],
+        "category_id": 67
+      },
+      {
+        "bbox": [
+          392,
+          104,
+          449,
+          445
+        ],
+        "category_id": 44
+      },
+      {
+        "bbox": [
+          200,
+          415,
+          392,
+          465
+        ],
+        "category_id": 51
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 112,
+        "hoi_category_id": 594
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 111
+      },
+      {
+        "subject_id": 0,
+        "object_id": 3,
+        "category_id": 58,
+        "hoi_category_id": 54
+      },
+      {
+        "subject_id": 0,
+        "object_id": 4,
+        "category_id": 58,
+        "hoi_category_id": 257
+      }
+    ],
+    "prompt": "(a photo of only one asian man washing a wine glass with water):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001720.jpg",
+    "img_id": 1720,
+    "annotations": [
+      {
+        "bbox": [
+          233,
+          94,
+          494,
+          407
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          292,
+          511,
+          510
+        ],
+        "category_id": 35
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 76,
+        "hoi_category_id": 470
+      }
+    ],
+    "prompt": "(a photo of only one hispanic young man repairing a skis with tools):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001721.jpg",
+    "img_id": 1721,
+    "annotations": [
+      {
+        "bbox": [
+          116,
+          104,
+          300,
+          452
+        ],
+        "category_id": 82
+      },
+      {
+        "bbox": [
+          0,
+          67,
+          144,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          58,
+          187,
+          106,
+          272
+        ],
+        "category_id": 64
+      },
+      {
+        "bbox": [
+          317,
+          237,
+          363,
+          283
+        ],
+        "category_id": 64
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 57,
+        "hoi_category_id": 432
+      },
+      {
+        "subject_id": 1,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 174
+      },
+      {
+        "subject_id": 1,
+        "object_id": 3,
+        "category_id": 58,
+        "hoi_category_id": 174
+      }
+    ],
+    "prompt": "(a photo of only one white teenager moving a refrigerator):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001722.jpg",
+    "img_id": 1722,
+    "annotations": [
+      {
+        "bbox": [
+          160,
+          130,
+          386,
+          509
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          81,
+          87,
+          180
+        ],
+        "category_id": 64
+      },
+      {
+        "bbox": [
+          98,
+          97,
+          231,
+          381
+        ],
+        "category_id": 82
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 58,
+        "hoi_category_id": 174
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 57,
+        "hoi_category_id": 432
+      }
+    ],
+    "prompt": "(a photo of only one hispanic teenager moving a refrigerator):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001723.jpg",
+    "img_id": 1723,
+    "annotations": [
+      {
+        "bbox": [
+          13,
+          82,
+          372,
+          485
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          245,
+          42,
+          511,
+          440
+        ],
+        "category_id": 82
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 57,
+        "hoi_category_id": 432
+      }
+    ],
+    "prompt": "(a photo of only one asian teenager moving a refrigerator):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001724.jpg",
+    "img_id": 1724,
+    "annotations": [
+      {
+        "bbox": [
+          351,
+          63,
+          511,
+          482
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          321,
+          161,
+          361,
+          291
+        ],
+        "category_id": 44
+      },
+      {
+        "bbox": [
+          291,
+          186,
+          320,
+          293
+        ],
+        "category_id": 44
+      },
+      {
+        "bbox": [
+          287,
+          125,
+          511,
+          419
+        ],
+        "category_id": 82
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 58,
+        "hoi_category_id": 54
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 54
+      },
+      {
+        "subject_id": 0,
+        "object_id": 3,
+        "category_id": 57,
+        "hoi_category_id": 432
+      }
+    ],
+    "prompt": "(a photo of only one white boy moving a refrigerator):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001725.jpg",
+    "img_id": 1725,
+    "annotations": [
+      {
+        "bbox": [
+          42,
+          105,
+          199,
+          505
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          11,
+          50,
+          272,
+          199
+        ],
+        "category_id": 28
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 54,
+        "hoi_category_id": 579
+      }
+    ],
+    "prompt": "(a photo of only one asian teenager losing a umbrella):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001726.jpg",
+    "img_id": 1726,
+    "annotations": [
+      {
+        "bbox": [
+          283,
+          167,
+          458,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          360,
+          192,
+          463
+        ],
+        "category_id": 3
+      },
+      {
+        "bbox": [
+          283,
+          79,
+          507,
+          194
+        ],
+        "category_id": 28
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 58,
+        "hoi_category_id": 76
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 54,
+        "hoi_category_id": 579
+      }
+    ],
+    "prompt": "(a photo of only one hispanic woman losing a umbrella):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001727.jpg",
+    "img_id": 1727,
+    "annotations": [
+      {
+        "bbox": [
+          1,
+          29,
+          404,
+          509
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          186,
+          321,
+          364,
+          429
+        ],
+        "category_id": 51
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 49,
+        "hoi_category_id": 256
+      }
+    ],
+    "prompt": "(a photo of only one black young woman licking a bowl with Tongue):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001728.jpg",
+    "img_id": 1728,
+    "annotations": [
+      {
+        "bbox": [
+          70,
+          230,
+          209,
+          376
+        ],
+        "category_id": 74
+      },
+      {
+        "bbox": [
+          290,
+          63,
+          510,
+          418
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 76,
+        "hoi_category_id": 396
+      }
+    ],
+    "prompt": "(a photo of only one asian young woman repairing a mouse with tools):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001729.jpg",
+    "img_id": 1729,
+    "annotations": [
+      {
+        "bbox": [
+          1,
+          12,
+          336,
+          435
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          364,
+          192,
+          511,
+          473
+        ],
+        "category_id": 80
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 76,
+        "hoi_category_id": 549
+      }
+    ],
+    "prompt": "(a photo of only one black teenager repairing a toaster with tools):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001730.jpg",
+    "img_id": 1730,
+    "annotations": [
+      {
+        "bbox": [
+          245,
+          1,
+          511,
+          470
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          87,
+          413,
+          379,
+          456
+        ],
+        "category_id": 81
+      },
+      {
+        "bbox": [
+          381,
+          397,
+          465,
+          478
+        ],
+        "category_id": 57
+      },
+      {
+        "bbox": [
+          0,
+          313,
+          113,
+          378
+        ],
+        "category_id": 51
+      },
+      {
+        "bbox": [
+          439,
+          428,
+          504,
+          490
+        ],
+        "category_id": 57
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 58,
+        "hoi_category_id": 453
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 112,
+        "hoi_category_id": 282
+      },
+      {
+        "subject_id": 0,
+        "object_id": 3,
+        "category_id": 58,
+        "hoi_category_id": 257
+      },
+      {
+        "subject_id": 0,
+        "object_id": 4,
+        "category_id": 112,
+        "hoi_category_id": 282
+      }
+    ],
+    "prompt": "(a photo of only one hispanic woman washing a carrot with water):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001731.jpg",
+    "img_id": 1731,
+    "annotations": [
+      {
+        "bbox": [
+          200,
+          89,
+          336,
+          447
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          231,
+          90,
+          310
+        ],
+        "category_id": 20
+      },
+      {
+        "bbox": [
+          96,
+          231,
+          511,
+          511
+        ],
+        "category_id": 20
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 77,
+        "hoi_category_id": 182
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 77,
+        "hoi_category_id": 182
+      }
+    ],
+    "prompt": "(a photo of only one white young man riding a sheep):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001732.jpg",
+    "img_id": 1732,
+    "annotations": [
+      {
+        "bbox": [
+          332,
+          134,
+          512,
+          430
+        ],
+        "category_id": 20
+      },
+      {
+        "bbox": [
+          0,
+          169,
+          240,
+          338
+        ],
+        "category_id": 20
+      },
+      {
+        "bbox": [
+          48,
+          87,
+          153,
+          249
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 2,
+        "object_id": 0,
+        "category_id": 77,
+        "hoi_category_id": 182
+      },
+      {
+        "subject_id": 2,
+        "object_id": 1,
+        "category_id": 77,
+        "hoi_category_id": 182
+      }
+    ],
+    "prompt": "(a photo of only one hispanic boy riding a sheep):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001733.jpg",
+    "img_id": 1733,
+    "annotations": [
+      {
+        "bbox": [
+          261,
+          146,
+          511,
+          461
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          41,
+          299,
+          290,
+          493
+        ],
+        "category_id": 20
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 77,
+        "hoi_category_id": 182
+      }
+    ],
+    "prompt": "(a photo of only one asian teenager riding a sheep):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001734.jpg",
+    "img_id": 1734,
+    "annotations": [
+      {
+        "bbox": [
+          236,
+          89,
+          368,
+          461
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          276,
+          222,
+          511,
+          455
+        ],
+        "category_id": 20
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 77,
+        "hoi_category_id": 182
+      }
+    ],
+    "prompt": "(a photo of only one hispanic young woman riding a sheep):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001735.jpg",
+    "img_id": 1735,
+    "annotations": [
+      {
+        "bbox": [
+          73,
+          183,
+          481,
+          479
+        ],
+        "category_id": 4
+      },
+      {
+        "bbox": [
+          320,
+          133,
+          375,
+          300
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          436,
+          108,
+          511,
+          466
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 112,
+        "hoi_category_id": 159
+      },
+      {
+        "subject_id": 2,
+        "object_id": 0,
+        "category_id": 112,
+        "hoi_category_id": 159
+      }
+    ],
+    "prompt": "(a photo of only one black man washing a motorcycle with water):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001736.jpg",
+    "img_id": 1736,
+    "annotations": [
+      {
+        "bbox": [
+          430,
+          56,
+          511,
+          463
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          134,
+          419,
+          446
+        ],
+        "category_id": 4
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 112,
+        "hoi_category_id": 159
+      }
+    ],
+    "prompt": "(a photo of only one hispanic woman washing a motorcycle with water):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001737.jpg",
+    "img_id": 1737,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          190,
+          200,
+          292
+        ],
+        "category_id": 3
+      },
+      {
+        "bbox": [
+          205,
+          115,
+          511,
+          506
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          120,
+          170,
+          511,
+          510
+        ],
+        "category_id": 4
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 58,
+        "hoi_category_id": 76
+      },
+      {
+        "subject_id": 1,
+        "object_id": 2,
+        "category_id": 112,
+        "hoi_category_id": 159
+      }
+    ],
+    "prompt": "(a photo of only one black woman washing a motorcycle with water):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001738.jpg",
+    "img_id": 1738,
+    "annotations": [
+      {
+        "bbox": [
+          262,
+          248,
+          414,
+          478
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          171,
+          190,
+          455
+        ],
+        "category_id": 4
+      },
+      {
+        "bbox": [
+          0,
+          120,
+          124,
+          352
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          383,
+          305,
+          511,
+          485
+        ],
+        "category_id": 4
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 2,
+        "object_id": 1,
+        "category_id": 112,
+        "hoi_category_id": 159
+      },
+      {
+        "subject_id": 0,
+        "object_id": 3,
+        "category_id": 112,
+        "hoi_category_id": 159
+      }
+    ],
+    "prompt": "(a photo of only one asian boy washing a motorcycle with water):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001739.jpg",
+    "img_id": 1739,
+    "annotations": [
+      {
+        "bbox": [
+          100,
+          39,
+          493,
+          393
+        ],
+        "category_id": 4
+      },
+      {
+        "bbox": [
+          0,
+          111,
+          202,
+          422
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 112,
+        "hoi_category_id": 159
+      }
+    ],
+    "prompt": "(a photo of only one asian young man washing a motorcycle with water):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001740.jpg",
+    "img_id": 1740,
+    "annotations": [
+      {
+        "bbox": [
+          103,
+          171,
+          468,
+          470
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          511,
+          473
+        ],
+        "category_id": 82
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 13,
+        "hoi_category_id": 430
+      }
+    ],
+    "prompt": "(a photo of only one white woman cleaning a refrigerator):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001741.jpg",
+    "img_id": 1741,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          59,
+          176,
+          471
+        ],
+        "category_id": 82
+      },
+      {
+        "bbox": [
+          442,
+          100,
+          511,
+          494
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 13,
+        "hoi_category_id": 430
+      }
+    ],
+    "prompt": "(a photo of only one asian teenager cleaning a refrigerator):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001742.jpg",
+    "img_id": 1742,
+    "annotations": [
+      {
+        "bbox": [
+          216,
+          48,
+          407,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          408,
+          60,
+          510,
+          496
+        ],
+        "category_id": 82
+      },
+      {
+        "bbox": [
+          0,
+          123,
+          160,
+          400
+        ],
+        "category_id": 79
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 13,
+        "hoi_category_id": 430
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 414
+      }
+    ],
+    "prompt": "(a photo of only one black woman cleaning a refrigerator):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001743.jpg",
+    "img_id": 1743,
+    "annotations": [
+      {
+        "bbox": [
+          98,
+          91,
+          511,
+          320
+        ],
+        "category_id": 7
+      },
+      {
+        "bbox": [
+          117,
+          280,
+          225,
+          414
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 53,
+        "hoi_category_id": 190
+      }
+    ],
+    "prompt": "(a photo of only one asian young man loading a train):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001744.jpg",
+    "img_id": 1744,
+    "annotations": [
+      {
+        "bbox": [
+          147,
+          50,
+          511,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          511,
+          482
+        ],
+        "category_id": 7
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 53,
+        "hoi_category_id": 190
+      }
+    ],
+    "prompt": "(a photo of only one black woman loading a train):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001745.jpg",
+    "img_id": 1745,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          235,
+          114,
+          511
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          2,
+          511,
+          498
+        ],
+        "category_id": 6
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 114,
+        "hoi_category_id": 64
+      }
+    ],
+    "prompt": "(a photo of only one white young woman waving a bus):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001746.jpg",
+    "img_id": 1746,
+    "annotations": [
+      {
+        "bbox": [
+          196,
+          175,
+          340,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          24,
+          69,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          26,
+          511,
+          506
+        ],
+        "category_id": 6
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 114,
+        "hoi_category_id": 64
+      },
+      {
+        "subject_id": 1,
+        "object_id": 2,
+        "category_id": 114,
+        "hoi_category_id": 64
+      }
+    ],
+    "prompt": "(a photo of only one black woman waving a bus):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001747.jpg",
+    "img_id": 1747,
+    "annotations": [
+      {
+        "bbox": [
+          1,
+          0,
+          512,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          288,
+          257,
+          368,
+          460
+        ],
+        "category_id": 57
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 90,
+        "hoi_category_id": 280
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 278
+      }
+    ],
+    "prompt": "(a photo of only one black young woman smelling a carrot with nose and closing eyes,holding a carrot with hand):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001748.jpg",
+    "img_id": 1748,
+    "annotations": [
+      {
+        "bbox": [
+          23,
+          1,
+          500,
+          506
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          203,
+          171,
+          410,
+          229
+        ],
+        "category_id": 57
+      },
+      {
+        "bbox": [
+          0,
+          319,
+          353,
+          400
+        ],
+        "category_id": 57
+      },
+      {
+        "bbox": [
+          157,
+          240,
+          359,
+          328
+        ],
+        "category_id": 57
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 90,
+        "hoi_category_id": 280
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 278
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 90,
+        "hoi_category_id": 280
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 37,
+        "hoi_category_id": 278
+      },
+      {
+        "subject_id": 0,
+        "object_id": 3,
+        "category_id": 90,
+        "hoi_category_id": 280
+      },
+      {
+        "subject_id": 0,
+        "object_id": 3,
+        "category_id": 37,
+        "hoi_category_id": 278
+      }
+    ],
+    "prompt": "(a photo of only one white woman smelling a carrot with nose and closing eyes,holding a carrot with hand):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001749.jpg",
+    "img_id": 1749,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          0,
+          335,
+          509
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          243,
+          224,
+          406,
+          279
+        ],
+        "category_id": 57
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 90,
+        "hoi_category_id": 280
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 278
+      }
+    ],
+    "prompt": "(a photo of only one black boy smelling a carrot with nose and closing eyes,holding a carrot with hand):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001750.jpg",
+    "img_id": 1750,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          0,
+          511,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          218,
+          232,
+          281,
+          511
+        ],
+        "category_id": 57
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 90,
+        "hoi_category_id": 280
+      }
+    ],
+    "prompt": "(a photo of only one asian boy smelling a carrot with nose and closing eyes):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001751.jpg",
+    "img_id": 1751,
+    "annotations": [
+      {
+        "bbox": [
+          165,
+          48,
+          511,
+          506
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          193,
+          301,
+          316
+        ],
+        "category_id": 57
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 90,
+        "hoi_category_id": 280
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 278
+      }
+    ],
+    "prompt": "(a photo of only one asian young woman smelling a carrot with nose and closing eyes,holding a carrot with hand):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001752.jpg",
+    "img_id": 1752,
+    "annotations": [
+      {
+        "bbox": [
+          182,
+          168,
+          403,
+          464
+        ],
+        "category_id": 49
+      },
+      {
+        "bbox": [
+          46,
+          18,
+          383,
+          505
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          238,
+          97,
+          388
+        ],
+        "category_id": 64
+      },
+      {
+        "bbox": [
+          322,
+          264,
+          423,
+          427
+        ],
+        "category_id": 52
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 17,
+        "hoi_category_id": 377
+      },
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 37,
+        "hoi_category_id": 378
+      },
+      {
+        "subject_id": 1,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 174
+      },
+      {
+        "subject_id": 1,
+        "object_id": 3,
+        "category_id": 16,
+        "hoi_category_id": 217
+      }
+    ],
+    "prompt": "(a photo of only one hispanic teenager cutting a banana,cutting with a knife,holding a knife with hand):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001753.jpg",
+    "img_id": 1753,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          0,
+          511,
+          511
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          43,
+          130,
+          511,
+          500
+        ],
+        "category_id": 39
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 85,
+        "hoi_category_id": 228
+      }
+    ],
+    "prompt": "(a photo of only one asian teenager signing a baseball bat with a pen signing on the ball):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001754.jpg",
+    "img_id": 1754,
+    "annotations": [
+      {
+        "bbox": [
+          186,
+          278,
+          413,
+          379
+        ],
+        "category_id": 39
+      },
+      {
+        "bbox": [
+          0,
+          43,
+          290,
+          511
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          462,
+          55,
+          511,
+          104
+        ],
+        "category_id": 40
+      },
+      {
+        "bbox": [
+          325,
+          0,
+          511,
+          360
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 85,
+        "hoi_category_id": 228
+      },
+      {
+        "subject_id": 3,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 235
+      },
+      {
+        "subject_id": 3,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 235
+      }
+    ],
+    "prompt": "(a photo of only one hispanic boy signing a baseball bat with a pen signing on the ball):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001755.jpg",
+    "img_id": 1755,
+    "annotations": [
+      {
+        "bbox": [
+          3,
+          11,
+          308,
+          448
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          203,
+          184,
+          276,
+          266
+        ],
+        "category_id": 64
+      },
+      {
+        "bbox": [
+          338,
+          286,
+          367,
+          357
+        ],
+        "category_id": 47
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 58,
+        "hoi_category_id": 174
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 112,
+        "hoi_category_id": 304
+      }
+    ],
+    "prompt": "(a photo of only one hispanic man washing a cup with water):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001756.jpg",
+    "img_id": 1756,
+    "annotations": [
+      {
+        "bbox": [
+          244,
+          216,
+          395,
+          410
+        ],
+        "category_id": 47
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          263,
+          393
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 112,
+        "hoi_category_id": 304
+      }
+    ],
+    "prompt": "(a photo of only one white woman washing a cup with water):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001757.jpg",
+    "img_id": 1757,
+    "annotations": [
+      {
+        "bbox": [
+          1,
+          117,
+          484,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          411,
+          150,
+          459,
+          206
+        ],
+        "category_id": 47
+      },
+      {
+        "bbox": [
+          148,
+          440,
+          484,
+          511
+        ],
+        "category_id": 81
+      },
+      {
+        "bbox": [
+          238,
+          46,
+          504,
+          413
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 3,
+        "object_id": 1,
+        "category_id": 112,
+        "hoi_category_id": 304
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 453
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 453
+      }
+    ],
+    "prompt": "(a photo of only one black man washing a cup with water):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001758.jpg",
+    "img_id": 1758,
+    "annotations": [
+      {
+        "bbox": [
+          8,
+          0,
+          376,
+          509
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          223,
+          357,
+          430,
+          395
+        ],
+        "category_id": 81
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 13,
+        "hoi_category_id": 450
+      }
+    ],
+    "prompt": "(a photo of only one asian woman cleaning a sink):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001759.jpg",
+    "img_id": 1759,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          36,
+          386,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          131,
+          312,
+          510,
+          476
+        ],
+        "category_id": 81
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 13,
+        "hoi_category_id": 450
+      }
+    ],
+    "prompt": "(a photo of only one asian teenager cleaning a sink):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001760.jpg",
+    "img_id": 1760,
+    "annotations": [
+      {
+        "bbox": [
+          164,
+          40,
+          511,
+          508
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          243,
+          511,
+          508
+        ],
+        "category_id": 3
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 18,
+        "hoi_category_id": 67
+      }
+    ],
+    "prompt": "(a photo of only one hispanic teenager directing a car):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001761.jpg",
+    "img_id": 1761,
+    "annotations": [
+      {
+        "bbox": [
+          350,
+          73,
+          456,
+          488
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          186,
+          373,
+          440
+        ],
+        "category_id": 3
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 18,
+        "hoi_category_id": 67
+      }
+    ],
+    "prompt": "(a photo of only one black young man directing a car):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001762.jpg",
+    "img_id": 1762,
+    "annotations": [
+      {
+        "bbox": [
+          156,
+          44,
+          421,
+          244
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          91,
+          433,
+          457
+        ],
+        "category_id": 3
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 18,
+        "hoi_category_id": 67
+      }
+    ],
+    "prompt": "(a photo of only one white teenager directing a car):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001763.jpg",
+    "img_id": 1763,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          53,
+          281,
+          508
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          104,
+          511,
+          498
+        ],
+        "category_id": 3
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 18,
+        "hoi_category_id": 67
+      }
+    ],
+    "prompt": "(a photo of only one hispanic teenager directing a car):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001764.jpg",
+    "img_id": 1764,
+    "annotations": [
+      {
+        "bbox": [
+          208,
+          90,
+          280,
+          369
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          25,
+          150,
+          387,
+          475
+        ],
+        "category_id": 25
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 77,
+        "hoi_category_id": 346
+      }
+    ],
+    "prompt": "(a photo of only one black man riding a giraffe):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001765.jpg",
+    "img_id": 1765,
+    "annotations": [
+      {
+        "bbox": [
+          42,
+          226,
+          185,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          253,
+          0,
+          510,
+          511
+        ],
+        "category_id": 25
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 77,
+        "hoi_category_id": 346
+      }
+    ],
+    "prompt": "(a photo of only one white boy riding a giraffe):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001766.jpg",
+    "img_id": 1766,
+    "annotations": [
+      {
+        "bbox": [
+          249,
+          6,
+          382,
+          355
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          40,
+          511,
+          511
+        ],
+        "category_id": 25
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 77,
+        "hoi_category_id": 346
+      }
+    ],
+    "prompt": "(a photo of only one black man riding a giraffe):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001767.jpg",
+    "img_id": 1767,
+    "annotations": [
+      {
+        "bbox": [
+          94,
+          0,
+          376,
+          375
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          230,
+          511,
+          509
+        ],
+        "category_id": 25
+      },
+      {
+        "bbox": [
+          225,
+          183,
+          311,
+          318
+        ],
+        "category_id": 31
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 77,
+        "hoi_category_id": 346
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 356
+      }
+    ],
+    "prompt": "(a photo of only one hispanic teenager riding a giraffe):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001768.jpg",
+    "img_id": 1768,
+    "annotations": [
+      {
+        "bbox": [
+          91,
+          0,
+          510,
+          511
+        ],
+        "category_id": 25
+      },
+      {
+        "bbox": [
+          0,
+          137,
+          287,
+          510
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 77,
+        "hoi_category_id": 346
+      }
+    ],
+    "prompt": "(a photo of only one asian teenager riding a giraffe):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001769.jpg",
+    "img_id": 1769,
+    "annotations": [
+      {
+        "bbox": [
+          224,
+          8,
+          510,
+          508
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          3,
+          331,
+          451
+        ],
+        "category_id": 88
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 46,
+        "hoi_category_id": 532
+      }
+    ],
+    "prompt": "(a photo of only one white teenager kissing a teddy bear):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001770.jpg",
+    "img_id": 1770,
+    "annotations": [
+      {
+        "bbox": [
+          213,
+          126,
+          511,
+          496
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          89,
+          166,
+          304,
+          488
+        ],
+        "category_id": 88
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 46,
+        "hoi_category_id": 532
+      }
+    ],
+    "prompt": "(a photo of only one black young man kissing a teddy bear):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001771.jpg",
+    "img_id": 1771,
+    "annotations": [
+      {
+        "bbox": [
+          111,
+          60,
+          327,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          234,
+          10,
+          511,
+          489
+        ],
+        "category_id": 88
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 46,
+        "hoi_category_id": 532
+      }
+    ],
+    "prompt": "(a photo of only one hispanic teenager kissing a teddy bear):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001772.jpg",
+    "img_id": 1772,
+    "annotations": [
+      {
+        "bbox": [
+          13,
+          120,
+          376,
+          508
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          271,
+          68,
+          510,
+          508
+        ],
+        "category_id": 88
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 46,
+        "hoi_category_id": 532
+      }
+    ],
+    "prompt": "(a photo of only one hispanic teenager kissing a teddy bear):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001773.jpg",
+    "img_id": 1773,
+    "annotations": [
+      {
+        "bbox": [
+          42,
+          291,
+          299,
+          509
+        ],
+        "category_id": 88
+      },
+      {
+        "bbox": [
+          0,
+          3,
+          511,
+          507
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 46,
+        "hoi_category_id": 532
+      }
+    ],
+    "prompt": "(a photo of only one hispanic woman kissing a teddy bear):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001774.jpg",
+    "img_id": 1774,
+    "annotations": [
+      {
+        "bbox": [
+          5,
+          27,
+          389,
+          507
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          214,
+          262,
+          510,
+          509
+        ],
+        "category_id": 33
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 117,
+        "hoi_category_id": 515
+      }
+    ],
+    "prompt": "(a photo of only one hispanic man zipping a suitcase):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001775.jpg",
+    "img_id": 1775,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          0,
+          330,
+          507
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          220,
+          1,
+          460,
+          502
+        ],
+        "category_id": 33
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 117,
+        "hoi_category_id": 515
+      }
+    ],
+    "prompt": "(a photo of only one white young man zipping a suitcase):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001776.jpg",
+    "img_id": 1776,
+    "annotations": [
+      {
+        "bbox": [
+          156,
+          1,
+          338,
+          481
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          79,
+          154,
+          242,
+          495
+        ],
+        "category_id": 33
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 117,
+        "hoi_category_id": 515
+      }
+    ],
+    "prompt": "(a photo of only one black man zipping a suitcase):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001777.jpg",
+    "img_id": 1777,
+    "annotations": [
+      {
+        "bbox": [
+          76,
+          1,
+          401,
+          445
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          55,
+          381,
+          402,
+          510
+        ],
+        "category_id": 33
+      },
+      {
+        "bbox": [
+          0,
+          54,
+          176,
+          371
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 117,
+        "hoi_category_id": 515
+      },
+      {
+        "subject_id": 2,
+        "object_id": 1,
+        "category_id": 117,
+        "hoi_category_id": 515
+      }
+    ],
+    "prompt": "(a photo of only one black man zipping a suitcase):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001778.jpg",
+    "img_id": 1778,
+    "annotations": [
+      {
+        "bbox": [
+          142,
+          0,
+          347,
+          209
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          127,
+          198,
+          264,
+          375
+        ],
+        "category_id": 33
+      },
+      {
+        "bbox": [
+          342,
+          150,
+          485,
+          316
+        ],
+        "category_id": 33
+      },
+      {
+        "bbox": [
+          203,
+          197,
+          359,
+          335
+        ],
+        "category_id": 33
+      },
+      {
+        "bbox": [
+          0,
+          174,
+          156,
+          398
+        ],
+        "category_id": 33
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 117,
+        "hoi_category_id": 515
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 117,
+        "hoi_category_id": 515
+      },
+      {
+        "subject_id": 0,
+        "object_id": 3,
+        "category_id": 117,
+        "hoi_category_id": 515
+      },
+      {
+        "subject_id": 0,
+        "object_id": 4,
+        "category_id": 117,
+        "hoi_category_id": 515
+      }
+    ],
+    "prompt": "(a photo of only one white young woman zipping a suitcase):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001779.jpg",
+    "img_id": 1779,
+    "annotations": [
+      {
+        "bbox": [
+          449,
+          147,
+          511,
+          430
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          102,
+          157,
+          480,
+          430
+        ],
+        "category_id": 19
+      },
+      {
+        "bbox": [
+          248,
+          30,
+          332,
+          326
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 2,
+        "object_id": 1,
+        "category_id": 53,
+        "hoi_category_id": 136
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 53,
+        "hoi_category_id": 136
+      }
+    ],
+    "prompt": "(a photo of only one asian young woman loading a horse):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001780.jpg",
+    "img_id": 1780,
+    "annotations": [
+      {
+        "bbox": [
+          154,
+          57,
+          504,
+          508
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          30,
+          24,
+          320,
+          509
+        ],
+        "category_id": 19
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 53,
+        "hoi_category_id": 136
+      }
+    ],
+    "prompt": "(a photo of only one white teenager loading a horse):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001781.jpg",
+    "img_id": 1781,
+    "annotations": [
+      {
+        "bbox": [
+          80,
+          194,
+          164,
+          479
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          160,
+          186,
+          479,
+          488
+        ],
+        "category_id": 19
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 53,
+        "hoi_category_id": 136
+      }
+    ],
+    "prompt": "(a photo of only one white teenager loading a horse):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001782.jpg",
+    "img_id": 1782,
+    "annotations": [
+      {
+        "bbox": [
+          203,
+          27,
+          510,
+          506
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          63,
+          76,
+          352,
+          509
+        ],
+        "category_id": 19
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 53,
+        "hoi_category_id": 136
+      }
+    ],
+    "prompt": "(a photo of only one asian boy loading a horse):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001783.jpg",
+    "img_id": 1783,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          0,
+          261,
+          509
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          199,
+          79,
+          511,
+          507
+        ],
+        "category_id": 19
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 53,
+        "hoi_category_id": 136
+      }
+    ],
+    "prompt": "(a photo of only one black young man loading a horse):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001784.jpg",
+    "img_id": 1784,
+    "annotations": [
+      {
+        "bbox": [
+          107,
+          101,
+          333,
+          416
+        ],
+        "category_id": 4
+      },
+      {
+        "bbox": [
+          149,
+          41,
+          336,
+          322
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 38,
+        "hoi_category_id": 150
+      }
+    ],
+    "prompt": "(a photo of only one hispanic young woman hopping on a motorcycle):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001785.jpg",
+    "img_id": 1785,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          45,
+          403,
+          494
+        ],
+        "category_id": 4
+      },
+      {
+        "bbox": [
+          165,
+          14,
+          402,
+          423
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 38,
+        "hoi_category_id": 150
+      }
+    ],
+    "prompt": "(a photo of only one hispanic boy hopping on a motorcycle):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001786.jpg",
+    "img_id": 1786,
+    "annotations": [
+      {
+        "bbox": [
+          11,
+          145,
+          282,
+          453
+        ],
+        "category_id": 4
+      },
+      {
+        "bbox": [
+          27,
+          50,
+          250,
+          359
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 38,
+        "hoi_category_id": 150
+      }
+    ],
+    "prompt": "(a photo of only one white young man hopping on a motorcycle):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001787.jpg",
+    "img_id": 1787,
+    "annotations": [
+      {
+        "bbox": [
+          53,
+          45,
+          230,
+          394
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          116,
+          428,
+          442
+        ],
+        "category_id": 4
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 38,
+        "hoi_category_id": 150
+      }
+    ],
+    "prompt": "(a photo of only one asian woman hopping on a motorcycle):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001788.jpg",
+    "img_id": 1788,
+    "annotations": [
+      {
+        "bbox": [
+          174,
+          155,
+          450,
+          350
+        ],
+        "category_id": 4
+      },
+      {
+        "bbox": [
+          255,
+          113,
+          380,
+          285
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 38,
+        "hoi_category_id": 150
+      }
+    ],
+    "prompt": "(a photo of only one asian young woman hopping on a motorcycle):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001789.jpg",
+    "img_id": 1789,
+    "annotations": [
+      {
+        "bbox": [
+          186,
+          0,
+          511,
+          472
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          45,
+          227,
+          367,
+          498
+        ],
+        "category_id": 36
+      },
+      {
+        "bbox": [
+          0,
+          11,
+          180,
+          67
+        ],
+        "category_id": 35
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 58,
+        "hoi_category_id": 483
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 1,
+        "hoi_category_id": 464
+      }
+    ],
+    "prompt": "(a photo of only one white woman adjusting a skis):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001790.jpg",
+    "img_id": 1790,
+    "annotations": [
+      {
+        "bbox": [
+          94,
+          0,
+          430,
+          416
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          59,
+          338,
+          510,
+          507
+        ],
+        "category_id": 35
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 1,
+        "hoi_category_id": 464
+      }
+    ],
+    "prompt": "(a photo of only one hispanic man adjusting a skis):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001791.jpg",
+    "img_id": 1791,
+    "annotations": [
+      {
+        "bbox": [
+          67,
+          115,
+          277,
+          461
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          8,
+          380,
+          308,
+          484
+        ],
+        "category_id": 35
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 1,
+        "hoi_category_id": 464
+      }
+    ],
+    "prompt": "(a photo of only one white young man adjusting a skis):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001792.jpg",
+    "img_id": 1792,
+    "annotations": [
+      {
+        "bbox": [
+          71,
+          80,
+          388,
+          478
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          123,
+          418,
+          502,
+          511
+        ],
+        "category_id": 35
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 1,
+        "hoi_category_id": 464
+      }
+    ],
+    "prompt": "(a photo of only one black boy adjusting a skis):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001793.jpg",
+    "img_id": 1793,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          139,
+          511,
+          495
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          377,
+          99,
+          485,
+          201
+        ],
+        "category_id": 55
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 112,
+        "hoi_category_id": 406
+      }
+    ],
+    "prompt": "(a photo of only one asian teenager washing a orange with water):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001794.jpg",
+    "img_id": 1794,
+    "annotations": [
+      {
+        "bbox": [
+          144,
+          57,
+          418,
+          450
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          333,
+          63,
+          427
+        ],
+        "category_id": 47
+      },
+      {
+        "bbox": [
+          37,
+          233,
+          170,
+          368
+        ],
+        "category_id": 55
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 58,
+        "hoi_category_id": 305
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 112,
+        "hoi_category_id": 406
+      }
+    ],
+    "prompt": "(a photo of only one black woman washing a orange with water):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001795.jpg",
+    "img_id": 1795,
+    "annotations": [
+      {
+        "bbox": [
+          201,
+          126,
+          385,
+          285
+        ],
+        "category_id": 55
+      },
+      {
+        "bbox": [
+          341,
+          179,
+          511,
+          361
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 112,
+        "hoi_category_id": 406
+      }
+    ],
+    "prompt": "(a photo of only one hispanic boy washing a orange with water):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001796.jpg",
+    "img_id": 1796,
+    "annotations": [
+      {
+        "bbox": [
+          193,
+          0,
+          511,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          248,
+          334,
+          322,
+          387
+        ],
+        "category_id": 55
+      },
+      {
+        "bbox": [
+          74,
+          188,
+          151,
+          271
+        ],
+        "category_id": 55
+      },
+      {
+        "bbox": [
+          138,
+          196,
+          228,
+          280
+        ],
+        "category_id": 55
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 112,
+        "hoi_category_id": 406
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 112,
+        "hoi_category_id": 406
+      },
+      {
+        "subject_id": 0,
+        "object_id": 3,
+        "category_id": 112,
+        "hoi_category_id": 406
+      }
+    ],
+    "prompt": "(a photo of only one black teenager washing a orange with water):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001797.jpg",
+    "img_id": 1797,
+    "annotations": [
+      {
+        "bbox": [
+          1,
+          114,
+          375,
+          464
+        ],
+        "category_id": 22
+      },
+      {
+        "bbox": [
+          332,
+          207,
+          445,
+          500
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          457,
+          324,
+          511,
+          465
+        ],
+        "category_id": 22
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 46,
+        "hoi_category_id": 318
+      },
+      {
+        "subject_id": 1,
+        "object_id": 2,
+        "category_id": 46,
+        "hoi_category_id": 318
+      }
+    ],
+    "prompt": "(a photo of only one hispanic teenager kissing a elephant):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001798.jpg",
+    "img_id": 1798,
+    "annotations": [
+      {
+        "bbox": [
+          218,
+          101,
+          510,
+          507
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          21,
+          90,
+          330,
+          507
+        ],
+        "category_id": 22
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 46,
+        "hoi_category_id": 318
+      }
+    ],
+    "prompt": "(a photo of only one white man kissing a elephant):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001799.jpg",
+    "img_id": 1799,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          0,
+          355,
+          508
+        ],
+        "category_id": 22
+      },
+      {
+        "bbox": [
+          317,
+          38,
+          511,
+          507
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 46,
+        "hoi_category_id": 318
+      }
+    ],
+    "prompt": "(a photo of only one hispanic man kissing a elephant):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001800.jpg",
+    "img_id": 1800,
+    "annotations": [
+      {
+        "bbox": [
+          92,
+          0,
+          511,
+          509
+        ],
+        "category_id": 22
+      },
+      {
+        "bbox": [
+          65,
+          80,
+          315,
+          510
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 46,
+        "hoi_category_id": 318
+      }
+    ],
+    "prompt": "(a photo of only one asian woman kissing a elephant):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001801.jpg",
+    "img_id": 1801,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          0,
+          435,
+          469
+        ],
+        "category_id": 22
+      },
+      {
+        "bbox": [
+          279,
+          132,
+          486,
+          509
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 46,
+        "hoi_category_id": 318
+      }
+    ],
+    "prompt": "(a photo of only one hispanic man kissing a elephant):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001802.jpg",
+    "img_id": 1802,
+    "annotations": [
+      {
+        "bbox": [
+          209,
+          26,
+          511,
+          466
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          198,
+          153,
+          484
+        ],
+        "category_id": 70
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 30,
+        "hoi_category_id": 552
+      }
+    ],
+    "prompt": "(a photo of only one asian teenager flushing a toilet):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001803.jpg",
+    "img_id": 1803,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          23,
+          313,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          238,
+          253,
+          511,
+          508
+        ],
+        "category_id": 80
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 547
+      }
+    ],
+    "prompt": "(a photo of only one asian woman holding a toaster with hand):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001804.jpg",
+    "img_id": 1804,
+    "annotations": [
+      {
+        "bbox": [
+          2,
+          31,
+          429,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          323,
+          188,
+          455
+        ],
+        "category_id": 80
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 547
+      }
+    ],
+    "prompt": "(a photo of only one black woman holding a toaster with hand):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001805.jpg",
+    "img_id": 1805,
+    "annotations": [
+      {
+        "bbox": [
+          231,
+          178,
+          424,
+          287
+        ],
+        "category_id": 57
+      },
+      {
+        "bbox": [
+          215,
+          0,
+          511,
+          259
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          133,
+          71,
+          286,
+          231
+        ],
+        "category_id": 51
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 97,
+        "hoi_category_id": 281
+      },
+      {
+        "subject_id": 1,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 257
+      }
+    ],
+    "prompt": "(a photo of only one asian young man stirring a carrot):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001806.jpg",
+    "img_id": 1806,
+    "annotations": [
+      {
+        "bbox": [
+          57,
+          24,
+          320,
+          399
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          116,
+          341,
+          285,
+          402
+        ],
+        "category_id": 57
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 97,
+        "hoi_category_id": 281
+      }
+    ],
+    "prompt": "(a photo of only one white teenager stirring a carrot):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001807.jpg",
+    "img_id": 1807,
+    "annotations": [
+      {
+        "bbox": [
+          174,
+          46,
+          406,
+          462
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          58,
+          194,
+          410,
+          455
+        ],
+        "category_id": 2
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 112,
+        "hoi_category_id": 23
+      }
+    ],
+    "prompt": "(a photo of only one asian man washing a bicycle with water):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001808.jpg",
+    "img_id": 1808,
+    "annotations": [
+      {
+        "bbox": [
+          40,
+          216,
+          282,
+          468
+        ],
+        "category_id": 2
+      },
+      {
+        "bbox": [
+          199,
+          120,
+          323,
+          484
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 112,
+        "hoi_category_id": 23
+      }
+    ],
+    "prompt": "(a photo of only one white young woman washing a bicycle with water):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001809.jpg",
+    "img_id": 1809,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          21,
+          359,
+          505
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          276,
+          236,
+          416,
+          442
+        ],
+        "category_id": 89
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 76,
+        "hoi_category_id": 351
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 349
+      }
+    ],
+    "prompt": "(a photo of only one asian young woman repairing a hair drier with tools,holding a hair drier with hand):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001810.jpg",
+    "img_id": 1810,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          0,
+          316,
+          292
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          380,
+          231,
+          511
+        ],
+        "category_id": 89
+      },
+      {
+        "bbox": [
+          308,
+          151,
+          511,
+          340
+        ],
+        "category_id": 89
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 76,
+        "hoi_category_id": 351
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 349
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 76,
+        "hoi_category_id": 351
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 37,
+        "hoi_category_id": 349
+      }
+    ],
+    "prompt": "(a photo of only one hispanic teenager repairing a hair drier with tools,holding a hair drier with hand):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001811.jpg",
+    "img_id": 1811,
+    "annotations": [
+      {
+        "bbox": [
+          326,
+          271,
+          511,
+          509
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          98,
+          92,
+          439,
+          443
+        ],
+        "category_id": 89
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 76,
+        "hoi_category_id": 351
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 349
+      }
+    ],
+    "prompt": "(a photo of only one asian boy repairing a hair drier with tools,holding a hair drier with hand):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001812.jpg",
+    "img_id": 1812,
+    "annotations": [
+      {
+        "bbox": [
+          48,
+          82,
+          511,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          190,
+          81,
+          424
+        ],
+        "category_id": 89
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 76,
+        "hoi_category_id": 351
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 349
+      }
+    ],
+    "prompt": "(a photo of only one white young man repairing a hair drier with tools,holding a hair drier with hand):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001813.jpg",
+    "img_id": 1813,
+    "annotations": [
+      {
+        "bbox": [
+          216,
+          306,
+          342,
+          497
+        ],
+        "category_id": 18
+      },
+      {
+        "bbox": [
+          122,
+          147,
+          213,
+          470
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 11,
+        "hoi_category_id": 128
+      }
+    ],
+    "prompt": "(a photo of only one hispanic teenager chasing a dog):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001814.jpg",
+    "img_id": 1814,
+    "annotations": [
+      {
+        "bbox": [
+          397,
+          218,
+          446,
+          346
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          126,
+          310,
+          225,
+          384
+        ],
+        "category_id": 18
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 11,
+        "hoi_category_id": 128
+      }
+    ],
+    "prompt": "(a photo of only one black young woman chasing a dog):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001815.jpg",
+    "img_id": 1815,
+    "annotations": [
+      {
+        "bbox": [
+          216,
+          176,
+          339,
+          439
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          354,
+          306,
+          419,
+          443
+        ],
+        "category_id": 18
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 11,
+        "hoi_category_id": 128
+      }
+    ],
+    "prompt": "(a photo of only one black boy chasing a dog):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001816.jpg",
+    "img_id": 1816,
+    "annotations": [
+      {
+        "bbox": [
+          153,
+          197,
+          236,
+          382
+        ],
+        "category_id": 18
+      },
+      {
+        "bbox": [
+          0,
+          34,
+          102,
+          374
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 11,
+        "hoi_category_id": 128
+      }
+    ],
+    "prompt": "(a photo of only one white young woman chasing a dog):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001817.jpg",
+    "img_id": 1817,
+    "annotations": [
+      {
+        "bbox": [
+          168,
+          0,
+          461,
+          455
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          189,
+          196,
+          433
+        ],
+        "category_id": 18
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 11,
+        "hoi_category_id": 128
+      }
+    ],
+    "prompt": "(a photo of only one asian man chasing a dog):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001818.jpg",
+    "img_id": 1818,
+    "annotations": [
+      {
+        "bbox": [
+          118,
+          38,
+          278,
+          483
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          208,
+          183,
+          461
+        ],
+        "category_id": 62
+      },
+      {
+        "bbox": [
+          427,
+          215,
+          478,
+          264
+        ],
+        "category_id": 86
+      },
+      {
+        "bbox": [
+          252,
+          226,
+          328,
+          435
+        ],
+        "category_id": 62
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 94,
+        "hoi_category_id": 91
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 588
+      },
+      {
+        "subject_id": 0,
+        "object_id": 3,
+        "category_id": 94,
+        "hoi_category_id": 91
+      }
+    ],
+    "prompt": "(a photo of only one black teenager standing on a chair):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001819.jpg",
+    "img_id": 1819,
+    "annotations": [
+      {
+        "bbox": [
+          258,
+          49,
+          483,
+          509
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          247,
+          301,
+          318,
+          365
+        ],
+        "category_id": 55
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 42,
+        "hoi_category_id": 402
+      }
+    ],
+    "prompt": "(a photo of only one asian boy inspecting a orange by looking close):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001820.jpg",
+    "img_id": 1820,
+    "annotations": [
+      {
+        "bbox": [
+          169,
+          189,
+          230,
+          238
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          99,
+          272,
+          311,
+          455
+        ],
+        "category_id": 55
+      },
+      {
+        "bbox": [
+          31,
+          295,
+          277,
+          510
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 2,
+        "object_id": 1,
+        "category_id": 42,
+        "hoi_category_id": 402
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 42,
+        "hoi_category_id": 402
+      }
+    ],
+    "prompt": "(a photo of only one white young man inspecting a orange by looking close):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001821.jpg",
+    "img_id": 1821,
+    "annotations": [
+      {
+        "bbox": [
+          93,
+          0,
+          339,
+          387
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          293,
+          165,
+          494,
+          346
+        ],
+        "category_id": 55
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 42,
+        "hoi_category_id": 402
+      }
+    ],
+    "prompt": "(a photo of only one hispanic teenager inspecting a orange by looking close):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001822.jpg",
+    "img_id": 1822,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          0,
+          511,
+          508
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          175,
+          173,
+          335,
+          363
+        ],
+        "category_id": 55
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 42,
+        "hoi_category_id": 402
+      }
+    ],
+    "prompt": "(a photo of only one white man inspecting a orange by looking close):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001823.jpg",
+    "img_id": 1823,
+    "annotations": [
+      {
+        "bbox": [
+          243,
+          30,
+          511,
+          466
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          273,
+          305,
+          421,
+          444
+        ],
+        "category_id": 55
+      },
+      {
+        "bbox": [
+          225,
+          113,
+          249,
+          127
+        ],
+        "category_id": 3
+      },
+      {
+        "bbox": [
+          204,
+          113,
+          226,
+          129
+        ],
+        "category_id": 3
+      },
+      {
+        "bbox": [
+          21,
+          149,
+          46,
+          166
+        ],
+        "category_id": 3
+      },
+      {
+        "bbox": [
+          247,
+          114,
+          271,
+          126
+        ],
+        "category_id": 3
+      },
+      {
+        "bbox": [
+          0,
+          158,
+          18,
+          173
+        ],
+        "category_id": 3
+      },
+      {
+        "bbox": [
+          43,
+          149,
+          63,
+          162
+        ],
+        "category_id": 3
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 42,
+        "hoi_category_id": 402
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 76
+      },
+      {
+        "subject_id": 0,
+        "object_id": 3,
+        "category_id": 58,
+        "hoi_category_id": 76
+      },
+      {
+        "subject_id": 0,
+        "object_id": 4,
+        "category_id": 58,
+        "hoi_category_id": 76
+      },
+      {
+        "subject_id": 0,
+        "object_id": 5,
+        "category_id": 58,
+        "hoi_category_id": 76
+      },
+      {
+        "subject_id": 0,
+        "object_id": 6,
+        "category_id": 58,
+        "hoi_category_id": 76
+      },
+      {
+        "subject_id": 0,
+        "object_id": 7,
+        "category_id": 58,
+        "hoi_category_id": 76
+      }
+    ],
+    "prompt": "(a photo of only one black woman inspecting a orange by looking close):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001824.jpg",
+    "img_id": 1824,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          364,
+          206,
+          511
+        ],
+        "category_id": 33
+      },
+      {
+        "bbox": [
+          0,
+          180,
+          95,
+          334
+        ],
+        "category_id": 33
+      },
+      {
+        "bbox": [
+          132,
+          14,
+          307,
+          510
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 2,
+        "object_id": 0,
+        "category_id": 40,
+        "hoi_category_id": 510
+      },
+      {
+        "subject_id": 2,
+        "object_id": 1,
+        "category_id": 40,
+        "hoi_category_id": 510
+      }
+    ],
+    "prompt": "(a photo of only one asian young woman hugging a suitcase):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001825.jpg",
+    "img_id": 1825,
+    "annotations": [
+      {
+        "bbox": [
+          174,
+          241,
+          313,
+          462
+        ],
+        "category_id": 33
+      },
+      {
+        "bbox": [
+          62,
+          76,
+          291,
+          490
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 40,
+        "hoi_category_id": 510
+      }
+    ],
+    "prompt": "(a photo of only one hispanic young woman hugging a suitcase):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001826.jpg",
+    "img_id": 1826,
+    "annotations": [
+      {
+        "bbox": [
+          233,
+          107,
+          417,
+          441
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          148,
+          194,
+          261,
+          452
+        ],
+        "category_id": 33
+      },
+      {
+        "bbox": [
+          0,
+          170,
+          132,
+          484
+        ],
+        "category_id": 33
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 40,
+        "hoi_category_id": 510
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 40,
+        "hoi_category_id": 510
+      }
+    ],
+    "prompt": "(a photo of only one white boy hugging a suitcase):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001827.jpg",
+    "img_id": 1827,
+    "annotations": [
+      {
+        "bbox": [
+          125,
+          167,
+          224,
+          317
+        ],
+        "category_id": 33
+      },
+      {
+        "bbox": [
+          181,
+          62,
+          292,
+          495
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 40,
+        "hoi_category_id": 510
+      }
+    ],
+    "prompt": "(a photo of only one hispanic boy hugging a suitcase):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001828.jpg",
+    "img_id": 1828,
+    "annotations": [
+      {
+        "bbox": [
+          227,
+          187,
+          355,
+          495
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          141,
+          0,
+          511,
+          405
+        ],
+        "category_id": 7
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 26,
+        "hoi_category_id": 189
+      }
+    ],
+    "prompt": "(a photo of only one black young woman exiting a train):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001829.jpg",
+    "img_id": 1829,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          91,
+          489,
+          425
+        ],
+        "category_id": 7
+      },
+      {
+        "bbox": [
+          490,
+          194,
+          511,
+          287
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 26,
+        "hoi_category_id": 189
+      }
+    ],
+    "prompt": "(a photo of only one hispanic boy exiting a train):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001830.jpg",
+    "img_id": 1830,
+    "annotations": [
+      {
+        "bbox": [
+          340,
+          152,
+          499,
+          461
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          36,
+          298,
+          325,
+          487
+        ],
+        "category_id": 17
+      },
+      {
+        "bbox": [
+          466,
+          399,
+          511,
+          459
+        ],
+        "category_id": 17
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 11,
+        "hoi_category_id": 85
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 11,
+        "hoi_category_id": 85
+      }
+    ],
+    "prompt": "(a photo of only one hispanic teenager chasing a cat):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001831.jpg",
+    "img_id": 1831,
+    "annotations": [
+      {
+        "bbox": [
+          372,
+          62,
+          511,
+          436
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          28,
+          156,
+          159,
+          371
+        ],
+        "category_id": 17
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 11,
+        "hoi_category_id": 85
+      }
+    ],
+    "prompt": "(a photo of only one hispanic teenager chasing a cat):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001832.jpg",
+    "img_id": 1832,
+    "annotations": [
+      {
+        "bbox": [
+          142,
+          27,
+          413,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          103,
+          0,
+          511,
+          388
+        ],
+        "category_id": 22
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 39,
+        "hoi_category_id": 316
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 112,
+        "hoi_category_id": 323
+      }
+    ],
+    "prompt": "(a photo of only one hispanic boy hosing a elephant,washing a elephant with water):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001833.jpg",
+    "img_id": 1833,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          74,
+          166,
+          509
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          181,
+          67,
+          510,
+          508
+        ],
+        "category_id": 22
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 39,
+        "hoi_category_id": 316
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 112,
+        "hoi_category_id": 323
+      }
+    ],
+    "prompt": "(a photo of only one white teenager hosing a elephant,washing a elephant with water):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001834.jpg",
+    "img_id": 1834,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          40,
+          353,
+          508
+        ],
+        "category_id": 22
+      },
+      {
+        "bbox": [
+          201,
+          82,
+          509,
+          510
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 39,
+        "hoi_category_id": 316
+      },
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 112,
+        "hoi_category_id": 323
+      }
+    ],
+    "prompt": "(a photo of only one asian young man hosing a elephant,washing a elephant with water):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001835.jpg",
+    "img_id": 1835,
+    "annotations": [
+      {
+        "bbox": [
+          4,
+          78,
+          251,
+          471
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          140,
+          41,
+          511,
+          467
+        ],
+        "category_id": 22
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 39,
+        "hoi_category_id": 316
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 112,
+        "hoi_category_id": 323
+      }
+    ],
+    "prompt": "(a photo of only one asian boy hosing a elephant,washing a elephant with water):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001836.jpg",
+    "img_id": 1836,
+    "annotations": [
+      {
+        "bbox": [
+          60,
+          190,
+          323,
+          489
+        ],
+        "category_id": 22
+      },
+      {
+        "bbox": [
+          270,
+          19,
+          442,
+          502
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 39,
+        "hoi_category_id": 316
+      },
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 112,
+        "hoi_category_id": 323
+      }
+    ],
+    "prompt": "(a photo of only one asian boy hosing a elephant,washing a elephant with water):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001837.jpg",
+    "img_id": 1837,
+    "annotations": [
+      {
+        "bbox": [
+          76,
+          42,
+          364,
+          438
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          133,
+          339,
+          268,
+          388
+        ],
+        "category_id": 49
+      },
+      {
+        "bbox": [
+          213,
+          376,
+          412,
+          460
+        ],
+        "category_id": 56
+      },
+      {
+        "bbox": [
+          465,
+          125,
+          501,
+          159
+        ],
+        "category_id": 51
+      },
+      {
+        "bbox": [
+          0,
+          112,
+          208,
+          235
+        ],
+        "category_id": 78
+      },
+      {
+        "bbox": [
+          406,
+          357,
+          511,
+          471
+        ],
+        "category_id": 56
+      },
+      {
+        "bbox": [
+          467,
+          52,
+          498,
+          100
+        ],
+        "category_id": 47
+      },
+      {
+        "bbox": [
+          173,
+          263,
+          294,
+          377
+        ],
+        "category_id": 56
+      },
+      {
+        "bbox": [
+          387,
+          118,
+          447,
+          156
+        ],
+        "category_id": 51
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 17,
+        "hoi_category_id": 377
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 378
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 16,
+        "hoi_category_id": 258
+      },
+      {
+        "subject_id": 0,
+        "object_id": 3,
+        "category_id": 58,
+        "hoi_category_id": 257
+      },
+      {
+        "subject_id": 0,
+        "object_id": 4,
+        "category_id": 58,
+        "hoi_category_id": 393
+      },
+      {
+        "subject_id": 0,
+        "object_id": 5,
+        "category_id": 16,
+        "hoi_category_id": 258
+      },
+      {
+        "subject_id": 0,
+        "object_id": 6,
+        "category_id": 58,
+        "hoi_category_id": 305
+      },
+      {
+        "subject_id": 0,
+        "object_id": 7,
+        "category_id": 16,
+        "hoi_category_id": 258
+      },
+      {
+        "subject_id": 0,
+        "object_id": 8,
+        "category_id": 58,
+        "hoi_category_id": 257
+      }
+    ],
+    "prompt": "(a photo of only one white boy cutting a broccoli,cutting with a knife,holding a knife with hand):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001838.jpg",
+    "img_id": 1838,
+    "annotations": [
+      {
+        "bbox": [
+          91,
+          141,
+          510,
+          506
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          153,
+          272,
+          283,
+          327
+        ],
+        "category_id": 50
+      },
+      {
+        "bbox": [
+          0,
+          6,
+          253,
+          505
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 112,
+        "hoi_category_id": 486
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 484
+      },
+      {
+        "subject_id": 2,
+        "object_id": 1,
+        "category_id": 112,
+        "hoi_category_id": 486
+      },
+      {
+        "subject_id": 2,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 484
+      }
+    ],
+    "prompt": "(a photo of only one hispanic man washing a spoon with water,holding a spoon with hand):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001839.jpg",
+    "img_id": 1839,
+    "annotations": [
+      {
+        "bbox": [
+          198,
+          66,
+          315,
+          258
+        ],
+        "category_id": 50
+      },
+      {
+        "bbox": [
+          0,
+          17,
+          280,
+          201
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 112,
+        "hoi_category_id": 486
+      },
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 37,
+        "hoi_category_id": 484
+      }
+    ],
+    "prompt": "(a photo of only one black young woman washing a spoon with water,holding a spoon with hand):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001840.jpg",
+    "img_id": 1840,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          0,
+          511,
+          372
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          114,
+          190,
+          216,
+          400
+        ],
+        "category_id": 50
+      },
+      {
+        "bbox": [
+          64,
+          295,
+          334,
+          509
+        ],
+        "category_id": 51
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 112,
+        "hoi_category_id": 486
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 484
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 257
+      }
+    ],
+    "prompt": "(a photo of only one asian teenager washing a spoon with water,holding a spoon with hand):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001841.jpg",
+    "img_id": 1841,
+    "annotations": [
+      {
+        "bbox": [
+          220,
+          242,
+          260,
+          284
+        ],
+        "category_id": 37
+      },
+      {
+        "bbox": [
+          226,
+          88,
+          510,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          35,
+          203,
+          408,
+          418
+        ],
+        "category_id": 39
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 58,
+        "hoi_category_id": 502
+      },
+      {
+        "subject_id": 1,
+        "object_id": 2,
+        "category_id": 105,
+        "hoi_category_id": 230
+      }
+    ],
+    "prompt": "(a photo of only one white woman throwing a baseball bat):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001842.jpg",
+    "img_id": 1842,
+    "annotations": [
+      {
+        "bbox": [
+          80,
+          86,
+          392,
+          509
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          120,
+          72,
+          469,
+          112
+        ],
+        "category_id": 39
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 105,
+        "hoi_category_id": 230
+      }
+    ],
+    "prompt": "(a photo of only one hispanic boy throwing a baseball bat):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001843.jpg",
+    "img_id": 1843,
+    "annotations": [
+      {
+        "bbox": [
+          197,
+          195,
+          333,
+          256
+        ],
+        "category_id": 39
+      },
+      {
+        "bbox": [
+          0,
+          47,
+          204,
+          479
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 105,
+        "hoi_category_id": 230
+      }
+    ],
+    "prompt": "(a photo of only one black woman throwing a baseball bat):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001844.jpg",
+    "img_id": 1844,
+    "annotations": [
+      {
+        "bbox": [
+          284,
+          62,
+          511,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          135,
+          374,
+          511,
+          456
+        ],
+        "category_id": 39
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 105,
+        "hoi_category_id": 230
+      }
+    ],
+    "prompt": "(a photo of only one black teenager throwing a baseball bat):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001845.jpg",
+    "img_id": 1845,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          7,
+          275,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          196,
+          0,
+          511,
+          123
+        ],
+        "category_id": 78
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 13,
+        "hoi_category_id": 390
+      }
+    ],
+    "prompt": "(a photo of only one white teenager cleaning a microwave):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001846.jpg",
+    "img_id": 1846,
+    "annotations": [
+      {
+        "bbox": [
+          13,
+          0,
+          449,
+          511
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          348,
+          6,
+          470,
+          173
+        ],
+        "category_id": 78
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 13,
+        "hoi_category_id": 390
+      }
+    ],
+    "prompt": "(a photo of only one hispanic young man cleaning a microwave):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001847.jpg",
+    "img_id": 1847,
+    "annotations": [
+      {
+        "bbox": [
+          219,
+          0,
+          511,
+          511
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          164,
+          132,
+          413,
+          307
+        ],
+        "category_id": 78
+      },
+      {
+        "bbox": [
+          0,
+          138,
+          144,
+          343
+        ],
+        "category_id": 78
+      },
+      {
+        "bbox": [
+          236,
+          335,
+          286,
+          366
+        ],
+        "category_id": 51
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 13,
+        "hoi_category_id": 390
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 13,
+        "hoi_category_id": 390
+      },
+      {
+        "subject_id": 0,
+        "object_id": 3,
+        "category_id": 58,
+        "hoi_category_id": 257
+      }
+    ],
+    "prompt": "(a photo of only one asian man cleaning a microwave):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001848.jpg",
+    "img_id": 1848,
+    "annotations": [
+      {
+        "bbox": [
+          127,
+          25,
+          359,
+          447
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          276,
+          112,
+          481,
+          416
+        ],
+        "category_id": 70
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 94,
+        "hoi_category_id": 556
+      }
+    ],
+    "prompt": "(a photo of only one black teenager standing on a toilet):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001849.jpg",
+    "img_id": 1849,
+    "annotations": [
+      {
+        "bbox": [
+          1,
+          25,
+          511,
+          510
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          23,
+          377,
+          203,
+          511
+        ],
+        "category_id": 70
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 94,
+        "hoi_category_id": 556
+      }
+    ],
+    "prompt": "(a photo of only one white young woman standing on a toilet):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001850.jpg",
+    "img_id": 1850,
+    "annotations": [
+      {
+        "bbox": [
+          196,
+          82,
+          492,
+          269
+        ],
+        "category_id": 49
+      },
+      {
+        "bbox": [
+          302,
+          0,
+          511,
+          180
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 112,
+        "hoi_category_id": 380
+      }
+    ],
+    "prompt": "(a photo of only one black woman washing a knife with water):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001851.jpg",
+    "img_id": 1851,
+    "annotations": [
+      {
+        "bbox": [
+          263,
+          52,
+          511,
+          388
+        ],
+        "category_id": 49
+      },
+      {
+        "bbox": [
+          0,
+          1,
+          422,
+          362
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          0,
+          338,
+          294,
+          509
+        ],
+        "category_id": 51
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 112,
+        "hoi_category_id": 380
+      },
+      {
+        "subject_id": 1,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 257
+      }
+    ],
+    "prompt": "(a photo of only one black young woman washing a knife with water):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001852.jpg",
+    "img_id": 1852,
+    "annotations": [
+      {
+        "bbox": [
+          390,
+          382,
+          511,
+          488
+        ],
+        "category_id": 56
+      },
+      {
+        "bbox": [
+          1,
+          0,
+          336,
+          380
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 1,
+        "object_id": 0,
+        "category_id": 112,
+        "hoi_category_id": 263
+      }
+    ],
+    "prompt": "(a photo of only one hispanic man washing a broccoli with water):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001853.jpg",
+    "img_id": 1853,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          0,
+          316,
+          507
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          224,
+          199,
+          436,
+          434
+        ],
+        "category_id": 56
+      },
+      {
+        "bbox": [
+          112,
+          137,
+          470,
+          485
+        ],
+        "category_id": 51
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 112,
+        "hoi_category_id": 263
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 58,
+        "hoi_category_id": 257
+      }
+    ],
+    "prompt": "(a photo of only one asian man washing a broccoli with water):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001854.jpg",
+    "img_id": 1854,
+    "annotations": [
+      {
+        "bbox": [
+          0,
+          0,
+          338,
+          398
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          206,
+          275,
+          510,
+          425
+        ],
+        "category_id": 59
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 89,
+        "hoi_category_id": 427
+      }
+    ],
+    "prompt": "(a photo of only one asian young woman sliding a pizza):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001855.jpg",
+    "img_id": 1855,
+    "annotations": [
+      {
+        "bbox": [
+          94,
+          124,
+          417,
+          440
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          219,
+          438,
+          404,
+          494
+        ],
+        "category_id": 59
+      },
+      {
+        "bbox": [
+          64,
+          274,
+          226,
+          322
+        ],
+        "category_id": 59
+      },
+      {
+        "bbox": [
+          117,
+          341,
+          249,
+          468
+        ],
+        "category_id": 59
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 89,
+        "hoi_category_id": 427
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 89,
+        "hoi_category_id": 427
+      },
+      {
+        "subject_id": 0,
+        "object_id": 3,
+        "category_id": 89,
+        "hoi_category_id": 427
+      }
+    ],
+    "prompt": "(a photo of only one hispanic man sliding a pizza):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001856.jpg",
+    "img_id": 1856,
+    "annotations": [
+      {
+        "bbox": [
+          39,
+          39,
+          373,
+          507
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          318,
+          389,
+          510,
+          510
+        ],
+        "category_id": 59
+      },
+      {
+        "bbox": [
+          332,
+          169,
+          511,
+          298
+        ],
+        "category_id": 59
+      },
+      {
+        "bbox": [
+          176,
+          324,
+          270,
+          362
+        ],
+        "category_id": 59
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 89,
+        "hoi_category_id": 427
+      },
+      {
+        "subject_id": 0,
+        "object_id": 2,
+        "category_id": 89,
+        "hoi_category_id": 427
+      },
+      {
+        "subject_id": 0,
+        "object_id": 3,
+        "category_id": 89,
+        "hoi_category_id": 427
+      }
+    ],
+    "prompt": "(a photo of only one asian boy sliding a pizza):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001857.jpg",
+    "img_id": 1857,
+    "annotations": [
+      {
+        "bbox": [
+          128,
+          195,
+          223,
+          297
+        ],
+        "category_id": 37
+      },
+      {
+        "bbox": [
+          192,
+          110,
+          211,
+          141
+        ],
+        "category_id": 37
+      },
+      {
+        "bbox": [
+          0,
+          62,
+          171,
+          498
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          232,
+          394,
+          467,
+          511
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 2,
+        "object_id": 0,
+        "category_id": 85,
+        "hoi_category_id": 499
+      },
+      {
+        "subject_id": 2,
+        "object_id": 0,
+        "category_id": 37,
+        "hoi_category_id": 494
+      },
+      {
+        "subject_id": 2,
+        "object_id": 1,
+        "category_id": 85,
+        "hoi_category_id": 499
+      },
+      {
+        "subject_id": 2,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 494
+      },
+      {
+        "subject_id": 3,
+        "object_id": 0,
+        "category_id": 85,
+        "hoi_category_id": 499
+      },
+      {
+        "subject_id": 3,
+        "object_id": 0,
+        "category_id": 37,
+        "hoi_category_id": 494
+      }
+    ],
+    "prompt": "(a photo of only one white man signing a sports ball with a pen signing on the ball,holding a sports ball with hand):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001858.jpg",
+    "img_id": 1858,
+    "annotations": [
+      {
+        "bbox": [
+          30,
+          81,
+          438,
+          509
+        ],
+        "category_id": 1
+      },
+      {
+        "bbox": [
+          61,
+          209,
+          255,
+          385
+        ],
+        "category_id": 37
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 85,
+        "hoi_category_id": 499
+      },
+      {
+        "subject_id": 0,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 494
+      }
+    ],
+    "prompt": "(a photo of only one hispanic boy signing a sports ball with a pen signing on the ball,holding a sports ball with hand):1.75,best quality,only one person,ultra realistic,Professional,HD,Highly detailed"
+  },
+  {
+    "file_name": "Syn_train_001859.jpg",
+    "img_id": 1859,
+    "annotations": [
+      {
+        "bbox": [
+          335,
+          321,
+          426,
+          386
+        ],
+        "category_id": 37
+      },
+      {
+        "bbox": [
+          332,
+          386,
+          510,
+          511
+        ],
+        "category_id": 37
+      },
+      {
+        "bbox": [
+          10,
+          1,
+          421,
+          511
+        ],
+        "category_id": 1
+      }
+    ],
+    "hoi_annotation": [
+      {
+        "subject_id": 2,
+        "object_id": 0,
+        "category_id": 85,
+        "hoi_category_id": 499
+      },
+      {
+        "subject_id": 2,
+        "object_id": 0,
+        "category_id": 37,
+        "hoi_category_id": 494
+      },
+      {
+        "subject_id": 2,
+        "object_id": 1,
+        "category_id": 85,
+        "hoi_category_id": 499
+      },
+      {
+        "subject_id": 2,
+        "object_id": 1,
+        "category_id": 37,
+        "hoi_category_id": 494
+      }
+    ],
+    "prompt": "(a photo of only one black young man signing a sports ball with a pen signing on the ball,holding a sports ball with hand):1.75,best quality,only one person,ultra realistic,Professional,4K,Highly detailed"
   }
 ]
