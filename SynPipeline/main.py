@@ -17,7 +17,7 @@ from utils.anno_json import generate_annotation
 from labels_txt.rare_list import rare_list
 
 parser = argparse.ArgumentParser("Set output", add_help=False)
-parser.add_argument("--imgs_num", default=1, type=int)
+parser.add_argument("--imgs_num", default=3, type=int)
 parser.add_argument("--steps", default=80, type=int)
 parser.add_argument("--rare_num", default=75, type=int)  # 表明前多少个算rare
 parser.add_argument("--mode", default="seq", type=str)  # random | seq
@@ -147,7 +147,7 @@ class SynPipeline:
                 image=self.get_hico_img(v_o_list),
                 height=512,
                 width=512,
-                strength=0.83,
+                strength=0.87,
                 guidance_scale=7.55,
                 num_inference_steps=steps,
                 num_images_per_prompt=1,
