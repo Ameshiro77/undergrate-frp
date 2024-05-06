@@ -224,7 +224,7 @@ if __name__ == "__main__":
             hois = target_dict["hoi_annotation"]
             verb_ids = [_dict["category_id"] for _dict in hois]
             hoi_ids = [_dict["hoi_category_id"] for _dict in hois]
-            if 68 not in verb_ids:
+            if 91 not in verb_ids:
                 continue
             # if 36 not in objs_id:
             #     continue

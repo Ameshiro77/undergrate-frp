@@ -39,7 +39,7 @@ def get_rare_list(HICO_PATH,limit):
 #     plt.show()
     return list(hoi_count.keys())[:limit]
     
-def analyse(mode='Syn_HICO'):
+def analyse(mode='Syn',limit=160):
     # 用于分析HICO-DET数据集。
     if mode == "HICO":
         img_dir = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det\images\train2015"
@@ -100,7 +100,8 @@ def analyse(mode='Syn_HICO'):
     #     print(index, i, hoi_count[i + 1])
     #exit()
     #print(sorted(hico_unseen_index["rare_first"]))
-    plt.bar(range(160), list(hoi_count.values())[:160])
+    print(list(hoi_count.keys())[:limit])
+    plt.bar(range(limit), list(hoi_count.values())[:limit])
     # plt.bar(range(117),list(verb_count.values()))
     plt.show()
 
@@ -162,4 +163,4 @@ if __name__ == "__main__":
     if not os.path.exists(HICO_PATH):
         HICO_PATH = "/root/autodl-tmp/data/hico_20160224_det"
     get_rare_list(HICO_PATH,300)
-    #analyse()
+    analyse('Syn_HICO',76)
