@@ -182,7 +182,7 @@ def main(args):
     print('****************')
     
     #=== 试验区域 别的地方别动
-    if(1):
+    if(0):
         print("start")
         args.hoi_path = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det"
         dataset_train = build_dataset(image_set='train', args=args)   #继承dataset类。args指明HICO/VCOCO
