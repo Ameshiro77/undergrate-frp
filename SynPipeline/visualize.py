@@ -224,12 +224,12 @@ if __name__ == "__main__":
             hois = target_dict["hoi_annotation"]
             verb_ids = [_dict["category_id"] for _dict in hois]
             hoi_ids = [_dict["hoi_category_id"] for _dict in hois]
-            if 91 not in verb_ids:
-                continue
+            #if 1 not in verb_ids:
+            #    continue
             # if 36 not in objs_id:
             #     continue
-            # if 523 not in hoi_ids:
-            #     continue
+            if 540 not in hoi_ids:
+                 continue
 
         prompt = target_dict.get("prompt")  # 名字打印到标题上
         if prompt == None:

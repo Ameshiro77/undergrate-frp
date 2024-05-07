@@ -162,5 +162,5 @@ if __name__ == "__main__":
     HICO_PATH = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det"
     if not os.path.exists(HICO_PATH):
         HICO_PATH = "/root/autodl-tmp/data/hico_20160224_det"
-    get_rare_list(HICO_PATH,300)
-    analyse('HICO',138)
+    get_rare_list(HICO_PATH,70)
+    analyse('Syn_HICO',70)
