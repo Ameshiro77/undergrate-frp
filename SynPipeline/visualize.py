@@ -228,7 +228,7 @@ if __name__ == "__main__":
             #    continue
             # if 36 not in objs_id:
             #     continue
-            if 540 not in hoi_ids:
+            if 64 not in hoi_ids:
                  continue
 
         prompt = target_dict.get("prompt")  # 名字打印到标题上

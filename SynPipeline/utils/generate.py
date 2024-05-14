@@ -146,5 +146,5 @@ if __name__ == "__main__":
     # for seq_hoi_id in hoi_id:
     #     v_o_list.append(id_to_hoi_dict[seq_hoi_id])
     print(v_o_list)
-    imgs = generate(SDpipe, v_o_list, 80, gen, HICO_PATH)
-    imgs[0].save("./example.jpg")
+    # imgs = generate(SDpipe, v_o_list, 80, gen, HICO_PATH)
+    # imgs[0].save("./example.jpg")

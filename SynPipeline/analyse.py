@@ -102,7 +102,17 @@ def analyse(mode='Syn',limit=160):
     #print(sorted(hico_unseen_index["rare_first"]))
     print(list(hoi_count.keys())[:limit])
     plt.bar(range(limit), list(hoi_count.values())[:limit])
+    
+    import matplotlib
+    myfont = matplotlib.font_manager.FontProperties(fname=r"c:\windows\fonts\simsun.ttc", size=10)
+    plt.rcParams['font.sans-serif']=['SimHei']
+    plt.rcParams.update({'font.size': 15})
+    plt.xlabel("hoi标签序号",fontproperties = myfont)
+    plt.ylabel("hoi实例个数",fontproperties = myfont)
     # plt.bar(range(117),list(verb_count.values()))
+    from matplotlib.ticker import MaxNLocator
+    plt.gca().xaxis.set_major_locator(MaxNLocator(integer=True))
+    plt.gca().yaxis.set_major_locator(MaxNLocator(integer=True))
     plt.show()
 
 
@@ -163,4 +173,4 @@ if __name__ == "__main__":
     if not os.path.exists(HICO_PATH):
         HICO_PATH = "/root/autodl-tmp/data/hico_20160224_det"
     get_rare_list(HICO_PATH,70)
-    analyse('Syn_HICO',70)
+    analyse('Syn_HICO',160)
