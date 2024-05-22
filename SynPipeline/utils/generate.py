@@ -15,6 +15,7 @@ from utils.get_prompt import get_prompt
 
 def random_choice(HICO_PATH):  # 随机选择要生成的vo元组列表
     from analyse import get_rare_list
+
     PATH = HICO_PATH
     _rare_list = get_rare_list(PATH, 160)
     random.shuffle(_rare_list)
@@ -74,9 +75,9 @@ def get_hico_img(v_o_list, HICO_PATH):
     return img
 
 
-def generate(pipe, v_o_list, steps, mode, HICO_PATH):
-    prompt = get_prompt(v_o_list)
-    print(prompt)
+def generate(pipe, v_o_list, steps, mode, HICO_PATH, pmt, strength=0.83):
+    # prompt = get_prompt(v_o_list)
+    # print(prompt)
     ngt_prmt = "monochrome,skin blemishes,6 more fingers on one hand,deformity,bad legs,malformed limbs,extra limbs,ugly,poorly drawn hands,poorly drawn face,\
                                 extra fingers,mutated hands,mutation,bad anatomy,disfigured,fused fingers,2 more person"
     if mode == "t2i":
@@ -100,13 +101,31 @@ def generate(pipe, v_o_list, steps, mode, HICO_PATH):
             image=get_hico_img(v_o_list, HICO_PATH),
             height=512,
             width=512,
-            strength=0.83,
+            strength=strength,
             guidance_scale=7.65,
             num_inference_steps=steps,
             num_images_per_prompt=1,
             negative_prompt=ngt_prmt,
         ).images
         return imgs
+
+
+def get_clip(imgs, prompt):
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model, preprocess = clip.load("ViT-B/16", device=device)
+    for img in imgs:
+        # ========= 首先，用CLIP过滤
+        with torch.no_grad():
+            image_embed = preprocess(img).unsqueeze(0).to(device)  # 向量化
+            text_embed = clip.tokenize(prompt).to(device)
+            image_features = model.encode_image(
+                image_embed
+            )  # 将图片进行编码  # [1,512]
+            text_features = model.encode_text(text_embed)  # 将文本进行编码
+            similarity = torch.nn.functional.cosine_similarity(
+                image_features, text_features
+            ).item()
+        return similarity
 
 
 if __name__ == "__main__":
@@ -136,15 +155,68 @@ if __name__ == "__main__":
         )
     else:
         raise ValueError("生成方式不对,选择文生图t2i或图生图i2i")
-    # from diffusers import DDPMScheduler
 
-    # SDpipe.scheduler = DDPMScheduler.from_config(SDpipe.scheduler.config)
-    print(SDpipe.config)
-    #     exit()
-    v_o_list = random_choice(HICO_PATH)
-    # hoi_id = (386, 388)
-    # for seq_hoi_id in hoi_id:
-    #     v_o_list.append(id_to_hoi_dict[seq_hoi_id])
-    print(v_o_list)
-    # imgs = generate(SDpipe, v_o_list, 80, gen, HICO_PATH)
-    # imgs[0].save("./example.jpg")
+    from diffusers import DDPMScheduler
+
+    out_dir = "./ablation"
+    files_num = int(len(os.listdir(out_dir)) / 8)
+    index_name = "{:03d}".format(files_num + 1)
+
+    # ========================================== #
+    v_o_list = []
+    hoi_id = (75,)
+    for seq_hoi_id in hoi_id:
+        v_o_list.append(id_to_hoi_dict[seq_hoi_id])
+    pmt = get_prompt(v_o_list)
+    print(pmt)
+    false_pmt = get_prompt(v_o_list, False)
+    print(false_pmt)
+    clip_score = 0.4222
+    file_name = out_dir + "/PNDM_i2i" + index_name + str(clip_score) + ".jpg"
+    exit()
+
+    # PDNM 标准基线
+    imgs = generate(SDpipe, v_o_list, 80, gen, pmt, HICO_PATH)
+    clip_score = round(get_clip(imgs, pmt), 4)
+    imgs[0].save(out_dir + "/PNDM_i2i" + index_name + str(clip_score) + ".jpg")
+    print(clip_score)
+
+    # 文生图
+    imgs = generate(SDpipe, v_o_list, 80, "t2i", pmt, HICO_PATH)
+    clip_score = round(get_clip(imgs, pmt), 4)
+    imgs[0].save(out_dir + "/PNDM_t2i" + index_name + str(clip_score) + ".jpg")
+    print(clip_score)
+
+    # 禁用辅助词
+    imgs = generate(SDpipe, v_o_list, 80, gen, false_pmtpmt, HICO_PATH)
+    clip_score = round(get_clip(imgs, false_pmtpmt), 4)
+    imgs[0].save(out_dir + "/PNDM_i2i" + index_name + str(clip_score) + ".jpg")
+    print(clip_score)
+
+    # 加噪步数
+    for i in range(4):
+        imgs = generate(SDpipe, v_o_list, 80, "t2i", pmt, HICO_PATH, (i + 1) * 0.2)
+        clip_score = round(get_clip(imgs, pmt), 4)
+        imgs[0].save(
+            out_dir
+            + "/PNDM_t2i"
+            + index_name
+            + str(clip_score)
+            + "noise_"
+            + str(i)
+            + ".jpg"
+        )
+        print(clip_score)
+
+    # 采样器的比较 DDPM
+    SDpipe.scheduler = DDPMScheduler.from_config(SDpipe.scheduler.config)
+    # print(SDpipe.config)
+    imgs = generate(SDpipe, v_o_list, 80, gen, pmt, HICO_PATH)
+    clip_score = round(get_clip(imgs, pmt), 4)
+    imgs[0].save(out_dir + "/DDPM_t2i" + index_name + str(clip_score) + ".jpg")
+    print(clip_score)
+
+    # with的消融实验
+    # 采样器的比较
+    # clip过滤效果
+    # 加噪

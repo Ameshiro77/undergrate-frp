@@ -1,6 +1,7 @@
 """
 本.py实现从一个[(v,o)..]列表生成prompt
 """
+
 from labels_txt.labels import (
     id_to_verb_dict,
     id_to_obj_dict,
@@ -17,6 +18,7 @@ from labels_txt.hico_text_label import (
 from labels_txt.vo_pairs import vo_pairs, multi_hoi, aux_verb_noun
 import random
 
+
 # 获取动词
 def get_verb(v_o):  # 接受一个(v,o)元组
     prompt = hico_text_label.get(v_o).split()[5:]
@@ -26,6 +28,7 @@ def get_verb(v_o):  # 接受一个(v,o)元组
             break
         str = str + word + " "
     return str[:-1]
+
 
 # 获取名词
 def get_noun(v_o):  # 接受一个(v,o)元组
@@ -38,21 +41,29 @@ def get_noun(v_o):  # 接受一个(v,o)元组
         str = str + word + " "
     return "a " + str[:-1]
 
+
 # 获取全部的hoi短语
-def get_hoi(v_o_list):
+def get_hoi(v_o_list, use_aux=True):
+    aux_dict = aux_verb_noun
+    if use_aux == False:
+        aux_dict = {}
+        for i in range(117):
+            aux_dict[i] = ""
+
     hoi = ""
     last_vo = v_o_list[0]
     for v_o in v_o_list:
         if last_vo != v_o:
-            hoi = hoi[:-4] + get_noun(last_vo) + aux_verb_noun[last_vo[0]] + ","
+            hoi = hoi[:-4] + get_noun(last_vo) + aux_dict[last_vo[0]] + ","
         hoi = hoi + (get_verb(v_o)) + " and "
         last_vo = v_o
-    hoi = hoi[:-4] + get_noun(v_o_list[-1]) + aux_verb_noun[v_o_list[-1][0]]
+    hoi = hoi[:-4] + get_noun(v_o_list[-1]) + aux_dict[v_o_list[-1][0]]
     return hoi
 
+
 # 获取提示词
-def get_prompt(v_o_list: list):
-    race = random.choice(["asian", "black", "hispanic" ,"white"])
+def get_prompt(v_o_list: list, use_aux=True):
+    race = random.choice(["asian", "black", "hispanic", "white"])
     human = random.choice(
         ["boy", "teenager", "man", "young man", "woman", "young woman"]
     )
@@ -64,21 +75,13 @@ def get_prompt(v_o_list: list):
     shooting2 = random.choice(["warm lighting", "blue hour"])
     # shooting3 = random.choice(["partial view","back view","front view"])
     shooting3 = random.choice(["Highly detailed"])
-    #shooting4 = random.choice(["full shot"])
+    # shooting4 = random.choice(["full shot"])
     # prompt_prefix = hico_text_label[v_o].replace("person",race+" "+human)+","
-    hoi = get_hoi(v_o_list)
+    hoi = get_hoi(v_o_list, use_aux)
     # (a photo of a asian young man cutting with a knife,cutting a carrot,holding a knife):1.05,
     prompt_prefix = "(a photo of only one " + race + " " + human + " " + hoi + "):1.75,"
     prompt_suffix = (
-        quality
-        + ","
-        + scene
-        + ","
-        + details
-        + ","
-        + shooting
-        + ","
-        + shooting3
+        quality + "," + scene + "," + details + "," + shooting + "," + shooting3
     )
-    #return prompt_prefix
+    # return prompt_prefix
     return prompt_prefix + prompt_suffix

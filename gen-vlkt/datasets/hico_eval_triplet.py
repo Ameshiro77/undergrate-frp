@@ -46,18 +46,18 @@ class HICOEvaluator():
             img_preds = {k: v.to('cpu').numpy() for k, v in img_preds.items()}
             bboxes = [{'bbox': list(bbox)} for bbox in img_preds['boxes']]
             obj_scores = img_preds['obj_scores'] *  img_preds['obj_scores']
-            hoi_scores = img_preds['hoi_scores'] + obj_scores[:, self.hoi_obj_list]
+            hoi_scores = img_preds['hoi_scores'] + obj_scores[:, self.hoi_obj_list] #64*600
 
-            hoi_labels = np.tile(np.arange(hoi_scores.shape[1]), (hoi_scores.shape[0], 1))
+            hoi_labels = np.tile(np.arange(hoi_scores.shape[1]), (hoi_scores.shape[0], 1)) #64*600,[0~599 0~599 ..]
             subject_ids = np.tile(img_preds['sub_ids'], (hoi_scores.shape[1], 1)).T
             object_ids = np.tile(img_preds['obj_ids'], (hoi_scores.shape[1], 1)).T
 
-            hoi_scores = hoi_scores.ravel()
+            hoi_scores = hoi_scores.ravel()  #ravel 拉成一维数组
             hoi_labels = hoi_labels.ravel()
             subject_ids = subject_ids.ravel()
             object_ids = object_ids.ravel()
 
-            topk_hoi_scores = top_k(list(hoi_scores), self.max_hois)
+            topk_hoi_scores = top_k(list(hoi_scores), self.max_hois) #用了堆排序
             topk_indexes = np.array([np.where(hoi_scores == score)[0][0] for score in topk_hoi_scores])
 
             if len(subject_ids) > 0:

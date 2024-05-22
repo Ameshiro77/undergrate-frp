@@ -110,7 +110,7 @@ class GEN_VLKT(nn.Module):
             v_linear_proj_weight = clip_model.visual.proj.detach()
 
         del clip_model
-
+        # clip_label, obj_clip_label, v_linear_proj_weight, hoi_text, obj_text, train_clip_label
         return text_embedding.float(), obj_text_embedding.float(), v_linear_proj_weight.float(), \
                hoi_text_label_del, obj_text_inputs, text_embedding_del.float()
 
@@ -227,13 +227,13 @@ class SetCriterionHOI(nn.Module):
 
     def loss_obj_labels(self, outputs, targets, indices, num_interactions, log=True):
         assert 'pred_obj_logits' in outputs
-        src_logits = outputs['pred_obj_logits']
-
+        src_logits = outputs['pred_obj_logits'] #2 100 81
+        # 设2bs 100query 真实样本5个物体
         idx = self._get_src_permutation_idx(indices)
-        target_classes_o = torch.cat([t['obj_labels'][J] for t, (_, J) in zip(targets, indices)])
-        target_classes = torch.full(src_logits.shape[:2], self.num_obj_classes,
+        target_classes_o = torch.cat([t['obj_labels'][J] for t, (_, J) in zip(targets, indices)]) #[5]
+        target_classes = torch.full(src_logits.shape[:2], self.num_obj_classes,  #[2 100]
                                     dtype=torch.int64, device=src_logits.device)
-        target_classes[idx] = target_classes_o
+        target_classes[idx] = target_classes_o #[2 100]
 
         loss_obj_ce = F.cross_entropy(src_logits.transpose(1, 2), target_classes, self.empty_weight)
         losses = {'loss_obj_ce': loss_obj_ce}
@@ -270,9 +270,9 @@ class SetCriterionHOI(nn.Module):
         assert 'pred_hoi_logits' in outputs
         src_logits = outputs['pred_hoi_logits']
 
-        idx = self._get_src_permutation_idx(indices)
-        target_classes_o = torch.cat([t['hoi_labels'][J] for t, (_, J) in zip(targets, indices)])
-        target_classes = torch.zeros_like(src_logits)
+        idx = self._get_src_permutation_idx(indices) #一个元组 前者是batch_id列表 后者是匹配的query_id序号列表
+        target_classes_o = torch.cat([t['hoi_labels'][J] for t, (_, J) in zip(targets, indices)])  #(5 600)
+        target_classes = torch.zeros_like(src_logits) #(2 100 600)
         target_classes[idx] = target_classes_o
         src_logits = _sigmoid(src_logits)
         loss_hoi_ce = self._neg_loss(src_logits, target_classes, weights=None, alpha=self.alpha)
@@ -389,7 +389,7 @@ class SetCriterionHOI(nn.Module):
         # Retrieve the matching between the outputs of the last layer and the targets
         indices = self.matcher(outputs_without_aux, targets)
 
-        num_interactions = sum(len(t['hoi_labels']) for t in targets)
+        num_interactions = sum(len(t['hoi_labels']) for t in targets)  #以5为例
         num_interactions = torch.as_tensor([num_interactions], dtype=torch.float,
                                            device=next(iter(outputs.values())).device)
         if is_dist_avail_and_initialized():
@@ -482,15 +482,15 @@ def build(args):
         weight_dict['loss_hoi_labels'] = args.hoi_loss_coef
         weight_dict['loss_obj_ce'] = args.obj_loss_coef
     else:
-        weight_dict['loss_hoi_labels'] = args.hoi_loss_coef
-        weight_dict['loss_obj_ce'] = args.obj_loss_coef
+        weight_dict['loss_hoi_labels'] = args.hoi_loss_coef #2
+        weight_dict['loss_obj_ce'] = args.obj_loss_coef #1
 
-    weight_dict['loss_sub_bbox'] = args.bbox_loss_coef
-    weight_dict['loss_obj_bbox'] = args.bbox_loss_coef
+    weight_dict['loss_sub_bbox'] = args.bbox_loss_coef #2.5
+    weight_dict['loss_obj_bbox'] = args.bbox_loss_coef #1
     weight_dict['loss_sub_giou'] = args.giou_loss_coef
     weight_dict['loss_obj_giou'] = args.giou_loss_coef
     if args.with_mimic:
-        weight_dict['loss_feat_mimic'] = args.mimic_loss_coef
+        weight_dict['loss_feat_mimic'] = args.mimic_loss_coef #20
 
     if args.aux_loss:
         aux_weight_dict = {}
