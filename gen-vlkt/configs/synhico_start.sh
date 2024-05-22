@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -x
-EXP_DIR=exps/20240507_syn_restart
+EXP_DIR=exps/vlkt_restart
 # python -m torch.distributed.launch \
 #         --nproc_per_node=8 \
 #         --use_env \
@@ -10,7 +10,7 @@ EXP_DIR=exps/20240507_syn_restart
 #         --pretrained /root/autodl-tmp/frp/params/detr-r50-pre-2branch-hico.pth \
  #--pretrained /root/autodl-tmp/frp/params/HICO_GEN_VLKT_S.pth \
 python  main.py \
-        --pretrained /root/autodl-tmp/frp/params/HICO_GEN_VLKT_S.pth \
+        --pretrained /root/autodl-tmp/frp/params/detr-r50-pre-2branch-hico.pth \
         --output_dir ${EXP_DIR} \
         --dataset_file hico \
         --hoi_path /root/autodl-tmp/data/hico_20160224_det \
@@ -19,7 +19,7 @@ python  main.py \
         --backbone resnet50 \
         --num_queries 64 \
         --dec_layers 3 \
-        --epochs 2 \
+        --epochs 3 \
         --lr_drop 60 \
         --batch_size 4 \
         --use_nms_filter \
@@ -28,8 +28,8 @@ python  main.py \
         --with_obj_clip_label \
         --with_mimic \
         --mimic_loss_coef 20 \
-        --lr 0.00001 \
-        --lr_backbone 0.000001 \
-        --lr_clip 0.000001 \
-        --dataset_json syn \
+        --lr 0.0001 \
+        --lr_backbone 0.00001 \
+        --lr_clip 0.00001 \
+        --dataset_json hico \
         

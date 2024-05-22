@@ -311,7 +311,7 @@ def build(image_set, args):
         }
     else:
         PATHS = {
-            'train': (root / 'images' / 'train2015', root / 'annotations' / 'trainval_hico.json',
+            'train': (root / 'images' / 'train2015', root / 'annotations' / 'new_trainval_hico.json',
                       root / 'clip_feats_pool' / 'train2015'),
             'val': (
                 root / 'images' / 'test2015', root / 'annotations' / 'test_hico.json',

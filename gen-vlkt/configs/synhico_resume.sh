@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -x
-EXP_DIR=exps/20240507_syn_resume
+EXP_DIR=exps/new2_hico_resume
 # python -m torch.distributed.launch \
 #         --nproc_per_node=8 \
 #         --use_env \
@@ -31,5 +31,5 @@ python  main.py \
         --lr 0.00001 \
         --lr_backbone 0.000001 \
         --lr_clip 0.000001 \
-        --dataset_json syn \
+        --dataset_json hico \
         

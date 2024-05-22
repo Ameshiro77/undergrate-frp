@@ -75,7 +75,7 @@ def get_hico_img(v_o_list, HICO_PATH):
     return img
 
 
-def generate(pipe, v_o_list, steps, mode, HICO_PATH, pmt, strength=0.83):
+def generate(pipe, v_o_list, steps, mode,  pmt, HICO_PATH,strength=0.83):
     # prompt = get_prompt(v_o_list)
     # print(prompt)
     ngt_prmt = "monochrome,skin blemishes,6 more fingers on one hand,deformity,bad legs,malformed limbs,extra limbs,ugly,poorly drawn hands,poorly drawn face,\
@@ -84,7 +84,7 @@ def generate(pipe, v_o_list, steps, mode, HICO_PATH, pmt, strength=0.83):
         pipe.to("cuda")
         torch.cuda.empty_cache()
         imgs = pipe(
-            prompt,
+            pmt,
             height=512,
             width=512,
             num_inference_steps=steps,
@@ -97,7 +97,7 @@ def generate(pipe, v_o_list, steps, mode, HICO_PATH, pmt, strength=0.83):
         pipe.to("cuda")
         torch.cuda.empty_cache()
         imgs = pipe(
-            prompt,
+            pmt,
             image=get_hico_img(v_o_list, HICO_PATH),
             height=512,
             width=512,
@@ -156,53 +156,56 @@ if __name__ == "__main__":
     else:
         raise ValueError("生成方式不对,选择文生图t2i或图生图i2i")
 
-    from diffusers import DDPMScheduler
+    from diffusers import DDPMScheduler,DDIMScheduler
 
     out_dir = "./ablation"
-    files_num = int(len(os.listdir(out_dir)) / 8)
-    index_name = "{:03d}".format(files_num + 1)
+    files_num = int( (len(os.listdir(out_dir))-22) / 9) +5
+    index_name = "{:03d}".format(files_num + 1)+"_"
 
     # ========================================== #
-    v_o_list = []
-    hoi_id = (75,)
-    for seq_hoi_id in hoi_id:
-        v_o_list.append(id_to_hoi_dict[seq_hoi_id])
+    v_o_list = random_choice(HICO_PATH)
+    # hoi_id = (75,)
+    # for seq_hoi_id in hoi_id:
+    #     v_o_list.append(id_to_hoi_dict[seq_hoi_id])
     pmt = get_prompt(v_o_list)
     print(pmt)
     false_pmt = get_prompt(v_o_list, False)
     print(false_pmt)
-    clip_score = 0.4222
-    file_name = out_dir + "/PNDM_i2i" + index_name + str(clip_score) + ".jpg"
-    exit()
-
+    #clip_score = int(round(0.4222,4)*10000)
+    #file_name = out_dir + "/PNDM_i2i" + index_name + str(clip_score) + ".jpg"
+    #print(file_name)
+    
     # PDNM 标准基线
     imgs = generate(SDpipe, v_o_list, 80, gen, pmt, HICO_PATH)
-    clip_score = round(get_clip(imgs, pmt), 4)
-    imgs[0].save(out_dir + "/PNDM_i2i" + index_name + str(clip_score) + ".jpg")
+    clip_score = int(round(get_clip(imgs, pmt), 4)*10000)
+    imgs[0].save(out_dir + "/" + index_name + "PNDM_i2i_" + str(clip_score) + ".jpg")
     print(clip_score)
 
     # 文生图
+    SDpipe = StableDiffusionPipeline.from_pretrained(SD_PATH)
     imgs = generate(SDpipe, v_o_list, 80, "t2i", pmt, HICO_PATH)
-    clip_score = round(get_clip(imgs, pmt), 4)
-    imgs[0].save(out_dir + "/PNDM_t2i" + index_name + str(clip_score) + ".jpg")
+    clip_score = int(round(get_clip(imgs, pmt), 4)*10000)
+    imgs[0].save(out_dir + "/" + index_name + "PNDM_t2i_" + str(clip_score) + ".jpg")
     print(clip_score)
 
+    # 恢复sdpipe
+    SDpipe = StableDiffusionImg2ImgPipeline.from_pretrained(SD_PATH)
+    
     # 禁用辅助词
-    imgs = generate(SDpipe, v_o_list, 80, gen, false_pmtpmt, HICO_PATH)
-    clip_score = round(get_clip(imgs, false_pmtpmt), 4)
-    imgs[0].save(out_dir + "/PNDM_i2i" + index_name + str(clip_score) + ".jpg")
+    imgs = generate(SDpipe, v_o_list, 80, gen, false_pmt, HICO_PATH)
+    clip_score = int(round(get_clip(imgs, false_pmt), 4)*10000)
+    imgs[0].save(out_dir + "/" + index_name + "PNDM_i2i_noaux_" + str(clip_score) + ".jpg")
     print(clip_score)
 
     # 加噪步数
     for i in range(4):
-        imgs = generate(SDpipe, v_o_list, 80, "t2i", pmt, HICO_PATH, (i + 1) * 0.2)
-        clip_score = round(get_clip(imgs, pmt), 4)
+        imgs = generate(SDpipe, v_o_list, 80, "i2i", pmt, HICO_PATH, (i + 1) * 0.2)
+        clip_score = int(round(get_clip(imgs, pmt), 4)*10000)
         imgs[0].save(
-            out_dir
-            + "/PNDM_t2i"
-            + index_name
+            out_dir + "/" + index_name \
+            + "PNDM_t2i_"
             + str(clip_score)
-            + "noise_"
+            + "_noise_"
             + str(i)
             + ".jpg"
         )
@@ -212,8 +215,14 @@ if __name__ == "__main__":
     SDpipe.scheduler = DDPMScheduler.from_config(SDpipe.scheduler.config)
     # print(SDpipe.config)
     imgs = generate(SDpipe, v_o_list, 80, gen, pmt, HICO_PATH)
-    clip_score = round(get_clip(imgs, pmt), 4)
-    imgs[0].save(out_dir + "/DDPM_t2i" + index_name + str(clip_score) + ".jpg")
+    clip_score = int(round(get_clip(imgs, pmt), 4)*10000)
+    imgs[0].save(out_dir + "/" + index_name + "DDPM_i2i_" + str(clip_score) + ".jpg")
+    print(clip_score)
+    
+    SDpipe.scheduler = DDIMScheduler.from_config(SDpipe.scheduler.config)
+    imgs = generate(SDpipe, v_o_list, 80, gen, pmt, HICO_PATH)
+    clip_score = int(round(get_clip(imgs, pmt), 4)*10000)
+    imgs[0].save(out_dir + "/" + index_name + "DDIM_i2i_"  + str(clip_score) + ".jpg")
     print(clip_score)
 
     # with的消融实验
