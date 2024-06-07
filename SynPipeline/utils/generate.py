@@ -203,7 +203,7 @@ if __name__ == "__main__":
         clip_score = int(round(get_clip(imgs, pmt), 4)*10000)
         imgs[0].save(
             out_dir + "/" + index_name \
-            + "PNDM_t2i_"
+            + "PNDM_i2i_"
             + str(clip_score)
             + "_noise_"
             + str(i)

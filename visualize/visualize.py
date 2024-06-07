@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import json
 
 if __name__ == "__main__":
-    if(0):
+    if(1):
         with open("./data/log_syn.txt",'r') as f:
             data_syn = f.readlines()
         with open("./data/log_hico.txt",'r') as f:
@@ -46,13 +46,13 @@ if __name__ == "__main__":
     ax1.plot(epochs, test_mAP_non_rare_hico, label='non-rare', color='red',linestyle='--')
 
     # 添加图例
-    ax1.legend()
+    ax1.legend(fontsize=10)
 
     # 添加标题和标签
-    ax1.set_title('mAP')
-    ax1.set_xlabel('Epochs')
+    ax1.set_title('result')
+    ax1.set_xlabel('Epochs',fontsize=12)
     ax1.set_xticks(range(0,epoch_num))
-    ax1.set_ylabel('mAP')
+    ax1.set_ylabel('mAP',fontsize=12)
 
    # 添加图例和标题
    # loss

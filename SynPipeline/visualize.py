@@ -217,10 +217,11 @@ if __name__ == "__main__":
         for id in objs_id:
             if id == 1:
                 person_count = person_count + 1
-        # if person_count <= 1:
-        #     continue
-            
-        if is_syn == True:
+        if person_count <= 1:
+            continue
+        
+     
+        if is_syn == False:
             hois = target_dict["hoi_annotation"]
             verb_ids = [_dict["category_id"] for _dict in hois]
             hoi_ids = [_dict["hoi_category_id"] for _dict in hois]
@@ -229,7 +230,7 @@ if __name__ == "__main__":
             # if 36 not in objs_id:
             #     continue
             if 64 not in hoi_ids:
-                 continue
+                continue
 
         prompt = target_dict.get("prompt")  # 名字打印到标题上
         if prompt == None:

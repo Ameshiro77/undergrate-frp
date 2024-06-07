@@ -22,7 +22,7 @@ def get_prompt(tgt):  # 获取[text]
 #综合合成和HICO 获取按值排序的hoi类别字典
 def get_rare_list(HICO_PATH,limit): 
     img_dir = os.path.join(HICO_PATH,"images","train2015")
-    json_path = os.path.join(HICO_PATH,"annotations","new_trainval_hico.json")
+    json_path = os.path.join(HICO_PATH,"annotations","trainval_hico.json")
     with open(json_path, "r") as f:
         annotation = json.load(f)
     hoi_count = {}
@@ -32,6 +32,8 @@ def get_rare_list(HICO_PATH,limit):
         for hoi in anno["hoi_annotation"]:
             hoi_id = hoi["hoi_category_id"]
             hoi_count[hoi_id] = hoi_count[hoi_id] + 1
+    print(hoi_count[61])
+    exit()
     # 按值排序
     hoi_count = dict(sorted(hoi_count.items(), key=lambda item: item[1]))
     print(list(hoi_count.keys())[:limit])
@@ -132,7 +134,7 @@ def clip_similarity():
         annotation = json.load(f)
     annotation_dict = {item["file_name"]: item for item in annotation}
 
-    limit = 500
+    limit = 50
     low_simi = []
     low = [33, 38, 76, 143, 157, 241, 255, 269, 277, 335, 342, 363, 373, 404, 443, 447, 456, 462, 474, 481, 487, 496]
     with tqdm(total=limit) as pbar:
@@ -172,5 +174,6 @@ if __name__ == "__main__":
     HICO_PATH = r"G:\Code_Project\ComputerVision\no_frills_hoi_det-release_v1\HICO\hico_clean\hico_20160224_det"
     if not os.path.exists(HICO_PATH):
         HICO_PATH = "/root/autodl-tmp/data/hico_20160224_det"
-    get_rare_list(HICO_PATH,70)
-    analyse('Syn_HICO',160)
+    get_rare_list(HICO_PATH,600)
+    #analyse('Syn_HICO',160)
+    clip_similarity()
