@@ -94,19 +94,24 @@ def generate(pipe, v_o_list, steps, mode,  pmt, HICO_PATH,strength=0.83):
         return imgs
 
     elif mode == "i2i":
+        hico_img = get_hico_img(v_o_list, HICO_PATH)
         pipe.to("cuda")
-        torch.cuda.empty_cache()
-        imgs = pipe(
-            pmt,
-            image=get_hico_img(v_o_list, HICO_PATH),
-            height=512,
-            width=512,
-            strength=strength,
-            guidance_scale=7.65,
-            num_inference_steps=steps,
-            num_images_per_prompt=1,
-            negative_prompt=ngt_prmt,
-        ).images
+        print(hico_img)
+        for i in range(5):
+            torch.cuda.empty_cache()
+            imgs = pipe(
+                pmt,
+                image=hico_img,
+                height=512,
+                width=512,
+                #strength=strength,
+                strength = (i + 1) * 0.2,
+                guidance_scale=7.65,
+                num_inference_steps=steps,
+                num_images_per_prompt=1,
+                negative_prompt=ngt_prmt,
+            ).images
+            imgs[0].save("./ablation/4_noise_" + str(i)+ ".jpg")
         return imgs
 
 
@@ -146,12 +151,10 @@ if __name__ == "__main__":
     if gen == "t2i":
         SDpipe = StableDiffusionPipeline.from_pretrained(  # 放在这是为了避免多次调用
             SD_PATH,
-            # torch_dtype=torch.float32
         )
     elif gen == "i2i":
         SDpipe = StableDiffusionImg2ImgPipeline.from_pretrained(  # 放在这是为了避免多次调用
             SD_PATH,
-            # torch_dtype=torch.float32
         )
     else:
         raise ValueError("生成方式不对,选择文生图t2i或图生图i2i")
@@ -171,10 +174,14 @@ if __name__ == "__main__":
     print(pmt)
     false_pmt = get_prompt(v_o_list, False)
     print(false_pmt)
-    #clip_score = int(round(0.4222,4)*10000)
-    #file_name = out_dir + "/PNDM_i2i" + index_name + str(clip_score) + ".jpg"
-    #print(file_name)
     
+    hico_image=get_hico_img(v_o_list, HICO_PATH),
+    # 加噪步数
+    imgs = generate(SDpipe, v_o_list, 80, "i2i", pmt, HICO_PATH)
+    clip_score = int(round(get_clip(imgs, pmt), 4)*10000)
+    print(clip_score)
+    exit()
+        
     # PDNM 标准基线
     imgs = generate(SDpipe, v_o_list, 80, gen, pmt, HICO_PATH)
     clip_score = int(round(get_clip(imgs, pmt), 4)*10000)
@@ -192,6 +199,7 @@ if __name__ == "__main__":
     SDpipe = StableDiffusionImg2ImgPipeline.from_pretrained(SD_PATH)
     
     # 禁用辅助词
+<<<<<<< HEAD
     imgs = generate(SDpipe, v_o_list, 80, gen, false_pmt, HICO_PATH)
     clip_score = int(round(get_clip(imgs, false_pmt), 4)*10000)
     imgs[0].save(out_dir + "/" + index_name + "PNDM_i2i_noaux_" + str(clip_score) + ".jpg")
@@ -209,7 +217,15 @@ if __name__ == "__main__":
             + str(i)
             + ".jpg"
         )
+=======
+    if(0):
+        imgs = generate(SDpipe, v_o_list, 80, gen, false_pmt, HICO_PATH)
+        clip_score = int(round(get_clip(imgs, false_pmt), 4)*10000)
+        imgs[0].save(out_dir + "/" + index_name + "PNDM_i2i_noaux_" + str(clip_score) + ".jpg")
+>>>>>>> 184cc2071e953f89288743e833b719992dd741bb
         print(clip_score)
+
+
 
     # 采样器的比较 DDPM
     SDpipe.scheduler = DDPMScheduler.from_config(SDpipe.scheduler.config)
